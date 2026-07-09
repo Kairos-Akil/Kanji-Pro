@@ -103,7 +103,7 @@ For now, a star on the repository is the best way to support the project. Thanks
 
 ## Licence
 
-Application code is released under the MIT Licence — see [`LICENSE`](./LICENSE).
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0). See the [`LICENSE`](./LICENSE) file for details.
 Dictionary data retains its original CC BY-SA 4.0 licence as noted above.
 
 ## About
