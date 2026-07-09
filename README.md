@@ -6,15 +6,13 @@
 
 **Learn Japanese kana, kanji, and radicals.**
 
-A clean, offline-friendly Japanese study app built with Expo and React Native.
+A clean, offline-friendly Japanese study app for Android, built with Expo and React Native.
 Drill hiragana and katakana, work through kanji from N5 to N1, and master the
 radicals that make them up, with a spaced, star-based mastery system.
 
 </div>
 
----
-
-## 📸 Screenshots
+## Screenshots
 
 <div align="center">
 
@@ -28,8 +26,6 @@ radicals that make them up, with a spaced, star-based mastery system.
 
 </div>
 
----
-
 ## Features
 
 - **Full kana coverage**: Hiragana and katakana, basic sets plus variants and combinations.
@@ -41,6 +37,14 @@ radicals that make them up, with a spaced, star-based mastery system.
 - **Two input modes**: multiple-choice buttons or a built-in QWERTY keyboard that accepts romaji for kana readings.
 - **Multiple question types for kanji**: quiz on meanings, on/kun-readings, or a mix.
 - **Quality-of-life touches**: haptics, sound effects, light/dark/OLED themes, streak tracking, daily reminder, and search across the whole database.
+
+## Installation
+
+[<img src="https://raw.githubusercontent.com/ImranR98/Obtainium/refs/heads/main/assets/graphics/badge_obtainium.png"
+    alt="Get it on Obtainium"
+    height="80">](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Kairos-Akil/Kanji-Pro)
+
+Or download the APK from [Releases](https://github.com/Kairos-Akil/Kanji-Pro/releases).
 
 ---
 
