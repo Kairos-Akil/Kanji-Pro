@@ -1,0 +1,2821 @@
+[
+    {
+        "radical": "一",
+        "meanings": [
+            "one",
+            "horizontal stroke"
+        ],
+        "reading": "いち",
+        "readingRomaji": "ichi",
+        "strokes": 1,
+        "category": "Number"
+    },
+    {
+        "radical": "丨",
+        "meanings": [
+            "line",
+            "stick"
+        ],
+        "reading": "たてぼう",
+        "readingRomaji": "tatebou",
+        "strokes": 1,
+        "category": "Weapon"
+    },
+    {
+        "radical": "丶",
+        "meanings": [
+            "dot"
+        ],
+        "reading": "てん",
+        "readingRomaji": "ten",
+        "strokes": 1,
+        "category": "Other"
+    },
+    {
+        "radical": "丿",
+        "meanings": [
+            "bend",
+            "stroke"
+        ],
+        "reading": "の",
+        "readingRomaji": "no",
+        "strokes": 1,
+        "category": "Other"
+    },
+    {
+        "radical": "乙",
+        "meanings": [
+            "the second"
+        ],
+        "reading": "おつ",
+        "readingRomaji": "otsu",
+        "strokes": 1,
+        "category": "Other"
+    },
+    {
+        "radical": "亅",
+        "meanings": [
+            "hook",
+            "hook stick"
+        ],
+        "reading": "はねぼう",
+        "readingRomaji": "hanebou",
+        "strokes": 1,
+        "category": "Fishing"
+    },
+    {
+        "radical": "二",
+        "meanings": [
+            "two"
+        ],
+        "reading": "に",
+        "readingRomaji": "ni",
+        "strokes": 2,
+        "category": "Number"
+    },
+    {
+        "radical": "亠",
+        "meanings": [
+            "lid",
+            "top"
+        ],
+        "reading": "なべぶた",
+        "readingRomaji": "nabebuta",
+        "strokes": 2,
+        "category": "Home"
+    },
+    {
+        "radical": "人",
+        "meanings": [
+            "person"
+        ],
+        "reading": "ひと",
+        "readingRomaji": "hito",
+        "strokes": 2,
+        "category": "Body"
+    },
+    {
+        "radical": "儿",
+        "meanings": [
+            "human legs"
+        ],
+        "reading": "ひとあし",
+        "readingRomaji": "hitoashi",
+        "strokes": 2,
+        "category": "Body"
+    },
+    {
+        "radical": "⼊",
+        "meanings": [
+            "to enter"
+        ],
+        "reading": "いる",
+        "readingRomaji": "iru",
+        "strokes": 2,
+        "category": "Capability"
+    },
+    {
+        "radical": "八",
+        "meanings": [
+            "eight"
+        ],
+        "reading": "はち",
+        "readingRomaji": "hachi",
+        "strokes": 2,
+        "category": "Number"
+    },
+    {
+        "radical": "冂",
+        "meanings": [
+            "to enclose"
+        ],
+        "reading": "けいがまえ",
+        "readingRomaji": "keigamae",
+        "strokes": 2,
+        "category": "Capability"
+    },
+    {
+        "radical": "冖",
+        "meanings": [
+            "cover",
+            "crown"
+        ],
+        "reading": "わかんむり",
+        "readingRomaji": "wakanmuri",
+        "strokes": 2,
+        "category": "Home"
+    },
+    {
+        "radical": "冫",
+        "meanings": [
+            "ice"
+        ],
+        "reading": "にすい",
+        "readingRomaji": "nisui",
+        "strokes": 2,
+        "category": "Nature"
+    },
+    {
+        "radical": "几",
+        "meanings": [
+            "table"
+        ],
+        "reading": "きにょう",
+        "readingRomaji": "kinyou",
+        "strokes": 2,
+        "category": "Home"
+    },
+    {
+        "radical": "凵",
+        "meanings": [
+            "container",
+            "open box"
+        ],
+        "reading": "かんにょう",
+        "readingRomaji": "kannyou",
+        "strokes": 2,
+        "category": "Home"
+    },
+    {
+        "radical": "刀",
+        "meanings": [
+            "knife",
+            "sword"
+        ],
+        "reading": "かたな",
+        "readingRomaji": "katana",
+        "strokes": 2,
+        "category": "Weapon"
+    },
+    {
+        "radical": "力",
+        "meanings": [
+            "power"
+        ],
+        "reading": "ちから",
+        "readingRomaji": "chikara",
+        "strokes": 2,
+        "category": "Weapon"
+    },
+    {
+        "radical": "勹",
+        "meanings": [
+            "to wrap"
+        ],
+        "reading": "つつみがまえ",
+        "readingRomaji": "tsutsumigamae",
+        "strokes": 2,
+        "category": "Capability"
+    },
+    {
+        "radical": "匕",
+        "meanings": [
+            "spoon"
+        ],
+        "reading": "さじ",
+        "readingRomaji": "saji",
+        "strokes": 2,
+        "category": "Home"
+    },
+    {
+        "radical": "匚",
+        "meanings": [
+            "box"
+        ],
+        "reading": "はこがまえ",
+        "readingRomaji": "hakogamae",
+        "strokes": 2,
+        "category": "Home"
+    },
+    {
+        "radical": "匸",
+        "meanings": [
+            "to conceal",
+            "hide"
+        ],
+        "reading": "かくしがまえ",
+        "readingRomaji": "kakushigamae",
+        "strokes": 2,
+        "category": "Capability"
+    },
+    {
+        "radical": "十",
+        "meanings": [
+            "ten"
+        ],
+        "reading": "じゅう",
+        "readingRomaji": "juu",
+        "strokes": 2,
+        "category": "Number"
+    },
+    {
+        "radical": "卜",
+        "meanings": [
+            "oracle",
+            "divination"
+        ],
+        "reading": "ぼく",
+        "readingRomaji": "boku",
+        "strokes": 2,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "卩",
+        "meanings": [
+            "stamp",
+            "seal"
+        ],
+        "reading": "ふしづくり",
+        "readingRomaji": "fushizukuri",
+        "strokes": 2,
+        "category": "Society"
+    },
+    {
+        "radical": "厂",
+        "meanings": [
+            "cliff"
+        ],
+        "reading": "がんだれ",
+        "readingRomaji": "gandare",
+        "strokes": 2,
+        "category": "Nature"
+    },
+    {
+        "radical": "厶",
+        "meanings": [
+            "private",
+            "Katakana Mu"
+        ],
+        "reading": "む",
+        "readingRomaji": "mu",
+        "strokes": 2,
+        "category": "Society"
+    },
+    {
+        "radical": "又",
+        "meanings": [
+            "again",
+            "right hand"
+        ],
+        "reading": "また",
+        "readingRomaji": "mata",
+        "strokes": 2,
+        "category": "Body"
+    },
+    {
+        "radical": "口",
+        "meanings": [
+            "mouth"
+        ],
+        "reading": "くち",
+        "readingRomaji": "kuchi",
+        "strokes": 3,
+        "category": "Body"
+    },
+    {
+        "radical": "囗",
+        "meanings": [
+            "border",
+            "territorial boundaries"
+        ],
+        "reading": "くにがまえ",
+        "readingRomaji": "kunigamae",
+        "strokes": 3,
+        "category": "Society"
+    },
+    {
+        "radical": "土",
+        "meanings": [
+            "earth"
+        ],
+        "reading": "つち",
+        "readingRomaji": "tsuchi",
+        "strokes": 3,
+        "category": "Nature"
+    },
+    {
+        "radical": "士",
+        "meanings": [
+            "man",
+            "scholar",
+            "samurai"
+        ],
+        "reading": "さむらい",
+        "readingRomaji": "samurai",
+        "strokes": 3,
+        "category": "Society"
+    },
+    {
+        "radical": "夂",
+        "meanings": [
+            "to follow"
+        ],
+        "reading": "のまた",
+        "readingRomaji": "nomata",
+        "strokes": 3,
+        "category": "Capability"
+    },
+    {
+        "radical": "夊",
+        "meanings": [
+            "to go slowly"
+        ],
+        "reading": "なつあし",
+        "readingRomaji": "natsuashi",
+        "strokes": 3,
+        "category": "Capability"
+    },
+    {
+        "radical": "夕",
+        "meanings": [
+            "evening"
+        ],
+        "reading": "ゆうべ",
+        "readingRomaji": "yuube",
+        "strokes": 3,
+        "category": "Nature"
+    },
+    {
+        "radical": "大",
+        "meanings": [
+            "large",
+            "big"
+        ],
+        "reading": "だい",
+        "readingRomaji": "dai",
+        "strokes": 3,
+        "category": "Home"
+    },
+    {
+        "radical": "女",
+        "meanings": [
+            "woman"
+        ],
+        "reading": "おんな",
+        "readingRomaji": "onna",
+        "strokes": 3,
+        "category": "Society"
+    },
+    {
+        "radical": "子",
+        "meanings": [
+            "child",
+            "son"
+        ],
+        "reading": "こ",
+        "readingRomaji": "ko",
+        "strokes": 3,
+        "category": "Society"
+    },
+    {
+        "radical": "宀",
+        "meanings": [
+            "roof",
+            "house"
+        ],
+        "reading": "うかんむり",
+        "readingRomaji": "ukanmuri",
+        "strokes": 3,
+        "category": "Home"
+    },
+    {
+        "radical": "寸",
+        "meanings": [
+            "inch",
+            "(2.25 cm)"
+        ],
+        "reading": "すん",
+        "readingRomaji": "sun",
+        "strokes": 3,
+        "category": "Body"
+    },
+    {
+        "radical": "小",
+        "meanings": [
+            "small"
+        ],
+        "reading": "しょう",
+        "readingRomaji": "shou",
+        "strokes": 3,
+        "category": "Home"
+    },
+    {
+        "radical": "尢",
+        "meanings": [
+            "disabled",
+            "lame leg"
+        ],
+        "reading": "だいのまげあし",
+        "readingRomaji": "dainomageashi",
+        "strokes": 3,
+        "category": "Body"
+    },
+    {
+        "radical": "尸",
+        "meanings": [
+            "corpse"
+        ],
+        "reading": "しかばね",
+        "readingRomaji": "shikabane",
+        "strokes": 3,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "屮",
+        "meanings": [
+            "sprout"
+        ],
+        "reading": "くさのめ",
+        "readingRomaji": "kusanome",
+        "strokes": 3,
+        "category": "Agriculture"
+    },
+    {
+        "radical": "山",
+        "meanings": [
+            "mountain"
+        ],
+        "reading": "やま",
+        "readingRomaji": "yama",
+        "strokes": 3,
+        "category": "Nature"
+    },
+    {
+        "radical": "巛",
+        "meanings": [
+            "river"
+        ],
+        "reading": "まがりがわ",
+        "readingRomaji": "magarigawa",
+        "strokes": 3,
+        "category": "Nature"
+    },
+    {
+        "radical": "工",
+        "meanings": [
+            "work",
+            "carpenter",
+            "skill"
+        ],
+        "reading": "たくみ",
+        "readingRomaji": "takumi",
+        "strokes": 3,
+        "category": "Society"
+    },
+    {
+        "radical": "已",
+        "meanings": [
+            "oneself"
+        ],
+        "reading": "おのれ",
+        "readingRomaji": "onore",
+        "strokes": 3,
+        "category": "Capability"
+    },
+    {
+        "radical": "巾",
+        "meanings": [
+            "cloth"
+        ],
+        "reading": "はば",
+        "readingRomaji": "haba",
+        "strokes": 3,
+        "category": "Clothing"
+    },
+    {
+        "radical": "干",
+        "meanings": [
+            "to dry",
+            "shield"
+        ],
+        "reading": "かん",
+        "readingRomaji": "kan",
+        "strokes": 3,
+        "category": "Weapon"
+    },
+    {
+        "radical": "幺",
+        "meanings": [
+            "young",
+            "slight"
+        ],
+        "reading": "いとがしら",
+        "readingRomaji": "itogashira",
+        "strokes": 3,
+        "category": "Society"
+    },
+    {
+        "radical": "广",
+        "meanings": [
+            "slanting roof"
+        ],
+        "reading": "まだれ",
+        "readingRomaji": "madare",
+        "strokes": 3,
+        "category": "Home"
+    },
+    {
+        "radical": "廴",
+        "meanings": [
+            "to move",
+            "stretch"
+        ],
+        "reading": "えんにょう",
+        "readingRomaji": "rennyou",
+        "strokes": 3,
+        "category": "Body"
+    },
+    {
+        "radical": "廾",
+        "meanings": [
+            "folded hands"
+        ],
+        "reading": "にじゅうあし",
+        "readingRomaji": "nijuuashi",
+        "strokes": 3,
+        "category": "Body"
+    },
+    {
+        "radical": "弋",
+        "meanings": [
+            "javelin"
+        ],
+        "reading": "いぐるみ",
+        "readingRomaji": "igurumi",
+        "strokes": 3,
+        "category": "Weapon"
+    },
+    {
+        "radical": "弓",
+        "meanings": [
+            "bow （in archery）"
+        ],
+        "reading": "ゆみ",
+        "readingRomaji": "yumi",
+        "strokes": 3,
+        "category": "Weapon"
+    },
+    {
+        "radical": "彐",
+        "meanings": [
+            "pig’s head"
+        ],
+        "reading": "けいがしら",
+        "readingRomaji": "keigashira",
+        "strokes": 3,
+        "category": "Animal"
+    },
+    {
+        "radical": "彡",
+        "meanings": [
+            "hair-style",
+            "light rays"
+        ],
+        "reading": "さんづくり",
+        "readingRomaji": "sanzukuri",
+        "strokes": 3,
+        "category": "Body"
+    },
+    {
+        "radical": "彳",
+        "meanings": [
+            "step",
+            "stride",
+            "street",
+            "to go"
+        ],
+        "reading": "ぎょうにんべん",
+        "readingRomaji": "gyouninben",
+        "strokes": 3,
+        "category": "Body"
+    },
+    {
+        "radical": "心",
+        "meanings": [
+            "heart",
+            "mind",
+            "spirit"
+        ],
+        "reading": "こころ",
+        "readingRomaji": "kokoro",
+        "strokes": 4,
+        "category": "Body"
+    },
+    {
+        "radical": "戈",
+        "meanings": [
+            "spear",
+            "weapon"
+        ],
+        "reading": "ほこ",
+        "readingRomaji": "hoko",
+        "strokes": 4,
+        "category": "Weapon"
+    },
+    {
+        "radical": "戸",
+        "meanings": [
+            "door"
+        ],
+        "reading": "と",
+        "readingRomaji": "to",
+        "strokes": 4,
+        "category": "Home"
+    },
+    {
+        "radical": "手",
+        "meanings": [
+            "hand"
+        ],
+        "reading": "て",
+        "readingRomaji": "te",
+        "strokes": 4,
+        "category": "Body"
+    },
+    {
+        "radical": "支",
+        "meanings": [
+            "branch"
+        ],
+        "reading": "しにょう",
+        "readingRomaji": "shinyou",
+        "strokes": 4,
+        "category": "Nature"
+    },
+    {
+        "radical": "攵",
+        "meanings": [
+            "activity",
+            "to strike",
+            "hit"
+        ],
+        "reading": "ぼくづくり",
+        "readingRomaji": "bokuzukuri",
+        "strokes": 4,
+        "category": "Weapon"
+    },
+    {
+        "radical": "文",
+        "meanings": [
+            "literature",
+            "letters"
+        ],
+        "reading": "ぶん",
+        "readingRomaji": "bun",
+        "strokes": 4,
+        "category": "Society"
+    },
+    {
+        "radical": "斗",
+        "meanings": [
+            "big dipper",
+            "ladle",
+            "18 liters"
+        ],
+        "reading": "ますづくり",
+        "readingRomaji": "masuzukuri",
+        "strokes": 4,
+        "category": "Home"
+    },
+    {
+        "radical": "斤",
+        "meanings": [
+            "axe"
+        ],
+        "reading": "おのづくり",
+        "readingRomaji": "onozukuri",
+        "strokes": 4,
+        "category": "Weapon"
+    },
+    {
+        "radical": "方",
+        "meanings": [
+            "direction",
+            "flag"
+        ],
+        "reading": "ほう",
+        "readingRomaji": "hou",
+        "strokes": 4,
+        "category": "Other"
+    },
+    {
+        "radical": "无",
+        "meanings": [
+            "not"
+        ],
+        "reading": "むにょう",
+        "readingRomaji": "munyou",
+        "strokes": 4,
+        "category": "Other"
+    },
+    {
+        "radical": "日",
+        "meanings": [
+            "sun",
+            "day",
+            "time"
+        ],
+        "reading": "ひ",
+        "readingRomaji": "hi",
+        "strokes": 4,
+        "category": "Nature"
+    },
+    {
+        "radical": "曰",
+        "meanings": [
+            "to say"
+        ],
+        "reading": "ひらび",
+        "readingRomaji": "hirabi",
+        "strokes": 4,
+        "category": "Capability"
+    },
+    {
+        "radical": "月",
+        "meanings": [
+            "moon",
+            "month",
+            "period"
+        ],
+        "reading": "つき",
+        "readingRomaji": "tsuki",
+        "strokes": 4,
+        "category": "Nature"
+    },
+    {
+        "radical": "木",
+        "meanings": [
+            "tree",
+            "wood"
+        ],
+        "reading": "き",
+        "readingRomaji": "ki",
+        "strokes": 4,
+        "category": "Nature"
+    },
+    {
+        "radical": "欠",
+        "meanings": [
+            "to lack",
+            "yawn"
+        ],
+        "reading": "あくび",
+        "readingRomaji": "akubi",
+        "strokes": 4,
+        "category": "Capability"
+    },
+    {
+        "radical": "止",
+        "meanings": [
+            "to stop"
+        ],
+        "reading": "とめる",
+        "readingRomaji": "tomeru",
+        "strokes": 4,
+        "category": "Capability"
+    },
+    {
+        "radical": "歹",
+        "meanings": [
+            "death & dying",
+            "to decompose"
+        ],
+        "reading": "がつ",
+        "readingRomaji": "gatsu",
+        "strokes": 4,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "殳",
+        "meanings": [
+            "lance shaft",
+            "action"
+        ],
+        "reading": "るまた",
+        "readingRomaji": "rumata",
+        "strokes": 4,
+        "category": "Weapon"
+    },
+    {
+        "radical": "毋",
+        "meanings": [
+            "not",
+            "mother"
+        ],
+        "reading": "なかれ",
+        "readingRomaji": "nakare",
+        "strokes": 4,
+        "category": "Society"
+    },
+    {
+        "radical": "比",
+        "meanings": [
+            "to compare"
+        ],
+        "reading": "くらべる",
+        "readingRomaji": "kuraberu",
+        "strokes": 4,
+        "category": "Capability"
+    },
+    {
+        "radical": "毛",
+        "meanings": [
+            "hair"
+        ],
+        "reading": "け",
+        "readingRomaji": "ke",
+        "strokes": 4,
+        "category": "Body"
+    },
+    {
+        "radical": "氏",
+        "meanings": [
+            "family",
+            "clan"
+        ],
+        "reading": "うじ",
+        "readingRomaji": "uji",
+        "strokes": 4,
+        "category": "Society"
+    },
+    {
+        "radical": "气",
+        "meanings": [
+            "steam",
+            "air"
+        ],
+        "reading": "きがまえ",
+        "readingRomaji": "kigamae",
+        "strokes": 4,
+        "category": "Nature"
+    },
+    {
+        "radical": "水",
+        "meanings": [
+            "water"
+        ],
+        "reading": "みず",
+        "readingRomaji": "mizu",
+        "strokes": 4,
+        "category": "Nature"
+    },
+    {
+        "radical": "火",
+        "meanings": [
+            "fire"
+        ],
+        "reading": "ひ",
+        "readingRomaji": "hi",
+        "strokes": 4,
+        "category": "Nature"
+    },
+    {
+        "radical": "爪",
+        "meanings": [
+            "claw",
+            "nail"
+        ],
+        "reading": "つめ",
+        "readingRomaji": "tsume",
+        "strokes": 4,
+        "category": "Animal"
+    },
+    {
+        "radical": "父",
+        "meanings": [
+            "father"
+        ],
+        "reading": "ちち",
+        "readingRomaji": "chichi",
+        "strokes": 4,
+        "category": "Society"
+    },
+    {
+        "radical": "爻",
+        "meanings": [
+            "to mix"
+        ],
+        "reading": "こう",
+        "readingRomaji": "kou",
+        "strokes": 4,
+        "category": "Food"
+    },
+    {
+        "radical": "爿",
+        "meanings": [
+            "split wood"
+        ],
+        "reading": "しょうへん",
+        "readingRomaji": "shouhen",
+        "strokes": 4,
+        "category": "Nature"
+    },
+    {
+        "radical": "片",
+        "meanings": [
+            "slice"
+        ],
+        "reading": "かた",
+        "readingRomaji": "kata",
+        "strokes": 4,
+        "category": "Nature"
+    },
+    {
+        "radical": "牙",
+        "meanings": [
+            "fang",
+            "canine tooth"
+        ],
+        "reading": "きば",
+        "readingRomaji": "kiba",
+        "strokes": 5,
+        "category": "Animal"
+    },
+    {
+        "radical": "牛",
+        "meanings": [
+            "cow"
+        ],
+        "reading": "うし",
+        "readingRomaji": "ushi",
+        "strokes": 4,
+        "category": "Animal"
+    },
+    {
+        "radical": "犬",
+        "meanings": [
+            "dog"
+        ],
+        "reading": "いぬ",
+        "readingRomaji": "inu",
+        "strokes": 4,
+        "category": "Animal"
+    },
+    {
+        "radical": "玄",
+        "meanings": [
+            "darkness"
+        ],
+        "reading": "げん",
+        "readingRomaji": "gen",
+        "strokes": 5,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "王",
+        "meanings": [
+            "jewelry",
+            "king"
+        ],
+        "reading": "たま",
+        "readingRomaji": "tama",
+        "strokes": 5,
+        "category": "Society"
+    },
+    {
+        "radical": "瓜",
+        "meanings": [
+            "melon"
+        ],
+        "reading": "うり",
+        "readingRomaji": "uri",
+        "strokes": 6,
+        "category": "Agriculture"
+    },
+    {
+        "radical": "瓦",
+        "meanings": [
+            "tile"
+        ],
+        "reading": "かわら",
+        "readingRomaji": "kawara",
+        "strokes": 5,
+        "category": "Home"
+    },
+    {
+        "radical": "甘",
+        "meanings": [
+            "sweet"
+        ],
+        "reading": "あまい",
+        "readingRomaji": "amai",
+        "strokes": 5,
+        "category": "Food"
+    },
+    {
+        "radical": "生",
+        "meanings": [
+            "birth",
+            "life"
+        ],
+        "reading": "うまれる",
+        "readingRomaji": "umareru",
+        "strokes": 5,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "用",
+        "meanings": [
+            "to use"
+        ],
+        "reading": "もちいる",
+        "readingRomaji": "mochiiru",
+        "strokes": 5,
+        "category": "Capability"
+    },
+    {
+        "radical": "田",
+        "meanings": [
+            "rice paddy",
+            "field"
+        ],
+        "reading": "た",
+        "readingRomaji": "ta",
+        "strokes": 5,
+        "category": "Agriculture"
+    },
+    {
+        "radical": "疋",
+        "meanings": [
+            "bolt of cloth"
+        ],
+        "reading": "ひき",
+        "readingRomaji": "hiki",
+        "strokes": 5,
+        "category": "Clothing"
+    },
+    {
+        "radical": "疒",
+        "meanings": [
+            "sickness"
+        ],
+        "reading": "やまいだれ",
+        "readingRomaji": "yamaidare",
+        "strokes": 5,
+        "category": "Capability"
+    },
+    {
+        "radical": "癶",
+        "meanings": [
+            "outspread legs",
+            "departure"
+        ],
+        "reading": "はつがしら",
+        "readingRomaji": "hatsugashira",
+        "strokes": 5,
+        "category": "Body"
+    },
+    {
+        "radical": "白",
+        "meanings": [
+            "white"
+        ],
+        "reading": "しろ",
+        "readingRomaji": "shiro",
+        "strokes": 5,
+        "category": "Color"
+    },
+    {
+        "radical": "皮",
+        "meanings": [
+            "skin",
+            "hide"
+        ],
+        "reading": "けがわ",
+        "readingRomaji": "kegawa",
+        "strokes": 5,
+        "category": "Body"
+    },
+    {
+        "radical": "皿",
+        "meanings": [
+            "plate",
+            "bowl"
+        ],
+        "reading": "さら",
+        "readingRomaji": "sara",
+        "strokes": 5,
+        "category": "Home"
+    },
+    {
+        "radical": "目",
+        "meanings": [
+            "eye"
+        ],
+        "reading": "め",
+        "readingRomaji": "me",
+        "strokes": 5,
+        "category": "Body"
+    },
+    {
+        "radical": "矛",
+        "meanings": [
+            "halberd"
+        ],
+        "reading": "ほこ",
+        "readingRomaji": "hoko",
+        "strokes": 5,
+        "category": "Weapon"
+    },
+    {
+        "radical": "矢",
+        "meanings": [
+            "arrow"
+        ],
+        "reading": "や",
+        "readingRomaji": "ya",
+        "strokes": 5,
+        "category": "Weapon"
+    },
+    {
+        "radical": "石",
+        "meanings": [
+            "stone"
+        ],
+        "reading": "いし",
+        "readingRomaji": "ishi",
+        "strokes": 5,
+        "category": "Nature"
+    },
+    {
+        "radical": "示",
+        "meanings": [
+            "altar",
+            "festival",
+            "religious service"
+        ],
+        "reading": "しめす",
+        "readingRomaji": "shimesu",
+        "strokes": 5,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "禸",
+        "meanings": [
+            "footprint"
+        ],
+        "reading": "じゅうのあし",
+        "readingRomaji": "juunoashi",
+        "strokes": 5,
+        "category": "Body"
+    },
+    {
+        "radical": "禾",
+        "meanings": [
+            "grain"
+        ],
+        "reading": "のぎへん",
+        "readingRomaji": "nogihen",
+        "strokes": 5,
+        "category": "Agriculture"
+    },
+    {
+        "radical": "穴",
+        "meanings": [
+            "hole",
+            "cave"
+        ],
+        "reading": "あな",
+        "readingRomaji": "ana",
+        "strokes": 5,
+        "category": "Nature"
+    },
+    {
+        "radical": "立",
+        "meanings": [
+            "to stand"
+        ],
+        "reading": "たつ",
+        "readingRomaji": "tatsu",
+        "strokes": 5,
+        "category": "Body"
+    },
+    {
+        "radical": "竹",
+        "meanings": [
+            "bamboo"
+        ],
+        "reading": "たけ",
+        "readingRomaji": "take",
+        "strokes": 6,
+        "category": "Agriculture"
+    },
+    {
+        "radical": "米",
+        "meanings": [
+            "rice"
+        ],
+        "reading": "こめ",
+        "readingRomaji": "kome",
+        "strokes": 6,
+        "category": "Agriculture"
+    },
+    {
+        "radical": "糸",
+        "meanings": [
+            "thread"
+        ],
+        "reading": "いと",
+        "readingRomaji": "ito",
+        "strokes": 6,
+        "category": "Clothing"
+    },
+    {
+        "radical": "缶",
+        "meanings": [
+            "earthen jar"
+        ],
+        "reading": "みずがめ",
+        "readingRomaji": "mizugame",
+        "strokes": 6,
+        "category": "Home"
+    },
+    {
+        "radical": "罒",
+        "meanings": [
+            "net"
+        ],
+        "reading": "あみがしら",
+        "readingRomaji": "amigashira",
+        "strokes": 6,
+        "category": "Fishing"
+    },
+    {
+        "radical": "羊",
+        "meanings": [
+            "sheep"
+        ],
+        "reading": "ひつじ",
+        "readingRomaji": "hitsuji",
+        "strokes": 6,
+        "category": "Animal"
+    },
+    {
+        "radical": "羽",
+        "meanings": [
+            "feather",
+            "wing"
+        ],
+        "reading": "はね",
+        "readingRomaji": "hane",
+        "strokes": 6,
+        "category": "Animal"
+    },
+    {
+        "radical": "耂",
+        "meanings": [
+            "old",
+            "old-age"
+        ],
+        "reading": "おいかんむり",
+        "readingRomaji": "oikanmuri",
+        "strokes": 4,
+        "category": "Society"
+    },
+    {
+        "radical": "而",
+        "meanings": [
+            "and also"
+        ],
+        "reading": "しこうして",
+        "readingRomaji": "shikoushite",
+        "strokes": 6,
+        "category": "Other"
+    },
+    {
+        "radical": "耒",
+        "meanings": [
+            "plow"
+        ],
+        "reading": "らいすき",
+        "readingRomaji": "raisuki",
+        "strokes": 6,
+        "category": "Agriculture"
+    },
+    {
+        "radical": "耳",
+        "meanings": [
+            "ear"
+        ],
+        "reading": "みみ",
+        "readingRomaji": "mimi",
+        "strokes": 6,
+        "category": "Body"
+    },
+    {
+        "radical": "聿",
+        "meanings": [
+            "writing brush"
+        ],
+        "reading": "ふでづくり",
+        "readingRomaji": "fudezukuri",
+        "strokes": 6,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "肉",
+        "meanings": [
+            "flesh",
+            "meat"
+        ],
+        "reading": "にく",
+        "readingRomaji": "niku",
+        "strokes": 6,
+        "category": "Food"
+    },
+    {
+        "radical": "臣",
+        "meanings": [
+            "retainer",
+            "minister"
+        ],
+        "reading": "しん",
+        "readingRomaji": "shin",
+        "strokes": 7,
+        "category": "Society"
+    },
+    {
+        "radical": "自",
+        "meanings": [
+            "self"
+        ],
+        "reading": "みずから",
+        "readingRomaji": "mizukara",
+        "strokes": 6,
+        "category": "Capability"
+    },
+    {
+        "radical": "至",
+        "meanings": [
+            "to arrive",
+            "reach"
+        ],
+        "reading": "いたる",
+        "readingRomaji": "itaru",
+        "strokes": 6,
+        "category": "Capability"
+    },
+    {
+        "radical": "臼",
+        "meanings": [
+            "mortar",
+            "quern"
+        ],
+        "reading": "うす",
+        "readingRomaji": "usu",
+        "strokes": 6,
+        "category": "Home"
+    },
+    {
+        "radical": "舌",
+        "meanings": [
+            "tongue"
+        ],
+        "reading": "した",
+        "readingRomaji": "shita",
+        "strokes": 6,
+        "category": "Body"
+    },
+    {
+        "radical": "舛",
+        "meanings": [
+            "contrary",
+            "to err"
+        ],
+        "reading": "まいあし",
+        "readingRomaji": "maiashi",
+        "strokes": 7,
+        "category": "Other"
+    },
+    {
+        "radical": "舟",
+        "meanings": [
+            "ship",
+            "boat"
+        ],
+        "reading": "ふね",
+        "readingRomaji": "fune",
+        "strokes": 6,
+        "category": "Fishing"
+    },
+    {
+        "radical": "艮",
+        "meanings": [
+            "boundary"
+        ],
+        "reading": "こん",
+        "readingRomaji": "kon",
+        "strokes": 6,
+        "category": "Society"
+    },
+    {
+        "radical": "色",
+        "meanings": [
+            "color"
+        ],
+        "reading": "いろ",
+        "readingRomaji": "iro",
+        "strokes": 6,
+        "category": "Color"
+    },
+    {
+        "radical": "艹",
+        "meanings": [
+            "grass"
+        ],
+        "reading": "くさかんむり",
+        "readingRomaji": "kusakanmuri",
+        "strokes": 3,
+        "category": "Nature"
+    },
+    {
+        "radical": "虍",
+        "meanings": [
+            "tiger"
+        ],
+        "reading": "とらがしら",
+        "readingRomaji": "toragashira",
+        "strokes": 6,
+        "category": "Animal"
+    },
+    {
+        "radical": "虫",
+        "meanings": [
+            "worm",
+            "insect",
+            "bug"
+        ],
+        "reading": "むし",
+        "readingRomaji": "mushi",
+        "strokes": 6,
+        "category": "Nature"
+    },
+    {
+        "radical": "血",
+        "meanings": [
+            "blood"
+        ],
+        "reading": "ち",
+        "readingRomaji": "chi",
+        "strokes": 6,
+        "category": "Body"
+    },
+    {
+        "radical": "行",
+        "meanings": [
+            "to go"
+        ],
+        "reading": "ぎょうがまえ",
+        "readingRomaji": "gyougamae",
+        "strokes": 6,
+        "category": "Capability"
+    },
+    {
+        "radical": "衣",
+        "meanings": [
+            "clothing"
+        ],
+        "reading": "ころも",
+        "readingRomaji": "koromo",
+        "strokes": 6,
+        "category": "Clothing"
+    },
+    {
+        "radical": "西",
+        "meanings": [
+            "cover",
+            "west"
+        ],
+        "reading": "にし",
+        "readingRomaji": "nishi",
+        "strokes": 6,
+        "category": "Nature"
+    },
+    {
+        "radical": "見",
+        "meanings": [
+            "to see"
+        ],
+        "reading": "みる",
+        "readingRomaji": "miru",
+        "strokes": 7,
+        "category": "Body"
+    },
+    {
+        "radical": "角",
+        "meanings": [
+            "horn",
+            "corner"
+        ],
+        "reading": "つの",
+        "readingRomaji": "tsuno",
+        "strokes": 7,
+        "category": "Animal"
+    },
+    {
+        "radical": "言",
+        "meanings": [
+            "words",
+            "to speak",
+            "say"
+        ],
+        "reading": "げん",
+        "readingRomaji": "gen",
+        "strokes": 7,
+        "category": "Body"
+    },
+    {
+        "radical": "谷",
+        "meanings": [
+            "valley"
+        ],
+        "reading": "たに",
+        "readingRomaji": "tani",
+        "strokes": 7,
+        "category": "Nature"
+    },
+    {
+        "radical": "豆",
+        "meanings": [
+            "bean"
+        ],
+        "reading": "まめ",
+        "readingRomaji": "mame",
+        "strokes": 7,
+        "category": "Food"
+    },
+    {
+        "radical": "豕",
+        "meanings": [
+            "pig"
+        ],
+        "reading": "いのこ",
+        "readingRomaji": "inoko",
+        "strokes": 7,
+        "category": "Animal"
+    },
+    {
+        "radical": "豸",
+        "meanings": [
+            "badger",
+            "beast"
+        ],
+        "reading": "むじなへん",
+        "readingRomaji": "mujinahen",
+        "strokes": 7,
+        "category": "Animal"
+    },
+    {
+        "radical": "貝",
+        "meanings": [
+            "shell",
+            "property",
+            "wealth"
+        ],
+        "reading": "かい",
+        "readingRomaji": "kai",
+        "strokes": 7,
+        "category": "Fishing"
+    },
+    {
+        "radical": "赤",
+        "meanings": [
+            "red"
+        ],
+        "reading": "あか",
+        "readingRomaji": "aka",
+        "strokes": 7,
+        "category": "Color"
+    },
+    {
+        "radical": "走",
+        "meanings": [
+            "to run"
+        ],
+        "reading": "はしる",
+        "readingRomaji": "hashiru",
+        "strokes": 7,
+        "category": "Body"
+    },
+    {
+        "radical": "足",
+        "meanings": [
+            "foot",
+            "leg"
+        ],
+        "reading": "あし",
+        "readingRomaji": "ashi",
+        "strokes": 7,
+        "category": "Body"
+    },
+    {
+        "radical": "身",
+        "meanings": [
+            "body"
+        ],
+        "reading": "み",
+        "readingRomaji": "mi",
+        "strokes": 7,
+        "category": "Body"
+    },
+    {
+        "radical": "車",
+        "meanings": [
+            "vehicle",
+            "wheel",
+            "car"
+        ],
+        "reading": "くるま",
+        "readingRomaji": "kuruma",
+        "strokes": 7,
+        "category": "Weapon"
+    },
+    {
+        "radical": "辛",
+        "meanings": [
+            "bitter"
+        ],
+        "reading": "からい",
+        "readingRomaji": "karai",
+        "strokes": 7,
+        "category": "Food"
+    },
+    {
+        "radical": "辰",
+        "meanings": [
+            "morning",
+            "7–9 A.M."
+        ],
+        "reading": "しんのたつ",
+        "readingRomaji": "shinnotatsu",
+        "strokes": 7,
+        "category": "Nature"
+    },
+    {
+        "radical": "⻌",
+        "meanings": [
+            "road",
+            "walk",
+            "to advance"
+        ],
+        "reading": "しんにょう",
+        "readingRomaji": "shinnyou",
+        "strokes": 3,
+        "category": "Capability"
+    },
+    {
+        "radical": "邑",
+        "meanings": [
+            "town",
+            "community"
+        ],
+        "reading": "むら",
+        "readingRomaji": "mura",
+        "strokes": 7,
+        "category": "Society"
+    },
+    {
+        "radical": "酉",
+        "meanings": [
+            "sake jar",
+            "bird"
+        ],
+        "reading": "ひよみのとり",
+        "readingRomaji": "hiyominotori",
+        "strokes": 7,
+        "category": "Food"
+    },
+    {
+        "radical": "釆",
+        "meanings": [
+            "divide",
+            "to separate"
+        ],
+        "reading": "のごめ",
+        "readingRomaji": "nogom",
+        "strokes": 7,
+        "category": "Capability"
+    },
+    {
+        "radical": "里",
+        "meanings": [
+            "village",
+            "(3.93 km)"
+        ],
+        "reading": "さと",
+        "readingRomaji": "sato",
+        "strokes": 7,
+        "category": "Society"
+    },
+    {
+        "radical": "金",
+        "meanings": [
+            "metal",
+            "gold",
+            "mineral"
+        ],
+        "reading": "かね",
+        "readingRomaji": "kane",
+        "strokes": 8,
+        "category": "Nature"
+    },
+    {
+        "radical": "長",
+        "meanings": [
+            "long"
+        ],
+        "reading": "ながい",
+        "readingRomaji": "nagai",
+        "strokes": 8,
+        "category": "Home"
+    },
+    {
+        "radical": "門",
+        "meanings": [
+            "gate",
+            "door"
+        ],
+        "reading": "もんがまえ",
+        "readingRomaji": "mongamae",
+        "strokes": 8,
+        "category": "Home"
+    },
+    {
+        "radical": "阜",
+        "meanings": [
+            "hill",
+            "mound",
+            "dam"
+        ],
+        "reading": "こざと",
+        "readingRomaji": "kozato",
+        "strokes": 8,
+        "category": "Nature"
+    },
+    {
+        "radical": "隶",
+        "meanings": [
+            "to capture",
+            "servant"
+        ],
+        "reading": "れいづくり",
+        "readingRomaji": "reizukuri",
+        "strokes": 8,
+        "category": "Society"
+    },
+    {
+        "radical": "隹",
+        "meanings": [
+            "small bird"
+        ],
+        "reading": "ふるとり",
+        "readingRomaji": "furutori",
+        "strokes": 8,
+        "category": "Animal"
+    },
+    {
+        "radical": "雨",
+        "meanings": [
+            "rain"
+        ],
+        "reading": "あめ",
+        "readingRomaji": "ame",
+        "strokes": 8,
+        "category": "Nature"
+    },
+    {
+        "radical": "青",
+        "meanings": [
+            "blue",
+            "green"
+        ],
+        "reading": "あお",
+        "readingRomaji": "ao",
+        "strokes": 8,
+        "category": "Color"
+    },
+    {
+        "radical": "非",
+        "meanings": [
+            "wrong",
+            "non-"
+        ],
+        "reading": "あらず",
+        "readingRomaji": "arazu",
+        "strokes": 8,
+        "category": "Other"
+    },
+    {
+        "radical": "面",
+        "meanings": [
+            "face",
+            "surface"
+        ],
+        "reading": "めん",
+        "readingRomaji": "men",
+        "strokes": 9,
+        "category": "Body"
+    },
+    {
+        "radical": "革",
+        "meanings": [
+            "leather"
+        ],
+        "reading": "つくりがわ",
+        "readingRomaji": "tsukurigawa",
+        "strokes": 9,
+        "category": "Animal"
+    },
+    {
+        "radical": "韋",
+        "meanings": [
+            "tanned leather"
+        ],
+        "reading": "なめしがわ",
+        "readingRomaji": "nameshigawa",
+        "strokes": 10,
+        "category": "Clothing"
+    },
+    {
+        "radical": "韭",
+        "meanings": [
+            "leek"
+        ],
+        "reading": "にら",
+        "readingRomaji": "nira",
+        "strokes": 9,
+        "category": "Agriculture"
+    },
+    {
+        "radical": "音",
+        "meanings": [
+            "sound",
+            "noise"
+        ],
+        "reading": "おと",
+        "readingRomaji": "oto",
+        "strokes": 9,
+        "category": "Capability"
+    },
+    {
+        "radical": "頁",
+        "meanings": [
+            "head",
+            "page"
+        ],
+        "reading": "おおがい",
+        "readingRomaji": "oogai",
+        "strokes": 9,
+        "category": "Body"
+    },
+    {
+        "radical": "風",
+        "meanings": [
+            "wind"
+        ],
+        "reading": "かぜ",
+        "readingRomaji": "kaze",
+        "strokes": 9,
+        "category": "Nature"
+    },
+    {
+        "radical": "飛",
+        "meanings": [
+            "to fly"
+        ],
+        "reading": "とぶ",
+        "readingRomaji": "tobu",
+        "strokes": 9,
+        "category": "Animal"
+    },
+    {
+        "radical": "食",
+        "meanings": [
+            "food",
+            "to eat"
+        ],
+        "reading": "しょく",
+        "readingRomaji": "shoku",
+        "strokes": 9,
+        "category": "Food"
+    },
+    {
+        "radical": "首",
+        "meanings": [
+            "head"
+        ],
+        "reading": "くび",
+        "readingRomaji": "kubi",
+        "strokes": 9,
+        "category": "Body"
+    },
+    {
+        "radical": "香",
+        "meanings": [
+            "scent"
+        ],
+        "reading": "かおり",
+        "readingRomaji": "kaori",
+        "strokes": 9,
+        "category": "Capability"
+    },
+    {
+        "radical": "馬",
+        "meanings": [
+            "horse"
+        ],
+        "reading": "うま",
+        "readingRomaji": "uma",
+        "strokes": 10,
+        "category": "Animal"
+    },
+    {
+        "radical": "骨",
+        "meanings": [
+            "bone"
+        ],
+        "reading": "ほね",
+        "readingRomaji": "hone",
+        "strokes": 10,
+        "category": "Body"
+    },
+    {
+        "radical": "高",
+        "meanings": [
+            "high"
+        ],
+        "reading": "たかい",
+        "readingRomaji": "takai",
+        "strokes": 10,
+        "category": "Home"
+    },
+    {
+        "radical": "髟",
+        "meanings": [
+            "long hair"
+        ],
+        "reading": "かみかんむり",
+        "readingRomaji": "kamikanmuri",
+        "strokes": 10,
+        "category": "Body"
+    },
+    {
+        "radical": "鬥",
+        "meanings": [
+            "fighting"
+        ],
+        "reading": "たたかいがまえ",
+        "readingRomaji": "tatakaigamae",
+        "strokes": 10,
+        "category": "Weapon"
+    },
+    {
+        "radical": "鬯",
+        "meanings": [
+            "herbs"
+        ],
+        "reading": "においざけ",
+        "readingRomaji": "nioizake",
+        "strokes": 10,
+        "category": "Nature"
+    },
+    {
+        "radical": "鬲",
+        "meanings": [
+            "tripod",
+            "cauldron"
+        ],
+        "reading": "れき",
+        "readingRomaji": "reki",
+        "strokes": 10,
+        "category": "Home"
+    },
+    {
+        "radical": "鬼",
+        "meanings": [
+            "demon"
+        ],
+        "reading": "おに",
+        "readingRomaji": "oni",
+        "strokes": 10,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "魚",
+        "meanings": [
+            "fish"
+        ],
+        "reading": "うお",
+        "readingRomaji": "uo",
+        "strokes": 11,
+        "category": "Fishing"
+    },
+    {
+        "radical": "鳥",
+        "meanings": [
+            "bird"
+        ],
+        "reading": "とり",
+        "readingRomaji": "tori",
+        "strokes": 11,
+        "category": "Animal"
+    },
+    {
+        "radical": "鹵",
+        "meanings": [
+            "salt"
+        ],
+        "reading": "しお",
+        "readingRomaji": "shio",
+        "strokes": 11,
+        "category": "Food"
+    },
+    {
+        "radical": "鹿",
+        "meanings": [
+            "deer"
+        ],
+        "reading": "しか",
+        "readingRomaji": "shika",
+        "strokes": 11,
+        "category": "Animal"
+    },
+    {
+        "radical": "麦",
+        "meanings": [
+            "wheat"
+        ],
+        "reading": "むぎ",
+        "readingRomaji": "mugi",
+        "strokes": 7,
+        "category": "Food"
+    },
+    {
+        "radical": "麻",
+        "meanings": [
+            "hemp"
+        ],
+        "reading": "あさ",
+        "readingRomaji": "asa",
+        "strokes": 11,
+        "category": "Agriculture"
+    },
+    {
+        "radical": "黄",
+        "meanings": [
+            "yellow"
+        ],
+        "reading": "き",
+        "readingRomaji": "ki",
+        "strokes": 11,
+        "category": "Color"
+    },
+    {
+        "radical": "黍",
+        "meanings": [
+            "millet"
+        ],
+        "reading": "きび",
+        "readingRomaji": "kibi",
+        "strokes": 12,
+        "category": "Agriculture"
+    },
+    {
+        "radical": "黒",
+        "meanings": [
+            "black"
+        ],
+        "reading": "くろ",
+        "readingRomaji": "kuro",
+        "strokes": 11,
+        "category": "Color"
+    },
+    {
+        "radical": "黹",
+        "meanings": [
+            "embroider"
+        ],
+        "reading": "ぬいとり",
+        "readingRomaji": "nuitori",
+        "strokes": 12,
+        "category": "Clothing"
+    },
+    {
+        "radical": "黽",
+        "meanings": [
+            "frog"
+        ],
+        "reading": "かえる",
+        "readingRomaji": "kaeru",
+        "strokes": 13,
+        "category": "Animal"
+    },
+    {
+        "radical": "鼎",
+        "meanings": [
+            "tripod (sacrificial)"
+        ],
+        "reading": "かなえ",
+        "readingRomaji": "kanae",
+        "strokes": 13,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "鼓",
+        "meanings": [
+            "drum"
+        ],
+        "reading": "つづみ",
+        "readingRomaji": "tuzumi",
+        "strokes": 13,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "鼠",
+        "meanings": [
+            "rat",
+            "mouse"
+        ],
+        "reading": "ねずみ",
+        "readingRomaji": "nezumi",
+        "strokes": 13,
+        "category": "Animal"
+    },
+    {
+        "radical": "鼻",
+        "meanings": [
+            "nose"
+        ],
+        "reading": "はな",
+        "readingRomaji": "hana",
+        "strokes": 14,
+        "category": "Body"
+    },
+    {
+        "radical": "齊",
+        "meanings": [
+            "alike"
+        ],
+        "reading": "せい",
+        "readingRomaji": "sei",
+        "strokes": 14,
+        "category": "Other"
+    },
+    {
+        "radical": "歯",
+        "meanings": [
+            "tooth"
+        ],
+        "reading": "は",
+        "readingRomaji": "ha",
+        "strokes": 12,
+        "category": "Body"
+    },
+    {
+        "radical": "竜",
+        "meanings": [
+            "dragon"
+        ],
+        "reading": "りゅう",
+        "readingRomaji": "ryuu",
+        "strokes": 11,
+        "category": "Animal"
+    },
+    {
+        "radical": "亀",
+        "meanings": [
+            "turtle"
+        ],
+        "reading": "かめ",
+        "readingRomaji": "kame",
+        "strokes": 11,
+        "category": "Fishing"
+    },
+    {
+        "radical": "龠",
+        "meanings": [
+            "flute"
+        ],
+        "reading": "やく",
+        "readingRomaji": "yaku",
+        "strokes": 17,
+        "category": "Ceremony"
+    },
+    {
+        "radical": "⺃",
+        "meanings": [
+            "the second"
+        ],
+        "reading": "おつ",
+        "readingRomaji": "otsu",
+        "strokes": 1,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺅",
+        "meanings": [
+            "person"
+        ],
+        "reading": "にんべん",
+        "readingRomaji": "ninben",
+        "strokes": 2,
+        "category": "Variants"
+    },
+    {
+        "radical": "𠆢",
+        "meanings": [
+            "person"
+        ],
+        "reading": "ひとやね",
+        "readingRomaji": "hitoyane",
+        "strokes": 2,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺇",
+        "meanings": [
+            "wind"
+        ],
+        "reading": "かぜかんむり",
+        "readingRomaji": "kazekanmuri",
+        "strokes": 2,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺉",
+        "meanings": [
+            "knife",
+            "sword"
+        ],
+        "reading": "りっとう",
+        "readingRomaji": "rittou",
+        "strokes": 2,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺌",
+        "meanings": [
+            "small"
+        ],
+        "reading": "しょうかんむり",
+        "readingRomaji": "shoukanmuri",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "川",
+        "meanings": [
+            "river"
+        ],
+        "reading": "さんぼんがわ",
+        "readingRomaji": "sanbongawa",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "巳",
+        "meanings": [
+            "oneself"
+        ],
+        "reading": "おのれ",
+        "readingRomaji": "onore",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "己",
+        "meanings": [
+            "oneself"
+        ],
+        "reading": "おのれ",
+        "readingRomaji": "onore",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺕",
+        "meanings": [
+            "pig’s head"
+        ],
+        "reading": "けいがしら",
+        "readingRomaji": "keigashira",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺔",
+        "meanings": [
+            "pig’s head"
+        ],
+        "reading": "けいがしら",
+        "readingRomaji": "keigashira",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "⻏",
+        "meanings": [
+            "town",
+            "community"
+        ],
+        "reading": "おおざと",
+        "readingRomaji": "oozato",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "⻖",
+        "meanings": [
+            "hill",
+            "mound",
+            "dam"
+        ],
+        "reading": "こざとへん",
+        "readingRomaji": "kozatohen",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺖",
+        "meanings": [
+            "heart",
+            "mind",
+            "spirit"
+        ],
+        "reading": "りっしんべん",
+        "readingRomaji": "risshinben",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺘",
+        "meanings": [
+            "hand"
+        ],
+        "reading": "てへん",
+        "readingRomaji": "tehen",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺡",
+        "meanings": [
+            "water"
+        ],
+        "reading": "さんずい",
+        "readingRomaji": "sanzui",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺨",
+        "meanings": [
+            "beast"
+        ],
+        "reading": "けものへん",
+        "readingRomaji": "kemonohen",
+        "strokes": 3,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺗",
+        "meanings": [
+            "heart",
+            "mind",
+            "spirit"
+        ],
+        "reading": "したごころ",
+        "readingRomaji": "shitagokoro",
+        "strokes": 4,
+        "category": "Variants"
+    },
+    {
+        "radical": "⽁",
+        "meanings": [
+            "activity",
+            "to strike",
+            "hit"
+        ],
+        "reading": "ぼくづくり",
+        "readingRomaji": "bokuzukuri",
+        "strokes": 4,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺝",
+        "meanings": [
+            "moon",
+            "month",
+            "period"
+        ],
+        "reading": "つきへん",
+        "readingRomaji": "tsukihen",
+        "strokes": 4,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺣",
+        "meanings": [
+            "fire"
+        ],
+        "reading": "れっか",
+        "readingRomaji": "rekka",
+        "strokes": 4,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺤",
+        "meanings": [
+            "claw",
+            "nail"
+        ],
+        "reading": "つめかんむり",
+        "readingRomaji": "tsumekanmuri",
+        "strokes": 4,
+        "category": "Variants"
+    },
+    {
+        "radical": "爫",
+        "meanings": [
+            "claw",
+            "nail"
+        ],
+        "reading": "つめかんむり",
+        "readingRomaji": "tsumekanmuri",
+        "strokes": 4,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺭",
+        "meanings": [
+            "altar",
+            "festival",
+            "religious service"
+        ],
+        "reading": "しめすへん",
+        "readingRomaji": "shimesuhen",
+        "strokes": 4,
+        "category": "Variants"
+    },
+    {
+        "radical": "㓁",
+        "meanings": [
+            "net"
+        ],
+        "reading": "あみがしら",
+        "readingRomaji": "amigashira",
+        "strokes": 4,
+        "category": "Variants"
+    },
+    {
+        "radical": "玊",
+        "meanings": [
+            "jewelry",
+            "king"
+        ],
+        "reading": "たま",
+        "readingRomaji": "tama",
+        "strokes": 5,
+        "category": "Variants"
+    },
+    {
+        "radical": "玉",
+        "meanings": [
+            "jewelry",
+            "king"
+        ],
+        "reading": "たま",
+        "readingRomaji": "tama",
+        "strokes": 5,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺪",
+        "meanings": [
+            "bolt of cloth"
+        ],
+        "reading": "ひきへん",
+        "readingRomaji": "hikihen",
+        "strokes": 5,
+        "category": "Variants"
+    },
+    {
+        "radical": "氺",
+        "meanings": [
+            "water"
+        ],
+        "reading": "したみず",
+        "readingRomaji": "shitamizu",
+        "strokes": 5,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺫",
+        "meanings": [
+            "net"
+        ],
+        "reading": "あみがしら",
+        "readingRomaji": "amigashira",
+        "strokes": 5,
+        "category": "Variants"
+    },
+    {
+        "radical": "⻂",
+        "meanings": [
+            "clothing"
+        ],
+        "reading": "ころもへん",
+        "readingRomaji": "koromohen",
+        "strokes": 5,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺛",
+        "meanings": [
+            "not"
+        ],
+        "reading": "むにょう",
+        "readingRomaji": "munyou",
+        "strokes": 5,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺮",
+        "meanings": [
+            "bamboo"
+        ],
+        "reading": "たけかんむり",
+        "readingRomaji": "takekanmuri",
+        "strokes": 6,
+        "category": "Variants"
+    },
+    {
+        "radical": "𦉰",
+        "meanings": [
+            "net"
+        ],
+        "reading": "あみがしら",
+        "readingRomaji": "amigashira",
+        "strokes": 5,
+        "category": "Variants"
+    },
+    {
+        "radical": "⽹",
+        "meanings": [
+            "net"
+        ],
+        "reading": "あみめ",
+        "readingRomaji": "amime",
+        "strokes": 6,
+        "category": "Variants"
+    },
+    {
+        "radical": "⺷",
+        "meanings": [
+            "sheep"
+        ],
+        "reading": "ひつじ",
+        "readingRomaji": "hitsuji",
+        "strokes": 6,
+        "category": "Variants"
+    },
+    {
+        "radical": "⽻",
+        "meanings": [
+            "feather",
+            "wing"
+        ],
+        "reading": "はね",
+        "readingRomaji": "hane",
+        "strokes": 6,
+        "category": "Variants"
+    },
+    {
+        "radical": "⽼",
+        "meanings": [
+            "old",
+            "old-age"
+        ],
+        "reading": "おいかんむり",
+        "readingRomaji": "oikanmuri",
+        "strokes": 6,
+        "category": "Variants"
+    },
+    {
+        "radical": "⾂",
+        "meanings": [
+            "retainer",
+            "minister"
+        ],
+        "reading": "しん",
+        "readingRomaji": "shin",
+        "strokes": 6,
+        "category": "Variants"
+    },
+    {
+        "radical": "⾋",
+        "meanings": [
+            "grass",
+            "plant"
+        ],
+        "reading": "くさ",
+        "readingRomaji": "kusa",
+        "strokes": 6,
+        "category": "Variants"
+    },
+    {
+        "radical": "⾑",
+        "meanings": [
+            "cover",
+            "west"
+        ],
+        "reading": "にし",
+        "readingRomaji": "nishi",
+        "strokes": 6,
+        "category": "Variants"
+    },
+    {
+        "radical": "⻃",
+        "meanings": [
+            "cover",
+            "west"
+        ],
+        "reading": "にし",
+        "readingRomaji": "nishi",
+        "strokes": 6,
+        "category": "Variants"
+    },
+    {
+        "radical": "⻊",
+        "meanings": [
+            "foot",
+            "leg"
+        ],
+        "reading": "あしへん",
+        "readingRomaji": "ashihen",
+        "strokes": 7,
+        "category": "Variants"
+    },
+    {
+        "radical": "⾡",
+        "meanings": [
+            "to run"
+        ],
+        "reading": "しんにょう",
+        "readingRomaji": "shinnyou",
+        "strokes": 7,
+        "category": "Variants"
+    },
+    {
+        "radical": "⻗",
+        "meanings": [
+            "rain"
+        ],
+        "reading": "あめかんむり",
+        "readingRomaji": "amekanmuri",
+        "strokes": 8,
+        "category": "Variants"
+    },
+    {
+        "radical": "⾭",
+        "meanings": [
+            "blue",
+            "green"
+        ],
+        "reading": "あお",
+        "readingRomaji": "ao",
+        "strokes": 8,
+        "category": "Variants"
+    },
+    {
+        "radical": "⻟",
+        "meanings": [
+            "food",
+            "to eat"
+        ],
+        "reading": "しょくへん",
+        "readingRomaji": "shokuhen",
+        "strokes": 8,
+        "category": "Variants"
+    },
+    {
+        "radical": "⻫",
+        "meanings": [
+            "alike"
+        ],
+        "reading": "せい",
+        "readingRomaji": "sei",
+        "strokes": 8,
+        "category": "Variants"
+    },
+    {
+        "radical": "⿆",
+        "meanings": [
+            "wheat"
+        ],
+        "reading": "むぎ",
+        "readingRomaji": "mugi",
+        "strokes": 11,
+        "category": "Variants"
+    },
+    {
+        "radical": "⿈",
+        "meanings": [
+            "yellow"
+        ],
+        "reading": "き",
+        "readingRomaji": "ki",
+        "strokes": 12,
+        "category": "Variants"
+    },
+    {
+        "radical": "⿊",
+        "meanings": [
+            "black"
+        ],
+        "reading": "くろ",
+        "readingRomaji": "kuro",
+        "strokes": 12,
+        "category": "Variants"
+    },
+    {
+        "radical": "⿒",
+        "meanings": [
+            "tooth"
+        ],
+        "reading": "は",
+        "readingRomaji": "ha",
+        "strokes": 15,
+        "category": "Variants"
+    },
+    {
+        "radical": "龍",
+        "meanings": [
+            "dragon"
+        ],
+        "reading": "りゅう",
+        "readingRomaji": "ryuu",
+        "strokes": 16,
+        "category": "Variants"
+    },
+    {
+        "radical": "⿔",
+        "meanings": [
+            "turtle"
+        ],
+        "reading": "かめ",
+        "readingRomaji": "kame",
+        "strokes": 16,
+        "category": "Variants"
+    },
+    {
+        "radical": "々",
+        "meanings": [
+            "symbol of repetition"
+        ],
+        "reading": null,
+        "readingRomaji": null,
+        "strokes": null,
+        "category": "Variants"
+    }
+]

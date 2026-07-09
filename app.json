@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "scheme": "kanjipro",
+    "name": "Kanji Pro",
+    "slug": "Kanji-Pro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/MyAssets/blueLogo.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/MyAssets/blueLogo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "io.github.kairosakil.kanjipro"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/MyAssets/blueLogo.png",
+        "backgroundColor": "#000000"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "io.github.kairosakil.kanjipro"
+    },
+    "web": {
+      "favicon": "./assets/MyAssets/blueLogo.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      "expo-asset",
+      "expo-font",
+      "expo-notifications"
+    ]
+  }
+}

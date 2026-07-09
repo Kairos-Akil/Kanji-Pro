@@ -1,0 +1,9874 @@
+[
+  {
+    "character": "政",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 5,
+    "freq": 17,
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "まつりごと",
+      "まん"
+    ],
+    "meanings": [
+      "politics",
+      "government"
+    ],
+    "radicals": [
+      "一",
+      "止",
+      "攵"
+    ]
+  },
+  {
+    "character": "議",
+    "level": "N3",
+    "strokes": 20,
+    "grade": 4,
+    "freq": 25,
+    "onyomi": [
+      "ギ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "deliberation",
+      "consultation",
+      "debate",
+      "consideration"
+    ],
+    "radicals": [
+      "一",
+      "王",
+      "言",
+      "丷",
+      "羊",
+      "亅",
+      "戈",
+      "手"
+    ]
+  },
+  {
+    "character": "民",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 4,
+    "freq": 28,
+    "onyomi": [
+      "ミン"
+    ],
+    "kunyomi": [
+      "たみ"
+    ],
+    "meanings": [
+      "people",
+      "nation",
+      "subjects"
+    ],
+    "radicals": [
+      "口",
+      "氏"
+    ]
+  },
+  {
+    "character": "連",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 4,
+    "freq": 30,
+    "onyomi": [
+      "レン"
+    ],
+    "kunyomi": [
+      "つら.なる",
+      "つら.ねる",
+      "つ.れる",
+      "-づ.れ"
+    ],
+    "meanings": [
+      "take along",
+      "lead",
+      "join",
+      "connect",
+      "party",
+      "gang",
+      "clique"
+    ],
+    "radicals": [
+      "⻌",
+      "車"
+    ]
+  },
+  {
+    "character": "対",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 3,
+    "freq": 34,
+    "onyomi": [
+      "タイ",
+      "ツイ"
+    ],
+    "kunyomi": [
+      "あいて",
+      "こた.える",
+      "そろ.い",
+      "つれあ.い",
+      "なら.ぶ",
+      "むか.う"
+    ],
+    "meanings": [
+      "vis-a-vis",
+      "opposite",
+      "even",
+      "equal",
+      "versus",
+      "anti-",
+      "compare"
+    ],
+    "radicals": [
+      "寸",
+      "文"
+    ]
+  },
+  {
+    "character": "部",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 3,
+    "freq": 36,
+    "onyomi": [
+      "ブ"
+    ],
+    "kunyomi": [
+      "-べ"
+    ],
+    "meanings": [
+      "section",
+      "bureau",
+      "dept",
+      "class",
+      "copy",
+      "part",
+      "portion",
+      "counter for copies of a newspaper or magazine"
+    ],
+    "radicals": [
+      "口",
+      "⻏",
+      "立"
+    ]
+  },
+  {
+    "character": "合",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 2,
+    "freq": 41,
+    "onyomi": [
+      "ゴウ",
+      "ガッ",
+      "カッ"
+    ],
+    "kunyomi": [
+      "あ.う",
+      "-あ.う",
+      "あ.い",
+      "あい-",
+      "-あ.い",
+      "-あい",
+      "あ.わす",
+      "あ.わせる",
+      "-あ.わせる"
+    ],
+    "meanings": [
+      "fit",
+      "suit",
+      "join",
+      "0.1"
+    ],
+    "radicals": [
+      "口",
+      "𠆢",
+      "一"
+    ]
+  },
+  {
+    "character": "市",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 2,
+    "freq": 42,
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "いち"
+    ],
+    "meanings": [
+      "market",
+      "city",
+      "town"
+    ],
+    "radicals": [
+      "巾",
+      "亠"
+    ]
+  },
+  {
+    "character": "内",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 2,
+    "freq": 44,
+    "onyomi": [
+      "ナイ",
+      "ダイ"
+    ],
+    "kunyomi": [
+      "うち"
+    ],
+    "meanings": [
+      "inside",
+      "within",
+      "between",
+      "among",
+      "house",
+      "home"
+    ],
+    "radicals": [
+      "人",
+      "冂"
+    ]
+  },
+  {
+    "character": "相",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 3,
+    "freq": 45,
+    "onyomi": [
+      "ソウ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "あい-"
+    ],
+    "meanings": [
+      "inter-",
+      "mutual",
+      "together",
+      "each other",
+      "minister of state",
+      "councillor",
+      "aspect",
+      "phase",
+      "physiognomy"
+    ],
+    "radicals": [
+      "木",
+      "目"
+    ]
+  },
+  {
+    "character": "定",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 48,
+    "onyomi": [
+      "テイ",
+      "ジョウ"
+    ],
+    "kunyomi": [
+      "さだ.める",
+      "さだ.まる",
+      "さだ.か"
+    ],
+    "meanings": [
+      "determine",
+      "fix",
+      "establish",
+      "decide"
+    ],
+    "radicals": [
+      "疋",
+      "宀"
+    ]
+  },
+  {
+    "character": "回",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 2,
+    "freq": 50,
+    "onyomi": [
+      "カイ",
+      "エ"
+    ],
+    "kunyomi": [
+      "まわ.る",
+      "-まわ.る",
+      "-まわ.り",
+      "まわ.す",
+      "-まわ.す",
+      "まわ.し-",
+      "-まわ.し",
+      "もとお.る",
+      "か.える"
+    ],
+    "meanings": [
+      "-times",
+      "round",
+      "game",
+      "revolve",
+      "counter for occurrences"
+    ],
+    "radicals": [
+      "口",
+      "囗"
+    ]
+  },
+  {
+    "character": "選",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 4,
+    "freq": 57,
+    "onyomi": [
+      "セン"
+    ],
+    "kunyomi": [
+      "えら.ぶ",
+      "え.る",
+      "よ.る"
+    ],
+    "meanings": [
+      "elect",
+      "select",
+      "choose",
+      "prefer"
+    ],
+    "radicals": [
+      "丨",
+      "⻌",
+      "二",
+      "八",
+      "已"
+    ]
+  },
+  {
+    "character": "米",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 2,
+    "freq": 61,
+    "onyomi": [
+      "ベイ",
+      "マイ",
+      "メエトル"
+    ],
+    "kunyomi": [
+      "こめ",
+      "よね"
+    ],
+    "meanings": [
+      "rice",
+      "USA",
+      "metre"
+    ],
+    "radicals": [
+      "米"
+    ]
+  },
+  {
+    "character": "実",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 68,
+    "onyomi": [
+      "ジツ",
+      "シツ"
+    ],
+    "kunyomi": [
+      "み",
+      "みの.る",
+      "まこと",
+      "みの",
+      "みち.る"
+    ],
+    "meanings": [
+      "reality",
+      "truth",
+      "seed",
+      "fruit",
+      "nut"
+    ],
+    "radicals": [
+      "士",
+      "大",
+      "宀"
+    ]
+  },
+  {
+    "character": "関",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 4,
+    "freq": 70,
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [
+      "せき",
+      "-ぜき",
+      "かか.わる",
+      "からくり",
+      "かんぬき"
+    ],
+    "meanings": [
+      "connection",
+      "barrier",
+      "gateway",
+      "involve",
+      "concerning"
+    ],
+    "radicals": [
+      "人",
+      "大",
+      "二",
+      "八",
+      "門",
+      "丷"
+    ]
+  },
+  {
+    "character": "決",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 3,
+    "freq": 71,
+    "onyomi": [
+      "ケツ"
+    ],
+    "kunyomi": [
+      "き.める",
+      "-ぎ.め",
+      "き.まる",
+      "さ.く"
+    ],
+    "meanings": [
+      "decide",
+      "fix",
+      "agree upon",
+      "appoint"
+    ],
+    "radicals": [
+      "⺡",
+      "人",
+      "大",
+      "二"
+    ]
+  },
+  {
+    "character": "全",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 3,
+    "freq": 75,
+    "onyomi": [
+      "ゼン"
+    ],
+    "kunyomi": [
+      "まった.く",
+      "すべ.て"
+    ],
+    "meanings": [
+      "whole",
+      "entire",
+      "all",
+      "complete",
+      "fulfill"
+    ],
+    "radicals": [
+      "王",
+      "八",
+      "𠆢"
+    ]
+  },
+  {
+    "character": "表",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 77,
+    "onyomi": [
+      "ヒョウ"
+    ],
+    "kunyomi": [
+      "おもて",
+      "-おもて",
+      "あらわ.す",
+      "あらわ.れる",
+      "あら.わす"
+    ],
+    "meanings": [
+      "surface",
+      "table",
+      "chart",
+      "diagram"
+    ],
+    "radicals": [
+      "衣",
+      "士"
+    ]
+  },
+  {
+    "character": "戦",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 4,
+    "freq": 78,
+    "onyomi": [
+      "セン"
+    ],
+    "kunyomi": [
+      "いくさ",
+      "たたか.う",
+      "おのの.く",
+      "そよ.ぐ",
+      "わなな.く"
+    ],
+    "meanings": [
+      "war",
+      "battle",
+      "match"
+    ],
+    "radicals": [
+      "十",
+      "⺌",
+      "田",
+      "戈"
+    ]
+  },
+  {
+    "character": "経",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 79,
+    "onyomi": [
+      "ケイ",
+      "キョウ",
+      "キン"
+    ],
+    "kunyomi": [
+      "へ.る",
+      "た.つ",
+      "たていと",
+      "はか.る",
+      "のり"
+    ],
+    "meanings": [
+      "sutra",
+      "longitude",
+      "pass thru",
+      "expire",
+      "warp"
+    ],
+    "radicals": [
+      "糸",
+      "幺",
+      "小",
+      "土",
+      "又"
+    ]
+  },
+  {
+    "character": "最",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 4,
+    "freq": 82,
+    "onyomi": [
+      "サイ",
+      "シュ"
+    ],
+    "kunyomi": [
+      "もっと.も",
+      "つま"
+    ],
+    "meanings": [
+      "utmost",
+      "most",
+      "extreme"
+    ],
+    "radicals": [
+      "一",
+      "耳",
+      "日",
+      "又"
+    ]
+  },
+  {
+    "character": "現",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 85,
+    "onyomi": [
+      "ゲン"
+    ],
+    "kunyomi": [
+      "あらわ.れる",
+      "あらわ.す",
+      "うつつ",
+      "うつ.つ"
+    ],
+    "meanings": [
+      "present",
+      "existing",
+      "actual"
+    ],
+    "radicals": [
+      "王",
+      "見"
+    ]
+  },
+  {
+    "character": "調",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 3,
+    "freq": 87,
+    "onyomi": [
+      "チョウ"
+    ],
+    "kunyomi": [
+      "しら.べる",
+      "しら.べ",
+      "ととの.う",
+      "ととの.える"
+    ],
+    "meanings": [
+      "tune",
+      "tone",
+      "meter",
+      "key (music)",
+      "writing style",
+      "prepare",
+      "exorcise",
+      "investigate",
+      "harmonize",
+      "mediate"
+    ],
+    "radicals": [
+      "言",
+      "口",
+      "土",
+      "冂"
+    ]
+  },
+  {
+    "character": "化",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 3,
+    "freq": 89,
+    "onyomi": [
+      "カ",
+      "ケ"
+    ],
+    "kunyomi": [
+      "ば.ける",
+      "ば.かす",
+      "ふ.ける",
+      "け.する"
+    ],
+    "meanings": [
+      "change",
+      "take the form of",
+      "influence",
+      "enchant",
+      "delude",
+      "-ization"
+    ],
+    "radicals": [
+      "⺅",
+      "匕"
+    ]
+  },
+  {
+    "character": "当",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 2,
+    "freq": 91,
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "あ.たる",
+      "あ.たり",
+      "あ.てる",
+      "あ.て",
+      "まさ.に",
+      "まさ.にべし"
+    ],
+    "meanings": [
+      "hit",
+      "right",
+      "appropriate",
+      "himself"
+    ],
+    "radicals": [
+      "⺕",
+      "⺌"
+    ]
+  },
+  {
+    "character": "約",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 4,
+    "freq": 94,
+    "onyomi": [
+      "ヤク"
+    ],
+    "kunyomi": [
+      "つづ.まる",
+      "つづ.める",
+      "つづま.やか"
+    ],
+    "meanings": [
+      "promise",
+      "approximately",
+      "shrink"
+    ],
+    "radicals": [
+      "糸",
+      "幺",
+      "小",
+      "丶",
+      "勹"
+    ]
+  },
+  {
+    "character": "首",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 2,
+    "freq": 98,
+    "onyomi": [
+      "シュ"
+    ],
+    "kunyomi": [
+      "くび"
+    ],
+    "meanings": [
+      "neck",
+      "counter for songs and poems"
+    ],
+    "radicals": [
+      "自",
+      "首",
+      "丷",
+      "目"
+    ]
+  },
+  {
+    "character": "法",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 4,
+    "freq": 100,
+    "onyomi": [
+      "ホウ",
+      "ハッ",
+      "ホッ",
+      "フラン"
+    ],
+    "kunyomi": [
+      "のり"
+    ],
+    "meanings": [
+      "method",
+      "law",
+      "rule",
+      "principle",
+      "model",
+      "system"
+    ],
+    "radicals": [
+      "⺡",
+      "土",
+      "厶"
+    ]
+  },
+  {
+    "character": "性",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 5,
+    "freq": 104,
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "さが"
+    ],
+    "meanings": [
+      "sex",
+      "gender",
+      "nature"
+    ],
+    "radicals": [
+      "生",
+      "⺖"
+    ]
+  },
+  {
+    "character": "要",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 4,
+    "freq": 106,
+    "onyomi": [
+      "ヨウ"
+    ],
+    "kunyomi": [
+      "い.る",
+      "かなめ"
+    ],
+    "meanings": [
+      "need",
+      "main point",
+      "essence",
+      "pivot",
+      "key to"
+    ],
+    "radicals": [
+      "女",
+      "西"
+    ]
+  },
+  {
+    "character": "制",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 5,
+    "freq": 108,
+    "onyomi": [
+      "セイ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "system",
+      "law",
+      "rule"
+    ],
+    "radicals": [
+      "丿",
+      "⺉",
+      "牛",
+      "巾",
+      "二"
+    ]
+  },
+  {
+    "character": "治",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 4,
+    "freq": 109,
+    "onyomi": [
+      "ジ",
+      "チ"
+    ],
+    "kunyomi": [
+      "おさ.める",
+      "おさ.まる",
+      "なお.る",
+      "なお.す"
+    ],
+    "meanings": [
+      "reign",
+      "be at peace",
+      "calm down",
+      "subdue",
+      "quell",
+      "govt",
+      "cure",
+      "heal",
+      "rule",
+      "conserve"
+    ],
+    "radicals": [
+      "口",
+      "⺡",
+      "厶"
+    ]
+  },
+  {
+    "character": "務",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 111,
+    "onyomi": [
+      "ム"
+    ],
+    "kunyomi": [
+      "つと.める"
+    ],
+    "meanings": [
+      "task",
+      "duties"
+    ],
+    "radicals": [
+      "矛",
+      "力",
+      "夂"
+    ]
+  },
+  {
+    "character": "成",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 4,
+    "freq": 116,
+    "onyomi": [
+      "セイ",
+      "ジョウ"
+    ],
+    "kunyomi": [
+      "な.る",
+      "な.す",
+      "-な.す"
+    ],
+    "meanings": [
+      "turn into",
+      "become",
+      "get",
+      "grow",
+      "elapse",
+      "reach"
+    ],
+    "radicals": [
+      "丿",
+      "戈"
+    ]
+  },
+  {
+    "character": "期",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 117,
+    "onyomi": [
+      "キ",
+      "ゴ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "period",
+      "time",
+      "date",
+      "term"
+    ],
+    "radicals": [
+      "甘",
+      "月",
+      "八"
+    ]
+  },
+  {
+    "character": "取",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 122,
+    "onyomi": [
+      "シュ"
+    ],
+    "kunyomi": [
+      "と.る",
+      "と.り",
+      "と.り-",
+      "とり",
+      "-ど.り"
+    ],
+    "meanings": [
+      "take",
+      "fetch",
+      "take up"
+    ],
+    "radicals": [
+      "耳",
+      "又"
+    ]
+  },
+  {
+    "character": "都",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 3,
+    "freq": 123,
+    "onyomi": [
+      "ト",
+      "ツ"
+    ],
+    "kunyomi": [
+      "みやこ"
+    ],
+    "meanings": [
+      "metropolis",
+      "capital",
+      "all",
+      "everything"
+    ],
+    "radicals": [
+      "日",
+      "⻏",
+      "⽼"
+    ]
+  },
+  {
+    "character": "和",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 124,
+    "onyomi": [
+      "ワ",
+      "オ",
+      "カ"
+    ],
+    "kunyomi": [
+      "やわ.らぐ",
+      "やわ.らげる",
+      "なご.む",
+      "なご.やか",
+      "あ.える"
+    ],
+    "meanings": [
+      "harmony",
+      "Japanese style",
+      "peace",
+      "soften",
+      "Japan"
+    ],
+    "radicals": [
+      "禾",
+      "口"
+    ]
+  },
+  {
+    "character": "機",
+    "level": "N3",
+    "strokes": 16,
+    "grade": 4,
+    "freq": 127,
+    "onyomi": [
+      "キ"
+    ],
+    "kunyomi": [
+      "はた"
+    ],
+    "meanings": [
+      "loom",
+      "mechanism",
+      "machine",
+      "airplane",
+      "opportunity",
+      "potency",
+      "efficacy",
+      "occasion"
+    ],
+    "radicals": [
+      "丿",
+      "木",
+      "丶",
+      "幺",
+      "戈"
+    ]
+  },
+  {
+    "character": "平",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 3,
+    "freq": 128,
+    "onyomi": [
+      "ヘイ",
+      "ビョウ",
+      "ヒョウ"
+    ],
+    "kunyomi": [
+      "たい.ら",
+      "たい.らげる",
+      "ひら"
+    ],
+    "meanings": [
+      "even",
+      "flat",
+      "peace"
+    ],
+    "radicals": [
+      "干",
+      "丷"
+    ]
+  },
+  {
+    "character": "加",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 4,
+    "freq": 130,
+    "onyomi": [
+      "カ"
+    ],
+    "kunyomi": [
+      "くわ.える",
+      "くわ.わる"
+    ],
+    "meanings": [
+      "add",
+      "addition",
+      "increase",
+      "join",
+      "include",
+      "Canada"
+    ],
+    "radicals": [
+      "口",
+      "力"
+    ]
+  },
+  {
+    "character": "受",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 136,
+    "onyomi": [
+      "ジュ"
+    ],
+    "kunyomi": [
+      "う.ける",
+      "-う.け",
+      "う.かる"
+    ],
+    "meanings": [
+      "accept",
+      "undergo",
+      "answer (phone)",
+      "take",
+      "get",
+      "catch",
+      "receive"
+    ],
+    "radicals": [
+      "爪",
+      "又",
+      "冖"
+    ]
+  },
+  {
+    "character": "続",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 4,
+    "freq": 141,
+    "onyomi": [
+      "ゾク",
+      "ショク",
+      "コウ",
+      "キョウ"
+    ],
+    "kunyomi": [
+      "つづ.く",
+      "つづ.ける",
+      "つぐ.ない"
+    ],
+    "meanings": [
+      "continue",
+      "series",
+      "sequel"
+    ],
+    "radicals": [
+      "士",
+      "糸",
+      "幺",
+      "小",
+      "儿",
+      "冖"
+    ]
+  },
+  {
+    "character": "進",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 3,
+    "freq": 142,
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "すす.む",
+      "すす.める"
+    ],
+    "meanings": [
+      "advance",
+      "proceed",
+      "progress",
+      "promote"
+    ],
+    "radicals": [
+      "⻌",
+      "隹"
+    ]
+  },
+  {
+    "character": "数",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 2,
+    "freq": 148,
+    "onyomi": [
+      "スウ",
+      "ス",
+      "サク",
+      "ソク",
+      "シュ"
+    ],
+    "kunyomi": [
+      "かず",
+      "かぞ.える",
+      "しばしば",
+      "せ.める",
+      "わずらわ.しい"
+    ],
+    "meanings": [
+      "number",
+      "strength",
+      "fate",
+      "law",
+      "figures"
+    ],
+    "radicals": [
+      "女",
+      "米",
+      "攵",
+      "夂"
+    ]
+  },
+  {
+    "character": "記",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 2,
+    "freq": 149,
+    "onyomi": [
+      "キ"
+    ],
+    "kunyomi": [
+      "しる.す"
+    ],
+    "meanings": [
+      "scribe",
+      "account",
+      "narrative"
+    ],
+    "radicals": [
+      "言",
+      "已"
+    ]
+  },
+  {
+    "character": "初",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 152,
+    "onyomi": [
+      "ショ"
+    ],
+    "kunyomi": [
+      "はじ.め",
+      "はじ.めて",
+      "はつ",
+      "はつ-",
+      "うい-",
+      "-そ.める",
+      "-ぞ.め"
+    ],
+    "meanings": [
+      "first time",
+      "beginning"
+    ],
+    "radicals": [
+      "⻂",
+      "刀"
+    ]
+  },
+  {
+    "character": "指",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 3,
+    "freq": 155,
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "ゆび",
+      "さ.す",
+      "-さ.し"
+    ],
+    "meanings": [
+      "finger",
+      "point to",
+      "indicate",
+      "put into",
+      "play (chess)",
+      "measure (ruler)"
+    ],
+    "radicals": [
+      "日",
+      "匕",
+      "⺘"
+    ]
+  },
+  {
+    "character": "権",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 6,
+    "freq": 156,
+    "onyomi": [
+      "ケン",
+      "ゴン"
+    ],
+    "kunyomi": [
+      "おもり",
+      "かり",
+      "はか.る"
+    ],
+    "meanings": [
+      "authority",
+      "power",
+      "rights"
+    ],
+    "radicals": [
+      "矢",
+      "木",
+      "隹"
+    ]
+  },
+  {
+    "character": "支",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 5,
+    "freq": 159,
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "ささ.える",
+      "つか.える",
+      "か.う"
+    ],
+    "meanings": [
+      "branch",
+      "support",
+      "sustain",
+      "branch radical (no. 65)"
+    ],
+    "radicals": [
+      "支",
+      "十",
+      "又"
+    ]
+  },
+  {
+    "character": "産",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 4,
+    "freq": 161,
+    "onyomi": [
+      "サン"
+    ],
+    "kunyomi": [
+      "う.む",
+      "う.まれる",
+      "うぶ-",
+      "む.す"
+    ],
+    "meanings": [
+      "products",
+      "bear",
+      "give birth",
+      "yield",
+      "childbirth",
+      "native",
+      "property"
+    ],
+    "radicals": [
+      "丿",
+      "生",
+      "丷",
+      "立",
+      "亠",
+      "厂"
+    ]
+  },
+  {
+    "character": "点",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 2,
+    "freq": 165,
+    "onyomi": [
+      "テン"
+    ],
+    "kunyomi": [
+      "つ.ける",
+      "つ.く",
+      "た.てる",
+      "さ.す",
+      "とぼ.す",
+      "とも.す",
+      "ぼち"
+    ],
+    "meanings": [
+      "spot",
+      "point",
+      "mark",
+      "speck",
+      "decimal point"
+    ],
+    "radicals": [
+      "口",
+      "卜",
+      "⺣"
+    ]
+  },
+  {
+    "character": "報",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 5,
+    "freq": 167,
+    "onyomi": [
+      "ホウ"
+    ],
+    "kunyomi": [
+      "むく.いる"
+    ],
+    "meanings": [
+      "report",
+      "news",
+      "reward",
+      "retribution"
+    ],
+    "radicals": [
+      "十",
+      "辛",
+      "土",
+      "又",
+      "立",
+      "亠",
+      "卩"
+    ]
+  },
+  {
+    "character": "済",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 6,
+    "freq": 168,
+    "onyomi": [
+      "サイ",
+      "セイ"
+    ],
+    "kunyomi": [
+      "す.む",
+      "-ず.み",
+      "-ずみ",
+      "す.まない",
+      "す.ます",
+      "-す.ます",
+      "すく.う",
+      "な.す",
+      "わたし",
+      "わた.る"
+    ],
+    "meanings": [
+      "settle (debt, etc.)",
+      "relieve (burden)",
+      "finish",
+      "come to an end",
+      "excusable",
+      "need not"
+    ],
+    "radicals": [
+      "丨",
+      "丿",
+      "⺡",
+      "文",
+      "廾",
+      "⻫"
+    ]
+  },
+  {
+    "character": "活",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 2,
+    "freq": 171,
+    "onyomi": [
+      "カツ"
+    ],
+    "kunyomi": [
+      "い.きる",
+      "い.かす",
+      "い.ける"
+    ],
+    "meanings": [
+      "lively",
+      "resuscitation",
+      "being helped",
+      "living"
+    ],
+    "radicals": [
+      "丿",
+      "口",
+      "十",
+      "⺡",
+      "舌"
+    ]
+  },
+  {
+    "character": "原",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 2,
+    "freq": 172,
+    "onyomi": [
+      "ゲン"
+    ],
+    "kunyomi": [
+      "はら"
+    ],
+    "meanings": [
+      "meadow",
+      "original",
+      "primitive",
+      "field",
+      "plain",
+      "prairie",
+      "tundra",
+      "wilderness"
+    ],
+    "radicals": [
+      "小",
+      "白",
+      "厂"
+    ]
+  },
+  {
+    "character": "共",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 4,
+    "freq": 174,
+    "onyomi": [
+      "キョウ"
+    ],
+    "kunyomi": [
+      "とも",
+      "とも.に",
+      "-ども"
+    ],
+    "meanings": [
+      "together",
+      "both",
+      "neither",
+      "all",
+      "and",
+      "alike",
+      "with"
+    ],
+    "radicals": [
+      "八",
+      "丨",
+      "一",
+      "二"
+    ]
+  },
+  {
+    "character": "得",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 175,
+    "onyomi": [
+      "トク"
+    ],
+    "kunyomi": [
+      "え.る",
+      "う.る"
+    ],
+    "meanings": [
+      "gain",
+      "get",
+      "find",
+      "earn",
+      "acquire",
+      "can",
+      "may",
+      "able to",
+      "profit",
+      "advantage",
+      "benefit"
+    ],
+    "radicals": [
+      "寸",
+      "日",
+      "彳",
+      "一"
+    ]
+  },
+  {
+    "character": "解",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 5,
+    "freq": 176,
+    "onyomi": [
+      "カイ",
+      "ゲ"
+    ],
+    "kunyomi": [
+      "と.く",
+      "と.かす",
+      "と.ける",
+      "ほど.く",
+      "ほぐ.す",
+      "わか.る",
+      "さと.る"
+    ],
+    "meanings": [
+      "unravel",
+      "notes",
+      "key",
+      "explanation",
+      "understanding",
+      "untie",
+      "undo",
+      "solve",
+      "answer",
+      "cancel",
+      "absolve",
+      "explain",
+      "minute"
+    ],
+    "radicals": [
+      "角",
+      "牛",
+      "刀"
+    ]
+  },
+  {
+    "character": "交",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 2,
+    "freq": 178,
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "まじ.わる",
+      "まじ.える",
+      "ま.じる",
+      "まじ.る",
+      "ま.ざる",
+      "ま.ぜる",
+      "-か.う",
+      "か.わす",
+      "かわ.す",
+      "こもごも"
+    ],
+    "meanings": [
+      "mingle",
+      "mixing",
+      "association",
+      "coming & going"
+    ],
+    "radicals": [
+      "父",
+      "亠"
+    ]
+  },
+  {
+    "character": "資",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 5,
+    "freq": 179,
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "assets",
+      "resources",
+      "capital",
+      "funds",
+      "data",
+      "be conducive to",
+      "contribute to"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "八",
+      "欠",
+      "冫"
+    ]
+  },
+  {
+    "character": "予",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 3,
+    "freq": 180,
+    "onyomi": [
+      "ヨ",
+      "シャ"
+    ],
+    "kunyomi": [
+      "あらかじ.め"
+    ],
+    "meanings": [
+      "beforehand",
+      "previous",
+      "myself",
+      "I"
+    ],
+    "radicals": [
+      "マ",
+      "一",
+      "亅"
+    ]
+  },
+  {
+    "character": "向",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 3,
+    "freq": 182,
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "む.く",
+      "む.い",
+      "-む.き",
+      "む.ける",
+      "-む.け",
+      "む.かう",
+      "む.かい",
+      "む.こう",
+      "む.こう-",
+      "むこ",
+      "むか.い"
+    ],
+    "meanings": [
+      "yonder",
+      "facing",
+      "beyond",
+      "confront",
+      "defy",
+      "tend toward",
+      "approach"
+    ],
+    "radicals": [
+      "口",
+      "冂"
+    ]
+  },
+  {
+    "character": "際",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 5,
+    "freq": 183,
+    "onyomi": [
+      "サイ"
+    ],
+    "kunyomi": [
+      "きわ",
+      "-ぎわ"
+    ],
+    "meanings": [
+      "occasion",
+      "side",
+      "edge",
+      "verge",
+      "dangerous",
+      "adventurous",
+      "indecent",
+      "time",
+      "when"
+    ],
+    "radicals": [
+      "丿",
+      "示",
+      "二",
+      "小",
+      "癶",
+      "⻖"
+    ]
+  },
+  {
+    "character": "勝",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 185,
+    "onyomi": [
+      "ショウ"
+    ],
+    "kunyomi": [
+      "か.つ",
+      "-が.ち",
+      "まさ.る",
+      "すぐ.れる",
+      "かつ"
+    ],
+    "meanings": [
+      "victory",
+      "win",
+      "prevail",
+      "excel"
+    ],
+    "radicals": [
+      "月",
+      "人",
+      "大",
+      "二",
+      "丷",
+      "力"
+    ]
+  },
+  {
+    "character": "面",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 3,
+    "freq": 186,
+    "onyomi": [
+      "メン",
+      "ベン"
+    ],
+    "kunyomi": [
+      "おも",
+      "おもて",
+      "つら"
+    ],
+    "meanings": [
+      "mask",
+      "face",
+      "features",
+      "surface"
+    ],
+    "radicals": [
+      "面"
+    ]
+  },
+  {
+    "character": "告",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 5,
+    "freq": 188,
+    "onyomi": [
+      "コク"
+    ],
+    "kunyomi": [
+      "つ.げる"
+    ],
+    "meanings": [
+      "revelation",
+      "tell",
+      "inform",
+      "announce"
+    ],
+    "radicals": [
+      "丿",
+      "口",
+      "土"
+    ]
+  },
+  {
+    "character": "反",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 3,
+    "freq": 191,
+    "onyomi": [
+      "ハン",
+      "ホン",
+      "タン",
+      "ホ"
+    ],
+    "kunyomi": [
+      "そ.る",
+      "そ.らす",
+      "かえ.す",
+      "かえ.る",
+      "-かえ.る"
+    ],
+    "meanings": [
+      "anti-"
+    ],
+    "radicals": [
+      "又",
+      "厂"
+    ]
+  },
+  {
+    "character": "判",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 5,
+    "freq": 197,
+    "onyomi": [
+      "ハン",
+      "バン"
+    ],
+    "kunyomi": [
+      "わか.る"
+    ],
+    "meanings": [
+      "judgement",
+      "judgment",
+      "signature",
+      "stamp",
+      "seal"
+    ],
+    "radicals": [
+      "丨",
+      "⺉",
+      "二",
+      "丷",
+      "十"
+    ]
+  },
+  {
+    "character": "認",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 6,
+    "freq": 198,
+    "onyomi": [
+      "ニン"
+    ],
+    "kunyomi": [
+      "みと.める",
+      "したた.める"
+    ],
+    "meanings": [
+      "acknowledge",
+      "witness",
+      "discern",
+      "recognize",
+      "appreciate",
+      "believe"
+    ],
+    "radicals": [
+      "言",
+      "心",
+      "刀",
+      "丶"
+    ]
+  },
+  {
+    "character": "参",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 4,
+    "freq": 201,
+    "onyomi": [
+      "サン",
+      "シン"
+    ],
+    "kunyomi": [
+      "まい.る",
+      "まい-",
+      "まじわる",
+      "みつ"
+    ],
+    "meanings": [
+      "nonplussed",
+      "three (in documents)",
+      "going",
+      "coming",
+      "visiting",
+      "visit",
+      "be defeated",
+      "die",
+      "be madly in love",
+      "participate",
+      "take part in"
+    ],
+    "radicals": [
+      "一",
+      "厶",
+      "彡"
+    ]
+  },
+  {
+    "character": "利",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 203,
+    "onyomi": [
+      "リ"
+    ],
+    "kunyomi": [
+      "き.く"
+    ],
+    "meanings": [
+      "profit",
+      "advantage",
+      "benefit"
+    ],
+    "radicals": [
+      "禾",
+      "⺉"
+    ]
+  },
+  {
+    "character": "組",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 2,
+    "freq": 204,
+    "onyomi": [
+      "ソ"
+    ],
+    "kunyomi": [
+      "く.む",
+      "くみ",
+      "-ぐみ"
+    ],
+    "meanings": [
+      "association",
+      "braid",
+      "plait",
+      "construct",
+      "assemble",
+      "unite",
+      "cooperate",
+      "grapple"
+    ],
+    "radicals": [
+      "一",
+      "糸",
+      "幺",
+      "小",
+      "目"
+    ]
+  },
+  {
+    "character": "信",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 4,
+    "freq": 208,
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "faith",
+      "truth",
+      "fidelity",
+      "trust"
+    ],
+    "radicals": [
+      "⺅",
+      "言"
+    ]
+  },
+  {
+    "character": "在",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 5,
+    "freq": 211,
+    "onyomi": [
+      "ザイ"
+    ],
+    "kunyomi": [
+      "あ.る"
+    ],
+    "meanings": [
+      "exist",
+      "outskirts",
+      "suburbs",
+      "located in"
+    ],
+    "radicals": [
+      "丨",
+      "丿",
+      "一",
+      "土"
+    ]
+  },
+  {
+    "character": "件",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 5,
+    "freq": 212,
+    "onyomi": [
+      "ケン"
+    ],
+    "kunyomi": [
+      "くだん"
+    ],
+    "meanings": [
+      "affair",
+      "case",
+      "matter",
+      "item"
+    ],
+    "radicals": [
+      "⺅",
+      "牛"
+    ]
+  },
+  {
+    "character": "側",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 4,
+    "freq": 216,
+    "onyomi": [
+      "ソク"
+    ],
+    "kunyomi": [
+      "かわ",
+      "がわ",
+      "そば"
+    ],
+    "meanings": [
+      "side",
+      "lean",
+      "oppose",
+      "regret"
+    ],
+    "radicals": [
+      "⺅",
+      "貝",
+      "目",
+      "八",
+      "⺉"
+    ]
+  },
+  {
+    "character": "任",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 5,
+    "freq": 217,
+    "onyomi": [
+      "ニン"
+    ],
+    "kunyomi": [
+      "まか.せる",
+      "まか.す"
+    ],
+    "meanings": [
+      "responsibility",
+      "duty",
+      "term",
+      "entrust to",
+      "appoint"
+    ],
+    "radicals": [
+      "丿",
+      "王",
+      "⺅",
+      "士"
+    ]
+  },
+  {
+    "character": "引",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 2,
+    "freq": 218,
+    "onyomi": [
+      "イン"
+    ],
+    "kunyomi": [
+      "ひ.く",
+      "ひ.ける"
+    ],
+    "meanings": [
+      "pull",
+      "tug",
+      "jerk",
+      "admit",
+      "install",
+      "quote",
+      "refer to"
+    ],
+    "radicals": [
+      "丨",
+      "弓"
+    ]
+  },
+  {
+    "character": "求",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 220,
+    "onyomi": [
+      "キュウ",
+      "グ"
+    ],
+    "kunyomi": [
+      "もと.める"
+    ],
+    "meanings": [
+      "request",
+      "want",
+      "wish for",
+      "require",
+      "demand"
+    ],
+    "radicals": [
+      "一",
+      "水",
+      "丶"
+    ]
+  },
+  {
+    "character": "所",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 221,
+    "onyomi": [
+      "ショ"
+    ],
+    "kunyomi": [
+      "ところ",
+      "-ところ",
+      "どころ",
+      "とこ"
+    ],
+    "meanings": [
+      "place",
+      "extent"
+    ],
+    "radicals": [
+      "斤",
+      "戸",
+      "一",
+      "尸"
+    ]
+  },
+  {
+    "character": "次",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 3,
+    "freq": 222,
+    "onyomi": [
+      "ジ",
+      "シ"
+    ],
+    "kunyomi": [
+      "つ.ぐ",
+      "つぎ"
+    ],
+    "meanings": [
+      "next",
+      "order",
+      "sequence"
+    ],
+    "radicals": [
+      "欠",
+      "冫"
+    ]
+  },
+  {
+    "character": "昨",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 4,
+    "freq": 226,
+    "onyomi": [
+      "サク"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "yesterday",
+      "previous"
+    ],
+    "radicals": [
+      "丨",
+      "丿",
+      "日"
+    ]
+  },
+  {
+    "character": "論",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 6,
+    "freq": 227,
+    "onyomi": [
+      "ロン"
+    ],
+    "kunyomi": [
+      "あげつら.う"
+    ],
+    "meanings": [
+      "argument",
+      "discourse"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "言",
+      "𠆢",
+      "冊"
+    ]
+  },
+  {
+    "character": "官",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 4,
+    "freq": 230,
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "bureaucrat",
+      "the government",
+      "organ"
+    ],
+    "radicals": [
+      "口",
+      "宀"
+    ]
+  },
+  {
+    "character": "増",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 5,
+    "freq": 231,
+    "onyomi": [
+      "ゾウ"
+    ],
+    "kunyomi": [
+      "ま.す",
+      "ま.し",
+      "ふ.える",
+      "ふ.やす"
+    ],
+    "meanings": [
+      "increase",
+      "add",
+      "augment",
+      "gain",
+      "promote"
+    ],
+    "radicals": [
+      "田",
+      "土",
+      "日",
+      "丷"
+    ]
+  },
+  {
+    "character": "係",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 3,
+    "freq": 232,
+    "onyomi": [
+      "ケイ"
+    ],
+    "kunyomi": [
+      "かか.る",
+      "かかり",
+      "-がかり",
+      "かか.わる"
+    ],
+    "meanings": [
+      "person in charge",
+      "connection",
+      "duty",
+      "concern oneself"
+    ],
+    "radicals": [
+      "丿",
+      "⺅",
+      "糸",
+      "幺",
+      "小"
+    ]
+  },
+  {
+    "character": "感",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 3,
+    "freq": 233,
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "emotion",
+      "feeling",
+      "sensation"
+    ],
+    "radicals": [
+      "丿",
+      "口",
+      "心",
+      "戈"
+    ]
+  },
+  {
+    "character": "情",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 235,
+    "onyomi": [
+      "ジョウ",
+      "セイ"
+    ],
+    "kunyomi": [
+      "なさ.け"
+    ],
+    "meanings": [
+      "feelings",
+      "emotion",
+      "passion",
+      "sympathy",
+      "circumstances",
+      "facts"
+    ],
+    "radicals": [
+      "月",
+      "青",
+      "土",
+      "二",
+      "⺖",
+      "亠"
+    ]
+  },
+  {
+    "character": "投",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 3,
+    "freq": 236,
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "な.げる",
+      "-な.げ"
+    ],
+    "meanings": [
+      "throw",
+      "discard",
+      "abandon",
+      "launch into",
+      "join",
+      "invest in",
+      "hurl",
+      "give up",
+      "sell at a loss"
+    ],
+    "radicals": [
+      "⺘",
+      "殳",
+      "几",
+      "又"
+    ]
+  },
+  {
+    "character": "示",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 5,
+    "freq": 237,
+    "onyomi": [
+      "ジ",
+      "シ"
+    ],
+    "kunyomi": [
+      "しめ.す"
+    ],
+    "meanings": [
+      "show",
+      "indicate",
+      "point out",
+      "express",
+      "display"
+    ],
+    "radicals": [
+      "示",
+      "二",
+      "小"
+    ]
+  },
+  {
+    "character": "変",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 4,
+    "freq": 238,
+    "onyomi": [
+      "ヘン"
+    ],
+    "kunyomi": [
+      "か.わる",
+      "か.わり",
+      "か.える"
+    ],
+    "meanings": [
+      "unusual",
+      "change",
+      "strange"
+    ],
+    "radicals": [
+      "亠",
+      "夂"
+    ]
+  },
+  {
+    "character": "打",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 3,
+    "freq": 239,
+    "onyomi": [
+      "ダ",
+      "ダース"
+    ],
+    "kunyomi": [
+      "う.つ",
+      "う.ち-",
+      "ぶ.つ"
+    ],
+    "meanings": [
+      "strike",
+      "hit",
+      "knock",
+      "pound",
+      "dozen"
+    ],
+    "radicals": [
+      "亅",
+      "⺘"
+    ]
+  },
+  {
+    "character": "直",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 2,
+    "freq": 246,
+    "onyomi": [
+      "チョク",
+      "ジキ",
+      "ジカ"
+    ],
+    "kunyomi": [
+      "ただ.ちに",
+      "なお.す",
+      "-なお.す",
+      "なお.る",
+      "なお.き",
+      "す.ぐ"
+    ],
+    "meanings": [
+      "straightaway",
+      "honesty",
+      "frankness",
+      "fix",
+      "repair"
+    ],
+    "radicals": [
+      "十",
+      "目",
+      "丨",
+      "一"
+    ]
+  },
+  {
+    "character": "両",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 3,
+    "freq": 247,
+    "onyomi": [
+      "リョウ"
+    ],
+    "kunyomi": [
+      "てる",
+      "ふたつ"
+    ],
+    "meanings": [
+      "both",
+      "old Japanese coin",
+      "counter for carriages (e.g., in a train)",
+      "two"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "冂",
+      "山"
+    ]
+  },
+  {
+    "character": "式",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 3,
+    "freq": 251,
+    "onyomi": [
+      "シキ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "style",
+      "ceremony",
+      "rite",
+      "function",
+      "method",
+      "system",
+      "form",
+      "expression"
+    ],
+    "radicals": [
+      "工",
+      "弋"
+    ]
+  },
+  {
+    "character": "確",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 5,
+    "freq": 252,
+    "onyomi": [
+      "カク",
+      "コウ"
+    ],
+    "kunyomi": [
+      "たし.か",
+      "たし.かめる"
+    ],
+    "meanings": [
+      "assurance",
+      "firm",
+      "tight",
+      "hard",
+      "solid",
+      "confirm",
+      "clear",
+      "evident"
+    ],
+    "radicals": [
+      "口",
+      "石",
+      "宀",
+      "隹"
+    ]
+  },
+  {
+    "character": "果",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 4,
+    "freq": 258,
+    "onyomi": [
+      "カ"
+    ],
+    "kunyomi": [
+      "は.たす",
+      "はた.す",
+      "-は.たす",
+      "は.てる",
+      "-は.てる",
+      "は.て"
+    ],
+    "meanings": [
+      "fruit",
+      "reward",
+      "carry out",
+      "achieve",
+      "complete",
+      "end",
+      "finish",
+      "succeed"
+    ],
+    "radicals": [
+      "丨",
+      "田",
+      "木"
+    ]
+  },
+  {
+    "character": "容",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 5,
+    "freq": 264,
+    "onyomi": [
+      "ヨウ"
+    ],
+    "kunyomi": [
+      "い.れる"
+    ],
+    "meanings": [
+      "contain",
+      "form",
+      "looks"
+    ],
+    "radicals": [
+      "穴",
+      "口",
+      "谷",
+      "八",
+      "𠆢",
+      "宀"
+    ]
+  },
+  {
+    "character": "必",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 4,
+    "freq": 265,
+    "onyomi": [
+      "ヒツ"
+    ],
+    "kunyomi": [
+      "かなら.ず"
+    ],
+    "meanings": [
+      "invariably",
+      "certain",
+      "inevitable"
+    ],
+    "radicals": [
+      "丿",
+      "心"
+    ]
+  },
+  {
+    "character": "演",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 5,
+    "freq": 267,
+    "onyomi": [
+      "エン"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "performance",
+      "act",
+      "play",
+      "render",
+      "stage"
+    ],
+    "radicals": [
+      "⺡",
+      "田",
+      "八",
+      "宀"
+    ]
+  },
+  {
+    "character": "歳",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 8,
+    "freq": 269,
+    "onyomi": [
+      "サイ",
+      "セイ"
+    ],
+    "kunyomi": [
+      "とし",
+      "とせ",
+      "よわい"
+    ],
+    "meanings": [
+      "year-end",
+      "age",
+      "occasion",
+      "opportunity"
+    ],
+    "radicals": [
+      "丿",
+      "止",
+      "小",
+      "戈"
+    ]
+  },
+  {
+    "character": "争",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 4,
+    "freq": 271,
+    "onyomi": [
+      "ソウ"
+    ],
+    "kunyomi": [
+      "あらそ.う",
+      "いか.でか"
+    ],
+    "meanings": [
+      "contend",
+      "dispute",
+      "argue"
+    ],
+    "radicals": [
+      "⺕",
+      "一",
+      "亅",
+      "勹"
+    ]
+  },
+  {
+    "character": "談",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 3,
+    "freq": 272,
+    "onyomi": [
+      "ダン"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "discuss",
+      "talk"
+    ],
+    "radicals": [
+      "火",
+      "言"
+    ]
+  },
+  {
+    "character": "能",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 5,
+    "freq": 273,
+    "onyomi": [
+      "ノウ"
+    ],
+    "kunyomi": [
+      "よ.く",
+      "あた.う"
+    ],
+    "meanings": [
+      "ability",
+      "talent",
+      "skill",
+      "capacity"
+    ],
+    "radicals": [
+      "月",
+      "匕",
+      "厶"
+    ]
+  },
+  {
+    "character": "位",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 276,
+    "onyomi": [
+      "イ"
+    ],
+    "kunyomi": [
+      "くらい",
+      "ぐらい"
+    ],
+    "meanings": [
+      "rank",
+      "grade",
+      "throne",
+      "crown",
+      "about",
+      "some"
+    ],
+    "radicals": [
+      "⺅",
+      "立"
+    ]
+  },
+  {
+    "character": "置",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 4,
+    "freq": 277,
+    "onyomi": [
+      "チ"
+    ],
+    "kunyomi": [
+      "お.く",
+      "-お.き"
+    ],
+    "meanings": [
+      "placement",
+      "put",
+      "set",
+      "deposit",
+      "leave behind",
+      "keep",
+      "employ",
+      "pawn"
+    ],
+    "radicals": [
+      "十",
+      "罒",
+      "目",
+      "一",
+      "丨"
+    ]
+  },
+  {
+    "character": "流",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 3,
+    "freq": 280,
+    "onyomi": [
+      "リュウ",
+      "ル"
+    ],
+    "kunyomi": [
+      "なが.れる",
+      "なが.れ",
+      "なが.す",
+      "-なが.す"
+    ],
+    "meanings": [
+      "current",
+      "a sink",
+      "flow",
+      "forfeit"
+    ],
+    "radicals": [
+      "⺡",
+      "川",
+      "亠",
+      "厶"
+    ]
+  },
+  {
+    "character": "格",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 5,
+    "freq": 281,
+    "onyomi": [
+      "カク",
+      "コウ",
+      "キャク",
+      "ゴウ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "status",
+      "rank",
+      "capacity",
+      "character",
+      "case (law, grammar)"
+    ],
+    "radicals": [
+      "口",
+      "木",
+      "夂"
+    ]
+  },
+  {
+    "character": "疑",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 6,
+    "freq": 283,
+    "onyomi": [
+      "ギ"
+    ],
+    "kunyomi": [
+      "うたが.う"
+    ],
+    "meanings": [
+      "doubt",
+      "distrust",
+      "be suspicious",
+      "question"
+    ],
+    "radicals": [
+      "疋",
+      "矢",
+      "匕",
+      "マ"
+    ]
+  },
+  {
+    "character": "過",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 5,
+    "freq": 285,
+    "onyomi": [
+      "カ"
+    ],
+    "kunyomi": [
+      "す.ぎる",
+      "す.ごす",
+      "あやま.ち",
+      "あやま.つ",
+      "よぎ.る",
+      "よ.ぎる"
+    ],
+    "meanings": [
+      "overdo",
+      "exceed",
+      "go beyond",
+      "error"
+    ],
+    "radicals": [
+      "口",
+      "⻌",
+      "冂"
+    ]
+  },
+  {
+    "character": "局",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 3,
+    "freq": 286,
+    "onyomi": [
+      "キョク"
+    ],
+    "kunyomi": [
+      "つぼね"
+    ],
+    "meanings": [
+      "bureau",
+      "board",
+      "office",
+      "affair",
+      "conclusion",
+      "court lady",
+      "lady-in-waiting",
+      "her apartment"
+    ],
+    "radicals": [
+      "口",
+      "尸"
+    ]
+  },
+  {
+    "character": "放",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 288,
+    "onyomi": [
+      "ホウ"
+    ],
+    "kunyomi": [
+      "はな.す",
+      "-っぱな.し",
+      "はな.つ",
+      "はな.れる",
+      "こ.く",
+      "ほう.る"
+    ],
+    "meanings": [
+      "set free",
+      "release",
+      "fire",
+      "shoot",
+      "emit",
+      "banish",
+      "liberate"
+    ],
+    "radicals": [
+      "方",
+      "攵"
+    ]
+  },
+  {
+    "character": "常",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 293,
+    "onyomi": [
+      "ジョウ"
+    ],
+    "kunyomi": [
+      "つね",
+      "とこ-"
+    ],
+    "meanings": [
+      "usual",
+      "ordinary",
+      "normal",
+      "common",
+      "regular",
+      "continually",
+      "always",
+      "long-lasting"
+    ],
+    "radicals": [
+      "巾",
+      "口",
+      "⺌",
+      "冖"
+    ]
+  },
+  {
+    "character": "状",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 5,
+    "freq": 298,
+    "onyomi": [
+      "ジョウ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "status quo",
+      "conditions",
+      "circumstances",
+      "form",
+      "appearance"
+    ],
+    "radicals": [
+      "犬",
+      "爿"
+    ]
+  },
+  {
+    "character": "球",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 3,
+    "freq": 302,
+    "onyomi": [
+      "キュウ"
+    ],
+    "kunyomi": [
+      "たま"
+    ],
+    "meanings": [
+      "ball",
+      "sphere"
+    ],
+    "radicals": [
+      "王",
+      "水",
+      "丶"
+    ]
+  },
+  {
+    "character": "職",
+    "level": "N3",
+    "strokes": 18,
+    "grade": 5,
+    "freq": 305,
+    "onyomi": [
+      "ショク",
+      "ソク"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "post",
+      "employment",
+      "work"
+    ],
+    "radicals": [
+      "音",
+      "耳",
+      "日",
+      "立",
+      "戈"
+    ]
+  },
+  {
+    "character": "与",
+    "level": "N3",
+    "strokes": 3,
+    "grade": 8,
+    "freq": 308,
+    "onyomi": [
+      "ヨ"
+    ],
+    "kunyomi": [
+      "あた.える",
+      "あずか.る",
+      "くみ.する",
+      "ともに"
+    ],
+    "meanings": [
+      "bestow",
+      "participate in",
+      "give",
+      "award",
+      "impart",
+      "provide",
+      "cause",
+      "gift",
+      "godsend"
+    ],
+    "radicals": [
+      "勹",
+      "一",
+      "卜"
+    ]
+  },
+  {
+    "character": "供",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 6,
+    "freq": 313,
+    "onyomi": [
+      "キョウ",
+      "ク",
+      "クウ",
+      "グ"
+    ],
+    "kunyomi": [
+      "そな.える",
+      "とも",
+      "-ども"
+    ],
+    "meanings": [
+      "submit",
+      "offer",
+      "present",
+      "serve (meal)",
+      "accompany"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "⺅",
+      "二",
+      "八"
+    ]
+  },
+  {
+    "character": "役",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 3,
+    "freq": 315,
+    "onyomi": [
+      "ヤク",
+      "エキ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "duty",
+      "war",
+      "campaign",
+      "drafted labor",
+      "office",
+      "service",
+      "role"
+    ],
+    "radicals": [
+      "彳",
+      "殳",
+      "几",
+      "又"
+    ]
+  },
+  {
+    "character": "構",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 5,
+    "freq": 316,
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "かま.える",
+      "かま.う"
+    ],
+    "meanings": [
+      "posture",
+      "stance",
+      "appearance",
+      "build",
+      "set up"
+    ],
+    "radicals": [
+      "木",
+      "冂",
+      "一",
+      "十"
+    ]
+  },
+  {
+    "character": "割",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 6,
+    "freq": 318,
+    "onyomi": [
+      "カツ"
+    ],
+    "kunyomi": [
+      "わ.る",
+      "わり",
+      "わ.り",
+      "わ.れる",
+      "さ.く"
+    ],
+    "meanings": [
+      "proportion",
+      "comparatively",
+      "divide",
+      "cut",
+      "separate",
+      "split"
+    ],
+    "radicals": [
+      "⺉",
+      "口",
+      "土",
+      "宀",
+      "亠"
+    ]
+  },
+  {
+    "character": "費",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 5,
+    "freq": 321,
+    "onyomi": [
+      "ヒ"
+    ],
+    "kunyomi": [
+      "つい.やす",
+      "つい.える"
+    ],
+    "meanings": [
+      "expense",
+      "cost",
+      "spend",
+      "consume",
+      "waste"
+    ],
+    "radicals": [
+      "丨",
+      "貝",
+      "目",
+      "八",
+      "弓"
+    ]
+  },
+  {
+    "character": "付",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 4,
+    "freq": 322,
+    "onyomi": [
+      "フ"
+    ],
+    "kunyomi": [
+      "つ.ける",
+      "-つ.ける",
+      "-づ.ける",
+      "つ.け",
+      "つ.け-",
+      "-つ.け",
+      "-づ.け",
+      "-づけ",
+      "つ.く",
+      "-づ.く",
+      "つ.き",
+      "-つ.き",
+      "-つき",
+      "-づ.き",
+      "-づき"
+    ],
+    "meanings": [
+      "adhere",
+      "attach",
+      "refer to",
+      "append"
+    ],
+    "radicals": [
+      "⺅",
+      "寸"
+    ]
+  },
+  {
+    "character": "由",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 3,
+    "freq": 325,
+    "onyomi": [
+      "ユ",
+      "ユウ",
+      "ユイ"
+    ],
+    "kunyomi": [
+      "よし",
+      "よ.る"
+    ],
+    "meanings": [
+      "wherefore",
+      "a reason"
+    ],
+    "radicals": [
+      "丨",
+      "日",
+      "田"
+    ]
+  },
+  {
+    "character": "説",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 4,
+    "freq": 326,
+    "onyomi": [
+      "セツ",
+      "ゼイ"
+    ],
+    "kunyomi": [
+      "と.く"
+    ],
+    "meanings": [
+      "opinion",
+      "theory",
+      "explanation",
+      "rumor"
+    ],
+    "radicals": [
+      "言",
+      "口",
+      "丷",
+      "儿"
+    ]
+  },
+  {
+    "character": "難",
+    "level": "N3",
+    "strokes": 18,
+    "grade": 6,
+    "freq": 330,
+    "onyomi": [
+      "ナン"
+    ],
+    "kunyomi": [
+      "かた.い",
+      "-がた.い",
+      "むずか.しい",
+      "むづか.しい",
+      "むつか.しい",
+      "-にく.い"
+    ],
+    "meanings": [
+      "difficult",
+      "impossible",
+      "trouble",
+      "accident",
+      "defect"
+    ],
+    "radicals": [
+      "⾋",
+      "隹",
+      "大",
+      "口",
+      "亠"
+    ]
+  },
+  {
+    "character": "優",
+    "level": "N3",
+    "strokes": 17,
+    "grade": 6,
+    "freq": 334,
+    "onyomi": [
+      "ユウ",
+      "ウ"
+    ],
+    "kunyomi": [
+      "やさ.しい",
+      "すぐ.れる",
+      "まさ.る"
+    ],
+    "meanings": [
+      "tenderness",
+      "excel",
+      "surpass",
+      "actor",
+      "superiority",
+      "gentleness"
+    ],
+    "radicals": [
+      "一",
+      "⺅",
+      "心",
+      "白",
+      "冖",
+      "夂",
+      "自"
+    ]
+  },
+  {
+    "character": "夫",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 4,
+    "freq": 335,
+    "onyomi": [
+      "フ",
+      "フウ",
+      "ブ"
+    ],
+    "kunyomi": [
+      "おっと",
+      "それ"
+    ],
+    "meanings": [
+      "husband",
+      "man"
+    ],
+    "radicals": [
+      "人",
+      "二",
+      "大"
+    ]
+  },
+  {
+    "character": "収",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 6,
+    "freq": 337,
+    "onyomi": [
+      "シュウ"
+    ],
+    "kunyomi": [
+      "おさ.める",
+      "おさ.まる"
+    ],
+    "meanings": [
+      "income",
+      "obtain",
+      "reap",
+      "pay",
+      "supply",
+      "store"
+    ],
+    "radicals": [
+      "丨",
+      "又"
+    ]
+  },
+  {
+    "character": "断",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 338,
+    "onyomi": [
+      "ダン"
+    ],
+    "kunyomi": [
+      "た.つ",
+      "ことわ.る",
+      "さだ.める"
+    ],
+    "meanings": [
+      "severance",
+      "decline",
+      "refuse",
+      "apologize",
+      "warn",
+      "dismiss",
+      "prohibit",
+      "decision",
+      "judgement",
+      "cutting"
+    ],
+    "radicals": [
+      "斤",
+      "米",
+      "丨",
+      "一"
+    ]
+  },
+  {
+    "character": "石",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 1,
+    "freq": 342,
+    "onyomi": [
+      "セキ",
+      "シャク",
+      "コク"
+    ],
+    "kunyomi": [
+      "いし"
+    ],
+    "meanings": [
+      "stone"
+    ],
+    "radicals": [
+      "口",
+      "石"
+    ]
+  },
+  {
+    "character": "違",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 8,
+    "freq": 344,
+    "onyomi": [
+      "イ"
+    ],
+    "kunyomi": [
+      "ちが.う",
+      "ちが.い",
+      "ちが.える",
+      "-ちが.える",
+      "たが.う",
+      "たが.える"
+    ],
+    "meanings": [
+      "difference",
+      "differ"
+    ],
+    "radicals": [
+      "口",
+      "⻌",
+      "韋"
+    ]
+  },
+  {
+    "character": "消",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 3,
+    "freq": 345,
+    "onyomi": [
+      "ショウ"
+    ],
+    "kunyomi": [
+      "き.える",
+      "け.す"
+    ],
+    "meanings": [
+      "extinguish",
+      "blow out",
+      "turn off",
+      "neutralize",
+      "cancel"
+    ],
+    "radicals": [
+      "月",
+      "⺡",
+      "⺌"
+    ]
+  },
+  {
+    "character": "神",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 3,
+    "freq": 347,
+    "onyomi": [
+      "シン",
+      "ジン"
+    ],
+    "kunyomi": [
+      "かみ",
+      "かん-",
+      "こう-"
+    ],
+    "meanings": [
+      "gods",
+      "mind",
+      "soul"
+    ],
+    "radicals": [
+      "丨",
+      "日",
+      "⺭",
+      "田"
+    ]
+  },
+  {
+    "character": "番",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 2,
+    "freq": 348,
+    "onyomi": [
+      "バン"
+    ],
+    "kunyomi": [
+      "つが.い"
+    ],
+    "meanings": [
+      "turn",
+      "number in a series"
+    ],
+    "radicals": [
+      "田",
+      "釆",
+      "米"
+    ]
+  },
+  {
+    "character": "規",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 349,
+    "onyomi": [
+      "キ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "standard",
+      "measure"
+    ],
+    "radicals": [
+      "見",
+      "土",
+      "大"
+    ]
+  },
+  {
+    "character": "術",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 350,
+    "onyomi": [
+      "ジュツ"
+    ],
+    "kunyomi": [
+      "すべ"
+    ],
+    "meanings": [
+      "art",
+      "technique",
+      "skill",
+      "means",
+      "trick",
+      "resources",
+      "magic"
+    ],
+    "radicals": [
+      "行",
+      "十",
+      "丶",
+      "彳",
+      "木"
+    ]
+  },
+  {
+    "character": "備",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 5,
+    "freq": 356,
+    "onyomi": [
+      "ビ"
+    ],
+    "kunyomi": [
+      "そな.える",
+      "そな.わる",
+      "つぶさ.に"
+    ],
+    "meanings": [
+      "equip",
+      "provision",
+      "preparation"
+    ],
+    "radicals": [
+      "⺅",
+      "用",
+      "厂",
+      "⾋"
+    ]
+  },
+  {
+    "character": "宅",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 6,
+    "freq": 357,
+    "onyomi": [
+      "タク"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "home",
+      "house",
+      "residence",
+      "our house",
+      "my husband"
+    ],
+    "radicals": [
+      "丿",
+      "一",
+      "乙",
+      "宀"
+    ]
+  },
+  {
+    "character": "害",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 4,
+    "freq": 358,
+    "onyomi": [
+      "ガイ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "harm",
+      "injury"
+    ],
+    "radicals": [
+      "口",
+      "土",
+      "亠",
+      "宀"
+    ]
+  },
+  {
+    "character": "配",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 3,
+    "freq": 359,
+    "onyomi": [
+      "ハイ"
+    ],
+    "kunyomi": [
+      "くば.る"
+    ],
+    "meanings": [
+      "distribute",
+      "spouse",
+      "exile",
+      "rationing"
+    ],
+    "radicals": [
+      "酉",
+      "已"
+    ]
+  },
+  {
+    "character": "警",
+    "level": "N3",
+    "strokes": 19,
+    "grade": 6,
+    "freq": 366,
+    "onyomi": [
+      "ケイ"
+    ],
+    "kunyomi": [
+      "いまし.める"
+    ],
+    "meanings": [
+      "admonish",
+      "commandment"
+    ],
+    "radicals": [
+      "言",
+      "口",
+      "勹",
+      "夂",
+      "⾋",
+      "攵"
+    ]
+  },
+  {
+    "character": "育",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 369,
+    "onyomi": [
+      "イク"
+    ],
+    "kunyomi": [
+      "そだ.つ",
+      "そだ.ち",
+      "そだ.てる",
+      "はぐく.む"
+    ],
+    "meanings": [
+      "bring up",
+      "grow up",
+      "raise",
+      "rear"
+    ],
+    "radicals": [
+      "月",
+      "亠",
+      "厶"
+    ]
+  },
+  {
+    "character": "席",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 4,
+    "freq": 370,
+    "onyomi": [
+      "セキ"
+    ],
+    "kunyomi": [
+      "むしろ"
+    ],
+    "meanings": [
+      "seat",
+      "mat",
+      "occasion",
+      "place"
+    ],
+    "radicals": [
+      "巾",
+      "广"
+    ]
+  },
+  {
+    "character": "訪",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 6,
+    "freq": 372,
+    "onyomi": [
+      "ホウ"
+    ],
+    "kunyomi": [
+      "おとず.れる",
+      "たず.ねる",
+      "と.う"
+    ],
+    "meanings": [
+      "call on",
+      "visit",
+      "look up",
+      "offer sympathy"
+    ],
+    "radicals": [
+      "言",
+      "方"
+    ]
+  },
+  {
+    "character": "乗",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 3,
+    "freq": 377,
+    "onyomi": [
+      "ジョウ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "の.る",
+      "-の.り",
+      "の.せる"
+    ],
+    "meanings": [
+      "ride",
+      "power",
+      "multiplication",
+      "record",
+      "counter for vehicles",
+      "board",
+      "mount",
+      "join"
+    ],
+    "radicals": [
+      "丨",
+      "丿",
+      "一",
+      "禾",
+      "八"
+    ]
+  },
+  {
+    "character": "残",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 4,
+    "freq": 380,
+    "onyomi": [
+      "ザン",
+      "サン"
+    ],
+    "kunyomi": [
+      "のこ.る",
+      "のこ.す",
+      "そこな.う",
+      "のこ.り"
+    ],
+    "meanings": [
+      "remainder",
+      "leftover",
+      "balance"
+    ],
+    "radicals": [
+      "丿",
+      "毛",
+      "丶",
+      "歹"
+    ]
+  },
+  {
+    "character": "想",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 3,
+    "freq": 381,
+    "onyomi": [
+      "ソウ",
+      "ソ"
+    ],
+    "kunyomi": [
+      "おも.う"
+    ],
+    "meanings": [
+      "idea",
+      "thought",
+      "conception",
+      "think"
+    ],
+    "radicals": [
+      "心",
+      "木",
+      "目"
+    ]
+  },
+  {
+    "character": "声",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 2,
+    "freq": 388,
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "こえ",
+      "こわ-"
+    ],
+    "meanings": [
+      "voice"
+    ],
+    "radicals": [
+      "士",
+      "尸"
+    ]
+  },
+  {
+    "character": "念",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 4,
+    "freq": 390,
+    "onyomi": [
+      "ネン"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "wish",
+      "sense",
+      "idea",
+      "thought",
+      "feeling",
+      "desire",
+      "attention"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "心",
+      "𠆢"
+    ]
+  },
+  {
+    "character": "助",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 3,
+    "freq": 397,
+    "onyomi": [
+      "ジョ"
+    ],
+    "kunyomi": [
+      "たす.ける",
+      "たす.かる",
+      "す.ける",
+      "すけ"
+    ],
+    "meanings": [
+      "help",
+      "rescue",
+      "assist"
+    ],
+    "radicals": [
+      "目",
+      "力"
+    ]
+  },
+  {
+    "character": "労",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 398,
+    "onyomi": [
+      "ロウ"
+    ],
+    "kunyomi": [
+      "ろう.する",
+      "いたわ.る",
+      "いた.ずき",
+      "ねぎら",
+      "つか.れる",
+      "ねぎら.う"
+    ],
+    "meanings": [
+      "labor",
+      "thank for",
+      "reward for",
+      "toil",
+      "trouble"
+    ],
+    "radicals": [
+      "⺌",
+      "力",
+      "冖"
+    ]
+  },
+  {
+    "character": "例",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 4,
+    "freq": 399,
+    "onyomi": [
+      "レイ"
+    ],
+    "kunyomi": [
+      "たと.える"
+    ],
+    "meanings": [
+      "example",
+      "custom",
+      "usage",
+      "precedent"
+    ],
+    "radicals": [
+      "⺅",
+      "⺉",
+      "歹"
+    ]
+  },
+  {
+    "character": "然",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 4,
+    "freq": 401,
+    "onyomi": [
+      "ゼン",
+      "ネン"
+    ],
+    "kunyomi": [
+      "しか",
+      "しか.り",
+      "しか.し",
+      "さ"
+    ],
+    "meanings": [
+      "sort of thing",
+      "so",
+      "if so",
+      "in that case",
+      "well"
+    ],
+    "radicals": [
+      "犬",
+      "夕",
+      "⺣"
+    ]
+  },
+  {
+    "character": "限",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 5,
+    "freq": 405,
+    "onyomi": [
+      "ゲン"
+    ],
+    "kunyomi": [
+      "かぎ.る",
+      "かぎ.り",
+      "-かぎ.り"
+    ],
+    "meanings": [
+      "limit",
+      "restrict",
+      "to best of ability"
+    ],
+    "radicals": [
+      "艮",
+      "⻖"
+    ]
+  },
+  {
+    "character": "追",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 3,
+    "freq": 411,
+    "onyomi": [
+      "ツイ"
+    ],
+    "kunyomi": [
+      "お.う"
+    ],
+    "meanings": [
+      "chase",
+      "drive away",
+      "follow",
+      "pursue",
+      "meanwhile"
+    ],
+    "radicals": [
+      "丨",
+      "口",
+      "⻌"
+    ]
+  },
+  {
+    "character": "商",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 3,
+    "freq": 413,
+    "onyomi": [
+      "ショウ"
+    ],
+    "kunyomi": [
+      "あきな.う"
+    ],
+    "meanings": [
+      "make a deal",
+      "selling",
+      "dealing in",
+      "merchant"
+    ],
+    "radicals": [
+      "口",
+      "丷",
+      "立",
+      "亠",
+      "儿",
+      "冂"
+    ]
+  },
+  {
+    "character": "葉",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 414,
+    "onyomi": [
+      "ヨウ"
+    ],
+    "kunyomi": [
+      "は"
+    ],
+    "meanings": [
+      "leaf",
+      "plane",
+      "lobe",
+      "needle",
+      "blade",
+      "spear",
+      "counter for flat things",
+      "fragment",
+      "piece"
+    ],
+    "radicals": [
+      "木",
+      "世",
+      "⾋"
+    ]
+  },
+  {
+    "character": "伝",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 4,
+    "freq": 416,
+    "onyomi": [
+      "デン",
+      "テン"
+    ],
+    "kunyomi": [
+      "つた.わる",
+      "つた.える",
+      "つた.う",
+      "つだ.う",
+      "-づた.い",
+      "つて"
+    ],
+    "meanings": [
+      "transmit",
+      "go along",
+      "walk along",
+      "follow",
+      "report",
+      "communicate",
+      "legend",
+      "tradition"
+    ],
+    "radicals": [
+      "⺅",
+      "二",
+      "厶"
+    ]
+  },
+  {
+    "character": "働",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 4,
+    "freq": 417,
+    "onyomi": [
+      "ドウ"
+    ],
+    "kunyomi": [
+      "はたら.く"
+    ],
+    "meanings": [
+      "work",
+      "(kokuji)"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "⺅",
+      "力",
+      "日"
+    ]
+  },
+  {
+    "character": "形",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 2,
+    "freq": 418,
+    "onyomi": [
+      "ケイ",
+      "ギョウ"
+    ],
+    "kunyomi": [
+      "かた",
+      "-がた",
+      "かたち",
+      "なり"
+    ],
+    "meanings": [
+      "shape",
+      "form",
+      "style"
+    ],
+    "radicals": [
+      "廾",
+      "彡",
+      "丿"
+    ]
+  },
+  {
+    "character": "景",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 4,
+    "freq": 419,
+    "onyomi": [
+      "ケイ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "scenery",
+      "view"
+    ],
+    "radicals": [
+      "口",
+      "小",
+      "日",
+      "亠"
+    ]
+  },
+  {
+    "character": "落",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 420,
+    "onyomi": [
+      "ラク"
+    ],
+    "kunyomi": [
+      "お.ちる",
+      "お.ち",
+      "お.とす"
+    ],
+    "meanings": [
+      "fall",
+      "drop",
+      "come down",
+      "village",
+      "hamlet"
+    ],
+    "radicals": [
+      "口",
+      "⺡",
+      "夂",
+      "⾋"
+    ]
+  },
+  {
+    "character": "好",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 4,
+    "freq": 423,
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "この.む",
+      "す.く",
+      "よ.い",
+      "い.い"
+    ],
+    "meanings": [
+      "fond",
+      "pleasing",
+      "like something"
+    ],
+    "radicals": [
+      "子",
+      "女"
+    ]
+  },
+  {
+    "character": "退",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 6,
+    "freq": 424,
+    "onyomi": [
+      "タイ"
+    ],
+    "kunyomi": [
+      "しりぞ.く",
+      "しりぞ.ける",
+      "ひ.く",
+      "の.く",
+      "の.ける",
+      "ど.く"
+    ],
+    "meanings": [
+      "retreat",
+      "withdraw",
+      "retire",
+      "resign",
+      "repel",
+      "expel",
+      "reject"
+    ],
+    "radicals": [
+      "⻌",
+      "艮"
+    ]
+  },
+  {
+    "character": "頭",
+    "level": "N3",
+    "strokes": 16,
+    "grade": 2,
+    "freq": 433,
+    "onyomi": [
+      "トウ",
+      "ズ",
+      "ト"
+    ],
+    "kunyomi": [
+      "あたま",
+      "かしら",
+      "-がしら",
+      "かぶり"
+    ],
+    "meanings": [
+      "head",
+      "counter for large animals"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "八",
+      "口",
+      "豆",
+      "丷",
+      "頁"
+    ]
+  },
+  {
+    "character": "負",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 3,
+    "freq": 443,
+    "onyomi": [
+      "フ"
+    ],
+    "kunyomi": [
+      "ま.ける",
+      "ま.かす",
+      "お.う"
+    ],
+    "meanings": [
+      "defeat",
+      "negative",
+      "-",
+      "minus",
+      "bear",
+      "owe",
+      "assume a responsibility"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "八",
+      "勹"
+    ]
+  },
+  {
+    "character": "渡",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 8,
+    "freq": 446,
+    "onyomi": [
+      "ト"
+    ],
+    "kunyomi": [
+      "わた.る",
+      "-わた.る",
+      "わた.す"
+    ],
+    "meanings": [
+      "transit",
+      "ford",
+      "ferry",
+      "cross",
+      "import",
+      "deliver",
+      "diameter",
+      "migrate"
+    ],
+    "radicals": [
+      "⺡",
+      "又",
+      "广"
+    ]
+  },
+  {
+    "character": "失",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 4,
+    "freq": 447,
+    "onyomi": [
+      "シツ"
+    ],
+    "kunyomi": [
+      "うしな.う",
+      "う.せる"
+    ],
+    "meanings": [
+      "lose",
+      "error",
+      "fault",
+      "disadvantage",
+      "loss"
+    ],
+    "radicals": [
+      "丿",
+      "人",
+      "二",
+      "大"
+    ]
+  },
+  {
+    "character": "差",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 4,
+    "freq": 449,
+    "onyomi": [
+      "サ"
+    ],
+    "kunyomi": [
+      "さ.す",
+      "さ.し"
+    ],
+    "meanings": [
+      "distinction",
+      "difference",
+      "variation",
+      "discrepancy",
+      "margin",
+      "balance"
+    ],
+    "radicals": [
+      "丿",
+      "王",
+      "工",
+      "丷",
+      "羊"
+    ]
+  },
+  {
+    "character": "末",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 4,
+    "freq": 456,
+    "onyomi": [
+      "マツ",
+      "バツ"
+    ],
+    "kunyomi": [
+      "すえ",
+      "うら",
+      "うれ"
+    ],
+    "meanings": [
+      "end",
+      "close",
+      "tip",
+      "powder",
+      "posterity"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "八",
+      "木",
+      "亠"
+    ]
+  },
+  {
+    "character": "守",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 3,
+    "freq": 457,
+    "onyomi": [
+      "シュ",
+      "ス"
+    ],
+    "kunyomi": [
+      "まも.る",
+      "まも.り",
+      "もり",
+      "-もり",
+      "かみ"
+    ],
+    "meanings": [
+      "guard",
+      "protect",
+      "defend",
+      "obey"
+    ],
+    "radicals": [
+      "寸",
+      "宀"
+    ]
+  },
+  {
+    "character": "若",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 6,
+    "freq": 458,
+    "onyomi": [
+      "ジャク",
+      "ニャク",
+      "ニャ"
+    ],
+    "kunyomi": [
+      "わか.い",
+      "わか-",
+      "も.しくわ",
+      "も.し",
+      "も.しくは",
+      "ごと.し"
+    ],
+    "meanings": [
+      "young",
+      "if",
+      "perhaps",
+      "possibly",
+      "low number",
+      "immature"
+    ],
+    "radicals": [
+      "丿",
+      "一",
+      "口",
+      "⾋"
+    ]
+  },
+  {
+    "character": "種",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 4,
+    "freq": 461,
+    "onyomi": [
+      "シュ"
+    ],
+    "kunyomi": [
+      "たね",
+      "-ぐさ"
+    ],
+    "meanings": [
+      "species",
+      "kind",
+      "class",
+      "variety",
+      "seed"
+    ],
+    "radicals": [
+      "丨",
+      "禾",
+      "日",
+      "里"
+    ]
+  },
+  {
+    "character": "美",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 3,
+    "freq": 462,
+    "onyomi": [
+      "ビ",
+      "ミ"
+    ],
+    "kunyomi": [
+      "うつく.しい"
+    ],
+    "meanings": [
+      "beauty",
+      "beautiful"
+    ],
+    "radicals": [
+      "王",
+      "大",
+      "丷",
+      "羊"
+    ]
+  },
+  {
+    "character": "命",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 465,
+    "onyomi": [
+      "メイ",
+      "ミョウ"
+    ],
+    "kunyomi": [
+      "いのち"
+    ],
+    "meanings": [
+      "fate",
+      "command",
+      "decree",
+      "destiny",
+      "life",
+      "appoint"
+    ],
+    "radicals": [
+      "口",
+      "𠆢",
+      "卩",
+      "一"
+    ]
+  },
+  {
+    "character": "福",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 3,
+    "freq": 467,
+    "onyomi": [
+      "フク"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "blessing",
+      "fortune",
+      "luck",
+      "wealth"
+    ],
+    "radicals": [
+      "一",
+      "口",
+      "田",
+      "⺭"
+    ]
+  },
+  {
+    "character": "望",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 4,
+    "freq": 470,
+    "onyomi": [
+      "ボウ",
+      "モウ"
+    ],
+    "kunyomi": [
+      "のぞ.む",
+      "もち"
+    ],
+    "meanings": [
+      "ambition",
+      "full moon",
+      "hope",
+      "desire",
+      "aspire to",
+      "expect"
+    ],
+    "radicals": [
+      "王",
+      "亡",
+      "月"
+    ]
+  },
+  {
+    "character": "非",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 5,
+    "freq": 472,
+    "onyomi": [
+      "ヒ"
+    ],
+    "kunyomi": [
+      "あら.ず"
+    ],
+    "meanings": [
+      "un-",
+      "mistake",
+      "negative",
+      "injustice",
+      "non-"
+    ],
+    "radicals": [
+      "非"
+    ]
+  },
+  {
+    "character": "観",
+    "level": "N3",
+    "strokes": 18,
+    "grade": 4,
+    "freq": 476,
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [
+      "み.る",
+      "しめ.す"
+    ],
+    "meanings": [
+      "outlook",
+      "look",
+      "appearance",
+      "condition",
+      "view"
+    ],
+    "radicals": [
+      "見",
+      "隹",
+      "矢"
+    ]
+  },
+  {
+    "character": "察",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 4,
+    "freq": 477,
+    "onyomi": [
+      "サツ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "guess",
+      "presume",
+      "surmise",
+      "judge",
+      "understand"
+    ],
+    "radicals": [
+      "丿",
+      "示",
+      "二",
+      "小",
+      "宀",
+      "癶"
+    ]
+  },
+  {
+    "character": "段",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 6,
+    "freq": 479,
+    "onyomi": [
+      "ダン",
+      "タン"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "grade",
+      "steps",
+      "stairs"
+    ],
+    "radicals": [
+      "丨",
+      "殳",
+      "几",
+      "又"
+    ]
+  },
+  {
+    "character": "横",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 3,
+    "freq": 480,
+    "onyomi": [
+      "オウ"
+    ],
+    "kunyomi": [
+      "よこ"
+    ],
+    "meanings": [
+      "sideways",
+      "side",
+      "horizontal",
+      "width",
+      "woof",
+      "unreasonable",
+      "perverse"
+    ],
+    "radicals": [
+      "丨",
+      "黄",
+      "田",
+      "二",
+      "日",
+      "八",
+      "木",
+      "廾"
+    ]
+  },
+  {
+    "character": "深",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 3,
+    "freq": 484,
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "ふか.い",
+      "-ぶか.い",
+      "ふか.まる",
+      "ふか.める",
+      "み-"
+    ],
+    "meanings": [
+      "deep",
+      "heighten",
+      "intensify",
+      "strengthen"
+    ],
+    "radicals": [
+      "⺡",
+      "木",
+      "儿",
+      "冖"
+    ]
+  },
+  {
+    "character": "申",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 3,
+    "freq": 492,
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "もう.す",
+      "もう.し-",
+      "さる"
+    ],
+    "meanings": [
+      "have the honor to",
+      "sign of the monkey",
+      "3-5PM",
+      "ninth sign of Chinese zodiac"
+    ],
+    "radicals": [
+      "丨",
+      "日",
+      "田"
+    ]
+  },
+  {
+    "character": "様",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 3,
+    "freq": 493,
+    "onyomi": [
+      "ヨウ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "さま",
+      "さん"
+    ],
+    "meanings": [
+      "Esq.",
+      "way",
+      "manner",
+      "situation",
+      "polite suffix"
+    ],
+    "radicals": [
+      "王",
+      "水",
+      "丷",
+      "木",
+      "羊"
+    ]
+  },
+  {
+    "character": "財",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 5,
+    "freq": 494,
+    "onyomi": [
+      "ザイ",
+      "サイ",
+      "ゾク"
+    ],
+    "kunyomi": [
+      "たから"
+    ],
+    "meanings": [
+      "property",
+      "money",
+      "wealth",
+      "assets"
+    ],
+    "radicals": [
+      "丿",
+      "一",
+      "貝",
+      "目",
+      "八",
+      "亅"
+    ]
+  },
+  {
+    "character": "港",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 495,
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "みなと"
+    ],
+    "meanings": [
+      "harbor"
+    ],
+    "radicals": [
+      "⺡",
+      "八",
+      "已",
+      "井"
+    ]
+  },
+  {
+    "character": "識",
+    "level": "N3",
+    "strokes": 19,
+    "grade": 5,
+    "freq": 496,
+    "onyomi": [
+      "シキ"
+    ],
+    "kunyomi": [
+      "し.る",
+      "しる.す"
+    ],
+    "meanings": [
+      "discriminating",
+      "know",
+      "write"
+    ],
+    "radicals": [
+      "音",
+      "言",
+      "日",
+      "立",
+      "戈"
+    ]
+  },
+  {
+    "character": "呼",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 6,
+    "freq": 498,
+    "onyomi": [
+      "コ"
+    ],
+    "kunyomi": [
+      "よ.ぶ"
+    ],
+    "meanings": [
+      "call",
+      "call out to",
+      "invite"
+    ],
+    "radicals": [
+      "丿",
+      "口",
+      "丷",
+      "亅"
+    ]
+  },
+  {
+    "character": "達",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 4,
+    "freq": 500,
+    "onyomi": [
+      "タツ",
+      "ダ"
+    ],
+    "kunyomi": [
+      "-たち"
+    ],
+    "meanings": [
+      "accomplished",
+      "reach",
+      "arrive",
+      "attain"
+    ],
+    "radicals": [
+      "王",
+      "⻌",
+      "土",
+      "丷",
+      "羊"
+    ]
+  },
+  {
+    "character": "良",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 501,
+    "onyomi": [
+      "リョウ"
+    ],
+    "kunyomi": [
+      "よ.い",
+      "-よ.い",
+      "い.い",
+      "-い.い"
+    ],
+    "meanings": [
+      "good",
+      "pleasing",
+      "skilled"
+    ],
+    "radicals": [
+      "艮"
+    ]
+  },
+  {
+    "character": "候",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 4,
+    "freq": 510,
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "そうろう"
+    ],
+    "meanings": [
+      "climate",
+      "season",
+      "weather",
+      "wait for",
+      "expect"
+    ],
+    "radicals": [
+      "丨",
+      "⺅",
+      "矢"
+    ]
+  },
+  {
+    "character": "程",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 5,
+    "freq": 514,
+    "onyomi": [
+      "テイ"
+    ],
+    "kunyomi": [
+      "ほど",
+      "-ほど"
+    ],
+    "meanings": [
+      "extent",
+      "degree",
+      "law",
+      "formula",
+      "distance",
+      "limits",
+      "amount"
+    ],
+    "radicals": [
+      "王",
+      "禾",
+      "口"
+    ]
+  },
+  {
+    "character": "満",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 4,
+    "freq": 515,
+    "onyomi": [
+      "マン",
+      "バン"
+    ],
+    "kunyomi": [
+      "み.ちる",
+      "み.つ",
+      "み.たす"
+    ],
+    "meanings": [
+      "full",
+      "fullness",
+      "enough",
+      "satisfy"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "⺡",
+      "二",
+      "冂",
+      "山"
+    ]
+  },
+  {
+    "character": "敗",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 4,
+    "freq": 516,
+    "onyomi": [
+      "ハイ"
+    ],
+    "kunyomi": [
+      "やぶ.れる"
+    ],
+    "meanings": [
+      "failure",
+      "defeat",
+      "reversal"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "八",
+      "攵"
+    ]
+  },
+  {
+    "character": "値",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 6,
+    "freq": 518,
+    "onyomi": [
+      "チ"
+    ],
+    "kunyomi": [
+      "ね",
+      "あたい"
+    ],
+    "meanings": [
+      "price",
+      "cost",
+      "value"
+    ],
+    "radicals": [
+      "⺅",
+      "十",
+      "目",
+      "丨",
+      "一"
+    ]
+  },
+  {
+    "character": "突",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 8,
+    "freq": 521,
+    "onyomi": [
+      "トツ",
+      "カ"
+    ],
+    "kunyomi": [
+      "つ.く"
+    ],
+    "meanings": [
+      "stab",
+      "protruding",
+      "thrust",
+      "pierce",
+      "prick",
+      "collision",
+      "sudden"
+    ],
+    "radicals": [
+      "穴",
+      "大",
+      "儿",
+      "宀"
+    ]
+  },
+  {
+    "character": "光",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 2,
+    "freq": 527,
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "ひか.る",
+      "ひかり"
+    ],
+    "meanings": [
+      "ray",
+      "light"
+    ],
+    "radicals": [
+      "一",
+      "⺌",
+      "儿"
+    ]
+  },
+  {
+    "character": "路",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 3,
+    "freq": 529,
+    "onyomi": [
+      "ロ",
+      "ル"
+    ],
+    "kunyomi": [
+      "-じ",
+      "みち"
+    ],
+    "meanings": [
+      "path",
+      "route",
+      "road",
+      "distance"
+    ],
+    "radicals": [
+      "口",
+      "足",
+      "夂"
+    ]
+  },
+  {
+    "character": "科",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 2,
+    "freq": 531,
+    "onyomi": [
+      "カ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "department",
+      "course",
+      "section"
+    ],
+    "radicals": [
+      "禾",
+      "斗"
+    ]
+  },
+  {
+    "character": "積",
+    "level": "N3",
+    "strokes": 16,
+    "grade": 4,
+    "freq": 541,
+    "onyomi": [
+      "セキ"
+    ],
+    "kunyomi": [
+      "つ.む",
+      "-づ.み",
+      "つ.もる",
+      "つ.もり"
+    ],
+    "meanings": [
+      "volume",
+      "product (x*y)",
+      "acreage",
+      "contents",
+      "pile up",
+      "stack",
+      "load",
+      "amass"
+    ],
+    "radicals": [
+      "禾",
+      "貝",
+      "目",
+      "八",
+      "土",
+      "亠"
+    ]
+  },
+  {
+    "character": "他",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 3,
+    "freq": 543,
+    "onyomi": [
+      "タ"
+    ],
+    "kunyomi": [
+      "ほか"
+    ],
+    "meanings": [
+      "other",
+      "another",
+      "the others"
+    ],
+    "radicals": [
+      "⺅",
+      "也"
+    ]
+  },
+  {
+    "character": "処",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 6,
+    "freq": 547,
+    "onyomi": [
+      "ショ"
+    ],
+    "kunyomi": [
+      "ところ",
+      "-こ",
+      "お.る"
+    ],
+    "meanings": [
+      "dispose",
+      "manage",
+      "deal with",
+      "sentence",
+      "condemn",
+      "act",
+      "behave",
+      "place"
+    ],
+    "radicals": [
+      "几",
+      "夂",
+      "攵"
+    ]
+  },
+  {
+    "character": "太",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 2,
+    "freq": 552,
+    "onyomi": [
+      "タイ",
+      "タ"
+    ],
+    "kunyomi": [
+      "ふと.い",
+      "ふと.る"
+    ],
+    "meanings": [
+      "plump",
+      "thick",
+      "big around"
+    ],
+    "radicals": [
+      "大",
+      "丶"
+    ]
+  },
+  {
+    "character": "客",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 3,
+    "freq": 557,
+    "onyomi": [
+      "キャク",
+      "カク"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "guest",
+      "visitor",
+      "customer",
+      "client"
+    ],
+    "radicals": [
+      "口",
+      "夂",
+      "宀"
+    ]
+  },
+  {
+    "character": "否",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 6,
+    "freq": 561,
+    "onyomi": [
+      "ヒ"
+    ],
+    "kunyomi": [
+      "いな",
+      "いや"
+    ],
+    "meanings": [
+      "negate",
+      "no",
+      "noes",
+      "refuse",
+      "decline",
+      "deny"
+    ],
+    "radicals": [
+      "丿",
+      "一",
+      "口",
+      "丨",
+      "丶"
+    ]
+  },
+  {
+    "character": "師",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 5,
+    "freq": 563,
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "いくさ"
+    ],
+    "meanings": [
+      "expert",
+      "teacher",
+      "master",
+      "model",
+      "exemplar",
+      "army (incl. counter)",
+      "war"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "巾",
+      "口"
+    ]
+  },
+  {
+    "character": "登",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 566,
+    "onyomi": [
+      "トウ",
+      "ト",
+      "ドウ",
+      "ショウ",
+      "チョウ"
+    ],
+    "kunyomi": [
+      "のぼ.る",
+      "あ.がる"
+    ],
+    "meanings": [
+      "ascend",
+      "climb up"
+    ],
+    "radicals": [
+      "口",
+      "豆",
+      "丷",
+      "癶"
+    ]
+  },
+  {
+    "character": "易",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 5,
+    "freq": 571,
+    "onyomi": [
+      "エキ",
+      "イ"
+    ],
+    "kunyomi": [
+      "やさ.しい",
+      "やす.い"
+    ],
+    "meanings": [
+      "easy",
+      "ready to",
+      "simple",
+      "fortune-telling",
+      "divination"
+    ],
+    "radicals": [
+      "日",
+      "勿",
+      "勹"
+    ]
+  },
+  {
+    "character": "速",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 3,
+    "freq": 576,
+    "onyomi": [
+      "ソク"
+    ],
+    "kunyomi": [
+      "はや.い",
+      "はや-",
+      "はや.める",
+      "すみ.やか"
+    ],
+    "meanings": [
+      "quick",
+      "fast"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "口",
+      "⻌",
+      "八",
+      "木"
+    ]
+  },
+  {
+    "character": "存",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 6,
+    "freq": 577,
+    "onyomi": [
+      "ソン",
+      "ゾン"
+    ],
+    "kunyomi": [
+      "ながら.える",
+      "あ.る",
+      "たも.つ",
+      "と.う"
+    ],
+    "meanings": [
+      "exist",
+      "suppose",
+      "be aware of",
+      "believe",
+      "feel"
+    ],
+    "radicals": [
+      "丨",
+      "丿",
+      "一",
+      "子"
+    ]
+  },
+  {
+    "character": "飛",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 4,
+    "freq": 580,
+    "onyomi": [
+      "ヒ"
+    ],
+    "kunyomi": [
+      "と.ぶ",
+      "と.ばす",
+      "-と.ばす"
+    ],
+    "meanings": [
+      "fly",
+      "skip (pages)",
+      "scatter"
+    ],
+    "radicals": [
+      "飛"
+    ]
+  },
+  {
+    "character": "殺",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 5,
+    "freq": 581,
+    "onyomi": [
+      "サツ",
+      "サイ",
+      "セツ"
+    ],
+    "kunyomi": [
+      "ころ.す",
+      "-ごろ.し",
+      "そ.ぐ",
+      "あや.める"
+    ],
+    "meanings": [
+      "kill",
+      "murder",
+      "butcher",
+      "slice off",
+      "split",
+      "diminish",
+      "reduce",
+      "spoil"
+    ],
+    "radicals": [
+      "木",
+      "殳",
+      "丿",
+      "丶",
+      "几",
+      "又"
+    ]
+  },
+  {
+    "character": "号",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 3,
+    "freq": 585,
+    "onyomi": [
+      "ゴウ"
+    ],
+    "kunyomi": [
+      "さけ.ぶ",
+      "よびな"
+    ],
+    "meanings": [
+      "nickname",
+      "number",
+      "item",
+      "title",
+      "pseudonym",
+      "name",
+      "call"
+    ],
+    "radicals": [
+      "一",
+      "口",
+      "勹"
+    ]
+  },
+  {
+    "character": "単",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 4,
+    "freq": 586,
+    "onyomi": [
+      "タン"
+    ],
+    "kunyomi": [
+      "ひとえ"
+    ],
+    "meanings": [
+      "simple",
+      "one",
+      "single",
+      "merely"
+    ],
+    "radicals": [
+      "十",
+      "⺌",
+      "田"
+    ]
+  },
+  {
+    "character": "座",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 6,
+    "freq": 588,
+    "onyomi": [
+      "ザ"
+    ],
+    "kunyomi": [
+      "すわ.る"
+    ],
+    "meanings": [
+      "squat",
+      "seat",
+      "cushion",
+      "gathering",
+      "sit"
+    ],
+    "radicals": [
+      "丨",
+      "土",
+      "人",
+      "广"
+    ]
+  },
+  {
+    "character": "破",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 5,
+    "freq": 590,
+    "onyomi": [
+      "ハ"
+    ],
+    "kunyomi": [
+      "やぶ.る",
+      "やぶ.れる",
+      "わ.れる"
+    ],
+    "meanings": [
+      "rend",
+      "rip",
+      "tear",
+      "break",
+      "destroy",
+      "defeat",
+      "frustrate"
+    ],
+    "radicals": [
+      "口",
+      "石",
+      "皮",
+      "又"
+    ]
+  },
+  {
+    "character": "除",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 6,
+    "freq": 594,
+    "onyomi": [
+      "ジョ",
+      "ジ"
+    ],
+    "kunyomi": [
+      "のぞ.く",
+      "-よ.け"
+    ],
+    "meanings": [
+      "exclude",
+      "division (x/3)",
+      "remove",
+      "abolish",
+      "cancel",
+      "except"
+    ],
+    "radicals": [
+      "禾",
+      "𠆢",
+      "⻖"
+    ]
+  },
+  {
+    "character": "完",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 595,
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "perfect",
+      "completion",
+      "end"
+    ],
+    "radicals": [
+      "二",
+      "儿",
+      "宀",
+      "元"
+    ]
+  },
+  {
+    "character": "降",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 6,
+    "freq": 596,
+    "onyomi": [
+      "コウ",
+      "ゴ"
+    ],
+    "kunyomi": [
+      "お.りる",
+      "お.ろす",
+      "ふ.る",
+      "ふ.り",
+      "くだ.る",
+      "くだ.す"
+    ],
+    "meanings": [
+      "descend",
+      "precipitate",
+      "fall",
+      "surrender"
+    ],
+    "radicals": [
+      "夂",
+      "⻖",
+      "十"
+    ]
+  },
+  {
+    "character": "責",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 598,
+    "onyomi": [
+      "セキ"
+    ],
+    "kunyomi": [
+      "せ.める"
+    ],
+    "meanings": [
+      "blame",
+      "condemn",
+      "censure"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "八",
+      "土",
+      "亠"
+    ]
+  },
+  {
+    "character": "捕",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 8,
+    "freq": 604,
+    "onyomi": [
+      "ホ"
+    ],
+    "kunyomi": [
+      "と.らえる",
+      "と.らわれる",
+      "と.る",
+      "とら.える",
+      "とら.われる",
+      "つか.まえる",
+      "つか.まる"
+    ],
+    "meanings": [
+      "catch",
+      "capture"
+    ],
+    "radicals": [
+      "十",
+      "用",
+      "丶",
+      "⺘"
+    ]
+  },
+  {
+    "character": "危",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 6,
+    "freq": 606,
+    "onyomi": [
+      "キ"
+    ],
+    "kunyomi": [
+      "あぶ.ない",
+      "あや.うい",
+      "あや.ぶむ"
+    ],
+    "meanings": [
+      "dangerous",
+      "fear",
+      "uneasy"
+    ],
+    "radicals": [
+      "勹",
+      "厂",
+      "卩"
+    ]
+  },
+  {
+    "character": "給",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 4,
+    "freq": 615,
+    "onyomi": [
+      "キュウ"
+    ],
+    "kunyomi": [
+      "たま.う",
+      "たも.う",
+      "-たま.え"
+    ],
+    "meanings": [
+      "salary",
+      "wage",
+      "gift",
+      "allow",
+      "grant",
+      "bestow on"
+    ],
+    "radicals": [
+      "口",
+      "糸",
+      "幺",
+      "小",
+      "𠆢"
+    ]
+  },
+  {
+    "character": "苦",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 623,
+    "onyomi": [
+      "ク"
+    ],
+    "kunyomi": [
+      "くる.しい",
+      "-ぐる.しい",
+      "くる.しむ",
+      "くる.しめる",
+      "にが.い",
+      "にが.る"
+    ],
+    "meanings": [
+      "suffering",
+      "trial",
+      "worry",
+      "hardship",
+      "feel bitter",
+      "scowl"
+    ],
+    "radicals": [
+      "口",
+      "十",
+      "⾋"
+    ]
+  },
+  {
+    "character": "迎",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 8,
+    "freq": 625,
+    "onyomi": [
+      "ゲイ"
+    ],
+    "kunyomi": [
+      "むか.える"
+    ],
+    "meanings": [
+      "welcome",
+      "meet",
+      "greet"
+    ],
+    "radicals": [
+      "⻌",
+      "卩"
+    ]
+  },
+  {
+    "character": "園",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 2,
+    "freq": 628,
+    "onyomi": [
+      "エン"
+    ],
+    "kunyomi": [
+      "その"
+    ],
+    "meanings": [
+      "park",
+      "garden",
+      "yard",
+      "farm"
+    ],
+    "radicals": [
+      "衣",
+      "口",
+      "土",
+      "囗"
+    ]
+  },
+  {
+    "character": "具",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 629,
+    "onyomi": [
+      "グ"
+    ],
+    "kunyomi": [
+      "そな.える",
+      "つぶさ.に"
+    ],
+    "meanings": [
+      "tool",
+      "utensil",
+      "means",
+      "possess",
+      "ingredients",
+      "counter for armor, suits, sets of furniture"
+    ],
+    "radicals": [
+      "一",
+      "八",
+      "目"
+    ]
+  },
+  {
+    "character": "辞",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 4,
+    "freq": 633,
+    "onyomi": [
+      "ジ"
+    ],
+    "kunyomi": [
+      "や.める",
+      "いな.む"
+    ],
+    "meanings": [
+      "resign",
+      "word",
+      "term",
+      "expression"
+    ],
+    "radicals": [
+      "口",
+      "十",
+      "辛",
+      "舌",
+      "立"
+    ]
+  },
+  {
+    "character": "因",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 5,
+    "freq": 636,
+    "onyomi": [
+      "イン"
+    ],
+    "kunyomi": [
+      "よ.る",
+      "ちな.む"
+    ],
+    "meanings": [
+      "cause",
+      "factor",
+      "be associated with",
+      "depend on",
+      "be limited to"
+    ],
+    "radicals": [
+      "大",
+      "囗"
+    ]
+  },
+  {
+    "character": "馬",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 2,
+    "freq": 639,
+    "onyomi": [
+      "バ"
+    ],
+    "kunyomi": [
+      "うま",
+      "うま-",
+      "ま"
+    ],
+    "meanings": [
+      "horse"
+    ],
+    "radicals": [
+      "馬"
+    ]
+  },
+  {
+    "character": "愛",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 4,
+    "freq": 640,
+    "onyomi": [
+      "アイ"
+    ],
+    "kunyomi": [
+      "いと.しい",
+      "かな.しい",
+      "め.でる",
+      "お.しむ",
+      "まな"
+    ],
+    "meanings": [
+      "love",
+      "affection",
+      "favourite"
+    ],
+    "radicals": [
+      "心",
+      "爪",
+      "冖",
+      "夂"
+    ]
+  },
+  {
+    "character": "富",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 4,
+    "freq": 644,
+    "onyomi": [
+      "フ",
+      "フウ"
+    ],
+    "kunyomi": [
+      "と.む",
+      "とみ"
+    ],
+    "meanings": [
+      "wealth",
+      "enrich",
+      "abundant"
+    ],
+    "radicals": [
+      "口",
+      "田",
+      "宀"
+    ]
+  },
+  {
+    "character": "彼",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 8,
+    "freq": 648,
+    "onyomi": [
+      "ヒ"
+    ],
+    "kunyomi": [
+      "かれ",
+      "かの",
+      "か.の"
+    ],
+    "meanings": [
+      "he",
+      "that",
+      "the"
+    ],
+    "radicals": [
+      "皮",
+      "又",
+      "彳"
+    ]
+  },
+  {
+    "character": "未",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 4,
+    "freq": 650,
+    "onyomi": [
+      "ミ",
+      "ビ"
+    ],
+    "kunyomi": [
+      "いま.だ",
+      "ま.だ",
+      "ひつじ"
+    ],
+    "meanings": [
+      "un-",
+      "not yet",
+      "hitherto",
+      "still",
+      "even now",
+      "sign of the ram",
+      "1-3PM",
+      "eighth sign of Chinese zodiac"
+    ],
+    "radicals": [
+      "丨",
+      "二",
+      "八",
+      "木",
+      "亠"
+    ]
+  },
+  {
+    "character": "舞",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 8,
+    "freq": 655,
+    "onyomi": [
+      "ブ"
+    ],
+    "kunyomi": [
+      "ま.う",
+      "-ま.う",
+      "まい"
+    ],
+    "meanings": [
+      "dance",
+      "flit",
+      "circle",
+      "wheel"
+    ],
+    "radicals": [
+      "丨",
+      "丿",
+      "一",
+      "舛",
+      "二",
+      "夕",
+      "無"
+    ]
+  },
+  {
+    "character": "亡",
+    "level": "N3",
+    "strokes": 3,
+    "grade": 6,
+    "freq": 661,
+    "onyomi": [
+      "ボウ",
+      "モウ"
+    ],
+    "kunyomi": [
+      "な.い",
+      "な.き-",
+      "ほろ.びる",
+      "ほろ.ぶ",
+      "ほろ.ぼす"
+    ],
+    "meanings": [
+      "deceased",
+      "the late",
+      "dying",
+      "perish"
+    ],
+    "radicals": [
+      "亡",
+      "亠"
+    ]
+  },
+  {
+    "character": "冷",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 667,
+    "onyomi": [
+      "レイ"
+    ],
+    "kunyomi": [
+      "つめ.たい",
+      "ひ.える",
+      "ひ.や",
+      "ひ.ややか",
+      "ひ.やす",
+      "ひ.やかす",
+      "さ.める",
+      "さ.ます"
+    ],
+    "meanings": [
+      "cool",
+      "cold (beer, person)",
+      "chill"
+    ],
+    "radicals": [
+      "𠆢",
+      "冫",
+      "卩",
+      "一"
+    ]
+  },
+  {
+    "character": "適",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 5,
+    "freq": 670,
+    "onyomi": [
+      "テキ"
+    ],
+    "kunyomi": [
+      "かな.う"
+    ],
+    "meanings": [
+      "suitable",
+      "occasional",
+      "rare",
+      "qualified",
+      "capable"
+    ],
+    "radicals": [
+      "口",
+      "⻌",
+      "十",
+      "丷",
+      "立",
+      "亠",
+      "冂",
+      "啇"
+    ]
+  },
+  {
+    "character": "婦",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 671,
+    "onyomi": [
+      "フ"
+    ],
+    "kunyomi": [
+      "よめ"
+    ],
+    "meanings": [
+      "lady",
+      "woman",
+      "wife",
+      "bride"
+    ],
+    "radicals": [
+      "⺕",
+      "巾",
+      "女",
+      "冖"
+    ]
+  },
+  {
+    "character": "寄",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 673,
+    "onyomi": [
+      "キ"
+    ],
+    "kunyomi": [
+      "よ.る",
+      "-よ.り",
+      "よ.せる"
+    ],
+    "meanings": [
+      "draw near",
+      "stop in",
+      "bring near",
+      "gather",
+      "collect",
+      "send",
+      "forward"
+    ],
+    "radicals": [
+      "一",
+      "口",
+      "大",
+      "亅",
+      "宀"
+    ]
+  },
+  {
+    "character": "込",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 8,
+    "freq": 675,
+    "onyomi": [],
+    "kunyomi": [
+      "-こ.む",
+      "こ.む",
+      "こ.み",
+      "-こ.み",
+      "こ.める"
+    ],
+    "meanings": [
+      "crowded",
+      "mixture",
+      "in bulk",
+      "included",
+      "(kokuji)"
+    ],
+    "radicals": [
+      "⻌",
+      "⼊"
+    ]
+  },
+  {
+    "character": "顔",
+    "level": "N3",
+    "strokes": 18,
+    "grade": 2,
+    "freq": 676,
+    "onyomi": [
+      "ガン"
+    ],
+    "kunyomi": [
+      "かお"
+    ],
+    "meanings": [
+      "face",
+      "expression"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "八",
+      "頁",
+      "立",
+      "亠",
+      "厂",
+      "彡"
+    ]
+  },
+  {
+    "character": "類",
+    "level": "N3",
+    "strokes": 18,
+    "grade": 4,
+    "freq": 678,
+    "onyomi": [
+      "ルイ"
+    ],
+    "kunyomi": [
+      "たぐ.い"
+    ],
+    "meanings": [
+      "sort",
+      "kind",
+      "variety",
+      "class",
+      "genus"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "八",
+      "大",
+      "米",
+      "頁"
+    ]
+  },
+  {
+    "character": "余",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 5,
+    "freq": 680,
+    "onyomi": [
+      "ヨ"
+    ],
+    "kunyomi": [
+      "あま.る",
+      "あま.り",
+      "あま.す",
+      "あんま.り"
+    ],
+    "meanings": [
+      "too much",
+      "myself",
+      "surplus",
+      "other",
+      "remainder"
+    ],
+    "radicals": [
+      "一",
+      "二",
+      "八",
+      "𠆢",
+      "亅",
+      "示",
+      "二",
+      "小"
+    ]
+  },
+  {
+    "character": "王",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 1,
+    "freq": 684,
+    "onyomi": [
+      "オウ",
+      "-ノウ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "king",
+      "rule",
+      "magnate"
+    ],
+    "radicals": [
+      "王"
+    ]
+  },
+  {
+    "character": "返",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 3,
+    "freq": 685,
+    "onyomi": [
+      "ヘン"
+    ],
+    "kunyomi": [
+      "かえ.す",
+      "-かえ.す",
+      "かえ.る",
+      "-かえ.る"
+    ],
+    "meanings": [
+      "return",
+      "answer",
+      "fade",
+      "repay"
+    ],
+    "radicals": [
+      "⻌",
+      "又",
+      "厂"
+    ]
+  },
+  {
+    "character": "妻",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 5,
+    "freq": 691,
+    "onyomi": [
+      "サイ"
+    ],
+    "kunyomi": [
+      "つま"
+    ],
+    "meanings": [
+      "wife",
+      "spouse"
+    ],
+    "radicals": [
+      "丨",
+      "⺕",
+      "一",
+      "女"
+    ]
+  },
+  {
+    "character": "背",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 6,
+    "freq": 696,
+    "onyomi": [
+      "ハイ"
+    ],
+    "kunyomi": [
+      "せ",
+      "せい",
+      "そむ.く",
+      "そむ.ける"
+    ],
+    "meanings": [
+      "stature",
+      "height",
+      "back",
+      "behind",
+      "disobey",
+      "defy",
+      "go back on",
+      "rebel"
+    ],
+    "radicals": [
+      "月",
+      "匕",
+      "爿"
+    ]
+  },
+  {
+    "character": "熱",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 4,
+    "freq": 700,
+    "onyomi": [
+      "ネツ"
+    ],
+    "kunyomi": [
+      "あつ.い"
+    ],
+    "meanings": [
+      "heat",
+      "temperature",
+      "fever",
+      "mania",
+      "passion"
+    ],
+    "radicals": [
+      "土",
+      "九",
+      "丶",
+      "儿",
+      "⺣"
+    ]
+  },
+  {
+    "character": "宿",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 3,
+    "freq": 701,
+    "onyomi": [
+      "シュク"
+    ],
+    "kunyomi": [
+      "やど",
+      "やど.る",
+      "やど.す"
+    ],
+    "meanings": [
+      "inn",
+      "lodging",
+      "relay station",
+      "dwell",
+      "lodge",
+      "be pregnant",
+      "home",
+      "dwelling"
+    ],
+    "radicals": [
+      "⺅",
+      "白",
+      "宀"
+    ]
+  },
+  {
+    "character": "薬",
+    "level": "N3",
+    "strokes": 16,
+    "grade": 3,
+    "freq": 702,
+    "onyomi": [
+      "ヤク"
+    ],
+    "kunyomi": [
+      "くすり"
+    ],
+    "meanings": [
+      "medicine",
+      "chemical",
+      "enamel",
+      "gunpowder",
+      "benefit"
+    ],
+    "radicals": [
+      "日",
+      "木",
+      "冫",
+      "⾋"
+    ]
+  },
+  {
+    "character": "険",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 707,
+    "onyomi": [
+      "ケン"
+    ],
+    "kunyomi": [
+      "けわ.しい"
+    ],
+    "meanings": [
+      "precipitous",
+      "inaccessible place",
+      "impregnable position",
+      "steep place",
+      "sharp eyes"
+    ],
+    "radicals": [
+      "口",
+      "人",
+      "𠆢",
+      "⻖"
+    ]
+  },
+  {
+    "character": "頼",
+    "level": "N3",
+    "strokes": 16,
+    "grade": 8,
+    "freq": 708,
+    "onyomi": [
+      "ライ"
+    ],
+    "kunyomi": [
+      "たの.む",
+      "たの.もしい",
+      "たよ.る"
+    ],
+    "meanings": [
+      "trust",
+      "request"
+    ],
+    "radicals": [
+      "丨",
+      "貝",
+      "目",
+      "口",
+      "八",
+      "頁",
+      "木"
+    ]
+  },
+  {
+    "character": "覚",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 4,
+    "freq": 710,
+    "onyomi": [
+      "カク"
+    ],
+    "kunyomi": [
+      "おぼ.える",
+      "さ.ます",
+      "さ.める",
+      "さと.る"
+    ],
+    "meanings": [
+      "memorize",
+      "learn",
+      "remember",
+      "awake",
+      "sober up"
+    ],
+    "radicals": [
+      "見",
+      "⺌",
+      "冖"
+    ]
+  },
+  {
+    "character": "船",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 2,
+    "freq": 713,
+    "onyomi": [
+      "セン"
+    ],
+    "kunyomi": [
+      "ふね",
+      "ふな-"
+    ],
+    "meanings": [
+      "ship",
+      "boat"
+    ],
+    "radicals": [
+      "口",
+      "舟",
+      "八"
+    ]
+  },
+  {
+    "character": "途",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 8,
+    "freq": 717,
+    "onyomi": [
+      "ト"
+    ],
+    "kunyomi": [
+      "みち"
+    ],
+    "meanings": [
+      "route",
+      "way",
+      "road"
+    ],
+    "radicals": [
+      "⻌",
+      "八",
+      "𠆢",
+      "亅",
+      "木"
+    ]
+  },
+  {
+    "character": "許",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 720,
+    "onyomi": [
+      "キョ"
+    ],
+    "kunyomi": [
+      "ゆる.す",
+      "もと"
+    ],
+    "meanings": [
+      "permit",
+      "approve"
+    ],
+    "radicals": [
+      "丿",
+      "干",
+      "言",
+      "十"
+    ]
+  },
+  {
+    "character": "抜",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 8,
+    "freq": 726,
+    "onyomi": [
+      "バツ",
+      "ハツ",
+      "ハイ"
+    ],
+    "kunyomi": [
+      "ぬ.く",
+      "-ぬ.く",
+      "ぬ.き",
+      "ぬ.ける",
+      "ぬ.かす",
+      "ぬ.かる"
+    ],
+    "meanings": [
+      "slip out",
+      "extract",
+      "pull out",
+      "pilfer",
+      "quote",
+      "remove",
+      "omit"
+    ],
+    "radicals": [
+      "夂",
+      "亠",
+      "⺘",
+      "又"
+    ]
+  },
+  {
+    "character": "便",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 4,
+    "freq": 729,
+    "onyomi": [
+      "ベン",
+      "ビン"
+    ],
+    "kunyomi": [
+      "たよ.り"
+    ],
+    "meanings": [
+      "convenience",
+      "facility",
+      "excrement",
+      "feces",
+      "letter",
+      "chance"
+    ],
+    "radicals": [
+      "丨",
+      "丿",
+      "一",
+      "⺅",
+      "日",
+      "田"
+    ]
+  },
+  {
+    "character": "留",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 5,
+    "freq": 731,
+    "onyomi": [
+      "リュウ",
+      "ル"
+    ],
+    "kunyomi": [
+      "と.める",
+      "と.まる",
+      "とど.める",
+      "とど.まる",
+      "るうぶる"
+    ],
+    "meanings": [
+      "detain",
+      "fasten",
+      "halt",
+      "stop"
+    ],
+    "radicals": [
+      "田",
+      "刀",
+      "厶"
+    ]
+  },
+  {
+    "character": "罪",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 5,
+    "freq": 732,
+    "onyomi": [
+      "ザイ"
+    ],
+    "kunyomi": [
+      "つみ"
+    ],
+    "meanings": [
+      "guilt",
+      "sin",
+      "crime",
+      "fault",
+      "blame",
+      "offense"
+    ],
+    "radicals": [
+      "罒",
+      "非"
+    ]
+  },
+  {
+    "character": "努",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 749,
+    "onyomi": [
+      "ド"
+    ],
+    "kunyomi": [
+      "つと.める"
+    ],
+    "meanings": [
+      "toil",
+      "diligent",
+      "as much as possible"
+    ],
+    "radicals": [
+      "女",
+      "又",
+      "力"
+    ]
+  },
+  {
+    "character": "精",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 5,
+    "freq": 752,
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "しら.げる",
+      "くわ.しい"
+    ],
+    "meanings": [
+      "refined",
+      "ghost",
+      "fairy",
+      "energy",
+      "vitality",
+      "semen",
+      "excellence",
+      "purity",
+      "skill"
+    ],
+    "radicals": [
+      "月",
+      "青",
+      "土",
+      "二",
+      "米",
+      "亠"
+    ]
+  },
+  {
+    "character": "散",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 4,
+    "freq": 758,
+    "onyomi": [
+      "サン"
+    ],
+    "kunyomi": [
+      "ち.る",
+      "ち.らす",
+      "-ち.らす",
+      "ち.らかす",
+      "ち.らかる",
+      "ち.らばる",
+      "ばら",
+      "ばら.ける"
+    ],
+    "meanings": [
+      "scatter",
+      "disperse",
+      "spend",
+      "squander"
+    ],
+    "radicals": [
+      "丨",
+      "月",
+      "攵"
+    ]
+  },
+  {
+    "character": "静",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 4,
+    "freq": 764,
+    "onyomi": [
+      "セイ",
+      "ジョウ"
+    ],
+    "kunyomi": [
+      "しず-",
+      "しず.か",
+      "しず.まる",
+      "しず.める"
+    ],
+    "meanings": [
+      "quiet"
+    ],
+    "radicals": [
+      "月",
+      "青",
+      "土",
+      "亅",
+      "亠",
+      "勹",
+      "⺕"
+    ]
+  },
+  {
+    "character": "婚",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 8,
+    "freq": 767,
+    "onyomi": [
+      "コン"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "marriage"
+    ],
+    "radicals": [
+      "氏",
+      "女",
+      "日"
+    ]
+  },
+  {
+    "character": "喜",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 5,
+    "freq": 769,
+    "onyomi": [
+      "キ"
+    ],
+    "kunyomi": [
+      "よろこ.ぶ",
+      "よろこ.ばす"
+    ],
+    "meanings": [
+      "rejoice",
+      "take pleasure in"
+    ],
+    "radicals": [
+      "口",
+      "士",
+      "豆",
+      "丷"
+    ]
+  },
+  {
+    "character": "浮",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 8,
+    "freq": 776,
+    "onyomi": [
+      "フ"
+    ],
+    "kunyomi": [
+      "う.く",
+      "う.かれる",
+      "う.かぶ",
+      "う.かべる"
+    ],
+    "meanings": [
+      "floating",
+      "float",
+      "rise to surface"
+    ],
+    "radicals": [
+      "子",
+      "⺡",
+      "爪"
+    ]
+  },
+  {
+    "character": "絶",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 5,
+    "freq": 784,
+    "onyomi": [
+      "ゼツ"
+    ],
+    "kunyomi": [
+      "た.える",
+      "た.やす",
+      "た.つ"
+    ],
+    "meanings": [
+      "discontinue",
+      "sever",
+      "cut off",
+      "abstain",
+      "interrupt",
+      "suppress",
+      "be beyond",
+      "without match",
+      "peerless",
+      "unparalleled"
+    ],
+    "radicals": [
+      "糸",
+      "幺",
+      "小",
+      "色"
+    ]
+  },
+  {
+    "character": "幸",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 786,
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "さいわ.い",
+      "さち",
+      "しあわ.せ"
+    ],
+    "meanings": [
+      "happiness",
+      "blessing",
+      "fortune"
+    ],
+    "radicals": [
+      "十",
+      "辛",
+      "立",
+      "亠"
+    ]
+  },
+  {
+    "character": "押",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 8,
+    "freq": 789,
+    "onyomi": [
+      "オウ"
+    ],
+    "kunyomi": [
+      "お.す",
+      "お.し-",
+      "お.っ-",
+      "お.さえる",
+      "おさ.える"
+    ],
+    "meanings": [
+      "push",
+      "stop",
+      "check",
+      "subdue",
+      "attach",
+      "seize",
+      "weight",
+      "shove",
+      "press",
+      "seal",
+      "do in spite of"
+    ],
+    "radicals": [
+      "丨",
+      "日",
+      "⺘",
+      "田"
+    ]
+  },
+  {
+    "character": "倒",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 8,
+    "freq": 791,
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "たお.れる",
+      "-だお.れ",
+      "たお.す",
+      "さかさま",
+      "さかさ",
+      "さかしま"
+    ],
+    "meanings": [
+      "overthrow",
+      "fall",
+      "collapse",
+      "drop",
+      "break down"
+    ],
+    "radicals": [
+      "⺅",
+      "⺉",
+      "至",
+      "土",
+      "厶"
+    ]
+  },
+  {
+    "character": "等",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 798,
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "ひと.しい",
+      "など",
+      "-ら"
+    ],
+    "meanings": [
+      "etc.",
+      "and so forth",
+      "class (first)",
+      "quality",
+      "equal",
+      "similar"
+    ],
+    "radicals": [
+      "寸",
+      "竹",
+      "土"
+    ]
+  },
+  {
+    "character": "老",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 4,
+    "freq": 803,
+    "onyomi": [
+      "ロウ"
+    ],
+    "kunyomi": [
+      "お.いる",
+      "ふ.ける"
+    ],
+    "meanings": [
+      "old man",
+      "old age",
+      "grow old"
+    ],
+    "radicals": [
+      "⽼"
+    ]
+  },
+  {
+    "character": "曲",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 3,
+    "freq": 810,
+    "onyomi": [
+      "キョク"
+    ],
+    "kunyomi": [
+      "ま.がる",
+      "ま.げる",
+      "くま"
+    ],
+    "meanings": [
+      "bend",
+      "music",
+      "melody",
+      "composition",
+      "pleasure",
+      "injustice",
+      "fault",
+      "curve",
+      "crooked",
+      "perverse",
+      "lean"
+    ],
+    "radicals": [
+      "丨",
+      "日"
+    ]
+  },
+  {
+    "character": "払",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 8,
+    "freq": 813,
+    "onyomi": [
+      "フツ",
+      "ヒツ",
+      "ホツ"
+    ],
+    "kunyomi": [
+      "はら.う",
+      "-はら.い",
+      "-ばら.い"
+    ],
+    "meanings": [
+      "pay",
+      "clear out",
+      "prune",
+      "banish",
+      "dispose of"
+    ],
+    "radicals": [
+      "厶",
+      "⺘"
+    ]
+  },
+  {
+    "character": "庭",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 3,
+    "freq": 816,
+    "onyomi": [
+      "テイ"
+    ],
+    "kunyomi": [
+      "にわ"
+    ],
+    "meanings": [
+      "courtyard",
+      "garden",
+      "yard"
+    ],
+    "radicals": [
+      "王",
+      "广",
+      "廴"
+    ]
+  },
+  {
+    "character": "徒",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 4,
+    "freq": 817,
+    "onyomi": [
+      "ト"
+    ],
+    "kunyomi": [
+      "いたずら",
+      "あだ"
+    ],
+    "meanings": [
+      "on foot",
+      "junior",
+      "emptiness",
+      "vanity",
+      "futility",
+      "uselessness",
+      "ephemeral thing",
+      "gang",
+      "set",
+      "party",
+      "people"
+    ],
+    "radicals": [
+      "走",
+      "土",
+      "彳"
+    ]
+  },
+  {
+    "character": "勤",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 6,
+    "freq": 830,
+    "onyomi": [
+      "キン",
+      "ゴン"
+    ],
+    "kunyomi": [
+      "つと.める",
+      "-づと.め",
+      "つと.まる",
+      "いそ.しむ"
+    ],
+    "meanings": [
+      "diligence",
+      "become employed",
+      "serve"
+    ],
+    "radicals": [
+      "土",
+      "力",
+      "⾋",
+      "口"
+    ]
+  },
+  {
+    "character": "遅",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 8,
+    "freq": 833,
+    "onyomi": [
+      "チ"
+    ],
+    "kunyomi": [
+      "おく.れる",
+      "おく.らす",
+      "おそ.い"
+    ],
+    "meanings": [
+      "slow",
+      "late",
+      "back",
+      "later"
+    ],
+    "radicals": [
+      "王",
+      "⻌",
+      "丷",
+      "羊",
+      "尸"
+    ]
+  },
+  {
+    "character": "居",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 5,
+    "freq": 836,
+    "onyomi": [
+      "キョ",
+      "コ"
+    ],
+    "kunyomi": [
+      "い.る",
+      "-い",
+      "お.る"
+    ],
+    "meanings": [
+      "reside",
+      "to be",
+      "exist",
+      "live with"
+    ],
+    "radicals": [
+      "口",
+      "十",
+      "尸"
+    ]
+  },
+  {
+    "character": "雑",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 5,
+    "freq": 839,
+    "onyomi": [
+      "ザツ",
+      "ゾウ"
+    ],
+    "kunyomi": [
+      "まじ.える",
+      "まじ.る"
+    ],
+    "meanings": [
+      "miscellaneous"
+    ],
+    "radicals": [
+      "木",
+      "隹",
+      "九"
+    ]
+  },
+  {
+    "character": "招",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 5,
+    "freq": 840,
+    "onyomi": [
+      "ショウ"
+    ],
+    "kunyomi": [
+      "まね.く"
+    ],
+    "meanings": [
+      "beckon",
+      "invite",
+      "summon",
+      "engage"
+    ],
+    "radicals": [
+      "口",
+      "刀",
+      "⺘"
+    ]
+  },
+  {
+    "character": "困",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 6,
+    "freq": 843,
+    "onyomi": [
+      "コン"
+    ],
+    "kunyomi": [
+      "こま.る"
+    ],
+    "meanings": [
+      "quandary",
+      "become distressed",
+      "annoyed"
+    ],
+    "radicals": [
+      "木",
+      "囗"
+    ]
+  },
+  {
+    "character": "欠",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 4,
+    "freq": 860,
+    "onyomi": [
+      "ケツ",
+      "ケン"
+    ],
+    "kunyomi": [
+      "か.ける",
+      "か.く"
+    ],
+    "meanings": [
+      "lack",
+      "gap",
+      "fail",
+      "yawning radical (no. 76)"
+    ],
+    "radicals": [
+      "欠",
+      "勹",
+      "人"
+    ]
+  },
+  {
+    "character": "更",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 8,
+    "freq": 861,
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "さら",
+      "さら.に",
+      "ふ.ける",
+      "ふ.かす"
+    ],
+    "meanings": [
+      "grow late",
+      "night watch",
+      "sit up late",
+      "of course",
+      "renew",
+      "renovate",
+      "again",
+      "more and more",
+      "further"
+    ],
+    "radicals": [
+      "丿",
+      "一",
+      "日"
+    ]
+  },
+  {
+    "character": "刻",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 6,
+    "freq": 866,
+    "onyomi": [
+      "コク"
+    ],
+    "kunyomi": [
+      "きざ.む",
+      "きざ.み"
+    ],
+    "meanings": [
+      "engrave",
+      "cut fine",
+      "chop",
+      "hash",
+      "mince",
+      "time",
+      "carving"
+    ],
+    "radicals": [
+      "⺉",
+      "亠"
+    ]
+  },
+  {
+    "character": "賛",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 5,
+    "freq": 868,
+    "onyomi": [
+      "サン"
+    ],
+    "kunyomi": [
+      "たす.ける",
+      "たた.える"
+    ],
+    "meanings": [
+      "approve",
+      "praise",
+      "title or inscription on picture",
+      "assist",
+      "agree with"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "八",
+      "人",
+      "大",
+      "二",
+      "亠"
+    ]
+  },
+  {
+    "character": "抱",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 8,
+    "freq": 871,
+    "onyomi": [
+      "ホウ"
+    ],
+    "kunyomi": [
+      "だ.く",
+      "いだ.く",
+      "かか.える"
+    ],
+    "meanings": [
+      "embrace",
+      "hug",
+      "hold in arms"
+    ],
+    "radicals": [
+      "勹",
+      "已",
+      "⺘"
+    ]
+  },
+  {
+    "character": "犯",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 5,
+    "freq": 874,
+    "onyomi": [
+      "ハン",
+      "ボン"
+    ],
+    "kunyomi": [
+      "おか.す"
+    ],
+    "meanings": [
+      "crime",
+      "sin",
+      "offense"
+    ],
+    "radicals": [
+      "乙",
+      "⺨",
+      "卩"
+    ]
+  },
+  {
+    "character": "恐",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 8,
+    "freq": 878,
+    "onyomi": [
+      "キョウ"
+    ],
+    "kunyomi": [
+      "おそ.れる",
+      "おそ.る",
+      "おそ.ろしい",
+      "こわ.い",
+      "こわ.がる"
+    ],
+    "meanings": [
+      "fear",
+      "dread",
+      "awe"
+    ],
+    "radicals": [
+      "工",
+      "心",
+      "丶",
+      "几"
+    ]
+  },
+  {
+    "character": "息",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 3,
+    "freq": 882,
+    "onyomi": [
+      "ソク"
+    ],
+    "kunyomi": [
+      "いき"
+    ],
+    "meanings": [
+      "breath",
+      "respiration",
+      "son",
+      "interest (on money)",
+      "rest",
+      "coming to an end"
+    ],
+    "radicals": [
+      "自",
+      "心"
+    ]
+  },
+  {
+    "character": "遠",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 2,
+    "freq": 887,
+    "onyomi": [
+      "エン",
+      "オン"
+    ],
+    "kunyomi": [
+      "とお.い"
+    ],
+    "meanings": [
+      "distant",
+      "far"
+    ],
+    "radicals": [
+      "衣",
+      "口",
+      "⻌",
+      "土"
+    ]
+  },
+  {
+    "character": "戻",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 8,
+    "freq": 890,
+    "onyomi": [
+      "レイ"
+    ],
+    "kunyomi": [
+      "もど.す",
+      "もど.る"
+    ],
+    "meanings": [
+      "re-",
+      "return",
+      "revert",
+      "resume",
+      "restore",
+      "go backwards"
+    ],
+    "radicals": [
+      "戸",
+      "大",
+      "一",
+      "尸"
+    ]
+  },
+  {
+    "character": "願",
+    "level": "N3",
+    "strokes": 19,
+    "grade": 4,
+    "freq": 894,
+    "onyomi": [
+      "ガン"
+    ],
+    "kunyomi": [
+      "ねが.う",
+      "-ねがい"
+    ],
+    "meanings": [
+      "petition",
+      "request",
+      "vow",
+      "wish",
+      "hope"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "八",
+      "小",
+      "白",
+      "頁",
+      "厂"
+    ]
+  },
+  {
+    "character": "絵",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 2,
+    "freq": 895,
+    "onyomi": [
+      "カイ",
+      "エ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "picture",
+      "drawing",
+      "painting",
+      "sketch"
+    ],
+    "radicals": [
+      "糸",
+      "幺",
+      "小",
+      "二",
+      "𠆢",
+      "厶"
+    ]
+  },
+  {
+    "character": "越",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 8,
+    "freq": 897,
+    "onyomi": [
+      "エツ",
+      "オツ"
+    ],
+    "kunyomi": [
+      "こ.す",
+      "-こ.す",
+      "-ご.し",
+      "こ.える",
+      "-ご.え"
+    ],
+    "meanings": [
+      "surpass",
+      "cross over",
+      "move to",
+      "exceed",
+      "Vietnam"
+    ],
+    "radicals": [
+      "走",
+      "土",
+      "戈"
+    ]
+  },
+  {
+    "character": "欲",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 6,
+    "freq": 902,
+    "onyomi": [
+      "ヨク"
+    ],
+    "kunyomi": [
+      "ほっ.する",
+      "ほ.しい"
+    ],
+    "meanings": [
+      "longing",
+      "covetousness",
+      "greed",
+      "passion",
+      "desire",
+      "craving"
+    ],
+    "radicals": [
+      "欠",
+      "口",
+      "谷",
+      "八",
+      "𠆢"
+    ]
+  },
+  {
+    "character": "痛",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 6,
+    "freq": 903,
+    "onyomi": [
+      "ツウ"
+    ],
+    "kunyomi": [
+      "いた.い",
+      "いた.む",
+      "いた.ましい",
+      "いた.める"
+    ],
+    "meanings": [
+      "pain",
+      "hurt",
+      "damage",
+      "bruise"
+    ],
+    "radicals": [
+      "用",
+      "疒",
+      "マ"
+    ]
+  },
+  {
+    "character": "笑",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 4,
+    "freq": 913,
+    "onyomi": [
+      "ショウ"
+    ],
+    "kunyomi": [
+      "わら.う",
+      "え.む"
+    ],
+    "meanings": [
+      "laugh"
+    ],
+    "radicals": [
+      "禾",
+      "竹",
+      "大"
+    ]
+  },
+  {
+    "character": "互",
+    "level": "N3",
+    "strokes": 4,
+    "grade": 8,
+    "freq": 914,
+    "onyomi": [
+      "ゴ"
+    ],
+    "kunyomi": [
+      "たが.い",
+      "かたみ.に"
+    ],
+    "meanings": [
+      "mutually",
+      "reciprocally",
+      "together"
+    ],
+    "radicals": [
+      "⺕",
+      "一",
+      "彑"
+    ]
+  },
+  {
+    "character": "束",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 918,
+    "onyomi": [
+      "ソク"
+    ],
+    "kunyomi": [
+      "たば",
+      "たば.ねる",
+      "つか",
+      "つか.ねる"
+    ],
+    "meanings": [
+      "bundle",
+      "sheaf",
+      "ream",
+      "tie in bundles",
+      "govern",
+      "manage",
+      "control"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "口",
+      "八",
+      "木"
+    ]
+  },
+  {
+    "character": "似",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 5,
+    "freq": 923,
+    "onyomi": [
+      "ジ"
+    ],
+    "kunyomi": [
+      "に.る",
+      "ひ.る"
+    ],
+    "meanings": [
+      "becoming",
+      "resemble",
+      "counterfeit",
+      "imitate",
+      "suitable"
+    ],
+    "radicals": [
+      "⺅",
+      "人",
+      "丶"
+    ]
+  },
+  {
+    "character": "列",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 3,
+    "freq": 927,
+    "onyomi": [
+      "レツ",
+      "レ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "file",
+      "row",
+      "rank",
+      "tier",
+      "column"
+    ],
+    "radicals": [
+      "⺉",
+      "歹"
+    ]
+  },
+  {
+    "character": "探",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 6,
+    "freq": 930,
+    "onyomi": [
+      "タン"
+    ],
+    "kunyomi": [
+      "さぐ.る",
+      "さが.す"
+    ],
+    "meanings": [
+      "grope",
+      "search",
+      "look for"
+    ],
+    "radicals": [
+      "木",
+      "儿",
+      "冖",
+      "⺘"
+    ]
+  },
+  {
+    "character": "逃",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 8,
+    "freq": 931,
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "に.げる",
+      "に.がす",
+      "のが.す",
+      "のが.れる"
+    ],
+    "meanings": [
+      "escape",
+      "flee",
+      "shirk",
+      "evade",
+      "set free"
+    ],
+    "radicals": [
+      "⻌",
+      "儿",
+      "冫"
+    ]
+  },
+  {
+    "character": "遊",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 941,
+    "onyomi": [
+      "ユウ",
+      "ユ"
+    ],
+    "kunyomi": [
+      "あそ.ぶ",
+      "あそ.ばす"
+    ],
+    "meanings": [
+      "play"
+    ],
+    "radicals": [
+      "⻌",
+      "子",
+      "方"
+    ]
+  },
+  {
+    "character": "迷",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 5,
+    "freq": 942,
+    "onyomi": [
+      "メイ"
+    ],
+    "kunyomi": [
+      "まよ.う"
+    ],
+    "meanings": [
+      "astray",
+      "be perplexed",
+      "in doubt",
+      "lost",
+      "err",
+      "illusion"
+    ],
+    "radicals": [
+      "⻌",
+      "米"
+    ]
+  },
+  {
+    "character": "夢",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 5,
+    "freq": 943,
+    "onyomi": [
+      "ム",
+      "ボウ"
+    ],
+    "kunyomi": [
+      "ゆめ",
+      "ゆめ.みる",
+      "くら.い"
+    ],
+    "meanings": [
+      "dream",
+      "vision",
+      "illusion"
+    ],
+    "radicals": [
+      "罒",
+      "夕",
+      "冖",
+      "⾋"
+    ]
+  },
+  {
+    "character": "君",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 3,
+    "freq": 947,
+    "onyomi": [
+      "クン"
+    ],
+    "kunyomi": [
+      "きみ",
+      "-ぎみ"
+    ],
+    "meanings": [
+      "mister",
+      "you",
+      "ruler",
+      "male name suffix"
+    ],
+    "radicals": [
+      "一",
+      "口",
+      "丿"
+    ]
+  },
+  {
+    "character": "閉",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 6,
+    "freq": 951,
+    "onyomi": [
+      "ヘイ"
+    ],
+    "kunyomi": [
+      "と.じる",
+      "と.ざす",
+      "し.める",
+      "し.まる",
+      "た.てる"
+    ],
+    "meanings": [
+      "closed",
+      "shut"
+    ],
+    "radicals": [
+      "丿",
+      "一",
+      "門",
+      "亅"
+    ]
+  },
+  {
+    "character": "緒",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 8,
+    "freq": 952,
+    "onyomi": [
+      "ショ",
+      "チョ"
+    ],
+    "kunyomi": [
+      "お",
+      "いとぐち"
+    ],
+    "meanings": [
+      "thong",
+      "beginning",
+      "inception",
+      "end",
+      "cord",
+      "strap",
+      "mental or emotional state"
+    ],
+    "radicals": [
+      "糸",
+      "幺",
+      "小",
+      "日",
+      "⽼"
+    ]
+  },
+  {
+    "character": "折",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 4,
+    "freq": 962,
+    "onyomi": [
+      "セツ",
+      "シャク"
+    ],
+    "kunyomi": [
+      "お.る",
+      "おり",
+      "お.り",
+      "-お.り",
+      "お.れる"
+    ],
+    "meanings": [
+      "fold",
+      "break",
+      "fracture",
+      "bend",
+      "yield",
+      "submit"
+    ],
+    "radicals": [
+      "斤",
+      "⺘"
+    ]
+  },
+  {
+    "character": "草",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 1,
+    "freq": 967,
+    "onyomi": [
+      "ソウ"
+    ],
+    "kunyomi": [
+      "くさ",
+      "くさ-",
+      "-ぐさ"
+    ],
+    "meanings": [
+      "grass",
+      "weeds",
+      "herbs",
+      "pasture",
+      "write",
+      "draft"
+    ],
+    "radicals": [
+      "十",
+      "日",
+      "⾋"
+    ]
+  },
+  {
+    "character": "暮",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 6,
+    "freq": 978,
+    "onyomi": [
+      "ボ"
+    ],
+    "kunyomi": [
+      "く.れる",
+      "く.らす"
+    ],
+    "meanings": [
+      "evening",
+      "twilight",
+      "season's end",
+      "livelihood",
+      "make a living",
+      "spend time"
+    ],
+    "radicals": [
+      "大",
+      "日",
+      "⾋"
+    ]
+  },
+  {
+    "character": "酒",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 3,
+    "freq": 1006,
+    "onyomi": [
+      "シュ"
+    ],
+    "kunyomi": [
+      "さけ",
+      "さか-"
+    ],
+    "meanings": [
+      "sake",
+      "alcohol"
+    ],
+    "radicals": [
+      "⺡",
+      "酉"
+    ]
+  },
+  {
+    "character": "悲",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 1014,
+    "onyomi": [
+      "ヒ"
+    ],
+    "kunyomi": [
+      "かな.しい",
+      "かな.しむ"
+    ],
+    "meanings": [
+      "grieve",
+      "sad",
+      "deplore",
+      "regret"
+    ],
+    "radicals": [
+      "心",
+      "非"
+    ]
+  },
+  {
+    "character": "晴",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 2,
+    "freq": 1022,
+    "onyomi": [
+      "セイ"
+    ],
+    "kunyomi": [
+      "は.れる",
+      "は.れ",
+      "は.れ-",
+      "-ば.れ",
+      "は.らす"
+    ],
+    "meanings": [
+      "clear up"
+    ],
+    "radicals": [
+      "月",
+      "青",
+      "土",
+      "二",
+      "日",
+      "亠"
+    ]
+  },
+  {
+    "character": "掛",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 8,
+    "freq": 1027,
+    "onyomi": [
+      "カイ",
+      "ケイ"
+    ],
+    "kunyomi": [
+      "か.ける",
+      "-か.ける",
+      "か.け",
+      "-か.け",
+      "-が.け",
+      "か.かる",
+      "-か.かる",
+      "-が.かる",
+      "か.かり",
+      "-が.かり",
+      "かかり",
+      "-がかり"
+    ],
+    "meanings": [
+      "hang",
+      "suspend",
+      "depend",
+      "arrive at",
+      "tax",
+      "pour"
+    ],
+    "radicals": [
+      "土",
+      "卜",
+      "⺘"
+    ]
+  },
+  {
+    "character": "到",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 8,
+    "freq": 1032,
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "いた.る"
+    ],
+    "meanings": [
+      "arrival",
+      "proceed",
+      "reach",
+      "attain",
+      "result in"
+    ],
+    "radicals": [
+      "⺉",
+      "至",
+      "土",
+      "厶"
+    ]
+  },
+  {
+    "character": "寝",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 8,
+    "freq": 1034,
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "ね.る",
+      "ね.かす",
+      "い.ぬ",
+      "みたまや",
+      "や.める"
+    ],
+    "meanings": [
+      "lie down",
+      "sleep",
+      "rest",
+      "bed",
+      "remain unsold"
+    ],
+    "radicals": [
+      "⺕",
+      "又",
+      "冖",
+      "宀",
+      "爿"
+    ]
+  },
+  {
+    "character": "暗",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 3,
+    "freq": 1040,
+    "onyomi": [
+      "アン"
+    ],
+    "kunyomi": [
+      "くら.い",
+      "くら.む",
+      "くれ.る"
+    ],
+    "meanings": [
+      "darkness",
+      "disappear",
+      "shade",
+      "informal",
+      "grow dark",
+      "be blinded"
+    ],
+    "radicals": [
+      "音",
+      "日",
+      "立"
+    ]
+  },
+  {
+    "character": "盗",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 8,
+    "freq": 1051,
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "ぬす.む",
+      "ぬす.み"
+    ],
+    "meanings": [
+      "steal",
+      "rob",
+      "pilfer"
+    ],
+    "radicals": [
+      "欠",
+      "皿",
+      "冫"
+    ]
+  },
+  {
+    "character": "吸",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 6,
+    "freq": 1054,
+    "onyomi": [
+      "キュウ"
+    ],
+    "kunyomi": [
+      "す.う"
+    ],
+    "meanings": [
+      "suck",
+      "imbibe",
+      "inhale",
+      "sip"
+    ],
+    "radicals": [
+      "丿",
+      "口",
+      "及"
+    ]
+  },
+  {
+    "character": "陽",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 1071,
+    "onyomi": [
+      "ヨウ"
+    ],
+    "kunyomi": [
+      "ひ"
+    ],
+    "meanings": [
+      "sunshine",
+      "yang principle",
+      "positive",
+      "male",
+      "heaven",
+      "daytime"
+    ],
+    "radicals": [
+      "一",
+      "日",
+      "勿",
+      "⻖"
+    ]
+  },
+  {
+    "character": "御",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 8,
+    "freq": 1087,
+    "onyomi": [
+      "ギョ",
+      "ゴ"
+    ],
+    "kunyomi": [
+      "おん-",
+      "お-",
+      "み-"
+    ],
+    "meanings": [
+      "honorable",
+      "manipulate",
+      "govern"
+    ],
+    "radicals": [
+      "丿",
+      "止",
+      "卩",
+      "彳"
+    ]
+  },
+  {
+    "character": "歯",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 1106,
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "よわい",
+      "は",
+      "よわ.い",
+      "よわい.する"
+    ],
+    "meanings": [
+      "tooth",
+      "cog"
+    ],
+    "radicals": [
+      "止",
+      "歯",
+      "米",
+      "凵"
+    ]
+  },
+  {
+    "character": "忘",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 6,
+    "freq": 1129,
+    "onyomi": [
+      "ボウ"
+    ],
+    "kunyomi": [
+      "わす.れる"
+    ],
+    "meanings": [
+      "forget"
+    ],
+    "radicals": [
+      "心",
+      "亡",
+      "亠"
+    ]
+  },
+  {
+    "character": "雪",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 2,
+    "freq": 1131,
+    "onyomi": [
+      "セツ"
+    ],
+    "kunyomi": [
+      "ゆき"
+    ],
+    "meanings": [
+      "snow"
+    ],
+    "radicals": [
+      "⺕",
+      "雨"
+    ]
+  },
+  {
+    "character": "吹",
+    "level": "N3",
+    "strokes": 7,
+    "grade": 8,
+    "freq": 1133,
+    "onyomi": [
+      "スイ"
+    ],
+    "kunyomi": [
+      "ふ.く"
+    ],
+    "meanings": [
+      "blow",
+      "breathe",
+      "puff",
+      "emit",
+      "smoke"
+    ],
+    "radicals": [
+      "欠",
+      "口"
+    ]
+  },
+  {
+    "character": "娘",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 8,
+    "freq": 1145,
+    "onyomi": [
+      "ジョウ"
+    ],
+    "kunyomi": [
+      "むすめ",
+      "こ"
+    ],
+    "meanings": [
+      "daughter",
+      "girl"
+    ],
+    "radicals": [
+      "艮",
+      "女"
+    ]
+  },
+  {
+    "character": "誤",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 6,
+    "freq": 1150,
+    "onyomi": [
+      "ゴ"
+    ],
+    "kunyomi": [
+      "あやま.る",
+      "-あやま.る"
+    ],
+    "meanings": [
+      "mistake",
+      "err",
+      "do wrong",
+      "mislead"
+    ],
+    "radicals": [
+      "言",
+      "口",
+      "八"
+    ]
+  },
+  {
+    "character": "洗",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 6,
+    "freq": 1168,
+    "onyomi": [
+      "セン"
+    ],
+    "kunyomi": [
+      "あら.う"
+    ],
+    "meanings": [
+      "wash",
+      "inquire into",
+      "probe"
+    ],
+    "radicals": [
+      "丿",
+      "⺡",
+      "土",
+      "儿"
+    ]
+  },
+  {
+    "character": "慣",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 5,
+    "freq": 1177,
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [
+      "な.れる",
+      "な.らす"
+    ],
+    "meanings": [
+      "accustomed",
+      "get used to",
+      "become experienced"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "八",
+      "母",
+      "⺖",
+      "毋"
+    ]
+  },
+  {
+    "character": "礼",
+    "level": "N3",
+    "strokes": 5,
+    "grade": 3,
+    "freq": 1185,
+    "onyomi": [
+      "レイ",
+      "ライ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "salute",
+      "bow",
+      "ceremony",
+      "thanks",
+      "remuneration"
+    ],
+    "radicals": [
+      "乙",
+      "⺭"
+    ]
+  },
+  {
+    "character": "窓",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 6,
+    "freq": 1186,
+    "onyomi": [
+      "ソウ",
+      "ス"
+    ],
+    "kunyomi": [
+      "まど",
+      "てんまど",
+      "けむだし"
+    ],
+    "meanings": [
+      "window",
+      "pane"
+    ],
+    "radicals": [
+      "穴",
+      "心",
+      "儿",
+      "厶",
+      "宀"
+    ]
+  },
+  {
+    "character": "昔",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 1197,
+    "onyomi": [
+      "セキ",
+      "シャク"
+    ],
+    "kunyomi": [
+      "むかし"
+    ],
+    "meanings": [
+      "once upon a time",
+      "antiquity",
+      "old times"
+    ],
+    "radicals": [
+      "丨",
+      "一",
+      "二",
+      "日"
+    ]
+  },
+  {
+    "character": "貧",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 5,
+    "freq": 1211,
+    "onyomi": [
+      "ヒン",
+      "ビン"
+    ],
+    "kunyomi": [
+      "まず.しい"
+    ],
+    "meanings": [
+      "poverty",
+      "poor"
+    ],
+    "radicals": [
+      "貝",
+      "目",
+      "刀",
+      "八"
+    ]
+  },
+  {
+    "character": "怒",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 8,
+    "freq": 1221,
+    "onyomi": [
+      "ド",
+      "ヌ"
+    ],
+    "kunyomi": [
+      "いか.る",
+      "おこ.る"
+    ],
+    "meanings": [
+      "angry",
+      "be offended"
+    ],
+    "radicals": [
+      "女",
+      "心",
+      "又"
+    ]
+  },
+  {
+    "character": "泳",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 3,
+    "freq": 1223,
+    "onyomi": [
+      "エイ"
+    ],
+    "kunyomi": [
+      "およ.ぐ"
+    ],
+    "meanings": [
+      "swim"
+    ],
+    "radicals": [
+      "⺡",
+      "水",
+      "丶"
+    ]
+  },
+  {
+    "character": "祖",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 5,
+    "freq": 1226,
+    "onyomi": [
+      "ソ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "ancestor",
+      "pioneer",
+      "founder"
+    ],
+    "radicals": [
+      "一",
+      "目",
+      "⺭"
+    ]
+  },
+  {
+    "character": "杯",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 8,
+    "freq": 1235,
+    "onyomi": [
+      "ハイ"
+    ],
+    "kunyomi": [
+      "さかずき"
+    ],
+    "meanings": [
+      "counter for cupfuls",
+      "wine glass",
+      "glass",
+      "toast"
+    ],
+    "radicals": [
+      "丨",
+      "丿",
+      "一",
+      "木",
+      "⺭"
+    ]
+  },
+  {
+    "character": "疲",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 8,
+    "freq": 1263,
+    "onyomi": [
+      "ヒ"
+    ],
+    "kunyomi": [
+      "つか.れる",
+      "-づか.れ",
+      "つか.らす"
+    ],
+    "meanings": [
+      "exhausted",
+      "tire",
+      "weary"
+    ],
+    "radicals": [
+      "皮",
+      "又",
+      "疒"
+    ]
+  },
+  {
+    "character": "皆",
+    "level": "N3",
+    "strokes": 9,
+    "grade": 8,
+    "freq": 1267,
+    "onyomi": [
+      "カイ"
+    ],
+    "kunyomi": [
+      "みな",
+      "みんな"
+    ],
+    "meanings": [
+      "all",
+      "everything"
+    ],
+    "radicals": [
+      "白",
+      "比"
+    ]
+  },
+  {
+    "character": "鳴",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 2,
+    "freq": 1279,
+    "onyomi": [
+      "メイ"
+    ],
+    "kunyomi": [
+      "な.く",
+      "な.る",
+      "な.らす"
+    ],
+    "meanings": [
+      "chirp",
+      "cry",
+      "bark",
+      "sound",
+      "ring",
+      "echo",
+      "honk"
+    ],
+    "radicals": [
+      "口",
+      "鳥",
+      "⺣"
+    ]
+  },
+  {
+    "character": "腹",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 6,
+    "freq": 1286,
+    "onyomi": [
+      "フク"
+    ],
+    "kunyomi": [
+      "はら"
+    ],
+    "meanings": [
+      "abdomen",
+      "belly",
+      "stomach"
+    ],
+    "radicals": [
+      "月",
+      "日",
+      "夂"
+    ]
+  },
+  {
+    "character": "煙",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 8,
+    "freq": 1290,
+    "onyomi": [
+      "エン"
+    ],
+    "kunyomi": [
+      "けむ.る",
+      "けむり",
+      "けむ.い"
+    ],
+    "meanings": [
+      "smoke"
+    ],
+    "radicals": [
+      "火",
+      "西",
+      "土"
+    ]
+  },
+  {
+    "character": "眠",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 8,
+    "freq": 1315,
+    "onyomi": [
+      "ミン"
+    ],
+    "kunyomi": [
+      "ねむ.る",
+      "ねむ.い"
+    ],
+    "meanings": [
+      "sleep",
+      "die",
+      "sleepy"
+    ],
+    "radicals": [
+      "口",
+      "氏",
+      "目"
+    ]
+  },
+  {
+    "character": "怖",
+    "level": "N3",
+    "strokes": 8,
+    "grade": 8,
+    "freq": 1325,
+    "onyomi": [
+      "フ",
+      "ホ"
+    ],
+    "kunyomi": [
+      "こわ.い",
+      "こわ.がる",
+      "お.じる",
+      "おそ.れる"
+    ],
+    "meanings": [
+      "dreadful",
+      "be frightened",
+      "fearful"
+    ],
+    "radicals": [
+      "丿",
+      "一",
+      "巾",
+      "⺖"
+    ]
+  },
+  {
+    "character": "耳",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 1,
+    "freq": 1328,
+    "onyomi": [
+      "ジ"
+    ],
+    "kunyomi": [
+      "みみ"
+    ],
+    "meanings": [
+      "ear"
+    ],
+    "radicals": [
+      "耳"
+    ]
+  },
+  {
+    "character": "頂",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 6,
+    "freq": 1350,
+    "onyomi": [
+      "チョウ"
+    ],
+    "kunyomi": [
+      "いただ.く",
+      "いただき"
+    ],
+    "meanings": [
+      "place on the head",
+      "receive",
+      "top of head",
+      "top",
+      "summit",
+      "peak"
+    ],
+    "radicals": [
+      "一",
+      "貝",
+      "目",
+      "八",
+      "頁",
+      "亅"
+    ]
+  },
+  {
+    "character": "箱",
+    "level": "N3",
+    "strokes": 15,
+    "grade": 3,
+    "freq": 1357,
+    "onyomi": [
+      "ソウ"
+    ],
+    "kunyomi": [
+      "はこ"
+    ],
+    "meanings": [
+      "box",
+      "chest",
+      "case",
+      "bin",
+      "railway car"
+    ],
+    "radicals": [
+      "竹",
+      "木",
+      "目"
+    ]
+  },
+  {
+    "character": "晩",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 6,
+    "freq": 1424,
+    "onyomi": [
+      "バン"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "nightfall",
+      "night"
+    ],
+    "radicals": [
+      "免",
+      "日",
+      "儿"
+    ]
+  },
+  {
+    "character": "寒",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 3,
+    "freq": 1456,
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [
+      "さむ.い"
+    ],
+    "meanings": [
+      "cold"
+    ],
+    "radicals": [
+      "一",
+      "八",
+      "宀",
+      "丶",
+      "井"
+    ]
+  },
+  {
+    "character": "髪",
+    "level": "N3",
+    "strokes": 14,
+    "grade": 8,
+    "freq": 1474,
+    "onyomi": [
+      "ハツ"
+    ],
+    "kunyomi": [
+      "かみ"
+    ],
+    "meanings": [
+      "hair of the head"
+    ],
+    "radicals": [
+      "夂",
+      "一",
+      "長",
+      "彡",
+      "髟"
+    ]
+  },
+  {
+    "character": "忙",
+    "level": "N3",
+    "strokes": 6,
+    "grade": 8,
+    "freq": 1475,
+    "onyomi": [
+      "ボウ",
+      "モウ"
+    ],
+    "kunyomi": [
+      "いそが.しい",
+      "せわ.しい",
+      "おそ.れる",
+      "うれえるさま"
+    ],
+    "meanings": [
+      "busy",
+      "occupied",
+      "restless"
+    ],
+    "radicals": [
+      "亡",
+      "⺖",
+      "亠"
+    ]
+  },
+  {
+    "character": "才",
+    "level": "N3",
+    "strokes": 3,
+    "grade": 2,
+    "freq": 1497,
+    "onyomi": [
+      "サイ"
+    ],
+    "kunyomi": [],
+    "meanings": [
+      "genius",
+      "years old",
+      "cubic shaku"
+    ],
+    "radicals": [
+      "丿",
+      "一",
+      "亅"
+    ]
+  },
+  {
+    "character": "靴",
+    "level": "N3",
+    "strokes": 13,
+    "grade": 8,
+    "freq": 1561,
+    "onyomi": [
+      "カ"
+    ],
+    "kunyomi": [
+      "くつ"
+    ],
+    "meanings": [
+      "shoes"
+    ],
+    "radicals": [
+      "⺅",
+      "革",
+      "匕"
+    ]
+  },
+  {
+    "character": "恥",
+    "level": "N3",
+    "strokes": 10,
+    "grade": 8,
+    "freq": 1575,
+    "onyomi": [
+      "チ"
+    ],
+    "kunyomi": [
+      "は.じる",
+      "はじ",
+      "は.じらう",
+      "は.ずかしい"
+    ],
+    "meanings": [
+      "shame",
+      "dishonor"
+    ],
+    "radicals": [
+      "耳",
+      "心"
+    ]
+  },
+  {
+    "character": "偶",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 8,
+    "freq": 1602,
+    "onyomi": [
+      "グウ"
+    ],
+    "kunyomi": [
+      "たま"
+    ],
+    "meanings": [
+      "accidentally",
+      "even number",
+      "couple",
+      "man & wife",
+      "same kind"
+    ],
+    "radicals": [
+      "⺅",
+      "田",
+      "冂",
+      "厶",
+      "禸"
+    ]
+  },
+  {
+    "character": "偉",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 8,
+    "freq": 1639,
+    "onyomi": [
+      "イ"
+    ],
+    "kunyomi": [
+      "えら.い"
+    ],
+    "meanings": [
+      "admirable",
+      "greatness",
+      "remarkable",
+      "conceited",
+      "famous",
+      "excellent"
+    ],
+    "radicals": [
+      "⺅",
+      "口",
+      "韋"
+    ]
+  },
+  {
+    "character": "猫",
+    "level": "N3",
+    "strokes": 11,
+    "grade": 8,
+    "freq": 1702,
+    "onyomi": [
+      "ビョウ"
+    ],
+    "kunyomi": [
+      "ねこ"
+    ],
+    "meanings": [
+      "cat"
+    ],
+    "radicals": [
+      "田",
+      "⺨",
+      "⾋"
+    ]
+  },
+  {
+    "character": "幾",
+    "level": "N3",
+    "strokes": 12,
+    "grade": 8,
+    "freq": 1725,
+    "onyomi": [
+      "キ"
+    ],
+    "kunyomi": [
+      "いく-",
+      "いく.つ",
+      "いく.ら"
+    ],
+    "meanings": [
+      "how many",
+      "how much",
+      "how far",
+      "how long",
+      "some",
+      "several"
+    ],
+    "radicals": [
+      "丿",
+      "幺",
+      "戈",
+      "丶"
+    ]
+  }
+]
