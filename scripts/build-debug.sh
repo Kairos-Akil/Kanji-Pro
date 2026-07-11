@@ -5,10 +5,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-if [ ! -f android/gradlew ]; then
-    echo "No native android project found, running expo prebuild..."
-    npx expo prebuild --platform android
-fi
+# Regenerate android/ if app.json or the logo changed since the last prebuild.
+bash scripts/ensure-native.sh
 
 # By default RNGP skips embedding the JS bundle for the debug variant and expects
 # Metro instead. Force it to bundle in debug too, so this APK never needs Metro.
