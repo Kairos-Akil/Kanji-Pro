@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import { MousePointerClick, Keyboard, Save, Shuffle, BookOpen, MessageCircle, GraduationCap, Ban } from 'lucide-react-native'
+import { MousePointerClick, Keyboard, Save, Shuffle, BookOpen, MessageCircle, GraduationCap, Ban, Info } from 'lucide-react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useTheme } from '../context/ThemeContext'
 import { useAlert } from '../context/AlertContext'
@@ -128,7 +128,7 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
     }
 
     return (
-        <BottomSheet isVisible={isVisible} onClose={onClose} title="Quiz Settings" heightPercent={showQuizContent ? '74%' : '62%'}>
+        <BottomSheet isVisible={isVisible} onClose={onClose} title="Quiz Settings" heightPercent={showQuizContent ? '77%' : '62%'}>
             {/* --- Setting 1: Mastery Level (Stars) --- */}
             <View style={styles.settingRow}>
                 <View>
@@ -159,9 +159,18 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
             <View style={styles.section}>
                 <Text style={[styles.label, { color: theme.text }]}>Learning Mode</Text>
                 <Text style={[styles.subLabel, { color: '#888', marginBottom: 10 }]}>
-                    Show the answer for new characters instead of guessing
+                    Teaches a few characters at a time and reveals new ones.
                 </Text>
                 <SegmentedToggle options={LEARNING_MODE_OPTIONS} value={learningMode} onChange={setLearningMode} />
+
+                <Spacer height={10} />
+
+                <View style={styles.noteRow}>
+                    <Info size={13} color={theme.text} style={{ opacity: 0.55 }} />
+                    <Text style={[styles.noteText, { color: theme.text, fontSize: 11 }]}>
+                        Progress is saved across both modes. Can be reset in the settings.
+                    </Text>
+                </View>
             </View>
 
             {/* --- Setting 4: Quiz Content (kanji courses only) --- */}
@@ -208,6 +217,16 @@ const styles = StyleSheet.create({
     subLabel: {
         fontSize: 14,
         marginTop: 2,
+    },
+    noteRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 6,
+    },
+    noteText: {
+        flex: 1, // wrap within the row instead of pushing past the sheet edge
+        fontSize: 13,
+        opacity: 0.55,
     },
     section: {},
     saveBtn: {

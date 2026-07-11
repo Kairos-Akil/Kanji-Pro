@@ -27,7 +27,7 @@ const QuizInputKeyboard = ({ onSubmit, showAnswer, correctAnswerText, isCorrect 
 
     // Light selection haptic on each keypress. Respects the Haptics toggle; no-op on web.
     const tick = useCallback(() => {
-        if (hapticsEnabled) Haptics.selectionAsync().catch(() => {})
+        if (hapticsEnabled) Haptics.selectionAsync().catch(() => { })
     }, [hapticsEnabled])
 
     // Reset input when the question changes (showAnswer true -> false).
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
     // Feedback Styles
     feedbackContainer: {
         position: 'absolute',
-        top: -10, // Float above the keyboard area
+        top: -52, // Float above the keyboard area
         alignSelf: 'center',
         backgroundColor: 'rgba(0,0,0,0.8)',
         paddingHorizontal: 20,

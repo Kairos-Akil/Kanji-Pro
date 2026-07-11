@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { StyleSheet, View, TouchableOpacity, ScrollView, Text } from 'react-native'
 import { router } from 'expo-router'
 import { useFocusEffect } from '@react-navigation/native'
@@ -11,42 +11,24 @@ import ThemedText from './ThemedText'
 import AppSettings from './AppSettings'
 import SearchModal from './SearchModal'
 import InfoModal from './InfoModal'
-import { loadQuizSettings, DEFAULT_MAX_STARS } from './QuizSettings'
+import { loadQuizSettings } from './QuizSettings'
 import { useTheme } from '../context/ThemeContext'
-import { useProgress } from '../context/ProgressContext'
+import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
 import { COURSES, DEFAULT_COURSE_ID, LAST_ACTIVE_STORAGE_KEY, RADICAL_CATEGORY_IDS, KANJI_TIER_IDS_BY_LEVEL } from '../constants/Courses'
 
-const HomePage = () => {
-    const { theme } = useTheme()
-    const { streakCount, getLearnedCount } = useProgress()
-    const [settingsVisible, setSettingsVisible] = useState(false)
-    const [searchVisible, setSearchVisible] = useState(false)
-    const [infoVisible, setInfoVisible] = useState(false)
-    const [activeCourseId, setActiveCourseId] = useState(DEFAULT_COURSE_ID)
-    const [maxStars, setMaxStars] = useState(DEFAULT_MAX_STARS)
+// Course-id groups behind each card's progress bar (a card can span several courses).
+const CARD_COURSE_GROUPS = {
+    hiragana: ['hiragana_basic', 'hiragana_variants', 'hiragana_combinations'],
+    katakana: ['katakana_basic', 'katakana_variants', 'katakana_combinations'],
+    ...KANJI_TIER_IDS_BY_LEVEL,
+    ...Object.fromEntries(RADICAL_CATEGORY_IDS.map(id => [id, [id]])),
+}
 
-    // Refresh on focus so the "Continue" card and progress percentages reflect changes made elsewhere.
-    useFocusEffect(
-        useCallback(() => {
-            AsyncStorage.getItem(LAST_ACTIVE_STORAGE_KEY)
-                .then(lastActive => {
-                    if (lastActive && COURSES[lastActive]) setActiveCourseId(lastActive)
-                })
-                .catch(err => console.log('Error loading last active course', err))
-
-            loadQuizSettings()
-                .then(saved => setMaxStars(saved.maxStars))
-                .catch(err => console.log('Error loading mastery level', err))
-        }, [])
-    )
-
-    const activeCourse = COURSES[activeCourseId] ?? COURSES[DEFAULT_COURSE_ID]
-
-    // Percent learned across the given course ids (a card can span several, e.g. Hiragana's
-    // basic/variants/combinations). Null for id-less explainer cards, which skip the progress bar.
-    const getCardProgress = (courseIds) => {
-        if (!courseIds || courseIds.length === 0) return null
-
+// Percent learned per card key. Runs on focus (not per render): HomePage stays mounted under the
+// navigation stack, and counting every course live would re-run on each answered quiz question.
+const computeCardPercents = (getLearnedCount, maxStars) => {
+    const percents = {}
+    Object.entries(CARD_COURSE_GROUPS).forEach(([key, courseIds]) => {
         let learned = 0
         let total = 0
         courseIds.forEach(id => {
@@ -56,26 +38,66 @@ const HomePage = () => {
             learned += getLearnedCount(course.id, itemIds, maxStars)
             total += course.data.length
         })
+        percents[key] = total > 0 ? Math.round((learned / total) * 100) : 0
+    })
+    return percents
+}
 
-        return total > 0 ? Math.round((learned / total) * 100) : 0
-    }
+const HomePage = () => {
+    const { theme } = useTheme()
+    // Stable actions (not the live context), so answering quiz questions doesn't re-render Home.
+    const { getLearnedCount } = useProgressActions()
+    const { streakCount, progressLoaded } = useProgressMeta()
+    const [settingsVisible, setSettingsVisible] = useState(false)
+    const [searchVisible, setSearchVisible] = useState(false)
+    const [infoVisible, setInfoVisible] = useState(false)
+    const [activeCourseId, setActiveCourseId] = useState(DEFAULT_COURSE_ID)
+    // Keyed by CARD_COURSE_GROUPS; empty until the first refresh computes it (bars render blank).
+    const [cardPercents, setCardPercents] = useState({})
+
+    // getLearnedCount comes from the stable actions context, so this callback never goes stale.
+    const refreshPercents = useCallback(() => {
+        loadQuizSettings()
+            .then(saved => setCardPercents(computeCardPercents(getLearnedCount, saved.maxStars)))
+            .catch(err => console.log('Error loading mastery level', err))
+    }, [getLearnedCount])
+
+    // Refresh on focus so the "Continue" card and percentages reflect changes made elsewhere.
+    useFocusEffect(
+        useCallback(() => {
+            AsyncStorage.getItem(LAST_ACTIVE_STORAGE_KEY)
+                .then(lastActive => {
+                    if (lastActive && COURSES[lastActive]) setActiveCourseId(lastActive)
+                })
+                .catch(err => console.log('Error loading last active course', err))
+
+            refreshPercents()
+        }, [refreshPercents])
+    )
+
+    // The first focus can run before the persisted progress finishes loading; recompute once it has.
+    useEffect(() => {
+        if (progressLoaded) refreshPercents()
+    }, [progressLoaded, refreshPercents])
+
+    const activeCourse = COURSES[activeCourseId] ?? COURSES[DEFAULT_COURSE_ID]
 
     const kanaCourses = [
         { title: 'What are Kana?', sub: 'Kana explained', icon: 'bulb', route: '/Explain_Page/Kana' },
         {
             title: 'Hiragana', sub: 'Native Words', icon: 'school', route: '/Hiragana_Page/hiraganaBasic',
-            percent: getCardProgress(['hiragana_basic', 'hiragana_variants', 'hiragana_combinations']),
+            percent: cardPercents.hiragana,
         },
         {
             title: 'Katakana', sub: 'Foreign Words', icon: 'school', route: '/Katakana_Page/katakanaBasic',
-            percent: getCardProgress(['katakana_basic', 'katakana_variants', 'katakana_combinations']),
+            percent: cardPercents.katakana,
         },
     ]
 
     // Each N-level card links to its first tier and aggregates progress across all 3 tiers.
     const kanjiLevelCard = (id, title, sub) => {
         const tierIds = KANJI_TIER_IDS_BY_LEVEL[id]
-        return { title, sub, icon: 'book', route: COURSES[tierIds[0]].route, percent: getCardProgress(tierIds) }
+        return { title, sub, icon: 'book', route: COURSES[tierIds[0]].route, percent: cardPercents[id] }
     }
     const kanjiCourses = [
         { title: 'What are Kanji?', sub: 'Kanji explained', icon: 'bulb', route: '/Explain_Page/Kanji' },
@@ -96,7 +118,7 @@ const HomePage = () => {
                 sub: `${course.data.length} radicals`,
                 icon: course.icon,
                 route: course.route,
-                percent: getCardProgress([id]),
+                percent: cardPercents[id],
             }
         }),
     ]
@@ -167,9 +189,13 @@ const HomePage = () => {
     return (
         <ThemedView safe={true} style={styles.container} backgroundColor={theme.background}>
 
+            {/* Refresh on close: "Reset All Progress" lives in this sheet and fires no focus event. */}
             <AppSettings
                 isVisible={settingsVisible}
-                onClose={() => setSettingsVisible(false)}
+                onClose={() => {
+                    setSettingsVisible(false)
+                    refreshPercents()
+                }}
             />
 
             <SearchModal

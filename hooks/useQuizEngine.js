@@ -68,6 +68,17 @@ const shuffle = (arr) => {
 // Shared "positive" blue for the success glow and the teaching card's border.
 const TEACH_COLOR = '#00e1ffff'
 
+// Learning Mode drills only a small "working set" of unmastered items at a time, so a fresh
+// course doesn't throw all characters at the user at once. The set fills instantly to the minimum,
+// then grows by chance per question up to the maximum; mastering an item frees its slot.
+// With Learning Mode off, the quiz draws from all unmastered items (plain test).
+const WORKING_SET_MIN = 5
+const WORKING_SET_MAX = 15
+const NEW_ITEM_CHANCE = 0.1
+
+// Chance of re-drilling a mastered item, so mastery can still be lost and the quiz never runs dry.
+const REVIEW_CHANCE = 0.15
+
 // Shared drill logic for every quiz (Kana, Kanji, Radicals): tracks per-item star progress,
 // generates multiple-choice questions, and drives the success/failure animation. idKey identifies
 // an item, answerKey is the tested field. questionModes (kanji) rotates the tested field per
@@ -93,9 +104,11 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
     const advanceTimeoutRef = useRef(null)
     useEffect(() => () => clearTimeout(advanceTimeoutRef.current), [])
 
-    const playSound = async (player) => {
+    const playSound = (player) => {
         try {
-            await player.seekTo(0)
+            // seekTo is deliberately not awaited: native commands run in dispatch order anyway,
+            // and awaiting would queue play() behind the answer-tap re-render (audibly late sound).
+            player.seekTo(0).catch(() => {})
             player.play()
         } catch (err) {
             // Non-fatal: playback isn't available on every platform (e.g. some web browsers).
@@ -171,29 +184,96 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [current, maxStars, quizContent, learningMode])
 
-    // Chance of re-drilling a mastered item, so mastery can still be lost and the quiz never runs dry.
-    const REVIEW_CHANCE = 0.2
+    // Active learning pool: ids of the (at most WORKING_SET_MAX) unmastered items drilled right now.
+    const workingSetRef = useRef(null)
+    // Ids that rolled into the set but haven't been shown yet, they're presented back-to-back
+    // (teach cards in Learning Mode) before normal quizzing resumes.
+    const introQueueRef = useRef([])
+
+    // Sync the working set with current progress/settings; returns its items. Runs before every
+    // question, so it self-heals after mastery-level changes or a progress reset.
+    const updateWorkingSet = (unmastered, getStars) => {
+        const inProgress = unmastered.filter(item => getStars(item) > 0)
+
+        // First run: resume the items already in progress, so prior partial stars stay active.
+        if (workingSetRef.current === null) {
+            workingSetRef.current = shuffle(inProgress).slice(0, WORKING_SET_MAX).map(item => item[idKey])
+        }
+
+        const unmasteredIds = new Set(unmastered.map(item => item[idKey]))
+        const set = workingSetRef.current.filter(id => unmasteredIds.has(id)) // drop mastered items
+
+        const setIds = new Set(set)
+        const enroll = (item) => { set.push(item[idKey]); setIds.add(item[idKey]) }
+
+        // Partially-starred items outside the set (e.g. after raising the mastery level) re-enter
+        // before brand-new ones.
+        for (const item of shuffle(inProgress)) {
+            if (set.length >= WORKING_SET_MAX) break
+            if (!setIds.has(item[idKey])) enroll(item)
+        }
+
+        // Fill instantly up to the minimum, then let new items trickle in by chance.
+        const fresh = shuffle(unmastered.filter(item => !setIds.has(item[idKey])))
+        const enrollFresh = () => {
+            const item = fresh.pop()
+            enroll(item)
+            introQueueRef.current.push(item[idKey])
+        }
+        while (set.length < WORKING_SET_MIN && fresh.length > 0) enrollFresh()
+        if (set.length < WORKING_SET_MAX && fresh.length > 0 && Math.random() < NEW_ITEM_CHANCE) {
+            enrollFresh()
+        }
+
+        workingSetRef.current = set
+        return unmastered.filter(item => setIds.has(item[idKey]))
+    }
 
     const generateQuestion = () => {
         if (maxStars === 0 || Data.length === 0) return
 
-        const unmastered = Data.filter(item => (progress[item[idKey]] ?? 0) < maxStars)
-        const mastered = Data.filter(item => (progress[item[idKey]] ?? 0) >= maxStars)
+        const getStars = (item) => progress[item[idKey]] ?? 0
+        const unmastered = Data.filter(item => getStars(item) < maxStars)
+        const mastered = Data.filter(item => getStars(item) >= maxStars)
 
+        let nextItem = null
         let pool
-        if (unmastered.length === 0) {
-            pool = mastered
+
+        // The working set (and its teach-first queue) is Learning Mode's pacing. With Learning
+        // Mode off the quiz is a plain test drawing from every unmastered item at once.
+        if (learningMode === 'on') {
+            const workingSet = updateWorkingSet(unmastered, getStars)
+
+            // Drop queued ids that left the set in the meantime (e.g. after a progress reset).
+            introQueueRef.current = introQueueRef.current.filter(id =>
+                workingSet.some(item => item[idKey] === id))
+
+            if (introQueueRef.current.length > 0) {
+                // Freshly rolled-in characters are shown back-to-back, before quizzing resumes.
+                const nextId = introQueueRef.current.shift()
+                nextItem = workingSet.find(item => item[idKey] === nextId)
+            } else if (workingSet.length === 0) {
+                pool = mastered // everything mastered: reviews are all that's left
+            } else if (mastered.length > 0 && Math.random() < REVIEW_CHANCE) {
+                pool = mastered
+            } else {
+                pool = workingSet
+            }
+        } else if (unmastered.length === 0) {
+            pool = mastered // everything mastered: reviews are all that's left
         } else if (mastered.length > 0 && Math.random() < REVIEW_CHANCE) {
             pool = mastered
         } else {
             pool = unmastered
         }
 
-        // Don't re-ask the on-screen character (skipped only if it's the only candidate).
-        const candidates = pool.length > 1 && currentItem
-            ? pool.filter(item => item[idKey] !== currentItem[idKey])
-            : pool
-        const nextItem = candidates[Math.floor(Math.random() * candidates.length)]
+        if (!nextItem) {
+            // Don't re-ask the on-screen character (skipped only if it's the only candidate).
+            const candidates = pool.length > 1 && currentItem
+                ? pool.filter(item => item[idKey] !== currentItem[idKey])
+                : pool
+            nextItem = candidates[Math.floor(Math.random() * candidates.length)]
+        }
 
         // Only modes the item has data for; the fallback guards against pathological data.
         const itemModes = activeModes.filter(mode => hasModeData(nextItem, mode))
