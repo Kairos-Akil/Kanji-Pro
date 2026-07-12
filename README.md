@@ -42,7 +42,7 @@ radicals that make them up, with a spaced, star-based mastery system.
 
 [<img src="https://raw.githubusercontent.com/ImranR98/Obtainium/refs/heads/main/assets/graphics/badge_obtainium.png"
     alt="Get it on Obtainium"
-    height="80">](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Kairos-Akil/Kanji-Pro)
+    height="80">](https://apps.obtainium.page/redirect?r=obtainium://app/%7B%22id%22:%22dev.Kairos-Akil.Kanji-Pro%22,%22url%22:%22https://github.com/Kairos-Akil/Kanji-Pro%22,%22author%22:%22Kairos-Akil%22,%22name%22:%22Kanji-Pro%22%7D)
 
 Or download the APK from [Releases](https://github.com/Kairos-Akil/Kanji-Pro/releases).
 
