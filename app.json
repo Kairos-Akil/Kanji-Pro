@@ -3,7 +3,7 @@
     "scheme": "kanjipro",
     "name": "Kanji Pro",
     "slug": "Kanji-Pro",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "orientation": "portrait",
     "icon": "./assets/MyAssets/blueLogo.png",
     "userInterfaceStyle": "dark",
@@ -17,7 +17,7 @@
         "backgroundColor": "#000000"
       },
       "package": "io.github.kairosakil.kanjipro",
-      "versionCode": 3
+      "versionCode": 4
     },
     "web": {
       "favicon": "./assets/MyAssets/blueLogo.png"
@@ -42,6 +42,17 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#000000"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "buildArchs": [
+              "arm64-v8a",
+              "armeabi-v7a"
+            ]
+          }
         }
       ]
     ]
