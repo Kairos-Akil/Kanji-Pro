@@ -237,12 +237,12 @@ export const SEARCH_INDEX = Object.values(COURSES).flatMap(course =>
     }))
 )
 
-// Build a TopSlider tab entry from a course id; each _layout.jsx only supplies name + component.
-export const buildTab = (name, component, courseId) => {
+// Build a TopSlider tab entry from a course id. `name` is the tab's route file in the same folder
+// (e.g. 'hiraganaBasic' for hiraganaBasic.jsx); the router loads the screen from that file.
+export const buildTab = (name, courseId) => {
     const course = COURSES[courseId]
     return {
         name,
-        component,
         title: course.tabLabel,
         totalItems: course.data.length,
         id: course.id,

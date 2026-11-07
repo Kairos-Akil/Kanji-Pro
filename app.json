@@ -3,7 +3,7 @@
     "scheme": "kanjipro",
     "name": "Kanji Pro",
     "slug": "Kanji-Pro",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/MyAssets/blueLogo.png",
     "userInterfaceStyle": "dark",
@@ -17,7 +17,7 @@
         "backgroundColor": "#000000"
       },
       "package": "io.github.kairosakil.kanjipro",
-      "versionCode": 2
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/MyAssets/blueLogo.png"
