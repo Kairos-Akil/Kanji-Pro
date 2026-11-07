@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react'
+import { createContext, useContext, useRef } from 'react'
 import { Platform } from 'react-native'
 import * as Notifications from 'expo-notifications'
 import { usePersistedState } from '../hooks/usePersistedState'
@@ -36,7 +36,7 @@ export const AppSettingsProvider = ({ children }) => {
 
     // Reschedule (or cancel) the daily reminder. Cancel-all-then-reschedule avoids tracking
     // notification ids; the result lets callers detect a denied permission.
-    const applyReminder = async (enabled, hour, minute) => {
+    const applyReminderNow = async (enabled, hour, minute) => {
         if (Platform.OS === 'web') return { success: true } // not supported on web
 
         try {
@@ -72,6 +72,16 @@ export const AppSettingsProvider = ({ children }) => {
             console.warn('Failed to schedule reminder notification:', err)
             return { success: false, reason: 'error' }
         }
+    }
+
+    // Run reschedules one at a time: rapid time-stepper taps would otherwise interleave as
+    // cancel, cancel, schedule, schedule — leaving two daily reminders. applyReminderNow never
+    // rejects, so one failure can't break the chain.
+    const reminderQueue = useRef(Promise.resolve())
+    const applyReminder = (enabled, hour, minute) => {
+        const run = reminderQueue.current.then(() => applyReminderNow(enabled, hour, minute))
+        reminderQueue.current = run
+        return run
     }
 
     // Only persist "enabled" once the reminder was actually scheduled.

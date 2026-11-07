@@ -279,10 +279,20 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         const itemModes = activeModes.filter(mode => hasModeData(nextItem, mode))
         const mode = itemModes[Math.floor(Math.random() * itemModes.length)] ?? allModes[0]
 
-        // Wrong options also need data for this mode's field, or their button renders blank.
+        // Wrong options also need data for this mode's field, or their button renders blank. They must
+        // share no accepted answer with the correct item (生 is セイ, so another kanji's "セイ" isn't
+        // wrong), and identical labels (じ/ぢ both "ji") are shown once.
+        const correctAnswers = toAnswerList(nextItem[mode.key])
+        const seenLabels = new Set()
         const wrongOptions = shuffle(
-            Data.filter(item => hasModeData(item, mode) && !answersMatch(item[mode.key], nextItem[mode.key]))
-        ).slice(0, 3)
+            Data.filter(item => hasModeData(item, mode) &&
+                !toAnswerList(item[mode.key]).some(answer => correctAnswers.includes(answer)))
+        ).filter(item => {
+            const label = answerDisplayText(item[mode.key])
+            if (seenLabels.has(label)) return false
+            seenLabels.add(label)
+            return true
+        }).slice(0, 3)
 
         const allOptions = shuffle([...wrongOptions, nextItem])
 

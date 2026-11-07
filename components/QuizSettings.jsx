@@ -133,7 +133,7 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
             <View style={styles.settingRow}>
                 <View>
                     <Text style={[styles.label, { color: theme.text }]}>Mastery Level</Text>
-                    <Text style={[styles.subLabel, { color: '#888' }]}>Stars per Kana</Text>
+                    <Text style={[styles.subLabel, { color: '#888' }]}>Stars per character</Text>
                 </View>
 
                 <Stepper

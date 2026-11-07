@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { AppState } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 // Saves are debounced: bursts of changes (e.g. rapid quiz answers) would otherwise serialize and
@@ -14,6 +15,16 @@ export const usePersistedState = (key, defaultValue, { serialize = JSON.stringif
     const [isLoaded, setIsLoaded] = useState(false)
     const hasLoaded = useRef(false)
     const saveTimer = useRef(null)
+    // The debounced write waiting to run, if any. Kept so it can also be flushed early.
+    const pendingSave = useRef(null)
+
+    // Refs only, so this is stable for the AppState listener below.
+    const flushPendingSave = useCallback(() => {
+        clearTimeout(saveTimer.current)
+        const save = pendingSave.current
+        pendingSave.current = null
+        save?.()
+    }, [])
 
     useEffect(() => {
         AsyncStorage.getItem(key)
@@ -36,13 +47,21 @@ export const usePersistedState = (key, defaultValue, { serialize = JSON.stringif
         // No unmount cleanup: callers are app-lifetime providers, and clearing the timer on
         // unmount would silently drop the final pending write.
         clearTimeout(saveTimer.current)
-        saveTimer.current = setTimeout(() => {
-            AsyncStorage.setItem(key, serialize(value))
-                .catch(err => console.warn(`Failed to persist state for "${key}":`, err))
-        }, SAVE_DEBOUNCE_MS)
+        pendingSave.current = () => AsyncStorage.setItem(key, serialize(value))
+            .catch(err => console.warn(`Failed to persist state for "${key}":`, err))
+        saveTimer.current = setTimeout(flushPendingSave, SAVE_DEBOUNCE_MS)
         // serialize excluded for the same reason as above.
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [key, value])
+
+    // Write immediately when the app leaves the foreground, so swiping it away right after an
+    // answer can't drop the last change still waiting out the debounce.
+    useEffect(() => {
+        const sub = AppState.addEventListener('change', state => {
+            if (state !== 'active') flushPendingSave()
+        })
+        return () => sub.remove()
+    }, [flushPendingSave])
 
     return [value, setValue, isLoaded]
 }

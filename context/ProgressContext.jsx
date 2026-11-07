@@ -82,9 +82,17 @@ export const ProgressProvider = ({ children }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    // The stored count only changes on activity, so a broken streak would keep showing until the
+    // next answer. Display 0 once the last active day is older than yesterday.
+    const today = getLocalDateString()
+    const streakCount = streak.lastActiveDate === today ||
+        (streak.lastActiveDate && isYesterday(streak.lastActiveDate, today))
+        ? streak.count
+        : 0
+
     const meta = useMemo(
-        () => ({ streakCount: streak.count, progressLoaded }),
-        [streak.count, progressLoaded]
+        () => ({ streakCount, progressLoaded }),
+        [streakCount, progressLoaded]
     )
 
     return (
@@ -95,7 +103,7 @@ export const ProgressProvider = ({ children }) => {
                     value={{
                         ...actions,
                         progress,
-                        streakCount: streak.count,
+                        streakCount,
                     }}
                 >
                     {children}
