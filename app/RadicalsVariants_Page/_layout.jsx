@@ -4,7 +4,7 @@ import { buildTab } from '../../constants/Courses'
 const RadicalsVariantsLayout = () => (
     <TopSlider
         tabs={[
-            buildTab('radicalsVariants', 'radicals_variants'),
+            buildTab('radicals_variants'),
         ]}
     />
 )

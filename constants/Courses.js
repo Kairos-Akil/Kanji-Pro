@@ -237,12 +237,12 @@ export const SEARCH_INDEX = Object.values(COURSES).flatMap(course =>
     }))
 )
 
-// Build a TopSlider tab entry from a course id. `name` is the tab's route file in the same folder
-// (e.g. 'hiraganaBasic' for hiraganaBasic.jsx); the router loads the screen from that file.
-export const buildTab = (name, courseId) => {
+// Build a TopSlider tab entry from a course id. `name` is the tab's route file, taken from the end
+// of the course's route ('/Hiragana_Page/hiraganaBasic' -> 'hiraganaBasic' = hiraganaBasic.jsx).
+export const buildTab = (courseId) => {
     const course = COURSES[courseId]
     return {
-        name,
+        name: course.route.split('/').pop(),
         title: course.tabLabel,
         totalItems: course.data.length,
         id: course.id,

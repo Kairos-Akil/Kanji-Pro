@@ -58,7 +58,7 @@ const HomePage = () => {
     const refreshPercents = useCallback(() => {
         loadQuizSettings()
             .then(saved => setCardPercents(computeCardPercents(getLearnedCount, saved.maxStars)))
-            .catch(err => console.log('Error loading mastery level', err))
+            .catch(err => console.warn('Error loading mastery level', err))
     }, [getLearnedCount])
 
     // Refresh on focus so the "Continue" card and percentages reflect changes made elsewhere.
@@ -68,7 +68,7 @@ const HomePage = () => {
                 .then(lastActive => {
                     if (lastActive && COURSES[lastActive]) setActiveCourseId(lastActive)
                 })
-                .catch(err => console.log('Error loading last active course', err))
+                .catch(err => console.warn('Error loading last active course', err))
 
             refreshPercents()
         }, [refreshPercents])
@@ -186,7 +186,7 @@ const HomePage = () => {
     )
 
     return (
-        <ThemedView safe={true} style={styles.container} backgroundColor={theme.background}>
+        <ThemedView safe={true} style={styles.container}>
 
             {/* Refresh on close: "Reset All Progress" lives in this sheet and fires no focus event. */}
             <AppSettings

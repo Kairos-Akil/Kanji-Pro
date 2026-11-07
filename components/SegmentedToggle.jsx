@@ -1,4 +1,4 @@
-import React from 'react'
+import { Fragment } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { useTheme } from '../context/ThemeContext'
 
@@ -13,7 +13,7 @@ const SegmentedToggle = ({ options, value, onChange }) => {
             {options.map(({ value: optionValue, label, Icon, accessibilityLabel }, index) => {
                 const isActive = value === optionValue
                 return (
-                    <React.Fragment key={optionValue}>
+                    <Fragment key={optionValue}>
                         {index > 0 && <View style={{ width: 12 }} />}
                         <TouchableOpacity
                             style={[
@@ -31,7 +31,7 @@ const SegmentedToggle = ({ options, value, onChange }) => {
                                 {label}
                             </Text>
                         </TouchableOpacity>
-                    </React.Fragment>
+                    </Fragment>
                 )
             })}
         </View>

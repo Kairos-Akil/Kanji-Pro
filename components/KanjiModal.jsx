@@ -1,8 +1,8 @@
-import { Modal, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { useTheme } from '../context/ThemeContext';
-import { answerDisplayText } from '../hooks/useQuizEngine';
-import { getFrequencyLabel, formatRadicalList } from '../constants/Courses';
-import ThemedView from './ThemedView';
+import { Modal, View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { useTheme } from '../context/ThemeContext'
+import { answerDisplayText } from '../hooks/useQuizEngine'
+import { getFrequencyLabel, formatRadicalList } from '../constants/Courses'
+import ThemedView from './ThemedView'
 
 // Detail rows for a kanji, in display order. `format` renders array fields; fields without a value
 // are skipped, except `alwaysShow` ones (freq still maps to a real "Rare" label when absent).
@@ -17,9 +17,9 @@ const DETAIL_FIELDS = [
 ]
 
 const KanjiModal = ({ visible, item, onClose }) => {
-    const { theme } = useTheme();
+    const { theme } = useTheme()
 
-    if (!item) return null;
+    if (!item) return null
 
     return (
         <Modal
@@ -61,8 +61,8 @@ const KanjiModal = ({ visible, item, onClose }) => {
                 </View>
             </ThemedView>
         </Modal>
-    );
-};
+    )
+}
 
 const styles = StyleSheet.create({
     overlay: {
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         borderRadius: 10,
     },
-});
+})
 
-export default KanjiModal;
+export default KanjiModal
 

@@ -9,7 +9,7 @@ import SegmentedToggle from './SegmentedToggle'
 import Stepper from './Stepper'
 import Spacer from './Spacer'
 
-export const SETTINGS_KEYS = {
+const SETTINGS_KEYS = {
     MAX_STARS: 'quiz_max_stars',
     INPUT_MODE: 'quiz_input_mode',
     QUIZ_CONTENT: 'quiz_content',
@@ -88,7 +88,7 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
             setQuizContent(saved.quizContent)
             setLearningMode(saved.learningMode)
         } catch (e) {
-            console.error("Failed to load settings", e)
+            console.warn("Failed to load settings", e)
         }
     }
 
@@ -103,7 +103,7 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
 
             onClose()
         } catch (e) {
-            console.error("Failed to save settings", e)
+            console.warn("Failed to save settings", e)
         }
     }
 

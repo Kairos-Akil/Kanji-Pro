@@ -1,17 +1,17 @@
-import { StyleSheet, ScrollView, View, TouchableOpacity } from 'react-native';
-import { router } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { StyleSheet, ScrollView, View, TouchableOpacity } from 'react-native'
+import { router } from 'expo-router'
+import { Ionicons } from '@expo/vector-icons'
+import { LinearGradient } from 'expo-linear-gradient'
 
 import ThemedView from './ThemedView'
 import ThemedText from './ThemedText'
 import { useTheme } from '../context/ThemeContext'
 
 const ExplanationLayout = ({ data, accentColor, icon }) => {
-    const { theme } = useTheme();
+    const { theme } = useTheme()
 
     return (
-        <ThemedView style={styles.container} backgroundColor={theme.background}>
+        <ThemedView style={styles.container}>
 
             {/* --- HERO HEADER --- */}
             <View style={styles.headerContainer}>
@@ -51,7 +51,7 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
                 showsVerticalScrollIndicator={false}
             >
                 {/* Introduction */}
-                <View style={[styles.card, { backgroundColor: theme.uiBackground || '#f5f5f5' }]}>
+                <View style={[styles.card, { backgroundColor: theme.uiBackground }]}>
                     <ThemedText title style={styles.sectionHeader}>Overview</ThemedText>
                     <ThemedText style={styles.bodyText}>{data.intro}</ThemedText>
                 </View>
@@ -88,10 +88,10 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
                 <View style={{ height: 50 }} />
             </ScrollView>
         </ThemedView>
-    );
-};
+    )
+}
 
-export default ExplanationLayout;
+export default ExplanationLayout
 
 const styles = StyleSheet.create({
     container: { flex: 1 },
@@ -137,4 +137,4 @@ const styles = StyleSheet.create({
     exampleChar: { fontSize: 48, fontWeight: 'bold' },
     exampleReading: { fontSize: 14, opacity: 0.6 },
     exampleMeaning: { fontSize: 18, fontWeight: 'bold' }
-});
+})

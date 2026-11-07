@@ -30,7 +30,7 @@ const TopSlider = ({ tabs = [] }) => {
             const saved = await loadQuizSettings()
             setMaxStars(saved.maxStars)
         } catch (e) {
-            console.log('Error loading settings', e)
+            console.warn('Error loading settings', e)
         }
     }
 
@@ -42,17 +42,15 @@ const TopSlider = ({ tabs = [] }) => {
         }, [settingsVisible])
     )
 
-    // "learned / total" for the active tab. idKey lets non-kana tracks point at their own field.
+    // "learned / total" for the active tab. No tab matches while another screen (e.g. a quiz) is
+    // on top, since the URL then points there.
     const currentTabObj = tabs.find(t => t.name === activeTabName)
-    let progressString = ""
+    let progressString = ''
 
-    if (currentTabObj && currentTabObj.id && currentTabObj.data) {
-        const idKey = currentTabObj.idKey || 'kana'
-        const itemIds = currentTabObj.data.map(item => item[idKey])
+    if (currentTabObj) {
+        const itemIds = currentTabObj.data.map(item => item[currentTabObj.idKey])
         const learnedCount = getLearnedCount(currentTabObj.id, itemIds, maxStars)
         progressString = `${learnedCount}/${currentTabObj.totalItems}`
-    } else if (currentTabObj) {
-        progressString = `0/${currentTabObj.totalItems}`
     }
 
     // Remember the active tab so Home's "Continue" card can jump back into it.

@@ -15,7 +15,7 @@ const configureAudio = () => {
     playsInSilentMode: true,
     interruptionMode: 'mixWithOthers',
     shouldPlayInBackground: false,
-  }).catch((e) => console.log('Failed to configure audio mode', e))
+  }).catch((e) => console.warn('Failed to configure audio mode', e))
 }
 
 const RootLayoutNav = () => {

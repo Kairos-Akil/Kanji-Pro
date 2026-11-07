@@ -20,8 +20,8 @@ const KanaData = {
         reading: "Arigatou",
         meaning: "Thank You (Hiragana)"
     }
-};
+}
 
 export default function KanaPage() {
-    return <ExplanationLayout data={KanaData} accentColor="#4facfe" icon="school" />;
+    return <ExplanationLayout data={KanaData} accentColor="#4facfe" icon="school" />
 }

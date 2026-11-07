@@ -20,8 +20,8 @@ const KanjiData = {
         reading: "Nihon",
         meaning: "Japan (Sun Origin)"
     }
-};
+}
 
 export default function KanjiPage() {
-    return <ExplanationLayout data={KanjiData} accentColor="#CE2D4F" icon="book" />;
+    return <ExplanationLayout data={KanjiData} accentColor="#CE2D4F" icon="book" />
 }

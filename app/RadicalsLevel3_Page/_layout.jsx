@@ -4,7 +4,7 @@ import { buildTab } from '../../constants/Courses'
 const RadicalsLevel3Layout = () => (
     <TopSlider
         tabs={[
-            buildTab('radicalsLevel3', 'radicals_level3'),
+            buildTab('radicals_level3'),
         ]}
     />
 )

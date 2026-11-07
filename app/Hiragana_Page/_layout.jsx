@@ -4,9 +4,9 @@ import { buildTab } from '../../constants/Courses'
 const HiraganaLayout = () => (
     <TopSlider
         tabs={[
-            buildTab('hiraganaBasic', 'hiragana_basic'),
-            buildTab('hiraganaVariants', 'hiragana_variants'),
-            buildTab('hiraganaCombinations', 'hiragana_combinations'),
+            buildTab('hiragana_basic'),
+            buildTab('hiragana_variants'),
+            buildTab('hiragana_combinations'),
         ]}
     />
 )

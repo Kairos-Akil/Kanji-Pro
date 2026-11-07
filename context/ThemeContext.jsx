@@ -31,7 +31,7 @@ export const ThemeProvider = ({ children }) => {
     }
 
     return (
-        <ThemeContext.Provider value={{ mode, setMode, theme, modes: MODES }}>
+        <ThemeContext.Provider value={{ mode, setMode, theme }}>
             {children}
         </ThemeContext.Provider>
     )

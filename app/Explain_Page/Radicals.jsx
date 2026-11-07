@@ -24,8 +24,8 @@ const RadicalsData = {
         reading: "Person (人) + Tree (木)",
         meaning: "To Rest (Like a person\nleaning on a tree)"
     }
-};
+}
 
 export default function RadicalsPage() {
-    return <ExplanationLayout data={RadicalsData} accentColor="#00b09b" icon="leaf" />;
+    return <ExplanationLayout data={RadicalsData} accentColor="#00b09b" icon="leaf" />
 }

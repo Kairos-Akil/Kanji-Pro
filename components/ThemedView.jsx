@@ -2,32 +2,24 @@ import { View } from 'react-native'
 import { useTheme } from '../context/ThemeContext'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
-
+// View with the theme background. `safe` adds padding for the status bar / navigation bar.
+// Not `0` when unsafe: paddingTop would beat a caller's `padding` shorthand; undefined is ignored.
 const ThemedView = ({ style, safe = false, ...props }) => {
   const { theme } = useTheme()
-  // Called unconditionally (only the `safe` branch uses it) so hook order stays stable.
   const insets = useSafeAreaInsets()
-
-  if (!safe) return (
-    <View
-      style={[{ backgroundColor: theme.background }, style]}
-      {...props}
-    />
-  )
 
   return (
     <View
       style={[{
         backgroundColor: theme.background,
-        paddingTop: insets.top,
-        paddingBottom: insets.bottom,
+        paddingTop: safe ? insets.top : undefined,
+        paddingBottom: safe ? insets.bottom : undefined,
       },
         style
       ]}
       {...props}
     />
   )
-
 }
 
 export default ThemedView

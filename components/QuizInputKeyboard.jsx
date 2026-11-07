@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { View, Text, Pressable, StyleSheet } from 'react-native'
 import { ArrowRight, ArrowLeft } from 'lucide-react-native'
 import Animated, { FadeInDown } from 'react-native-reanimated'

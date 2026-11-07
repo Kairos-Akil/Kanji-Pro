@@ -10,8 +10,6 @@ export const Colors = {
         tile: '#22212e',
         background: '#100e15ff',
         navBackground: '#0d0c11ff',
-        iconColor: '#9591a5',
-        iconColorFocused: '#fff',
         uiBackground: '#2f2b3d',
     },
 
@@ -21,8 +19,6 @@ export const Colors = {
         tile: '#ffffff',
         background: '#e0dfe8',
         navBackground: '#e8e7ef',
-        iconColor: '#686477',
-        iconColorFocused: '#201e2b',
         uiBackground: '#00e1ff10',
     },
 
@@ -32,8 +28,6 @@ export const Colors = {
         tile: '#121212',
         background: '#000000',
         navBackground: '#000000',
-        iconColor: '#ffffff',
-        iconColorFocused: '#ffffff',
         uiBackground: '#050505',
     },
 }

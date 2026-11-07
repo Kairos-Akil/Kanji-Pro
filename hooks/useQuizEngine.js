@@ -30,7 +30,7 @@ const incorrectSound = require('../assets/sounds/incorrect.wav')
 const normalize = (s) => s.trim().toLowerCase().replace(/\s+/g, ' ')
 
 // Normalize an answerKey value (a single string, or an array of accepted alternatives) to an array.
-export const toAnswerList = (value) => Array.isArray(value) ? value : [value]
+const toAnswerList = (value) => Array.isArray(value) ? value : [value]
 
 // Accepted alternatives joined into one display string.
 export const answerDisplayText = (value) => toAnswerList(value).join(', ')
@@ -112,7 +112,7 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
             player.play()
         } catch (err) {
             // Non-fatal: playback isn't available on every platform (e.g. some web browsers).
-            console.log('Error playing sound', err)
+            console.warn('Error playing sound', err)
         }
     }
 
@@ -173,7 +173,7 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
                     setQuizContent(saved.quizContent)
                     setLearningMode(saved.learningMode)
                 })
-                .catch((e) => console.log('Error loading settings', e))
+                .catch((e) => console.warn('Error loading settings', e))
         }, [])
     )
 

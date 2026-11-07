@@ -1,22 +1,22 @@
-import { View, Text, FlatList, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import { useState } from 'react';
-import Animated from 'react-native-reanimated';
-import { useTheme } from '../context/ThemeContext';
-import { answerDisplayText } from '../hooks/useQuizEngine';
-import { useFocusHighlight } from '../hooks/useFocusHighlight';
-import ThemedView from './ThemedView';
-import KanjiModal from './KanjiModal';
-import FocusLoadingOverlay from './FocusLoadingOverlay';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, ScrollView } from 'react-native'
+import { useState } from 'react'
+import Animated from 'react-native-reanimated'
+import { useTheme } from '../context/ThemeContext'
+import { answerDisplayText } from '../hooks/useQuizEngine'
+import { useFocusHighlight } from '../hooks/useFocusHighlight'
+import ThemedView from './ThemedView'
+import KanjiModal from './KanjiModal'
+import FocusLoadingOverlay from './FocusLoadingOverlay'
 
-const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
+const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity)
 
 const KanjiPreview = ({ groupedData, focusChar }) => {
-    const { theme } = useTheme();
+    const { theme } = useTheme()
 
-    const [selectedItem, setSelectedItem] = useState(null);
-    const [modalVisible, setModalVisible] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null)
+    const [modalVisible, setModalVisible] = useState(false)
 
-    const { scrollRef, contentRef, targetRef, highlightStyle, loading } = useFocusHighlight(focusChar);
+    const { scrollRef, contentRef, targetRef, highlightStyle, loading } = useFocusHighlight(focusChar)
 
     return (
         <ThemedView style={[styles.container, { backgroundColor: theme.background }]}>
@@ -37,14 +37,14 @@ const KanjiPreview = ({ groupedData, focusChar }) => {
                         initialNumToRender={focusChar ? group.items.length : 10}
                         keyExtractor={(item, i) => i.toString()}
                         renderItem={({ item }) => {
-                            const isFocus = item.character === focusChar;
+                            const isFocus = item.character === focusChar
                             return (
                                 <AnimatedTouchable
                                     ref={isFocus ? targetRef : undefined}
                                     style={[styles.tile, { backgroundColor: theme.tile }, isFocus && highlightStyle]}
                                     onPress={() => {
-                                        setSelectedItem(item);
-                                        setModalVisible(true);
+                                        setSelectedItem(item)
+                                        setModalVisible(true)
                                     }}
                                     accessibilityLabel={`${item.character}, ${answerDisplayText(item.meanings)}, tap for more info`}
                                     accessibilityRole="button"
@@ -59,7 +59,7 @@ const KanjiPreview = ({ groupedData, focusChar }) => {
 
                                     <Text style={[styles.info, { color: theme.text }]}>tap for more info</Text>
                                 </AnimatedTouchable>
-                            );
+                            )
                         }}
                     />
                 ))}
@@ -74,10 +74,10 @@ const KanjiPreview = ({ groupedData, focusChar }) => {
 
             {loading && <FocusLoadingOverlay char={focusChar} />}
         </ThemedView>
-    );
-};
+    )
+}
 
-export default KanjiPreview;
+export default KanjiPreview
 
 const styles = StyleSheet.create({
     container: {
@@ -106,5 +106,5 @@ const styles = StyleSheet.create({
         marginTop: 4,
         marginBottom: 0,
     }
-});
+})
 
