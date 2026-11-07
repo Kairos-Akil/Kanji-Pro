@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end', // This aligns the Sheet to the bottom
     },
     backdrop: {
-        ...StyleSheet.absoluteFillObject,
+        ...StyleSheet.absoluteFill,
         backgroundColor: 'rgba(0,0,0,0.5)', // Darken background
     },
     sheet: {
