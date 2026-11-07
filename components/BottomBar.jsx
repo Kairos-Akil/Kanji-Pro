@@ -4,9 +4,9 @@ import { Undo, Play, Ellipsis } from 'lucide-react-native'
 import { useTheme } from '../context/ThemeContext'
 import { COURSES } from '../constants/Courses'
 
-// Preview route -> quiz route, derived from the Courses registry so it can't drift out of sync.
+// Preview route -> quiz route. Every quiz is app/Quiz_Page/[courseId].jsx, so its URL is the id.
 const QUIZ_ROUTE_MAP = Object.fromEntries(
-    Object.values(COURSES).map(course => [course.route, course.quizRoute])
+    Object.values(COURSES).map(course => [course.route, `/Quiz_Page/${course.id}`])
 )
 
 const BottomBar = ({ onOpenSettings, progress }) => {

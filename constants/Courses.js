@@ -79,7 +79,6 @@ const buildRadicalCourses = (allRadicals) => {
             char: data[0]?.radical ?? '?',
             color1: '#00b09b', color2: '#4facfe', textColor: '#0b3d3a',
             route: `/RadicalsLevel${i + 1}_Page/radicalsLevel${i + 1}`,
-            quizRoute: `/Quiz_Page/radicalsQuiz_Level${i + 1}`,
             data, idKey: 'radical', answerKey: 'meanings',
             groupLayout: [{ numColumns: 3 }], previewType: 'character', subFontSize: 17,
             icon: 'school',
@@ -92,7 +91,6 @@ const buildRadicalCourses = (allRadicals) => {
         char: variants[0]?.radical ?? '?',
         color1: '#00b09b', color2: '#4facfe', textColor: '#0b3d3a',
         route: '/RadicalsVariants_Page/radicalsVariants',
-        quizRoute: '/Quiz_Page/radicalsQuiz_Variants',
         data: variants, idKey: 'radical', answerKey: 'meanings',
         groupLayout: [{ numColumns: 3 }], previewType: 'character', subFontSize: 17,
         icon: 'git-branch',
@@ -118,11 +116,11 @@ export const KANJI_QUESTION_MODES = [
 
 // Per-level metadata for building each level's 3 tier entries.
 const KANJI_LEVELS = [
-    { id: 'kanji_n5', data: kanjiN5, subtitle: 'N5', folder: 'KanjiN5_Page', file: 'kanjiN5', quizBase: 'kanjiQuiz_N5' },
-    { id: 'kanji_n4', data: kanjiN4, subtitle: 'N4', folder: 'KanjiN4_Page', file: 'kanjiN4', quizBase: 'kanjiQuiz_N4' },
-    { id: 'kanji_n3', data: kanjiN3, subtitle: 'N3', folder: 'KanjiN3_Page', file: 'kanjiN3', quizBase: 'kanjiQuiz_N3' },
-    { id: 'kanji_n2', data: kanjiN2, subtitle: 'N2', folder: 'KanjiN2_Page', file: 'kanjiN2', quizBase: 'kanjiQuiz_N2' },
-    { id: 'kanji_n1', data: kanjiN1, subtitle: 'N1', folder: 'KanjiN1_Page', file: 'kanjiN1', quizBase: 'kanjiQuiz_N1' },
+    { id: 'kanji_n5', data: kanjiN5, subtitle: 'N5', folder: 'KanjiN5_Page', file: 'kanjiN5' },
+    { id: 'kanji_n4', data: kanjiN4, subtitle: 'N4', folder: 'KanjiN4_Page', file: 'kanjiN4' },
+    { id: 'kanji_n3', data: kanjiN3, subtitle: 'N3', folder: 'KanjiN3_Page', file: 'kanjiN3' },
+    { id: 'kanji_n2', data: kanjiN2, subtitle: 'N2', folder: 'KanjiN2_Page', file: 'kanjiN2' },
+    { id: 'kanji_n1', data: kanjiN1, subtitle: 'N1', folder: 'KanjiN1_Page', file: 'kanjiN1' },
 ]
 
 // {levelId: [tierIds]}, so HomePage can aggregate a level's tiers into one card.
@@ -148,7 +146,6 @@ const buildKanjiCourses = (levels) => {
                 char: data[0]?.character ?? '?',
                 color1: '#ff6b6b', color2: '#CE2D4F', textColor: '#5c1a1a',
                 route: `/${level.folder}/${level.file}${key}`,
-                quizRoute: `/Quiz_Page/${level.quizBase}_${key}`,
                 data, idKey: 'character', answerKey: 'meanings',
                 questionModes: KANJI_QUESTION_MODES,
                 groupLayout: [{ numColumns: 3 }], previewType: 'kanji',
@@ -163,14 +160,14 @@ const buildKanjiCourses = (levels) => {
 }
 
 // Registry of every learnable course, keyed by the id used as its quizId. `route` is the preview
-// page, `quizRoute` its quiz; `groupLayout`/`previewType` describe the preview grid.
+// page (its quiz is /Quiz_Page/<id>, see app/Quiz_Page/[courseId].jsx); `groupLayout`/`previewType`
+// describe the preview grid.
 export const COURSES = {
     hiragana_basic: {
         id: 'hiragana_basic',
         title: 'Hiragana', subtitle: 'Basic', tabLabel: 'Basic', char: 'あ',
         color1: '#00e1ff', color2: '#8d89c5', textColor: '#702d57',
         route: '/Hiragana_Page/hiraganaBasic',
-        quizRoute: '/Quiz_Page/hiraganaQuiz_Basic',
         data: hiraganaBasic, idKey: 'kana', answerKey: 'romaji',
         groupLayout: BASIC_GROUP_LAYOUT, previewType: 'character',
     },
@@ -179,7 +176,6 @@ export const COURSES = {
         title: 'Hiragana', subtitle: 'Variants', tabLabel: 'Variants', char: 'が',
         color1: '#00e1ff', color2: '#8d89c5', textColor: '#702d57',
         route: '/Hiragana_Page/hiraganaVariants',
-        quizRoute: '/Quiz_Page/hiraganaQuiz_Variants',
         data: hiraganaVariants, idKey: 'kana', answerKey: 'romaji',
         groupLayout: [{ numColumns: 5 }], previewType: 'character',
     },
@@ -188,7 +184,6 @@ export const COURSES = {
         title: 'Hiragana', subtitle: 'Combinations', tabLabel: 'Combinations', char: 'しゃ',
         color1: '#00e1ff', color2: '#8d89c5', textColor: '#702d57',
         route: '/Hiragana_Page/hiraganaCombinations',
-        quizRoute: '/Quiz_Page/hiraganaQuiz_Combinations',
         data: hiraganaCombinations, idKey: 'kana', answerKey: 'romaji',
         groupLayout: [{ numColumns: 3 }], previewType: 'character',
     },
@@ -197,7 +192,6 @@ export const COURSES = {
         title: 'Katakana', subtitle: 'Basic', tabLabel: 'Basic', char: 'ア',
         color1: '#4facfe', color2: '#c86dd7', textColor: '#3d2352',
         route: '/Katakana_Page/katakanaBasic',
-        quizRoute: '/Quiz_Page/katakanaQuiz_Basic',
         data: katakanaBasic, idKey: 'kana', answerKey: 'romaji',
         groupLayout: BASIC_GROUP_LAYOUT, previewType: 'character',
     },
@@ -206,7 +200,6 @@ export const COURSES = {
         title: 'Katakana', subtitle: 'Variants', tabLabel: 'Variants', char: 'ガ',
         color1: '#4facfe', color2: '#c86dd7', textColor: '#3d2352',
         route: '/Katakana_Page/katakanaVariants',
-        quizRoute: '/Quiz_Page/katakanaQuiz_Variants',
         data: katakanaVariants, idKey: 'kana', answerKey: 'romaji',
         groupLayout: [{ numColumns: 5 }], previewType: 'character',
     },
@@ -215,7 +208,6 @@ export const COURSES = {
         title: 'Katakana', subtitle: 'Combinations', tabLabel: 'Combinations', char: 'シャ',
         color1: '#4facfe', color2: '#c86dd7', textColor: '#3d2352',
         route: '/Katakana_Page/katakanaCombinations',
-        quizRoute: '/Quiz_Page/katakanaQuiz_Combinations',
         data: katakanaCombinations, idKey: 'kana', answerKey: 'romaji',
         groupLayout: [{ numColumns: 3 }], previewType: 'character',
     },
