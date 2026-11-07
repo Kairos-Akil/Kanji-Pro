@@ -1,7 +1,6 @@
 import { useState, useCallback, useEffect } from 'react'
 import { StyleSheet, View, TouchableOpacity, ScrollView, Text } from 'react-native'
-import { router } from 'expo-router'
-import { useFocusEffect } from '@react-navigation/native'
+import { router, useFocusEffect } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
 import { LinearGradient } from 'expo-linear-gradient'
 import AsyncStorage from '@react-native-async-storage/async-storage'

@@ -7,12 +7,6 @@
     "orientation": "portrait",
     "icon": "./assets/MyAssets/blueLogo.png",
     "userInterfaceStyle": "dark",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/MyAssets/blueLogo.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#000000"
-    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "io.github.kairosakil.kanjipro"
@@ -22,7 +16,6 @@
         "foregroundImage": "./assets/MyAssets/blueLogo.png",
         "backgroundColor": "#000000"
       },
-      "edgeToEdgeEnabled": true,
       "package": "io.github.kairosakil.kanjipro",
       "versionCode": 2
     },
@@ -40,7 +33,17 @@
       ],
       "expo-asset",
       "expo-font",
-      "expo-notifications"
+      "expo-notifications",
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/MyAssets/blueLogo.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#000000"
+        }
+      ]
     ]
   }
 }

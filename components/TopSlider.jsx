@@ -3,25 +3,27 @@ import { View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTheme } from '../context/ThemeContext'
 import { StatusBar } from 'expo-status-bar'
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
+import { TopTabs } from 'expo-router/js-top-tabs'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { useFocusEffect } from '@react-navigation/native'
+import { useFocusEffect, usePathname } from 'expo-router'
 
 import BottomBar from './BottomBar'
 import QuizSettings, { loadQuizSettings, DEFAULT_MAX_STARS } from './QuizSettings'
 import { useProgress } from '../context/ProgressContext'
 import { LAST_ACTIVE_STORAGE_KEY } from '../constants/Courses'
 
-const Tab = createMaterialTopTabNavigator()
-
+// Rendered by a course folder's _layout.jsx. Each tab is a route file in that folder (tab.name =
+// file name), so the URL picks the tab: /KanjiN5_Page/kanjiN5Tier2 opens Tier 2 directly.
 const TopSlider = ({ tabs = [] }) => {
     const insets = useSafeAreaInsets()
     const { theme } = useTheme()
     const { getLearnedCount } = useProgress()
+    const pathname = usePathname()
 
     const [settingsVisible, setSettingsVisible] = useState(false)
     const [maxStars, setMaxStars] = useState(DEFAULT_MAX_STARS)
-    const [activeTabName, setActiveTabName] = useState(tabs[0]?.name || '')
+    // The active tab is the last path segment, e.g. "hiraganaBasic".
+    const activeTabName = pathname.split('/').pop()
 
     const loadSettings = async () => {
         try {
@@ -82,15 +84,7 @@ const TopSlider = ({ tabs = [] }) => {
                     paddingBottom: insets.bottom,
                 }}
             >
-                <Tab.Navigator
-                    // Track the active tab so the progress string reflects the visible track.
-                    screenListeners={{
-                        state: (e) => {
-                            const index = e.data.state.index
-                            const routeName = e.data.state.routeNames[index]
-                            setActiveTabName(routeName)
-                        },
-                    }}
+                <TopTabs
                     screenOptions={{
                         headerShown: false,
                         swipeEnabled: true,
@@ -103,15 +97,15 @@ const TopSlider = ({ tabs = [] }) => {
                         tabBarLabelStyle: { fontSize: 17 },
                     }}
                 >
+                    {/* Only declared screens become tabs; the router loads each from its file. */}
                     {tabs.map((tab) => (
-                        <Tab.Screen
+                        <TopTabs.Screen
                             key={tab.name}
                             name={tab.name}
-                            component={tab.component}
                             options={{ title: tab.title }}
                         />
                     ))}
-                </Tab.Navigator>
+                </TopTabs>
 
                 <BottomBar
                     onOpenSettings={() => setSettingsVisible(true)}
