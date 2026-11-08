@@ -26,16 +26,26 @@ export const usePersistedState = (key, defaultValue, { serialize = JSON.stringif
         save?.()
     }, [])
 
+    // Saving only starts after a successful read, so the default can never overwrite stored data
+    // that merely failed to load.
     useEffect(() => {
         AsyncStorage.getItem(key)
             .then(raw => {
-                if (raw !== null) setValue(deserialize(raw))
-            })
-            .catch(err => console.warn(`Failed to load persisted state for "${key}":`, err))
-            .finally(() => {
+                if (raw !== null) {
+                    try {
+                        setValue(deserialize(raw))
+                    } catch (err) {
+                        // Corrupt value: keep a copy, then start fresh. Staying read-only here would
+                        // block saving on every future launch.
+                        console.warn(`Unreadable persisted state for "${key}", backed up and reset:`, err)
+                        AsyncStorage.setItem(`${key}_CORRUPT_BACKUP`, raw).catch(() => {})
+                    }
+                }
                 hasLoaded.current = true
                 setIsLoaded(true)
             })
+            // Storage itself failed: what's stored is unknown, so saving stays off this session.
+            .catch(err => console.warn(`Failed to load persisted state for "${key}":`, err))
         // `key` only: serialize/deserialize are stable per call site, and inline functions in
         // deps would re-run this (and re-read storage) every render.
         // eslint-disable-next-line react-hooks/exhaustive-deps

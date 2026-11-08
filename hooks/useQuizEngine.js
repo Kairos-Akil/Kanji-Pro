@@ -27,7 +27,10 @@ import { kanaToRomaji } from '../utils/kanaToRomaji'
 const correctSound = require('../assets/sounds/correct.wav')
 const incorrectSound = require('../assets/sounds/incorrect.wav')
 
-const normalize = (s) => s.trim().toLowerCase().replace(/\s+/g, ' ')
+// Typed answers compare letters and digits only: the quiz keyboard has no punctuation keys, so
+// "anti" matches "anti-" and "pigs head" matches "pig’s head". Spaces are dropped too, so both
+// "two mat area" and "twomat area" match "two-mat area".
+const normalize = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '')
 
 // Normalize an answerKey value (a single string, or an array of accepted alternatives) to an array.
 const toAnswerList = (value) => Array.isArray(value) ? value : [value]
@@ -38,6 +41,7 @@ export const answerDisplayText = (value) => toAnswerList(value).join(', ')
 // True if the typed text matches any accepted alternative or its romaji ("nichi" matches ニチ).
 const typedAnswerMatches = (typed, correctValue) => {
     const typedNormalized = normalize(typed)
+    if (!typedNormalized) return false // only punctuation typed; an empty string must not match
     return toAnswerList(correctValue).some(part => {
         if (normalize(part) === typedNormalized) return true
         const romaji = kanaToRomaji(part)
