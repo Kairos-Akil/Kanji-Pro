@@ -8,8 +8,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useFocusEffect, usePathname } from 'expo-router'
 
 import BottomBar from './BottomBar'
-import QuizSettings, { loadQuizSettings, DEFAULT_MAX_STARS } from './QuizSettings'
-import { useProgress } from '../context/ProgressContext'
+import QuizSettings, { loadQuizSettings } from './QuizSettings'
+import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
 import { LAST_ACTIVE_STORAGE_KEY } from '../constants/Courses'
 
 // Rendered by a course folder's _layout.jsx. Each tab is a route file in that folder (tab.name =
@@ -17,41 +17,52 @@ import { LAST_ACTIVE_STORAGE_KEY } from '../constants/Courses'
 const TopSlider = ({ tabs = [] }) => {
     const insets = useSafeAreaInsets()
     const { theme } = useTheme()
-    const { getLearnedCount } = useProgress()
+    // Stable actions, not the live progress: this page stays mounted (hidden) under an open quiz,
+    // and subscribing to live progress re-rendered it on every answer.
+    const { getLearnedCount } = useProgressActions()
+    const { progressLoaded } = useProgressMeta()
     const pathname = usePathname()
 
     const [settingsVisible, setSettingsVisible] = useState(false)
-    const [maxStars, setMaxStars] = useState(DEFAULT_MAX_STARS)
+    // Learned count per tab id, recomputed when the page is shown again (see below).
+    const [learnedByTab, setLearnedByTab] = useState({})
     // The active tab is the last path segment, e.g. "hiraganaBasic".
     const activeTabName = pathname.split('/').pop()
 
-    const loadSettings = async () => {
+    const refreshCounts = async () => {
         try {
-            const saved = await loadQuizSettings()
-            setMaxStars(saved.maxStars)
+            const { maxStars } = await loadQuizSettings()
+            setLearnedByTab(Object.fromEntries(tabs.map(tab => [
+                tab.id,
+                getLearnedCount(tab.id, tab.data.map(item => item[tab.idKey]), maxStars),
+            ])))
         } catch (e) {
             console.warn('Error loading settings', e)
         }
     }
 
-    // Reload on focus. settingsVisible is a dep only to re-run when the settings sheet closes.
+    // Recount when the page is shown again (e.g. back from a quiz) and when the settings sheet
+    // closes (the mastery level may have changed); settingsVisible is a dep only for the latter.
     useFocusEffect(
         useCallback(() => {
-            loadSettings()
+            refreshCounts()
             // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [settingsVisible])
     )
 
+    // Opened before the saved progress finished loading (e.g. straight from a link): count again
+    // once it has, since nothing else would trigger a recount.
+    useEffect(() => {
+        if (progressLoaded) refreshCounts()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [progressLoaded])
+
     // "learned / total" for the active tab. No tab matches while another screen (e.g. a quiz) is
     // on top, since the URL then points there.
     const currentTabObj = tabs.find(t => t.name === activeTabName)
-    let progressString = ''
-
-    if (currentTabObj) {
-        const itemIds = currentTabObj.data.map(item => item[currentTabObj.idKey])
-        const learnedCount = getLearnedCount(currentTabObj.id, itemIds, maxStars)
-        progressString = `${learnedCount}/${currentTabObj.totalItems}`
-    }
+    const progressString = currentTabObj
+        ? `${learnedByTab[currentTabObj.id] ?? 0}/${currentTabObj.totalItems}`
+        : ''
 
     // Remember the active tab so Home's "Continue" card can jump back into it.
     useEffect(() => {
@@ -66,10 +77,8 @@ const TopSlider = ({ tabs = [] }) => {
 
             <QuizSettings
                 isVisible={settingsVisible}
-                onClose={() => {
-                    setSettingsVisible(false)
-                    loadSettings()
-                }}
+                // Closing flips settingsVisible, which re-runs the focus effect above (recount).
+                onClose={() => setSettingsVisible(false)}
                 // Quiz Content (meanings/readings) applies only to kanji quizzes.
                 showQuizContent={tabs.some(tab => tab.id?.startsWith('kanji_'))}
             />

@@ -22,11 +22,13 @@ const BottomBar = ({ onOpenSettings, progress }) => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.navBackground, borderColor: theme.text }]}>
-            {/* Home button */}
+            {/* Home button: go *back* to the Home underneath. replace('/') put a second Home on top of
+                it, so Android back then needed two presses to leave the app. dismissTo still
+                replaces when there's no Home underneath (app opened directly on a course page). */}
             <View style={styles.slot}>
                 <Pressable
                     style={styles.button}
-                    onPress={() => router.replace('/')}
+                    onPress={() => router.dismissTo('/')}
                     accessibilityLabel="Go home"
                     accessibilityRole="button"
                 >
@@ -55,9 +57,10 @@ const BottomBar = ({ onOpenSettings, progress }) => {
                     accessibilityLabel={progress ? `Start quiz, progress ${progress}` : 'Start quiz'}
                     accessibilityRole="button"
                 >
-                    {progress && (
+                    {/* Ternary, not &&: an empty progress string would be rendered as bare text. */}
+                    {progress ? (
                         <Text style={styles.progressText}>{progress}</Text>
-                    )}
+                    ) : null}
                     <Play color='#000' size={22} fill={progress ? "transparent" : "#000"} />
                 </Pressable>
             </View>
