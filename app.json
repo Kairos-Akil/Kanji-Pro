@@ -54,7 +54,8 @@
             ]
           }
         }
-      ]
+      ],
+      "@react-native-vector-icons/ionicons"
     ]
   }
 }

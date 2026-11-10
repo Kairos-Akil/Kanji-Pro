@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import { View, Text, TextInput, FlatList, TouchableOpacity, StyleSheet } from 'react-native'
 import { router } from 'expo-router'
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { useTheme } from '../context/ThemeContext'
 import { answerDisplayText } from '../hooks/useQuizEngine'
 import { SEARCH_INDEX } from '../constants/Courses'

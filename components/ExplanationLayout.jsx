@@ -1,6 +1,6 @@
 import { StyleSheet, ScrollView, View, TouchableOpacity } from 'react-native'
 import { router } from 'expo-router'
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { LinearGradient } from 'expo-linear-gradient'
 
 import ThemedView from './ThemedView'
@@ -25,6 +25,8 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
                     <TouchableOpacity
                         onPress={() => router.back()}
                         style={styles.backButton}
+                        accessibilityLabel="Go back"
+                        accessibilityRole="button"
                     >
                         <Ionicons name="arrow-back" size={28} color="#FFF" />
                     </TouchableOpacity>

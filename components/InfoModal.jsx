@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native'
 import { Heart, ExternalLink } from 'lucide-react-native'
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons } from '@react-native-vector-icons/ionicons'
 
 import { useTheme } from '../context/ThemeContext'
 import BottomSheet from './BottomSheet'
