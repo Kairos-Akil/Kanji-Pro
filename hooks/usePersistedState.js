@@ -11,8 +11,10 @@ const SAVE_DEBOUNCE_MS = 500
 // must stay non-JSON (e.g. an already-shipped plain string).
 export const usePersistedState = (key, defaultValue, { serialize = JSON.stringify, deserialize = JSON.parse } = {}) => {
     const [value, setValue] = useState(defaultValue)
-    // isLoaded (third return value) lets callers tell the default apart from the stored value.
+    // isLoaded (third return value): the first read has finished, successfully or not, so callers
+    // waiting on it (e.g. the splash screen) never wait forever.
     const [isLoaded, setIsLoaded] = useState(false)
+    // Saving is allowed: set only after a *successful* read (unlike isLoaded).
     const hasLoaded = useRef(false)
     const saveTimer = useRef(null)
     // The debounced write waiting to run, if any. Kept so it can also be flushed early.
@@ -45,7 +47,10 @@ export const usePersistedState = (key, defaultValue, { serialize = JSON.stringif
                 setIsLoaded(true)
             })
             // Storage itself failed: what's stored is unknown, so saving stays off this session.
-            .catch(err => console.warn(`Failed to load persisted state for "${key}":`, err))
+            .catch(err => {
+                console.warn(`Failed to load persisted state for "${key}":`, err)
+                setIsLoaded(true)
+            })
         // `key` only: serialize/deserialize are stable per call site, and inline functions in
         // deps would re-run this (and re-read storage) every render.
         // eslint-disable-next-line react-hooks/exhaustive-deps

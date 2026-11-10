@@ -2,6 +2,7 @@ import { useEffect, useMemo } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Stack, ThemeProvider as NavigationThemeProvider, DarkTheme, DefaultTheme } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
+import * as SplashScreen from 'expo-splash-screen'
 import { setAudioModeAsync } from 'expo-audio'
 import { ProgressProvider } from '../context/ProgressContext'
 import { ThemeProvider, useTheme } from '../context/ThemeContext'
@@ -18,8 +19,13 @@ const configureAudio = () => {
   }).catch((e) => console.warn('Failed to configure audio mode', e))
 }
 
+// Keep the native splash (black logo screen) up until the saved theme is known; otherwise Light and
+// OLED users would see the default dark theme for a moment at app start.
+SplashScreen.preventAutoHideAsync().catch(() => {})
+const hideSplash = () => SplashScreen.hideAsync().catch(() => {})
+
 const RootLayoutNav = () => {
-  const { theme, mode } = useTheme()
+  const { theme, mode, themeLoaded } = useTheme()
 
   // Every screen sits on a navigation "card". Without our colors here, its default light gray
   // shows through whenever a screen draws nothing for a moment (e.g. while a quiz loads its settings).
@@ -37,9 +43,14 @@ const RootLayoutNav = () => {
     }
   }, [theme, mode])
 
+  // Nothing to draw yet: the splash still covers the screen. themeLoaded also turns true when the
+  // read fails (defaults are used then), so the splash can never stay up forever.
+  if (!themeLoaded) return null
+
   return (
     <NavigationThemeProvider value={navigationTheme}>
-      <View style={[styles.container, { backgroundColor: theme.background }]}>
+      {/* onLayout: hide the splash only once the first frame with the right theme is laid out. */}
+      <View style={[styles.container, { backgroundColor: theme.background }]} onLayout={hideSplash}>
         <StatusBar style={mode === 'light' ? 'dark' : 'light'} />
         <Stack screenOptions={{
           headerStyle: { backgroundColor: theme.navBackground },

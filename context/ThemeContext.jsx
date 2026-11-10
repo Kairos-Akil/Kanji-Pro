@@ -15,7 +15,8 @@ const modeCodec = {
 }
 
 export const ThemeProvider = ({ children }) => {
-    const [mode, setModeRaw] = usePersistedState(STORAGE_KEY, DEFAULT_MODE, modeCodec)
+    // themeLoaded: the saved mode has been read (or the read failed); the splash waits for it.
+    const [mode, setModeRaw, themeLoaded] = usePersistedState(STORAGE_KEY, DEFAULT_MODE, modeCodec)
 
     const setMode = (newMode) => {
         if (MODES.includes(newMode)) setModeRaw(newMode)
@@ -31,7 +32,7 @@ export const ThemeProvider = ({ children }) => {
     }
 
     return (
-        <ThemeContext.Provider value={{ mode, setMode, theme }}>
+        <ThemeContext.Provider value={{ mode, setMode, theme, themeLoaded }}>
             {children}
         </ThemeContext.Provider>
     )
