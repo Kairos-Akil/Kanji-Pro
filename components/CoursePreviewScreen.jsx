@@ -1,9 +1,10 @@
+import { useMemo } from 'react'
 import { useLocalSearchParams } from 'expo-router'
 import { COURSES } from '../constants/Courses'
 import CharacterPreview from './CharacterPreview'
 import KanjiPreview from './KanjiPreview'
 
-// Slice a course's flat data array into FlatList groups per its groupLayout. A group with no
+// Slice a course's flat data array into grid groups per its groupLayout. A group with no
 // `count` takes all remaining items (the common case: one group holding the whole set).
 const buildGroupedData = (data, groupLayout) => {
     let offset = 0
@@ -29,7 +30,8 @@ const buildGroupedData = (data, groupLayout) => {
 // KanjiPreview (it opens a details modal on tap); Kana and Radicals use CharacterPreview.
 const CoursePreviewScreen = ({ courseId }) => {
     const course = COURSES[courseId]
-    const groupedData = buildGroupedData(course.data, course.groupLayout)
+    // Memoized: PreviewGrid rebuilds its rows whenever this array changes identity.
+    const groupedData = useMemo(() => buildGroupedData(course.data, course.groupLayout), [course])
 
     // Character to scroll to and highlight (set by search). Route params are shared across sibling
     // tier tabs, so only engage on the tab whose data contains the character.
