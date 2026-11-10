@@ -108,6 +108,11 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
     const advanceTimeoutRef = useRef(null)
     useEffect(() => () => clearTimeout(advanceTimeoutRef.current), [])
 
+    // Whether the current question was already answered. A ref, not state: it changes instantly,
+    // so a second tap in the same frame (before React re-renders `showAnswer`) is ignored instead
+    // of counting the answer twice. Reset when the next question is shown.
+    const answeredRef = useRef(false)
+
     const playSound = (player) => {
         try {
             // seekTo is deliberately not awaited: native commands run in dispatch order anyway,
@@ -312,6 +317,7 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         setCurrentMode(mode)
         setOptions(allOptions)
         setShowAnswer(false)
+        answeredRef.current = false
         setSelectedChoice({})
 
         // Reveal (don't quiz) a 0-star item under Learning Mode.
@@ -343,7 +349,8 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
     }
 
     const handleAnswerSubmit = (submission) => {
-        if (!currentItem) return
+        if (!currentItem || answeredRef.current) return
+        answeredRef.current = true
 
         // Buttons submit the option object; the keyboard submits a string matched against any
         // accepted alternative. Both compare against the current mode's key.
@@ -383,9 +390,10 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
             .map(mode => ({ label: mode.label, text: answerDisplayText(currentItem[mode.key]) }))
         : []
 
-    // "Got it" resolves like a correct answer; showAnswer guards against double-taps.
+    // "Got it" resolves like a correct answer; answeredRef guards against double-taps.
     const handleLearningContinue = () => {
-        if (!currentItem || showAnswer) return
+        if (!currentItem || answeredRef.current) return
+        answeredRef.current = true
         setShowAnswer(true)
         triggerSuccessAnimation({ instantColor: true })
         incrementItem(quizId, currentItem[idKey], maxStars)

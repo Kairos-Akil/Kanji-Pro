@@ -1,4 +1,5 @@
-import { createContext, useContext, useMemo, useRef } from 'react'
+import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import { AppState } from 'react-native'
 import { usePersistedState } from '../hooks/usePersistedState'
 
 const ProgressContext = createContext(null)
@@ -82,8 +83,28 @@ export const ProgressProvider = ({ children }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    // Re-render at midnight (app left open) and when the app comes back
+    // to the foreground. setDay with an unchanged day is a no-op, so this costs nothing otherwise.
+    const [, setDay] = useState(getLocalDateString)
+    useEffect(() => {
+        let midnightTimer = null
+        const refreshDay = () => {
+            setDay(getLocalDateString())
+            clearTimeout(midnightTimer)
+            const now = new Date()
+            const nextMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1)
+            midnightTimer = setTimeout(refreshDay, nextMidnight - now + 1000)
+        }
+        refreshDay()
+        const sub = AppState.addEventListener('change', state => {
+            if (state === 'active') refreshDay()
+        })
+        return () => { clearTimeout(midnightTimer); sub.remove() }
+    }, [])
+
     // The stored count only changes on activity, so a broken streak would keep showing until the
-    // next answer. Display 0 once the last active day is older than yesterday.
+    // next answer. Display 0 once the last active day is older than yesterday. `today` is read
+    // fresh on every render (not from the state above), so practicing across midnight stays right.
     const today = getLocalDateString()
     const streakCount = streak.lastActiveDate === today ||
         (streak.lastActiveDate && isYesterday(streak.lastActiveDate, today))
