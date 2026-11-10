@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { Stack } from 'expo-router'
+import { Stack, ThemeProvider as NavigationThemeProvider, DarkTheme, DefaultTheme } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 import { setAudioModeAsync } from 'expo-audio'
 import { ProgressProvider } from '../context/ProgressContext'
@@ -21,31 +21,49 @@ const configureAudio = () => {
 const RootLayoutNav = () => {
   const { theme, mode } = useTheme()
 
+  // Every screen sits on a navigation "card". Without our colors here, its default light gray
+  // shows through whenever a screen draws nothing for a moment (e.g. while a quiz loads its settings).
+  const navigationTheme = useMemo(() => {
+    const base = mode === 'light' ? DefaultTheme : DarkTheme
+    return {
+      ...base,
+      colors: {
+        ...base.colors,
+        background: theme.background,
+        card: theme.navBackground,
+        text: theme.title,
+        primary: theme.primary,
+      },
+    }
+  }, [theme, mode])
+
   return (
-    <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <StatusBar style={mode === 'light' ? 'dark' : 'light'} />
-      <Stack screenOptions={{
-        headerStyle: { backgroundColor: theme.navBackground },
-        headerTintColor: theme.title,
-      }}>
-        <Stack.Screen name="index" options={{ title: 'Home', headerShown: false }} />
-        <Stack.Screen name="Hiragana_Page" options={{ title: 'Hiragana', headerShown: false }} />
-        <Stack.Screen name="Katakana_Page" options={{ title: 'Katakana', headerShown: false }} />
-        <Stack.Screen name="KanjiN5_Page" options={{ title: 'KanjiN5', headerShown: false }} />
-        <Stack.Screen name="KanjiN4_Page" options={{ title: 'KanjiN4', headerShown: false }} />
-        <Stack.Screen name="KanjiN3_Page" options={{ title: 'KanjiN3', headerShown: false }} />
-        <Stack.Screen name="KanjiN2_Page" options={{ title: 'KanjiN2', headerShown: false }} />
-        <Stack.Screen name="KanjiN1_Page" options={{ title: 'KanjiN1', headerShown: false }} />
-        <Stack.Screen name="RadicalsLevel1_Page" options={{ title: 'Radicals Level 1', headerShown: false }} />
-        <Stack.Screen name="RadicalsLevel2_Page" options={{ title: 'Radicals Level 2', headerShown: false }} />
-        <Stack.Screen name="RadicalsLevel3_Page" options={{ title: 'Radicals Level 3', headerShown: false }} />
-        <Stack.Screen name="RadicalsVariants_Page" options={{ title: 'Radicals Variants', headerShown: false }} />
-        <Stack.Screen name="Explain_Page/Kana" options={{ title: '', headerShown: false }} />
-        <Stack.Screen name="Explain_Page/Kanji" options={{ title: '', headerShown: false }} />
-        <Stack.Screen name="Explain_Page/Radicals" options={{ title: '', headerShown: false }} />
-        <Stack.Screen name="Quiz_Page" options={{ title: '', headerShown: true }} />
-      </Stack>
-    </View>
+    <NavigationThemeProvider value={navigationTheme}>
+      <View style={[styles.container, { backgroundColor: theme.background }]}>
+        <StatusBar style={mode === 'light' ? 'dark' : 'light'} />
+        <Stack screenOptions={{
+          headerStyle: { backgroundColor: theme.navBackground },
+          headerTintColor: theme.title,
+        }}>
+          <Stack.Screen name="index" options={{ title: 'Home', headerShown: false }} />
+          <Stack.Screen name="Hiragana_Page" options={{ title: 'Hiragana', headerShown: false }} />
+          <Stack.Screen name="Katakana_Page" options={{ title: 'Katakana', headerShown: false }} />
+          <Stack.Screen name="KanjiN5_Page" options={{ title: 'KanjiN5', headerShown: false }} />
+          <Stack.Screen name="KanjiN4_Page" options={{ title: 'KanjiN4', headerShown: false }} />
+          <Stack.Screen name="KanjiN3_Page" options={{ title: 'KanjiN3', headerShown: false }} />
+          <Stack.Screen name="KanjiN2_Page" options={{ title: 'KanjiN2', headerShown: false }} />
+          <Stack.Screen name="KanjiN1_Page" options={{ title: 'KanjiN1', headerShown: false }} />
+          <Stack.Screen name="RadicalsLevel1_Page" options={{ title: 'Radicals Level 1', headerShown: false }} />
+          <Stack.Screen name="RadicalsLevel2_Page" options={{ title: 'Radicals Level 2', headerShown: false }} />
+          <Stack.Screen name="RadicalsLevel3_Page" options={{ title: 'Radicals Level 3', headerShown: false }} />
+          <Stack.Screen name="RadicalsVariants_Page" options={{ title: 'Radicals Variants', headerShown: false }} />
+          <Stack.Screen name="Explain_Page/Kana" options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="Explain_Page/Kanji" options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="Explain_Page/Radicals" options={{ title: '', headerShown: false }} />
+          <Stack.Screen name="Quiz_Page" options={{ title: '', headerShown: true }} />
+        </Stack>
+      </View>
+    </NavigationThemeProvider>
   )
 }
 

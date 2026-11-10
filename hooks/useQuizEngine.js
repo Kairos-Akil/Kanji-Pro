@@ -124,6 +124,9 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
     const [inputMode, setInputMode] = useState(DEFAULT_INPUT_MODE)
     const [quizContent, setQuizContent] = useState(DEFAULT_QUIZ_CONTENT)
     const [learningMode, setLearningMode] = useState(DEFAULT_LEARNING_MODE)
+    // Question 1 waits for the saved settings. Built with the defaults first, it was replaced by a
+    // different question a moment later, once the real settings arrived (a visible flash).
+    const [settingsLoaded, setSettingsLoaded] = useState(false)
 
     // Modes after the Quiz Content filter; falls back to all modes if the filter empties the list.
     const allModes = questionModes ?? [{ key: answerKey, label: null }]
@@ -176,17 +179,22 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
                     setInputMode(saved.inputMode)
                     setQuizContent(saved.quizContent)
                     setLearningMode(saved.learningMode)
+                    setSettingsLoaded(true)
                 })
-                .catch((e) => console.warn('Error loading settings', e))
+                .catch((e) => {
+                    console.warn('Error loading settings', e)
+                    setSettingsLoaded(true) // start with the defaults rather than never
+                })
         }, [])
     )
 
-    // quizContent is included so question 1 rebuilds once the async settings load resolves.
+    // Settings are deps so a change made elsewhere (picked up on focus) rebuilds the question.
     useEffect(() => {
+        if (!settingsLoaded) return
         generateQuestion()
         // generateQuestion is recreated each render; excluding it keeps this an explicit whitelist.
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [current, maxStars, quizContent, learningMode])
+    }, [current, maxStars, quizContent, learningMode, settingsLoaded])
 
     // Active learning pool: ids of the (at most WORKING_SET_MAX) unmastered items drilled right now.
     const workingSetRef = useRef(null)
