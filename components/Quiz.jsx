@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native'
+import { useEffect } from 'react'
+import { View, Text, StyleSheet, ScrollView, Pressable, AccessibilityInfo } from 'react-native'
 import Animated from 'react-native-reanimated'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Star, ArrowRight } from 'lucide-react-native'
@@ -8,7 +9,8 @@ import ThemedView from './ThemedView'
 import Spacer from './Spacer'
 import QuizInputChoices from './QuizInputChoices'
 import QuizInputKeyboard from './QuizInputKeyboard'
-import { useQuizEngine, answerDisplayText } from '../hooks/useQuizEngine'
+import { useQuizEngine } from '../hooks/useQuizEngine'
+import { answerDisplayText, answerAnnouncement } from '../utils/answers'
 
 // Learning Mode card: reveals every quizzable answer, with a "Got it" button that grants the first star.
 const LearningCard = ({ answers, cardStyle, onContinue, theme }) => (
@@ -78,13 +80,29 @@ const Quiz = ({ Data, quizId, idKey = 'kana', answerKey = 'romaji', allowKeyboar
     // Bottom inset only: the Quiz_Page header already covers the top, so `safe` would double it.
     const insets = useSafeAreaInsets()
 
+    // Screen readers (TalkBack/VoiceOver) can't see the color, sound and vibration feedback, so
+    // say the result out loud. Not for Learning Mode's "Got it", which isn't an answer.
+    useEffect(() => {
+        if (!showAnswer || teaching || !currentItem) return
+        AccessibilityInfo.announceForAccessibility(
+            answerAnnouncement(lastAnswerCorrect, currentItem[currentAnswerKey])
+        )
+        // Only a new answer should announce; the other values belong to that same answer.
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [showAnswer])
+
     if (!currentItem) return null
 
     return (
         <ThemedView style={[styles.container, { backgroundColor: theme.background, paddingBottom: insets.bottom }]}>
             {/* Stars + progress row; sits above the flex:1 body so it stays put while it scrolls. */}
             <View style={styles.header}>
-                <View style={styles.starRow}>
+                {/* accessible: read as one element ("2 of 5 stars"), not as 5 unlabeled icons. */}
+                <View
+                    style={styles.starRow}
+                    accessible
+                    accessibilityLabel={`${itemProgress} of ${maxStars} stars`}
+                >
                     {[...Array(maxStars)].map((_, i) => (
                         <Star
                             key={i}
@@ -96,7 +114,10 @@ const Quiz = ({ Data, quizId, idKey = 'kana', answerKey = 'romaji', allowKeyboar
                     ))}
                 </View>
 
-                <Text style={[styles.progress, { color: theme.text }]}>
+                <Text
+                    style={[styles.progress, { color: theme.text }]}
+                    accessibilityLabel={`${learnedCount} of ${Data.length} learned`}
+                >
                     {learnedCount} / {Data.length}
                 </Text>
             </View>
@@ -114,7 +135,13 @@ const Quiz = ({ Data, quizId, idKey = 'kana', answerKey = 'romaji', allowKeyboar
                     </Text>
                 )}
 
-                <Animated.Text style={[styles.char, animatedStyle]}>
+                {/* Label adds what's being asked ("Meaning of 日"); the label row above is hidden while teaching. */}
+                <Animated.Text
+                    style={[styles.char, animatedStyle]}
+                    accessibilityLabel={questionLabel && !teaching
+                        ? `${questionLabel} of ${currentItem[idKey]}`
+                        : currentItem[idKey]}
+                >
                     {currentItem[idKey]}
                 </Animated.Text>
 

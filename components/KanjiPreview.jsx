@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react'
 import { Text, TouchableOpacity, StyleSheet } from 'react-native'
 import Animated from 'react-native-reanimated'
 import { useTheme } from '../context/ThemeContext'
-import { answerDisplayText } from '../hooks/useQuizEngine'
+import { answerDisplayText } from '../utils/answers'
 import PreviewGrid from './PreviewGrid'
 import KanjiModal from './KanjiModal'
 

@@ -24,7 +24,7 @@ const SegmentedToggle = ({ options, value, onChange }) => {
                             onPress={() => onChange(optionValue)}
                             accessibilityLabel={accessibilityLabel ?? label}
                             accessibilityRole="radio"
-                            accessibilityState={{ checked: isActive }}
+                            aria-checked={isActive}
                         >
                             <Icon size={20} color={isActive ? '#000' : theme.text} />
                             <Text style={[styles.text, { color: isActive ? '#000' : theme.text }]}>

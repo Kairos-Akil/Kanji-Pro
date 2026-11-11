@@ -49,7 +49,7 @@ const InfoModal = ({ isVisible, onClose }) => {
                     // onPress={() => openLink(DONATE_URL)}
                     accessibilityLabel="Support development"
                     accessibilityRole="link"
-                    accessibilityState={{ disabled: true }}
+                    aria-disabled
                 >
                     <View style={styles.linkLabelRow}>
                         <Ionicons name="heart-outline" size={20} color={theme.text} />

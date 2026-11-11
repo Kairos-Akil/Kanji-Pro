@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { useTheme } from '../context/ThemeContext'
-import { answersMatch, answerDisplayText } from '../hooks/useQuizEngine'
+import { answersMatch, answerDisplayText } from '../utils/answers'
 
 const QuizInputChoices = ({
     options,
@@ -55,6 +55,10 @@ const QuizInputChoices = ({
                         activeOpacity={0.7}
                         accessibilityLabel={answerDisplayText(option[answerKey])}
                         accessibilityRole="button"
+                        // After answering: buttons are inactive, and the tapped one is "selected".
+                        // aria-* (not accessibilityState): works on phones and on web.
+                        aria-disabled={showAnswer}
+                        aria-selected={showAnswer && isSelected}
                     >
                         <Text style={[styles.optionText, { color: theme.title }]}>
                             {answerDisplayText(option[answerKey])}

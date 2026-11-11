@@ -22,52 +22,10 @@ import {
 import { useProgress } from '../context/ProgressContext'
 import { useTheme } from '../context/ThemeContext'
 import { useAppSettings } from '../context/AppSettingsContext'
-import { kanaToRomaji } from '../utils/kanaToRomaji'
+import { answerDisplayText, typedAnswerMatches, answersMatch, hasModeData, shuffle, pickWrongOptions } from '../utils/answers'
 
 const correctSound = require('../assets/sounds/correct.wav')
 const incorrectSound = require('../assets/sounds/incorrect.wav')
-
-// Typed answers compare letters and digits only: the quiz keyboard has no punctuation keys, so
-// "anti" matches "anti-" and "pigs head" matches "pig’s head". Spaces are dropped too, so both
-// "two mat area" and "twomat area" match "two-mat area".
-const normalize = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '')
-
-// Normalize an answerKey value (a single string, or an array of accepted alternatives) to an array.
-const toAnswerList = (value) => Array.isArray(value) ? value : [value]
-
-// Accepted alternatives joined into one display string.
-export const answerDisplayText = (value) => toAnswerList(value).join(', ')
-
-// True if the typed text matches any accepted alternative or its romaji ("nichi" matches ニチ).
-const typedAnswerMatches = (typed, correctValue) => {
-    const typedNormalized = normalize(typed)
-    if (!typedNormalized) return false // only punctuation typed; an empty string must not match
-    return toAnswerList(correctValue).some(part => {
-        if (normalize(part) === typedNormalized) return true
-        const romaji = kanaToRomaji(part)
-        return romaji != null && normalize(romaji) === typedNormalized
-    })
-}
-
-// Value comparison for answer lists (arrays never compare equal by reference).
-export const answersMatch = (a, b) => {
-    const listA = toAnswerList(a)
-    const listB = toAnswerList(b)
-    return listA.length === listB.length && listA.every((v, i) => v === listB[i])
-}
-
-// Whether an item has data for a mode's field (e.g. a kanji with no kunyomi skips Kun questions).
-const hasModeData = (item, mode) => toAnswerList(item[mode.key] ?? []).length > 0
-
-// Fisher-Yates shuffle (unbiased, unlike the sort(() => Math.random() - 0.5) trick).
-const shuffle = (arr) => {
-    const a = [...arr]
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1))
-            ;[a[i], a[j]] = [a[j], a[i]]
-    }
-    return a
-}
 
 // Shared "positive" blue for the success glow and the teaching card's border.
 const TEACH_COLOR = '#00e1ffff'
@@ -296,20 +254,7 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         const itemModes = activeModes.filter(mode => hasModeData(nextItem, mode))
         const mode = itemModes[Math.floor(Math.random() * itemModes.length)] ?? allModes[0]
 
-        // Wrong options also need data for this mode's field, or their button renders blank. They must
-        // share no accepted answer with the correct item (生 is セイ, so another kanji's "セイ" isn't
-        // wrong), and identical labels (じ/ぢ both "ji") are shown once.
-        const correctAnswers = toAnswerList(nextItem[mode.key])
-        const seenLabels = new Set()
-        const wrongOptions = shuffle(
-            Data.filter(item => hasModeData(item, mode) &&
-                !toAnswerList(item[mode.key]).some(answer => correctAnswers.includes(answer)))
-        ).filter(item => {
-            const label = answerDisplayText(item[mode.key])
-            if (seenLabels.has(label)) return false
-            seenLabels.add(label)
-            return true
-        }).slice(0, 3)
+        const wrongOptions = pickWrongOptions(Data, nextItem, mode)
 
         const allOptions = shuffle([...wrongOptions, nextItem])
 

@@ -19,6 +19,8 @@ export default defineConfig([
       "react-hooks/exhaustive-deps": "warn",
     },
   },
+  // Tests use Jest's globals (test, expect, describe).
+  { files: ["__tests__/**/*.js"], languageOptions: { globals: globals.jest } },
   { files: ["**/*.json"], plugins: { json }, language: "json/json", extends: ["json/recommended"] },
   { files: ["**/*.jsonc"], plugins: { json }, language: "json/jsonc", extends: ["json/recommended"] },
   { files: ["**/*.json5"], plugins: { json }, language: "json/json5", extends: ["json/recommended"] },

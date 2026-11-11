@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { AppState } from 'react-native'
 import { usePersistedState } from '../hooks/usePersistedState'
+import { getLocalDateString, recordDay, displayedStreak } from '../utils/streak'
 
 const ProgressContext = createContext(null)
 // Same API with a stable identity: consumers of this one (e.g. HomePage) read progress on demand.
@@ -11,20 +12,6 @@ const ProgressMetaContext = createContext({ streakCount: 0, progressLoaded: fals
 
 const STORAGE_KEY = 'KANJI_PRO_PROGRESS_V1'
 const STREAK_STORAGE_KEY = 'KANJI_PRO_STREAK_V1'
-
-// Local (not UTC) YYYY-MM-DD, so the streak's "day" boundary matches the device's clock.
-const getLocalDateString = (date = new Date()) => {
-    const y = date.getFullYear()
-    const m = String(date.getMonth() + 1).padStart(2, '0')
-    const d = String(date.getDate()).padStart(2, '0')
-    return `${y}-${m}-${d}`
-}
-
-const isYesterday = (dateStr, todayStr) => {
-    const d = new Date(`${dateStr}T00:00:00`)
-    d.setDate(d.getDate() + 1)
-    return getLocalDateString(d) === todayStr
-}
 
 export const ProgressProvider = ({ children }) => {
     // Shape: { [quizId]: { [itemId]: starCount } }, e.g. { hiraganaBasic: { 'あ': 3, 'い': 1 } }.
@@ -38,17 +25,9 @@ export const ProgressProvider = ({ children }) => {
 
     // Created once: the setState functions are stable and live values are read through the refs.
     const actions = useMemo(() => {
-        // Count today as practiced: extend the streak if the last active day was yesterday, reset
-        // to 1 on a gap, or leave it if today is already recorded.
+        // Count today as practiced (see recordDay in utils/streak.js).
         const recordActivity = () => {
-            setStreak(prev => {
-                const today = getLocalDateString()
-                if (prev.lastActiveDate === today) return prev
-                if (prev.lastActiveDate && isYesterday(prev.lastActiveDate, today)) {
-                    return { count: prev.count + 1, lastActiveDate: today }
-                }
-                return { count: 1, lastActiveDate: today }
-            })
+            setStreak(prev => recordDay(prev, getLocalDateString()))
         }
 
         return {
@@ -102,14 +81,9 @@ export const ProgressProvider = ({ children }) => {
         return () => { clearTimeout(midnightTimer); sub.remove() }
     }, [])
 
-    // The stored count only changes on activity, so a broken streak would keep showing until the
-    // next answer. Display 0 once the last active day is older than yesterday. `today` is read
-    // fresh on every render (not from the state above), so practicing across midnight stays right.
-    const today = getLocalDateString()
-    const streakCount = streak.lastActiveDate === today ||
-        (streak.lastActiveDate && isYesterday(streak.lastActiveDate, today))
-        ? streak.count
-        : 0
+    // A broken streak shows 0 (see displayedStreak). The date is read fresh on every render (not
+    // from the state above), so practicing across midnight stays right.
+    const streakCount = displayedStreak(streak, getLocalDateString())
 
     const meta = useMemo(
         () => ({ streakCount, progressLoaded }),

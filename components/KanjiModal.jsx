@@ -1,6 +1,6 @@
 import { Modal, View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { useTheme } from '../context/ThemeContext'
-import { answerDisplayText } from '../hooks/useQuizEngine'
+import { answerDisplayText } from '../utils/answers'
 import { getFrequencyLabel, formatRadicalList } from '../constants/Courses'
 import ThemedView from './ThemedView'
 

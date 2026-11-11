@@ -3,7 +3,7 @@ import { View, Text, TextInput, FlatList, TouchableOpacity, StyleSheet } from 'r
 import { router } from 'expo-router'
 import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { useTheme } from '../context/ThemeContext'
-import { answerDisplayText } from '../hooks/useQuizEngine'
+import { answerDisplayText } from '../utils/answers'
 import { SEARCH_INDEX } from '../constants/Courses'
 import BottomSheet from './BottomSheet'
 
