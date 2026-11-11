@@ -1,6 +1,6 @@
-import { Modal, View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { useTheme } from '../context/ThemeContext'
-import ThemedView from './ThemedView'
+import Dialog from './Dialog'
 
 // Renders an alert as a real Modal instead of OS-level Alert.alert, which doesn't render on web.
 // Driven by the useAlert() hook in AlertContext.
@@ -14,56 +14,42 @@ const AlertModal = ({ isVisible, title, message, buttons, onButtonPress }) => {
     }
 
     return (
-        <Modal visible={isVisible} transparent animationType="fade" onRequestClose={handleRequestClose}>
-            <ThemedView style={styles.overlay} safe>
-                <View style={[styles.box, { backgroundColor: theme.tile }]}>
-                    {title ? <Text style={[styles.title, { color: theme.title }]}>{title}</Text> : null}
-                    {message ? <Text style={[styles.message, { color: theme.text }]}>{message}</Text> : null}
+        <Dialog isVisible={isVisible} onRequestClose={handleRequestClose} boxStyle={styles.box}>
+            {title ? <Text style={[styles.title, { color: theme.title }]}>{title}</Text> : null}
+            {message ? <Text style={[styles.message, { color: theme.text }]}>{message}</Text> : null}
 
-                    <View style={styles.buttonRow}>
-                        {buttons.map((button, index) => {
-                            const isCancel = button.style === 'cancel'
-                            const isDestructive = button.style === 'destructive'
-                            return (
-                                <TouchableOpacity
-                                    key={index}
-                                    style={[
-                                        styles.button,
-                                        isCancel && { backgroundColor: theme.navBackground },
-                                        isDestructive && { backgroundColor: theme.error },
-                                        !isCancel && !isDestructive && { backgroundColor: theme.primary },
-                                    ]}
-                                    onPress={() => onButtonPress(button)}
-                                    accessibilityLabel={button.text}
-                                    accessibilityRole="button"
-                                >
-                                    <Text style={[styles.buttonText, { color: isCancel ? theme.text : '#000' }]}>
-                                        {button.text}
-                                    </Text>
-                                </TouchableOpacity>
-                            )
-                        })}
-                    </View>
-                </View>
-            </ThemedView>
-        </Modal>
+            <View style={styles.buttonRow}>
+                {buttons.map((button, index) => {
+                    const isCancel = button.style === 'cancel'
+                    const isDestructive = button.style === 'destructive'
+                    return (
+                        <TouchableOpacity
+                            key={index}
+                            style={[
+                                styles.button,
+                                isCancel && { backgroundColor: theme.navBackground },
+                                isDestructive && { backgroundColor: theme.error },
+                                !isCancel && !isDestructive && { backgroundColor: theme.primary },
+                            ]}
+                            onPress={() => onButtonPress(button)}
+                            accessibilityLabel={button.text}
+                            accessibilityRole="button"
+                        >
+                            <Text style={[styles.buttonText, { color: isCancel ? theme.text : '#000' }]}>
+                                {button.text}
+                            </Text>
+                        </TouchableOpacity>
+                    )
+                })}
+            </View>
+        </Dialog>
     )
 }
 
 export default AlertModal
 
 const styles = StyleSheet.create({
-    overlay: {
-        flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0.72)',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 20,
-    },
     box: {
-        padding: 20,
-        borderRadius: 14,
-        width: '90%',
         maxWidth: 400,
     },
     title: {

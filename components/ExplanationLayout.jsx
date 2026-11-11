@@ -8,8 +8,9 @@ import ThemedView from './ThemedView'
 import ThemedText from './ThemedText'
 import Spacer from './Spacer'
 
-// Shared page for the "What are Kana/Kanji/Radicals?" explanations (app/Explain_Page/). `data`
-// holds the texts; accentColor and icon (an Ionicons name) give each page its own look.
+// The "What are Kana/Kanji/Radicals?" page (app/Explain_Page/[topic].jsx). `data` holds the
+// texts; accentColor and icon (an Ionicons name) give each page its own look. All three come from
+// constants/Categories.js.
 const ExplanationLayout = ({ data, accentColor, icon }) => {
     const { theme } = useTheme()
     const router = useRouter()

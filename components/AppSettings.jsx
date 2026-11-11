@@ -24,6 +24,36 @@ const THEME_OPTIONS = [
 
 const pad = (n) => n.toString().padStart(2, '0')
 
+// One settings line: icon and label on the left, the control (children) on the right.
+const SettingRow = ({ Icon, label, children }) => {
+    const { theme } = useTheme()
+    return (
+        <View style={styles.row}>
+            <View style={styles.rowLabel}>
+                <Icon size={20} color={theme.text} />
+                <Text style={[styles.rowLabelText, { color: theme.text }]}>{label}</Text>
+            </View>
+            {children}
+        </View>
+    )
+}
+
+// A SettingRow with an on/off switch.
+const SwitchRow = ({ Icon, label, value, onValueChange, accessibilityLabel }) => {
+    const { theme } = useTheme()
+    return (
+        <SettingRow Icon={Icon} label={label}>
+            <Switch
+                value={value}
+                onValueChange={onValueChange}
+                trackColor={{ false: theme.inactive, true: theme.primary }}
+                thumbColor="#fff"
+                accessibilityLabel={accessibilityLabel}
+            />
+        </SettingRow>
+    )
+}
+
 const AppSettings = ({ isVisible, onClose }) => {
     const { theme, mode, setMode } = useTheme()
     const {
@@ -83,35 +113,23 @@ const AppSettings = ({ isVisible, onClose }) => {
                 <View>
                     <Text style={[styles.label, { color: theme.text }]}>Feedback</Text>
 
-                    <View style={styles.switchRow}>
-                        <View style={styles.switchLabelRow}>
-                            <Vibrate size={20} color={theme.text} />
-                            <Text style={[styles.switchLabel, { color: theme.text }]}>Haptics</Text>
-                        </View>
-                        <Switch
-                            value={hapticsEnabled}
-                            onValueChange={setHapticsEnabled}
-                            trackColor={{ false: theme.inactive, true: theme.primary }}
-                            thumbColor="#fff"
-                            accessibilityLabel="Haptics"
-                        />
-                    </View>
+                    <SwitchRow
+                        Icon={Vibrate}
+                        label="Haptics"
+                        value={hapticsEnabled}
+                        onValueChange={setHapticsEnabled}
+                        accessibilityLabel="Haptics"
+                    />
 
                     <Spacer height={14} />
 
-                    <View style={styles.switchRow}>
-                        <View style={styles.switchLabelRow}>
-                            <Volume2 size={20} color={theme.text} />
-                            <Text style={[styles.switchLabel, { color: theme.text }]}>Sound Effects</Text>
-                        </View>
-                        <Switch
-                            value={soundEnabled}
-                            onValueChange={setSoundEnabled}
-                            trackColor={{ false: theme.inactive, true: theme.primary }}
-                            thumbColor="#fff"
-                            accessibilityLabel="Sound effects"
-                        />
-                    </View>
+                    <SwitchRow
+                        Icon={Volume2}
+                        label="Sound Effects"
+                        value={soundEnabled}
+                        onValueChange={setSoundEnabled}
+                        accessibilityLabel="Sound effects"
+                    />
                 </View>
 
                 <Spacer height={25} />
@@ -120,29 +138,18 @@ const AppSettings = ({ isVisible, onClose }) => {
                 <View>
                     <Text style={[styles.label, { color: theme.text }]}>Reminders</Text>
 
-                    <View style={styles.switchRow}>
-                        <View style={styles.switchLabelRow}>
-                            <Bell size={20} color={theme.text} />
-                            <Text style={[styles.switchLabel, { color: theme.text }]}>Daily Reminder</Text>
-                        </View>
-                        <Switch
-                            value={reminderEnabled}
-                            onValueChange={handleReminderToggle}
-                            trackColor={{ false: theme.inactive, true: theme.primary }}
-                            thumbColor="#fff"
-                            accessibilityLabel="Daily reminder"
-                        />
-                    </View>
+                    <SwitchRow
+                        Icon={Bell}
+                        label="Daily Reminder"
+                        value={reminderEnabled}
+                        onValueChange={handleReminderToggle}
+                        accessibilityLabel="Daily reminder"
+                    />
 
                     {reminderEnabled && (
                         <>
                             <Spacer height={14} />
-                            <View style={styles.switchRow}>
-                                <View style={styles.switchLabelRow}>
-                                    <Clock size={20} color={theme.text} />
-                                    <Text style={[styles.switchLabel, { color: theme.text }]}>Time</Text>
-                                </View>
-
+                            <SettingRow Icon={Clock} label="Time">
                                 <View style={styles.timeRow}>
                                     <Stepper
                                         value={pad(reminderHour)}
@@ -164,7 +171,7 @@ const AppSettings = ({ isVisible, onClose }) => {
                                         compact
                                     />
                                 </View>
-                            </View>
+                            </SettingRow>
                         </>
                     )}
                 </View>
@@ -198,17 +205,17 @@ const styles = StyleSheet.create({
     label: {
         marginBottom: 10,
     },
-    switchRow: {
+    row: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
     },
-    switchLabelRow: {
+    rowLabel: {
         flexDirection: 'row',
         alignItems: 'center',
         gap: 10,
     },
-    switchLabel: {
+    rowLabelText: {
         fontSize: 16,
         fontWeight: '500',
     },

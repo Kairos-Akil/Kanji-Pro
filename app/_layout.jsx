@@ -19,6 +19,23 @@ const configureAudio = () => {
     }).catch((e) => console.warn('Failed to configure audio mode', e))
 }
 
+// Course screen titles. Never shown as a heading (those headers are hidden), but the quiz's back
+// button is named after the screen below it: its label on iOS and for screen readers ("KanjiN5,
+// back"). Without a title it would fall back to the folder name ("KanjiN5_Page").
+const COURSE_SCREEN_TITLES = {
+    Hiragana_Page: 'Hiragana',
+    Katakana_Page: 'Katakana',
+    KanjiN5_Page: 'KanjiN5',
+    KanjiN4_Page: 'KanjiN4',
+    KanjiN3_Page: 'KanjiN3',
+    KanjiN2_Page: 'KanjiN2',
+    KanjiN1_Page: 'KanjiN1',
+    RadicalsLevel1_Page: 'Radicals Level 1',
+    RadicalsLevel2_Page: 'Radicals Level 2',
+    RadicalsLevel3_Page: 'Radicals Level 3',
+    RadicalsVariants_Page: 'Radicals Variants',
+}
+
 // Keep the native splash (black logo screen) up until the saved theme is known; otherwise Light and
 // OLED users would see the default dark theme for a moment at app start.
 SplashScreen.preventAutoHideAsync().catch(() => {})
@@ -53,25 +70,17 @@ const RootLayoutNav = () => {
             {/* onLayout: hide the splash once the first frame with the right theme is laid out. */}
             <View style={[styles.container, { backgroundColor: theme.background }]} onLayout={hideSplash}>
                 <StatusBar style={mode === 'light' ? 'dark' : 'light'} />
+                {/* Screens draw their own headers; only the quiz uses the navigation header (back
+                    button). Screens not listed here are added automatically from app/. */}
                 <Stack screenOptions={{
+                    headerShown: false,
                     headerStyle: { backgroundColor: theme.navBackground },
                     headerTintColor: theme.title,
                 }}>
-                    <Stack.Screen name="index" options={{ title: 'Home', headerShown: false }} />
-                    <Stack.Screen name="Hiragana_Page" options={{ title: 'Hiragana', headerShown: false }} />
-                    <Stack.Screen name="Katakana_Page" options={{ title: 'Katakana', headerShown: false }} />
-                    <Stack.Screen name="KanjiN5_Page" options={{ title: 'KanjiN5', headerShown: false }} />
-                    <Stack.Screen name="KanjiN4_Page" options={{ title: 'KanjiN4', headerShown: false }} />
-                    <Stack.Screen name="KanjiN3_Page" options={{ title: 'KanjiN3', headerShown: false }} />
-                    <Stack.Screen name="KanjiN2_Page" options={{ title: 'KanjiN2', headerShown: false }} />
-                    <Stack.Screen name="KanjiN1_Page" options={{ title: 'KanjiN1', headerShown: false }} />
-                    <Stack.Screen name="RadicalsLevel1_Page" options={{ title: 'Radicals Level 1', headerShown: false }} />
-                    <Stack.Screen name="RadicalsLevel2_Page" options={{ title: 'Radicals Level 2', headerShown: false }} />
-                    <Stack.Screen name="RadicalsLevel3_Page" options={{ title: 'Radicals Level 3', headerShown: false }} />
-                    <Stack.Screen name="RadicalsVariants_Page" options={{ title: 'Radicals Variants', headerShown: false }} />
-                    <Stack.Screen name="Explain_Page/Kana" options={{ title: '', headerShown: false }} />
-                    <Stack.Screen name="Explain_Page/Kanji" options={{ title: '', headerShown: false }} />
-                    <Stack.Screen name="Explain_Page/Radicals" options={{ title: '', headerShown: false }} />
+                    <Stack.Screen name="index" options={{ title: 'Home' }} />
+                    {Object.entries(COURSE_SCREEN_TITLES).map(([name, title]) => (
+                        <Stack.Screen key={name} name={name} options={{ title }} />
+                    ))}
                     <Stack.Screen name="Quiz_Page" options={{ title: '', headerShown: true }} />
                 </Stack>
             </View>

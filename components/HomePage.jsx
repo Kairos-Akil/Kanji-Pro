@@ -1,23 +1,19 @@
 import { useState, useCallback, useEffect } from 'react'
-import { StyleSheet, View, TouchableOpacity, ScrollView, Text } from 'react-native'
+import { StyleSheet, ScrollView } from 'react-native'
 import { useRouter, useFocusEffect } from 'expo-router'
-import { Ionicons } from '@react-native-vector-icons/ionicons'
-import { LinearGradient } from 'expo-linear-gradient'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { useTheme } from '../context/ThemeContext'
 import { useAlert } from '../context/AlertContext'
 import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
 import { useNavigateOnce } from '../hooks/useNavigateOnce'
 import { COURSES, DEFAULT_COURSE_ID, LAST_ACTIVE_STORAGE_KEY, RADICAL_CATEGORY_IDS, KANJI_TIER_IDS_BY_LEVEL } from '../constants/Courses'
+import { CATEGORIES } from '../constants/Categories'
 import ThemedView from './ThemedView'
-import ThemedText from './ThemedText'
+import HomeTopBar from './HomeTopBar'
+import ContinueCard from './ContinueCard'
+import CourseRow from './CourseRow'
 import AppSettings from './AppSettings'
 import SearchModal from './SearchModal'
 import InfoModal from './InfoModal'
-
-// Course card size; the horizontal rows snap by one card plus its gap.
-const CARD_WIDTH = 160
-const CARD_GAP = 16
 
 // Course-id groups behind each card's progress bar (a card can span several courses).
 const CARD_COURSE_GROUPS = {
@@ -47,9 +43,9 @@ const computeCardPercents = (getLearnedCount) => {
 }
 
 const HomePage = () => {
-    const { theme } = useTheme()
     const router = useRouter()
     const navigateOnce = useNavigateOnce()
+    const open = (route) => navigateOnce(() => router.push(route))
     // Stable actions (not the live context), so answering quiz questions doesn't re-render Home.
     const { getLearnedCount } = useProgressActions()
     const { streakCount, progressLoaded, progressLoadFailed } = useProgressMeta()
@@ -138,67 +134,12 @@ const HomePage = () => {
         }),
     ]
 
-    // Renders one category's horizontal row of course cards, tinted with accentColor.
-    const renderHorizontalSection = (title, subtitle, data, accentColor) => (
-        <View style={styles.sectionContainer}>
-            <View style={styles.sectionHeader}>
-                <View style={styles.titleWrapper}>
-                    <View style={[styles.accentBar, { backgroundColor: accentColor }]} />
-                    <View>
-                        <ThemedText title style={styles.sectionTitle}>{title}</ThemedText>
-                        <ThemedText style={styles.sectionSubtitle}>{subtitle}</ThemedText>
-                    </View>
-                </View>
-            </View>
-
-            <ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={styles.horizontalScrollContent}
-                decelerationRate="fast"
-                snapToInterval={CARD_WIDTH + CARD_GAP}
-            >
-                {data.map((item, index) => (
-                    <TouchableOpacity
-                        key={index}
-                        style={[
-                            styles.pathCard,
-                            { backgroundColor: theme.uiBackground, borderColor: theme.text },
-                        ]}
-                        activeOpacity={0.8}
-                        onPress={() => navigateOnce(() => router.push(item.route))}
-                        accessibilityLabel={`${item.title}, ${item.sub}`}
-                        accessibilityRole="button"
-                    >
-                        {/* '20'/'25' are hex alpha suffixes, tinting the accent color. */}
-                        <View style={[styles.iconCircle, { backgroundColor: accentColor + '20' }]}>
-                            <Ionicons name={item.icon} size={24} color={accentColor} />
-                        </View>
-
-                        <View>
-                            <ThemedText title style={styles.cardTitle}>{item.title}</ThemedText>
-                            <ThemedText style={styles.cardSub}>{item.sub}</ThemedText>
-                        </View>
-
-                        <View style={styles.cardFooter}>
-                            {item.percent != null ? (
-                                <View style={styles.progressGroup}>
-                                    <View style={[styles.progressTrack, { backgroundColor: accentColor + '25' }]}>
-                                        <View style={[styles.progressFill, { width: `${item.percent}%`, backgroundColor: accentColor }]} />
-                                    </View>
-                                    <ThemedText style={styles.progressPercent}>{item.percent}%</ThemedText>
-                                </View>
-                            ) : <View />}
-
-                            <View style={[styles.arrowBox, { backgroundColor: accentColor }]}>
-                                <Ionicons name="arrow-forward" size={16} color="#FFF" />
-                            </View>
-                        </View>
-                    </TouchableOpacity>
-                ))}
-            </ScrollView>
-        </View>
-    )
+    // The three category rows, in display order.
+    const rows = [
+        ['Kana', kanaCourses],
+        ['Kanji', kanjiCourses],
+        ['Radicals', radicalCourses],
+    ]
 
     return (
         <ThemedView safe style={styles.container}>
@@ -210,89 +151,32 @@ const HomePage = () => {
                     refreshPercents()
                 }}
             />
+            <SearchModal isVisible={searchVisible} onClose={() => setSearchVisible(false)} />
+            <InfoModal isVisible={infoVisible} onClose={() => setInfoVisible(false)} />
 
-            <SearchModal
-                isVisible={searchVisible}
-                onClose={() => setSearchVisible(false)}
+            <HomeTopBar
+                onOpenInfo={() => setInfoVisible(true)}
+                onOpenSearch={() => setSearchVisible(true)}
+                onOpenSettings={() => setSettingsVisible(true)}
             />
 
-            <InfoModal
-                isVisible={infoVisible}
-                onClose={() => setInfoVisible(false)}
-            />
+            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent}>
+                <ContinueCard
+                    course={activeCourse}
+                    streakCount={streakCount}
+                    onPress={() => open(activeCourse.route)}
+                />
 
-            <View style={styles.topBar}>
-                <View style={styles.topBarSide}>
-                    <TouchableOpacity
-                        onPress={() => setInfoVisible(true)}
-                        accessibilityLabel="App info"
-                        accessibilityRole="button"
-                    >
-                        <Ionicons name="information-circle-outline" size={28} color="#888" />
-                    </TouchableOpacity>
-                </View>
-                <ThemedText style={styles.appName}>KANJI PRO</ThemedText>
-                <View style={[styles.topBarSide, styles.topBarActions]}>
-                    <TouchableOpacity
-                        onPress={() => setSearchVisible(true)}
-                        accessibilityLabel="Search"
-                        accessibilityRole="button"
-                    >
-                        <Ionicons name="search-outline" size={24} color="#888" />
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() => setSettingsVisible(true)}
-                        accessibilityLabel="Settings"
-                        accessibilityRole="button"
-                    >
-                        <Ionicons name="settings-outline" size={26} color="#888" />
-                    </TouchableOpacity>
-                </View>
-            </View>
-
-            <ScrollView
-                showsVerticalScrollIndicator={false}
-                contentContainerStyle={{ paddingBottom: 50 }}
-            >
-                {/* "Continue" card for the last opened course */}
-                <TouchableOpacity
-                    activeOpacity={0.95}
-                    style={styles.focusContainer}
-                    onPress={() => navigateOnce(() => router.push(activeCourse.route))}
-                    accessibilityLabel={`Continue ${activeCourse.title} ${activeCourse.subtitle}`}
-                    accessibilityRole="button"
-                >
-                    <LinearGradient
-                        colors={[activeCourse.color1, activeCourse.color2]}
-                        style={styles.gradientBackground}
-                    >
-                        <View style={styles.cardHeader}>
-                            {streakCount > 0 && (
-                                <View style={styles.streakPill}>
-                                    <Ionicons name="flame" size={14} color={activeCourse.textColor} />
-                                    <Text style={[styles.streakText, { color: activeCourse.textColor }]}>
-                                        {streakCount} Day{streakCount === 1 ? '' : 's'} Streak
-                                    </Text>
-                                </View>
-                            )}
-                        </View>
-                        <Text style={styles.watermarkChar}>{activeCourse.char}</Text>
-                        <View style={styles.focusContent}>
-                            <Text style={[styles.focusLabel, { color: activeCourse.textColor }]}>CURRENT GOAL</Text>
-                            <Text style={[styles.focusTitle, { color: activeCourse.textColor }]}>{activeCourse.title}</Text>
-                            <Text style={[styles.focusSubtitle, { color: activeCourse.textColor }]}>{activeCourse.subtitle}</Text>
-                            <View style={styles.playButton}>
-                                <Text style={[styles.playText, { color: activeCourse.textColor }]}>CONTINUE</Text>
-                                <Ionicons name="arrow-forward-circle" size={32} color={activeCourse.textColor} />
-                            </View>
-                        </View>
-                    </LinearGradient>
-                </TouchableOpacity>
-
-                {/* One row of cards per category, each with its own accent color */}
-                {renderHorizontalSection('Kana', 'Native japanese writing system', kanaCourses, '#4facfe')}
-                {renderHorizontalSection('Kanji', 'Characters originally from China', kanjiCourses, '#CE2D4F')}
-                {renderHorizontalSection('Radicals', 'Building blocks or components of kanji characters', radicalCourses, '#00b09b')}
+                {rows.map(([name, cards]) => (
+                    <CourseRow
+                        key={name}
+                        title={name}
+                        subtitle={CATEGORIES[name].tagline}
+                        cards={cards}
+                        accentColor={CATEGORIES[name].accentColor}
+                        onOpen={open}
+                    />
+                ))}
             </ScrollView>
         </ThemedView>
     )
@@ -302,135 +186,5 @@ export default HomePage
 
 const styles = StyleSheet.create({
     container: { flex: 1 },
-
-    // --- Top bar ---
-    topBar: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingHorizontal: 20,
-        paddingVertical: 12,
-        marginBottom: 5,
-    },
-    appName: { fontSize: 14, fontWeight: 'bold', letterSpacing: 2.5, opacity: 0.5, textTransform: 'uppercase' },
-    topBarSide: { flex: 1, flexDirection: 'row', alignItems: 'center' },
-    topBarActions: { justifyContent: 'flex-end', gap: 16 },
-
-    // --- "Continue" card ---
-    focusContainer: {
-        height: 460,
-        marginHorizontal: 10,
-        marginBottom: 20,
-        borderRadius: 20,
-        overflow: 'hidden',
-        elevation: 8,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 10 },
-        shadowOpacity: 0.15,
-        shadowRadius: 15,
-    },
-    gradientBackground: { flex: 1, padding: 25, justifyContent: 'space-between' },
-    cardHeader: { flexDirection: 'row', justifyContent: 'flex-start', zIndex: 10 },
-    streakPill: {
-        flexDirection: 'row',
-        backgroundColor: 'rgba(255,255,255,0.6)',
-        paddingVertical: 6,
-        paddingHorizontal: 12,
-        borderRadius: 20,
-        alignItems: 'center',
-        gap: 6,
-    },
-    streakText: { fontWeight: '700', fontSize: 12 },
-    watermarkChar: {
-        position: 'absolute',
-        right: -20,
-        bottom: -40,
-        fontSize: 340,
-        fontWeight: '900',
-        color: 'rgba(255,255,255,0.4)',
-        zIndex: 0,
-    },
-    focusContent: { zIndex: 10, marginBottom: 15 },
-    focusLabel: { fontSize: 12, fontWeight: '800', letterSpacing: 2, opacity: 0.7, marginBottom: 5 },
-    focusTitle: { fontSize: 48, fontWeight: '900', letterSpacing: -1, lineHeight: 50 },
-    focusSubtitle: { fontSize: 18, fontWeight: '500', marginTop: 5, marginBottom: 30, opacity: 0.8 },
-    playButton: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: 'rgba(255,255,255,0.8)',
-        alignSelf: 'flex-start',
-        paddingVertical: 12,
-        paddingHorizontal: 24,
-        borderRadius: 30,
-        gap: 10,
-        elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.1,
-        shadowRadius: 5,
-    },
-    playText: { fontWeight: 'bold', fontSize: 14, letterSpacing: 1 },
-
-    // --- Category sections ---
-    sectionContainer: { marginBottom: 20 },
-    sectionHeader: { paddingHorizontal: 10, marginBottom: 15 },
-    titleWrapper: { flexDirection: 'row', alignItems: 'center' },
-    accentBar: {
-        width: 5,
-        height: 45,
-        borderRadius: 5,
-        marginRight: 10,
-    },
-    sectionTitle: { fontSize: 22, fontWeight: '800' },
-    sectionSubtitle: { fontSize: 14, opacity: 0.5, marginTop: -2 },
-
-    horizontalScrollContent: { paddingLeft: 16, paddingRight: 20, alignItems: 'center' },
-
-    // --- Course cards ---
-    pathCard: {
-        width: CARD_WIDTH,
-        height: 180,
-        marginRight: CARD_GAP,
-        borderRadius: 20,
-        padding: 15,
-        justifyContent: 'space-between',
-        borderWidth: 1,
-    },
-    iconCircle: {
-        width: 50,
-        height: 50,
-        borderRadius: 25,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    cardTitle: { fontSize: 18, fontWeight: 'bold', marginTop: 10 },
-    cardSub: { fontSize: 12, opacity: 0.6 },
-    cardFooter: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-    progressGroup: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: 5,
-    },
-    progressTrack: {
-        width: 40,
-        height: 4,
-        borderRadius: 3,
-        overflow: 'hidden',
-    },
-    progressFill: {
-        height: '100%',
-        borderRadius: 3,
-    },
-    progressPercent: { fontSize: 13, fontWeight: '700', opacity: 0.85 },
-    arrowBox: {
-        width: 35,
-        height: 35,
-        borderRadius: 20,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+    scrollContent: { paddingBottom: 50 },
 })

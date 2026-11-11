@@ -1,12 +1,9 @@
 import { useCallback, useState } from 'react'
-import { Text, TouchableOpacity, StyleSheet } from 'react-native'
-import Animated from 'react-native-reanimated'
+import { Text, StyleSheet } from 'react-native'
 import { useTheme } from '../context/ThemeContext'
 import { answerDisplayText } from '../utils/answers'
-import PreviewGrid from './PreviewGrid'
+import PreviewGrid, { PreviewTile } from './PreviewGrid'
 import KanjiModal from './KanjiModal'
-
-const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity)
 
 // Kanji preview: tiles with character + meaning; tapping one opens KanjiModal with the details.
 const KanjiPreview = ({ groupedData, focusChar }) => {
@@ -15,31 +12,24 @@ const KanjiPreview = ({ groupedData, focusChar }) => {
     const [selectedItem, setSelectedItem] = useState(null)
     const [modalVisible, setModalVisible] = useState(false)
 
-    // Only the highlighted tile needs the heavier animated component.
-    const renderTile = useCallback((item, highlightStyle) => {
-        const Tile = highlightStyle ? AnimatedTouchable : TouchableOpacity
-        return (
-            <Tile
-                style={[styles.tile, { backgroundColor: theme.tile }, highlightStyle]}
-                onPress={() => {
-                    setSelectedItem(item)
-                    setModalVisible(true)
-                }}
-                accessibilityLabel={`${item.character}, ${answerDisplayText(item.meanings)}, tap for more info`}
-                accessibilityRole="button"
-            >
-                <Text style={[styles.kanji, { color: theme.title }]}>
-                    {item.character}
-                </Text>
-
-                <Text style={[styles.meaning, { color: theme.text }]} numberOfLines={2}>
-                    {answerDisplayText(item.meanings)}
-                </Text>
-
-                <Text style={[styles.info, { color: theme.text }]}>tap for more info</Text>
-            </Tile>
-        )
-    }, [theme])
+    const renderTile = useCallback((item, highlightStyle) => (
+        <PreviewTile
+            highlightStyle={highlightStyle}
+            style={styles.tile}
+            onPress={() => {
+                setSelectedItem(item)
+                setModalVisible(true)
+            }}
+            accessibilityLabel={`${item.character}, ${answerDisplayText(item.meanings)}, tap for more info`}
+            accessibilityRole="button"
+        >
+            <Text style={[styles.kanji, { color: theme.title }]}>{item.character}</Text>
+            <Text style={[styles.meaning, { color: theme.text }]} numberOfLines={2}>
+                {answerDisplayText(item.meanings)}
+            </Text>
+            <Text style={[styles.info, { color: theme.text }]}>tap for more info</Text>
+        </PreviewTile>
+    ), [theme])
 
     return (
         <>
@@ -58,11 +48,6 @@ export default KanjiPreview
 
 const styles = StyleSheet.create({
     tile: {
-        flex: 1,
-        margin: 4,
-        borderRadius: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
         padding: 10,
         minHeight: 140,
     },

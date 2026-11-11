@@ -1,8 +1,21 @@
 import { Fragment, useMemo } from 'react'
-import { View, FlatList, StyleSheet } from 'react-native'
+import { View, FlatList, StyleSheet, TouchableOpacity } from 'react-native'
+import Animated from 'react-native-reanimated'
+import { useTheme } from '../context/ThemeContext'
 import { useFocusHighlight } from '../hooks/useFocusHighlight'
 import ThemedView from './ThemedView'
 import FocusLoadingOverlay from './FocusLoadingOverlay'
+
+const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity)
+
+// One grid tile with the theme's tile color. Pass renderTile's highlightStyle through: only the
+// highlighted tile (a search result) needs the heavier animated component. Other props
+// (onPress, accessibility) go to the touchable.
+export const PreviewTile = ({ highlightStyle, style, ...props }) => {
+    const { theme } = useTheme()
+    const Tile = highlightStyle ? AnimatedTouchable : TouchableOpacity
+    return <Tile style={[styles.tile, { backgroundColor: theme.tile }, style, highlightStyle]} {...props} />
+}
 
 // Split each group into rows of its column count, so one list can hold groups with different
 // column counts (Hiragana Basic mixes 5-, 3-, 2- and 1-column rows).
@@ -58,5 +71,12 @@ const styles = StyleSheet.create({
     },
     row: {
         flexDirection: 'row',
+    },
+    tile: {
+        flex: 1,
+        margin: 4,
+        borderRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 })

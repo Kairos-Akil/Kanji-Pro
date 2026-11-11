@@ -1,8 +1,8 @@
-import { Modal, View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native'
 import { useTheme } from '../context/ThemeContext'
 import { answerDisplayText } from '../utils/answers'
 import { getFrequencyLabel, formatRadicalList } from '../constants/Courses'
-import ThemedView from './ThemedView'
+import Dialog from './Dialog'
 
 // Detail rows for a kanji, in display order. `format` renders array fields; fields without a value
 // are skipped, except `alwaysShow` ones (freq still maps to a real "Rare" label when absent) and
@@ -26,73 +26,54 @@ const KanjiModal = ({ isVisible, item, onClose }) => {
     if (!item) return null
 
     return (
-        <Modal
-            visible={isVisible}
-            transparent
-            animationType="fade"
-            onRequestClose={onClose}
-        >
-            <ThemedView style={styles.overlay} safe>
-                <View style={[styles.box, { backgroundColor: theme.tile }]}>
-                    {/* Scrolls when a kanji's details don't fit (small phone, large font); Close
-                        stays below it, always reachable. */}
-                    <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
-                        <Text style={[styles.kanji, { color: theme.title }]}>
-                            {item.character}
-                        </Text>
+        <Dialog isVisible={isVisible} onRequestClose={onClose} boxStyle={styles.box}>
+            {/* Scrolls when a kanji's details don't fit (small phone, large font); Close
+                stays below it, always reachable. */}
+            <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
+                <Text style={[styles.kanji, { color: theme.title }]}>
+                    {item.character}
+                </Text>
 
-                        <Text style={[styles.meaning, { color: theme.text }]}>
-                            {answerDisplayText(item.meanings)}
-                        </Text>
+                <Text style={[styles.meaning, { color: theme.text }]}>
+                    {answerDisplayText(item.meanings)}
+                </Text>
 
-                        {DETAIL_FIELDS.map(({ label, key, format, alwaysShow, emptyText }) => {
-                            const present = hasValue(item[key])
-                            if (!present && !alwaysShow && !emptyText) return null
-                            return (
-                                <View key={key}>
-                                    <Text style={[styles.label, { color: theme.title }]}>{label}</Text>
-                                    {present || alwaysShow ? (
-                                        <Text style={[styles.value, { color: theme.text }]}>
-                                            {format ? format(item[key]) : item[key]}
-                                        </Text>
-                                    ) : (
-                                        <Text style={[styles.value, styles.emptyValue, { color: theme.text }]}>
-                                            {emptyText}
-                                        </Text>
-                                    )}
-                                </View>
-                            )
-                        })}
-                    </ScrollView>
+                {DETAIL_FIELDS.map(({ label, key, format, alwaysShow, emptyText }) => {
+                    const present = hasValue(item[key])
+                    if (!present && !alwaysShow && !emptyText) return null
+                    return (
+                        <View key={key}>
+                            <Text style={[styles.label, { color: theme.title }]}>{label}</Text>
+                            {present || alwaysShow ? (
+                                <Text style={[styles.value, { color: theme.text }]}>
+                                    {format ? format(item[key]) : item[key]}
+                                </Text>
+                            ) : (
+                                <Text style={[styles.value, styles.emptyValue, { color: theme.text }]}>
+                                    {emptyText}
+                                </Text>
+                            )}
+                        </View>
+                    )
+                })}
+            </ScrollView>
 
-                    <TouchableOpacity
-                        onPress={onClose}
-                        style={[styles.closeBtn, { backgroundColor: theme.background }]}
-                        accessibilityLabel="Close"
-                        accessibilityRole="button"
-                    >
-                        <Text style={{ color: theme.text }}>Close</Text>
-                    </TouchableOpacity>
-                </View>
-            </ThemedView>
-        </Modal>
+            <TouchableOpacity
+                onPress={onClose}
+                style={[styles.closeBtn, { backgroundColor: theme.background }]}
+                accessibilityLabel="Close"
+                accessibilityRole="button"
+            >
+                <Text style={{ color: theme.text }}>Close</Text>
+            </TouchableOpacity>
+        </Dialog>
     )
 }
 
 export default KanjiModal
 
 const styles = StyleSheet.create({
-    overlay: {
-        flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0.72)',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 20,
-    },
     box: {
-        padding: 20,
-        borderRadius: 14,
-        width: '90%',
         maxHeight: '90%',
     },
     scroll: {
