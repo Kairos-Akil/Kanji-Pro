@@ -1,5 +1,5 @@
 import { StyleSheet, ScrollView, View, TouchableOpacity } from 'react-native'
-import { router } from 'expo-router'
+import { useRouter } from 'expo-router'
 import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { LinearGradient } from 'expo-linear-gradient'
 
@@ -10,6 +10,7 @@ import { useNavigateOnce } from '../hooks/useNavigateOnce'
 
 const ExplanationLayout = ({ data, accentColor, icon }) => {
     const { theme } = useTheme()
+    const router = useRouter()
     // A double tap on back would otherwise go back two screens.
     const navigateOnce = useNavigateOnce()
 

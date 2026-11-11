@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { View, Text, TextInput, FlatList, TouchableOpacity, StyleSheet } from 'react-native'
-import { router } from 'expo-router'
+import { useRouter } from 'expo-router'
 import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { useTheme } from '../context/ThemeContext'
 import { answerDisplayText } from '../utils/answers'
@@ -15,6 +15,7 @@ const MAX_RESULTS = 50
 // highlights the item.
 const SearchModal = ({ isVisible, onClose }) => {
     const { theme } = useTheme()
+    const router = useRouter()
     const navigateOnce = useNavigateOnce()
     const [query, setQuery] = useState('')
 

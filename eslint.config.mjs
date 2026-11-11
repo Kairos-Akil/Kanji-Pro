@@ -26,5 +26,16 @@ export default defineConfig([
   { files: ["**/*.json5"], plugins: { json }, language: "json/json5", extends: ["json/recommended"] },
   { files: ["**/*.md"], plugins: { markdown }, language: "markdown/gfm", extends: ["markdown/recommended"] },
   { files: ["**/*.css"], plugins: { css }, language: "css/css", extends: ["css/recommended"] },
-  { files: ["**/*.{js,mjs,cjs,jsx}"], rules: { "react/react-in-jsx-scope": "off", "react/prop-types": "off", semi: ["warn", "never"] } }
+  { files: ["**/*.{js,mjs,cjs,jsx}"], rules: { "react/react-in-jsx-scope": "off", "react/prop-types": "off", semi: ["warn", "never"] } },
+  // The module-level `router` throws until the root layout's first render has finished, e.g. after
+  // Android restarts the screen on a font size change: a tap in that moment crashed the app (1.2.1).
+  // useRouter() is bound to the component and safe.
+  {
+    files: ["**/*.{js,jsx}"],
+    rules: {
+      "no-restricted-imports": ["error", {
+        paths: [{ name: "expo-router", importNames: ["router"], message: "Use const router = useRouter() inside the component instead." }],
+      }],
+    },
+  }
 ])

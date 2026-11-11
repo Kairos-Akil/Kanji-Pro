@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react'
 import { StyleSheet, View, TouchableOpacity, ScrollView, Text } from 'react-native'
-import { router, useFocusEffect } from 'expo-router'
+import { useRouter, useFocusEffect } from 'expo-router'
 import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { LinearGradient } from 'expo-linear-gradient'
 import AsyncStorage from '@react-native-async-storage/async-storage'
@@ -49,6 +49,7 @@ const computeCardPercents = (getLearnedCount) => {
 
 const HomePage = () => {
     const { theme } = useTheme()
+    const router = useRouter()
     const navigateOnce = useNavigateOnce()
     // Stable actions (not the live context), so answering quiz questions doesn't re-render Home.
     const { getLearnedCount } = useProgressActions()
