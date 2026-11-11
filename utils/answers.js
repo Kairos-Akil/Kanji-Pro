@@ -35,11 +35,12 @@ export const answersMatch = (a, b) => {
 // Whether an item has data for a mode's field (e.g. a kanji with no kunyomi skips Kun questions).
 export const hasModeData = (item, mode) => toAnswerList(item[mode.key] ?? []).length > 0
 
-// Fisher-Yates shuffle (unbiased, unlike the sort(() => Math.random() - 0.5) trick).
-export const shuffle = (arr) => {
+// Fisher-Yates shuffle (unbiased, unlike the sort(() => Math.random() - 0.5) trick). `random` is
+// injectable so tests can make it predictable.
+export const shuffle = (arr, random = Math.random) => {
     const a = [...arr]
     for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1))
+        const j = Math.floor(random() * (i + 1))
             ;[a[i], a[j]] = [a[j], a[i]]
     }
     return a

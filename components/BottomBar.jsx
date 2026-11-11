@@ -3,6 +3,7 @@ import { useRouter, usePathname } from 'expo-router'
 import { Undo, Play, Ellipsis } from 'lucide-react-native'
 import { useTheme } from '../context/ThemeContext'
 import { COURSES } from '../constants/Courses'
+import { useNavigateOnce } from '../hooks/useNavigateOnce'
 
 // Preview route -> quiz route. Every quiz is app/Quiz_Page/[courseId].jsx, so its URL is the id.
 const QUIZ_ROUTE_MAP = Object.fromEntries(
@@ -12,6 +13,7 @@ const QUIZ_ROUTE_MAP = Object.fromEntries(
 const BottomBar = ({ onOpenSettings, progress }) => {
     const { theme } = useTheme()
     const router = useRouter()
+    const navigateOnce = useNavigateOnce()
     const pathname = usePathname()
 
     const targetQuizRoute = QUIZ_ROUTE_MAP[pathname] ?? '/'
@@ -28,7 +30,7 @@ const BottomBar = ({ onOpenSettings, progress }) => {
             <View style={styles.slot}>
                 <Pressable
                     style={styles.button}
-                    onPress={() => router.dismissTo('/')}
+                    onPress={() => navigateOnce(() => router.dismissTo('/'))}
                     accessibilityLabel="Go home"
                     accessibilityRole="button"
                 >
@@ -53,7 +55,7 @@ const BottomBar = ({ onOpenSettings, progress }) => {
             <View style={styles.slot}>
                 <Pressable
                     style={[styles.playButton, styles.playButtonContent, { backgroundColor: theme.primary }]}
-                    onPress={() => router.push(targetQuizRoute)}
+                    onPress={() => navigateOnce(() => router.push(targetQuizRoute))}
                     accessibilityLabel={progress ? `Start quiz, progress ${progress}` : 'Start quiz'}
                     accessibilityRole="button"
                 >

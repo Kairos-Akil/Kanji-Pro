@@ -11,6 +11,8 @@ import AppSettings from './AppSettings'
 import SearchModal from './SearchModal'
 import InfoModal from './InfoModal'
 import { useTheme } from '../context/ThemeContext'
+import { useNavigateOnce } from '../hooks/useNavigateOnce'
+import { useAlert } from '../context/AlertContext'
 import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
 import { COURSES, DEFAULT_COURSE_ID, LAST_ACTIVE_STORAGE_KEY, RADICAL_CATEGORY_IDS, KANJI_TIER_IDS_BY_LEVEL } from '../constants/Courses'
 
@@ -47,9 +49,21 @@ const computeCardPercents = (getLearnedCount) => {
 
 const HomePage = () => {
     const { theme } = useTheme()
+    const navigateOnce = useNavigateOnce()
     // Stable actions (not the live context), so answering quiz questions doesn't re-render Home.
     const { getLearnedCount } = useProgressActions()
-    const { streakCount, progressLoaded } = useProgressMeta()
+    const { streakCount, progressLoaded, progressLoadFailed } = useProgressMeta()
+    const showAlert = useAlert()
+
+    // Saved progress couldn't be read (even after a retry), so nothing is saved this session to
+    // protect it. Say so once instead of letting the user study for nothing.
+    useEffect(() => {
+        if (!progressLoadFailed) return
+        showAlert(
+            'Progress could not be loaded',
+            'Your saved progress could not be read. To protect it, nothing you do now will be saved. Please close and restart the app.'
+        )
+    }, [progressLoadFailed, showAlert])
     const [settingsVisible, setSettingsVisible] = useState(false)
     const [searchVisible, setSearchVisible] = useState(false)
     const [infoVisible, setInfoVisible] = useState(false)
@@ -152,7 +166,7 @@ const HomePage = () => {
                             { backgroundColor: theme.uiBackground, borderColor: theme.text }
                         ]}
                         activeOpacity={0.8}
-                        onPress={() => router.push(item.route)}
+                        onPress={() => navigateOnce(() => router.push(item.route))}
                         accessibilityLabel={`${item.title}, ${item.sub}`}
                         accessibilityRole="button"
                     >
@@ -245,7 +259,7 @@ const HomePage = () => {
                 <TouchableOpacity
                     activeOpacity={0.95}
                     style={styles.focusContainer}
-                    onPress={() => router.push(activeCourse.route)}
+                    onPress={() => navigateOnce(() => router.push(activeCourse.route))}
                     accessibilityLabel={`Continue ${activeCourse.title} ${activeCourse.subtitle}`}
                     accessibilityRole="button"
                 >

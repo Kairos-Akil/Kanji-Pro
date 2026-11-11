@@ -6,9 +6,12 @@ import { LinearGradient } from 'expo-linear-gradient'
 import ThemedView from './ThemedView'
 import ThemedText from './ThemedText'
 import { useTheme } from '../context/ThemeContext'
+import { useNavigateOnce } from '../hooks/useNavigateOnce'
 
 const ExplanationLayout = ({ data, accentColor, icon }) => {
     const { theme } = useTheme()
+    // A double tap on back would otherwise go back two screens.
+    const navigateOnce = useNavigateOnce()
 
     return (
         <ThemedView style={styles.container}>
@@ -23,7 +26,7 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
                 >
                     {/* Back Button */}
                     <TouchableOpacity
-                        onPress={() => router.back()}
+                        onPress={() => navigateOnce(() => router.back())}
                         style={styles.backButton}
                         accessibilityLabel="Go back"
                         accessibilityRole="button"

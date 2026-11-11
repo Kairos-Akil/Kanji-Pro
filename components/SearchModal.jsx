@@ -6,6 +6,7 @@ import { useTheme } from '../context/ThemeContext'
 import { answerDisplayText } from '../utils/answers'
 import { SEARCH_INDEX } from '../constants/Courses'
 import BottomSheet from './BottomSheet'
+import { useNavigateOnce } from '../hooks/useNavigateOnce'
 
 const MAX_RESULTS = 50
 
@@ -14,6 +15,7 @@ const MAX_RESULTS = 50
 // highlights the item.
 const SearchModal = ({ isVisible, onClose }) => {
     const { theme } = useTheme()
+    const navigateOnce = useNavigateOnce()
     const [query, setQuery] = useState('')
 
     // Start fresh each time the modal opens rather than showing a stale search.
@@ -34,8 +36,10 @@ const SearchModal = ({ isVisible, onClose }) => {
     }, [query])
 
     const handleSelect = (item) => {
-        onClose()
-        router.push({ pathname: item.route, params: { focus: item.char } })
+        navigateOnce(() => {
+            onClose()
+            router.push({ pathname: item.route, params: { focus: item.char } })
+        })
     }
 
     return (

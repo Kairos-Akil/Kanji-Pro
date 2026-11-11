@@ -6,6 +6,13 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 // write the whole value once per change, on the JS thread, in the middle of the answer feedback.
 const SAVE_DEBOUNCE_MS = 500
 
+// A failed read is tried once more after this pause, so a one-off storage hiccup at launch doesn't
+// leave the whole session unable to save.
+const RETRY_DELAY_MS = 300
+
+const readWithRetry = (key) => AsyncStorage.getItem(key).catch(() =>
+    new Promise(resolve => setTimeout(resolve, RETRY_DELAY_MS)).then(() => AsyncStorage.getItem(key)))
+
 // Like useState, but loads its initial value from AsyncStorage on mount and re-saves on change.
 // Defaults to JSON (de)serialization; override serialize/deserialize only when the stored format
 // must stay non-JSON (e.g. an already-shipped plain string).
@@ -14,6 +21,9 @@ export const usePersistedState = (key, defaultValue, { serialize = JSON.stringif
     // isLoaded (third return value): the first read has finished, successfully or not, so callers
     // waiting on it (e.g. the splash screen) never wait forever.
     const [isLoaded, setIsLoaded] = useState(false)
+    // loadFailed (fourth return value): reading failed even after the retry, so this session won't
+    // save. Lets callers tell the user instead of silently dropping their changes.
+    const [loadFailed, setLoadFailed] = useState(false)
     // Saving is allowed: set only after a *successful* read (unlike isLoaded).
     const hasLoaded = useRef(false)
     const saveTimer = useRef(null)
@@ -31,7 +41,7 @@ export const usePersistedState = (key, defaultValue, { serialize = JSON.stringif
     // Saving only starts after a successful read, so the default can never overwrite stored data
     // that merely failed to load.
     useEffect(() => {
-        AsyncStorage.getItem(key)
+        readWithRetry(key)
             .then(raw => {
                 if (raw !== null) {
                     try {
@@ -46,9 +56,11 @@ export const usePersistedState = (key, defaultValue, { serialize = JSON.stringif
                 hasLoaded.current = true
                 setIsLoaded(true)
             })
-            // Storage itself failed: what's stored is unknown, so saving stays off this session.
+            // Storage itself failed (twice): what's stored is unknown, so saving stays off this
+            // session rather than risk overwriting it with the default.
             .catch(err => {
                 console.warn(`Failed to load persisted state for "${key}":`, err)
+                setLoadFailed(true)
                 setIsLoaded(true)
             })
         // `key` only: serialize/deserialize are stable per call site, and inline functions in
@@ -78,5 +90,5 @@ export const usePersistedState = (key, defaultValue, { serialize = JSON.stringif
         return () => sub.remove()
     }, [flushPendingSave])
 
-    return [value, setValue, isLoaded]
+    return [value, setValue, isLoaded, loadFailed]
 }
