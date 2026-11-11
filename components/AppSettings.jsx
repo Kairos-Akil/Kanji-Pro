@@ -10,7 +10,7 @@ import { Sun, Moon, Contrast, Vibrate, Volume2, Bell, Clock, Trash2 } from 'luci
 
 import { useTheme } from '../context/ThemeContext'
 import { useAppSettings } from '../context/AppSettingsContext'
-import { useProgress } from '../context/ProgressContext'
+import { useProgressActions } from '../context/ProgressContext'
 import { useAlert } from '../context/AlertContext'
 import BottomSheet from './BottomSheet'
 import SegmentedToggle from './SegmentedToggle'
@@ -33,7 +33,9 @@ const AppSettings = ({ isVisible, onClose }) => {
         reminderEnabled, setReminderEnabled,
         reminderHour, reminderMinute, setReminderTime,
     } = useAppSettings()
-    const { resetProgress } = useProgress()
+    // Stable actions: this sheet stays mounted under Home, so the live progress context would
+    // re-render it on every quiz answer.
+    const { resetProgress } = useProgressActions()
     const showAlert = useAlert()
 
     const adjustHour = (amount) => {

@@ -56,7 +56,7 @@ const LearningCard = ({ answers, cardStyle, onContinue, theme }) => (
 
 // Multiple-choice/keyboard drill quiz for Kana, Kanji, and Radicals. idKey/answerKey identify an
 // item and its answer field; questionModes (kanji) rotates the tested field. See useQuizEngine.
-const Quiz = ({ Data, quizId, idKey = 'kana', answerKey = 'romaji', allowKeyboard = true, questionModes = null }) => {
+const Quiz = ({ Data, quizId, idKey, answerKey, questionModes = null }) => {
     const { theme } = useTheme()
     const {
         currentItem,
@@ -75,7 +75,7 @@ const Quiz = ({ Data, quizId, idKey = 'kana', answerKey = 'romaji', allowKeyboar
         teachCardStyle,
         currentAnswerKey,
         questionLabel,
-    } = useQuizEngine({ Data, quizId, idKey, answerKey, allowKeyboard, questionModes })
+    } = useQuizEngine({ Data, quizId, idKey, answerKey, questionModes })
 
     // Bottom inset only: the Quiz_Page header already covers the top, so `safe` would double it.
     const insets = useSafeAreaInsets()

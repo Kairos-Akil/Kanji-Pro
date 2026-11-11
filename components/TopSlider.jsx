@@ -2,7 +2,6 @@ import { useState, useCallback, useEffect } from 'react'
 import { View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTheme } from '../context/ThemeContext'
-import { StatusBar } from 'expo-status-bar'
 import { TopTabs } from 'expo-router/js-top-tabs'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useFocusEffect, usePathname } from 'expo-router'
@@ -62,13 +61,12 @@ const TopSlider = ({ tabs = [] }) => {
     useEffect(() => {
         if (currentTabObj?.id) {
             AsyncStorage.setItem(LAST_ACTIVE_STORAGE_KEY, currentTabObj.id)
+                .catch(err => console.warn('Error saving last active course', err))
         }
     }, [currentTabObj?.id])
 
     return (
         <>
-            <StatusBar style="auto" />
-
             <QuizSettings
                 isVisible={settingsVisible}
                 onClose={() => setSettingsVisible(false)}

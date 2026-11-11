@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`course registry tier contents are unchanged (progress is stored per tier) 1`] = `
+{
+  "hiragana_basic": {
+    "count": 46,
+    "first": "あ",
+    "last": "ん",
+  },
+  "hiragana_combinations": {
+    "count": 33,
+    "first": "きゃ",
+    "last": "ぴょ",
+  },
+  "hiragana_variants": {
+    "count": 25,
+    "first": "が",
+    "last": "ぽ",
+  },
+  "kanji_n1_tier1": {
+    "count": 411,
+    "first": "氏",
+    "last": "懲",
+  },
+  "kanji_n1_tier2": {
+    "count": 411,
+    "first": "剣",
+    "last": "豚",
+  },
+  "kanji_n1_tier3": {
+    "count": 410,
+    "first": "遮",
+    "last": "滉",
+  },
+  "kanji_n2_tier1": {
+    "count": 123,
+    "first": "党",
+    "last": "圧",
+  },
+  "kanji_n2_tier2": {
+    "count": 123,
+    "first": "芸",
+    "last": "童",
+  },
+  "kanji_n2_tier3": {
+    "count": 121,
+    "first": "宝",
+    "last": "伺",
+  },
+  "kanji_n3_tier1": {
+    "count": 123,
+    "first": "政",
+    "last": "割",
+  },
+  "kanji_n3_tier2": {
+    "count": 123,
+    "first": "費",
+    "last": "顔",
+  },
+  "kanji_n3_tier3": {
+    "count": 121,
+    "first": "類",
+    "last": "幾",
+  },
+  "kanji_n4_tier1": {
+    "count": 56,
+    "first": "会",
+    "last": "画",
+  },
+  "kanji_n4_tier2": {
+    "count": 56,
+    "first": "海",
+    "last": "味",
+  },
+  "kanji_n4_tier3": {
+    "count": 54,
+    "first": "写",
+    "last": "漢",
+  },
+  "kanji_n5_tier1": {
+    "count": 27,
+    "first": "日",
+    "last": "金",
+  },
+  "kanji_n5_tier2": {
+    "count": 27,
+    "first": "九",
+    "last": "半",
+  },
+  "kanji_n5_tier3": {
+    "count": 25,
+    "first": "男",
+    "last": "雨",
+  },
+  "katakana_basic": {
+    "count": 46,
+    "first": "ア",
+    "last": "ン",
+  },
+  "katakana_combinations": {
+    "count": 33,
+    "first": "キャ",
+    "last": "ピョ",
+  },
+  "katakana_variants": {
+    "count": 25,
+    "first": "ガ",
+    "last": "ポ",
+  },
+  "radicals_level1": {
+    "count": 72,
+    "first": "一",
+    "last": "方",
+  },
+  "radicals_level2": {
+    "count": 72,
+    "first": "无",
+    "last": "衣",
+  },
+  "radicals_level3": {
+    "count": 70,
+    "first": "西",
+    "last": "龠",
+  },
+  "radicals_variants": {
+    "count": 55,
+    "first": "⺃",
+    "last": "々",
+  },
+}
+`;

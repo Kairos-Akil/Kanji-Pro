@@ -14,6 +14,10 @@ import { useTheme } from '../context/ThemeContext'
 import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
 import { COURSES, DEFAULT_COURSE_ID, LAST_ACTIVE_STORAGE_KEY, RADICAL_CATEGORY_IDS, KANJI_TIER_IDS_BY_LEVEL } from '../constants/Courses'
 
+// Course card size; the horizontal rows snap by one card plus its gap.
+const CARD_WIDTH = 160
+const CARD_GAP = 16
+
 // Course-id groups behind each card's progress bar (a card can span several courses).
 const CARD_COURSE_GROUPS = {
     hiragana: ['hiragana_basic', 'hiragana_variants', 'hiragana_combinations'],
@@ -138,7 +142,7 @@ const HomePage = () => {
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={styles.horizontalScrollContent}
                 decelerationRate="fast"
-                snapToInterval={160}
+                snapToInterval={CARD_WIDTH + CARD_GAP}
             >
                 {data.map((item, index) => (
                     <TouchableOpacity
@@ -375,9 +379,9 @@ const styles = StyleSheet.create({
 
     // Card Styles
     pathCard: {
-        width: 160,
+        width: CARD_WIDTH,
         height: 180,
-        marginRight: 16,
+        marginRight: CARD_GAP,
         borderRadius: 20,
         padding: 15,
         justifyContent: 'space-between',

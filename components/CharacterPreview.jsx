@@ -9,7 +9,7 @@ const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity)
 
 // Kana and Radicals preview: tiles showing a character (mainKey) with a label under it (subKey).
 // Kanji uses KanjiPreview instead (it opens a details modal on tap).
-const CharacterPreview = ({ groupedData, mainKey = 'kana', subKey = 'romaji', subFontSize = 21, focusChar }) => {
+const CharacterPreview = ({ groupedData, mainKey, subKey, subFontSize = 21, focusChar }) => {
     const { theme } = useTheme()
 
     // Only the highlighted tile needs the heavier animated component.

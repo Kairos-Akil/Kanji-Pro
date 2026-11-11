@@ -46,7 +46,7 @@ const REVIEW_CHANCE = 0.15
 // generates multiple-choice questions, and drives the success/failure animation. idKey identifies
 // an item, answerKey is the tested field. questionModes (kanji) rotates the tested field per
 // question instead of always using answerKey.
-export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = true, questionModes = null }) => {
+export const useQuizEngine = ({ Data, quizId, idKey, answerKey, questionModes = null }) => {
     const { theme } = useTheme()
     const { hapticsEnabled, soundEnabled } = useAppSettings()
     const {
@@ -132,8 +132,8 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         backgroundColor: interpolateColor(color.value, [0, 1], [theme.background, TEACH_COLOR]),
     }))
 
-    // Reload on every focus: quiz screens stay mounted in the tab navigator, so settings changed
-    // elsewhere must be picked up on return.
+    // Load the quiz settings when the screen gains focus. In practice that's once per quiz: the
+    // quiz unmounts when you leave it, and the settings sheet only exists on the course page.
     useFocusEffect(
         useCallback(() => {
             loadQuizSettings()
@@ -165,7 +165,8 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
     const introQueueRef = useRef([])
 
     // Sync the working set with current progress/settings; returns its items. Runs before every
-    // question, so it self-heals after mastery-level changes or a progress reset.
+    // question, so it self-heals when an item changes state (e.g. a missed review drops a mastered
+    // item back to 5 stars).
     const updateWorkingSet = (unmastered, getStars) => {
         const inProgress = unmastered.filter(item => getStars(item) > 0)
 
@@ -180,8 +181,8 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         const setIds = new Set(set)
         const enroll = (item) => { set.push(item[idKey]); setIds.add(item[idKey]) }
 
-        // Partially-starred items outside the set (e.g. after raising the mastery level) re-enter
-        // before brand-new ones.
+        // Partially-starred items outside the set (e.g. a mastered item demoted by a missed
+        // review) re-enter before brand-new ones.
         for (const item of shuffle(inProgress)) {
             if (set.length >= WORKING_SET_MAX) break
             if (!setIds.has(item[idKey])) enroll(item)
@@ -212,11 +213,15 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
 
         let nextItem = null
         let pool
+        // Where learning questions come from: the working set with Learning Mode on, else every
+        // unmastered item. Needed below to swap pools when one holds only the on-screen character.
+        let learningPool = unmastered
 
         // The working set (and its teach-first queue) is Learning Mode's pacing. With Learning
         // Mode off the quiz is a plain test drawing from every unmastered item at once.
         if (learningMode === 'on') {
             const workingSet = updateWorkingSet(unmastered, getStars)
+            learningPool = workingSet
 
             // Drop queued ids that left the set in the meantime (e.g. after a progress reset).
             introQueueRef.current = introQueueRef.current.filter(id =>
@@ -242,10 +247,14 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         }
 
         if (!nextItem) {
-            // One character left to learn and it was just shown: take a review instead.
-            if (pool !== mastered) {
-                pool = avoidRepeat(pool, mastered, currentItem?.[idKey], item => item[idKey])
-            }
+            // If the chosen pool holds only the character that was just shown, take the other
+            // pool instead: one character left to learn -> a review; only one character mastered
+            // so far (e.g. right after the first mastery) -> a learning question.
+            const idOf = item => item[idKey]
+            const currentId = currentItem?.[idKey]
+            pool = pool === mastered
+                ? avoidRepeat(mastered, learningPool, currentId, idOf)
+                : avoidRepeat(pool, mastered, currentId, idOf)
 
             // Don't re-ask the on-screen character (skipped only if it's the only candidate).
             const candidates = pool.length > 1 && currentItem
@@ -361,8 +370,7 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         options,
         showAnswer,
         selectedChoice,
-        // Callers can force choice-only for answer sets the keyboard can't represent.
-        inputMode: allowKeyboard ? inputMode : 'choice',
+        inputMode,
         animatedStyle,
         itemProgress,
         learnedCount,

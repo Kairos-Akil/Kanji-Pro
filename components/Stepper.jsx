@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { Minus, Plus } from 'lucide-react-native'
 import { useTheme } from '../context/ThemeContext'
 
-// Generic -/value/+ stepper row (e.g. Mastery Level stars, reminder hour/minute).
+// Generic -/value/+ stepper row (e.g. reminder hour/minute).
 // `compact` shrinks it for use side-by-side (e.g. two steppers with a ":" between them).
 const Stepper = ({ value, onDecrement, onIncrement, decrementLabel = 'Decrease', incrementLabel = 'Increase', compact = false }) => {
     const { theme } = useTheme()

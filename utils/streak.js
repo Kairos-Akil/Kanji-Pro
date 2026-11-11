@@ -15,10 +15,17 @@ export const isYesterday = (dateStr, todayStr) => {
     return getLocalDateString(d) === todayStr
 }
 
+// "Already recorded": the last active day is today, or tomorrow from this phone's point of view.
+// Tomorrow happens after flying west (time zones shift the date by at most one day); treating it
+// as a gap would wipe the streak. Only one day ahead on purpose: a clock that was badly wrong
+// (e.g. a year ahead) must not freeze the streak until that date comes.
+const isRecorded = (lastActiveDate, today) =>
+    lastActiveDate === today || (lastActiveDate != null && isYesterday(today, lastActiveDate))
+
 // Count today as practiced: extend the streak if the last active day was yesterday, reset to 1 on
 // a gap, or leave it unchanged (same object) if today is already recorded.
 export const recordDay = (streak, today) => {
-    if (streak.lastActiveDate === today) return streak
+    if (isRecorded(streak.lastActiveDate, today)) return streak
     if (streak.lastActiveDate && isYesterday(streak.lastActiveDate, today)) {
         return { count: streak.count + 1, lastActiveDate: today }
     }
@@ -28,7 +35,7 @@ export const recordDay = (streak, today) => {
 // The streak to show. The stored count only changes on activity, so a broken streak would keep
 // showing until the next answer; show 0 once the last active day is older than yesterday.
 export const displayedStreak = (streak, today) =>
-    streak.lastActiveDate === today ||
+    isRecorded(streak.lastActiveDate, today) ||
         (streak.lastActiveDate && isYesterday(streak.lastActiveDate, today))
         ? streak.count
         : 0

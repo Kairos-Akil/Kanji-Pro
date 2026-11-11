@@ -98,3 +98,12 @@ describe('avoidRepeat (one character left to learn)', () => {
         expect(avoidRepeat(learning, [], '日', id)).toBe(learning)
     })
 })
+
+describe('avoidRepeat, the other direction (first character just mastered)', () => {
+    const id = item => item.c
+    test('a review pool holding only the on-screen character falls back to learning questions', () => {
+        const mastered = [{ c: '日' }]          // the only mastered character, just answered
+        const learning = [{ c: '月' }, { c: '火' }]
+        expect(avoidRepeat(mastered, learning, '日', id)).toBe(learning)
+    })
+})

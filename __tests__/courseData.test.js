@@ -22,6 +22,26 @@ describe('course registry', () => {
         expect(fs.existsSync(path.join(__dirname, '..', 'app', 'Quiz_Page', '[courseId].jsx'))).toBe(true)
     })
 
+    test('every course has at least 4 items (a question needs 1 correct + 3 wrong options)', () => {
+        for (const course of courses) {
+            expect({ course: course.id, enough: course.data.length >= 4 }).toEqual({ course: course.id, enough: true })
+        }
+    })
+
+    // Progress is stored per course (= per tier), but which kanji or radical lands in which tier
+    // comes only from the order and size of the data files (constants/Courses.js slices them).
+    // Adding or removing one item shifts tier boundaries, and stars of the shifted characters would
+    // silently show as 0 in their new tier. If this fails after a data change, that change moves
+    // users' progress: only update the snapshot (`npm test -- -u`) together with a migration.
+    test('tier contents are unchanged (progress is stored per tier)', () => {
+        const tiers = Object.fromEntries(courses.map(course => [course.id, {
+            count: course.data.length,
+            first: course.data[0][course.idKey],
+            last: course.data[course.data.length - 1][course.idKey],
+        }]))
+        expect(tiers).toMatchSnapshot()
+    })
+
     test('item ids are unique within each course (they are the progress keys)', () => {
         for (const course of courses) {
             const ids = course.data.map(item => item[course.idKey])

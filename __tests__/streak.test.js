@@ -50,3 +50,28 @@ describe('displayedStreak (what Home shows)', () => {
         expect(displayedStreak({ count: 0, lastActiveDate: null }, '2026-11-12')).toBe(0)
     })
 })
+
+describe('date moved back (flying west, clock set back)', () => {
+    // Last practiced on the 12th in Tokyo; in Los Angeles it is still the 11th.
+    const streak = { count: 40, lastActiveDate: '2026-11-12' }
+
+    test('the streak keeps showing', () => {
+        expect(displayedStreak(streak, '2026-11-11')).toBe(40)
+    })
+
+    test('practicing does not reset it', () => {
+        expect(recordDay(streak, '2026-11-11')).toBe(streak)
+    })
+
+    test('it continues normally once the dates line up again', () => {
+        expect(recordDay(streak, '2026-11-13')).toEqual({ count: 41, lastActiveDate: '2026-11-13' })
+    })
+})
+
+describe('clock that was badly wrong', () => {
+    test('a last active day far in the future does not freeze the streak', () => {
+        const streak = { count: 5, lastActiveDate: '2030-01-01' } // clock was set years ahead
+        expect(displayedStreak(streak, '2026-11-11')).toBe(0)
+        expect(recordDay(streak, '2026-11-11')).toEqual({ count: 1, lastActiveDate: '2026-11-11' })
+    })
+})
