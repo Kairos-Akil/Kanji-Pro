@@ -1,5 +1,5 @@
 import CoursePreviewScreen from '../../components/CoursePreviewScreen'
 
-const Katakana_Combinations = () => <CoursePreviewScreen courseId="katakana_combinations" />
+const KatakanaCombinations = () => <CoursePreviewScreen courseId="katakana_combinations" />
 
-export default Katakana_Combinations
+export default KatakanaCombinations

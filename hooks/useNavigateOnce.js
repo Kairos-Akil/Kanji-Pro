@@ -5,9 +5,10 @@ import { useFocusEffect } from 'expo-router'
 const UNLOCK_AFTER_MS = 1000
 
 // Wraps navigation taps so a double tap navigates only once. On a phone both taps of a double tap
-// land on the button before the next screen covers it, so `router.push` ran twice and stacked two
-// copies of the screen (two quizzes, and an extra back press to leave). The lock opens when this
-// screen is focused again, or after UNLOCK_AFTER_MS.
+// land on the button before the next screen covers it; without the lock `router.push` would run
+// twice and stack two copies of the screen (two quizzes, and an extra back press to leave). The
+// lock opens when this screen is focused again, or after UNLOCK_AFTER_MS.
+// Usage: const navigateOnce = useNavigateOnce(); navigateOnce(() => router.push('/somewhere'))
 export const useNavigateOnce = () => {
     const lockedRef = useRef(false)
     const timerRef = useRef(null)

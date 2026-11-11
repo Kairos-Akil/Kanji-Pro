@@ -17,6 +17,8 @@ const FocusLoadingOverlay = ({ char }) => {
     )
 }
 
+export default FocusLoadingOverlay
+
 const styles = StyleSheet.create({
     overlay: {
         ...StyleSheet.absoluteFill,
@@ -41,5 +43,3 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
 })
-
-export default FocusLoadingOverlay

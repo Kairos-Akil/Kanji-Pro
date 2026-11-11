@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native'
-import { MousePointerClick, Keyboard, Save, Shuffle, BookOpen, MessageCircle, GraduationCap, Ban, Info } from 'lucide-react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import { MousePointerClick, Keyboard, Save, Shuffle, BookOpen, MessageCircle, GraduationCap, Ban, Info } from 'lucide-react-native'
 import { useTheme } from '../context/ThemeContext'
 import BottomSheet from './BottomSheet'
 import SegmentedToggle from './SegmentedToggle'
@@ -23,7 +23,6 @@ export const DEFAULT_QUIZ_CONTENT = 'meanings'
 export const DEFAULT_LEARNING_MODE = 'on'
 
 // Single reader for the quiz settings, shared with useQuizEngine so keys/defaults can't disagree.
-// (The old 'quiz_max_stars' key is no longer read: mastery is fixed, see utils/mastery.js.)
 export const loadQuizSettings = async () => {
     const [[, mode], [, content], [, learning]] = await AsyncStorage.multiGet([
         SETTINGS_KEYS.INPUT_MODE,
@@ -53,7 +52,8 @@ const LEARNING_MODE_OPTIONS = [
     { value: 'off', label: 'Off', Icon: Ban, accessibilityLabel: 'Learning mode off' },
 ]
 
-// showQuizContent: show the kanji-only "Quiz Content" section (enabled by TopSlider on kanji pages).
+// Quiz settings sheet, opened from a course page's bottom bar. Changes are saved on "Apply".
+// showQuizContent: show the kanji-only "Quiz Content" section (set by TopSlider on kanji pages).
 const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
     const { theme } = useTheme()
 
@@ -62,9 +62,7 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
     const [learningMode, setLearningMode] = useState(DEFAULT_LEARNING_MODE)
 
     useEffect(() => {
-        if (isVisible) {
-            loadSettings()
-        }
+        if (isVisible) loadSettings()
     }, [isVisible])
 
     const loadSettings = async () => {
@@ -74,7 +72,7 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
             setQuizContent(saved.quizContent)
             setLearningMode(saved.learningMode)
         } catch (e) {
-            console.warn("Failed to load settings", e)
+            console.warn('Failed to load settings', e)
         }
     }
 
@@ -85,10 +83,9 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
                 [SETTINGS_KEYS.QUIZ_CONTENT, quizContent],
                 [SETTINGS_KEYS.LEARNING_MODE, learningMode],
             ])
-
             onClose()
         } catch (e) {
-            console.warn("Failed to save settings", e)
+            console.warn('Failed to save settings', e)
         }
     }
 
@@ -97,7 +94,7 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
             {/* Scrolls on small screens; the Apply button below stays visible either way. */}
             <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
                 {/* --- Setting 1: Input Mode --- */}
-                <View style={styles.section}>
+                <View>
                     <Text style={[styles.label, { color: theme.text, marginBottom: 10 }]}>Input Method</Text>
                     <SegmentedToggle options={INPUT_MODE_OPTIONS} value={inputMode} onChange={setInputMode} />
                 </View>
@@ -105,9 +102,9 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
                 <Spacer height={20} />
 
                 {/* --- Setting 2: Learning Mode (global) --- */}
-                <View style={styles.section}>
+                <View>
                     <Text style={[styles.label, { color: theme.text }]}>Learning Mode</Text>
-                    <Text style={[styles.subLabel, { color: '#888', marginBottom: 10 }]}>
+                    <Text style={styles.subLabel}>
                         Teaches a few characters at a time and reveals new ones.
                     </Text>
                     <SegmentedToggle options={LEARNING_MODE_OPTIONS} value={learningMode} onChange={setLearningMode} />
@@ -116,7 +113,7 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
 
                     <View style={styles.noteRow}>
                         <Info size={13} color={theme.text} style={{ opacity: 0.55 }} />
-                        <Text style={[styles.noteText, { color: theme.text, fontSize: 11 }]}>
+                        <Text style={[styles.noteText, { color: theme.text }]}>
                             Progress is saved across both modes. Can be reset in the settings.
                         </Text>
                     </View>
@@ -126,9 +123,9 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
                 {showQuizContent && (
                     <>
                         <Spacer height={20} />
-                        <View style={styles.section}>
+                        <View>
                             <Text style={[styles.label, { color: theme.text }]}>Quiz Content</Text>
-                            <Text style={[styles.subLabel, { color: '#888', marginBottom: 10 }]}>
+                            <Text style={styles.subLabel}>
                                 What kanji questions ask for
                             </Text>
                             <SegmentedToggle options={QUIZ_CONTENT_OPTIONS} value={quizContent} onChange={setQuizContent} />
@@ -139,7 +136,6 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
                 <Spacer height={25} />
             </ScrollView>
 
-            {/* Apply Button */}
             <TouchableOpacity
                 style={[styles.saveBtn, { backgroundColor: theme.primary }]}
                 onPress={save}
@@ -154,6 +150,8 @@ const QuizSettings = ({ isVisible, onClose, showQuizContent = false }) => {
     )
 }
 
+export default QuizSettings
+
 const styles = StyleSheet.create({
     label: {
         fontSize: 18,
@@ -162,6 +160,8 @@ const styles = StyleSheet.create({
     subLabel: {
         fontSize: 14,
         marginTop: 2,
+        marginBottom: 10,
+        color: '#888',
     },
     noteRow: {
         flexDirection: 'row',
@@ -170,17 +170,16 @@ const styles = StyleSheet.create({
     },
     noteText: {
         flex: 1, // wrap within the row instead of pushing past the sheet edge
-        fontSize: 13,
+        fontSize: 11,
         opacity: 0.55,
     },
-    section: {},
     saveBtn: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: 16,
         borderRadius: 25,
-        marginTop: 'auto', // Pushes button to bottom of sheet
+        marginTop: 'auto', // pushes the button to the bottom of the sheet
         marginBottom: 10,
     },
     saveText: {
@@ -189,5 +188,3 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
 })
-
-export default QuizSettings

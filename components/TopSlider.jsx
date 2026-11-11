@@ -1,15 +1,14 @@
 import { useState, useCallback, useEffect } from 'react'
 import { View } from 'react-native'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { useTheme } from '../context/ThemeContext'
-import { TopTabs } from 'expo-router/js-top-tabs'
-import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useFocusEffect, usePathname } from 'expo-router'
-
-import BottomBar from './BottomBar'
-import QuizSettings from './QuizSettings'
+import { TopTabs } from 'expo-router/js-top-tabs'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { useTheme } from '../context/ThemeContext'
 import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
 import { LAST_ACTIVE_STORAGE_KEY } from '../constants/Courses'
+import BottomBar from './BottomBar'
+import QuizSettings from './QuizSettings'
 
 // Rendered by a course folder's _layout.jsx. Each tab is a route file in that folder (tab.name =
 // file name), so the URL picks the tab: /KanjiN5_Page/kanjiN5Tier2 opens Tier 2 directly.
@@ -17,7 +16,7 @@ const TopSlider = ({ tabs = [] }) => {
     const insets = useSafeAreaInsets()
     const { theme } = useTheme()
     // Stable actions, not the live progress: this page stays mounted (hidden) under an open quiz,
-    // and subscribing to live progress re-rendered it on every answer.
+    // and subscribing to live progress would re-render it on every answer.
     const { getLearnedCount } = useProgressActions()
     const { progressLoaded } = useProgressMeta()
     const pathname = usePathname()
@@ -39,6 +38,8 @@ const TopSlider = ({ tabs = [] }) => {
     useFocusEffect(
         useCallback(() => {
             refreshCounts()
+            // refreshCounts is recreated each render, but what it reads (tabs, getLearnedCount)
+            // never changes.
             // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [])
     )
@@ -47,6 +48,7 @@ const TopSlider = ({ tabs = [] }) => {
     // once it has, since nothing else would trigger a recount.
     useEffect(() => {
         if (progressLoaded) refreshCounts()
+        // Same as above: only progressLoaded should trigger this.
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [progressLoaded])
 
@@ -87,9 +89,7 @@ const TopSlider = ({ tabs = [] }) => {
                         headerShown: false,
                         swipeEnabled: true,
                         tabBarStyle: { backgroundColor: theme.navBackground },
-                        tabBarIndicatorStyle: {
-                            backgroundColor: theme.primary
-                        },
+                        tabBarIndicatorStyle: { backgroundColor: theme.primary },
                         tabBarActiveTintColor: theme.primary,
                         tabBarInactiveTintColor: theme.title,
                         tabBarLabelStyle: { fontSize: 17 },
@@ -109,7 +109,6 @@ const TopSlider = ({ tabs = [] }) => {
                     onOpenSettings={() => setSettingsVisible(true)}
                     progress={progressString}
                 />
-
             </View>
         </>
     )

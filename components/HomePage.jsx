@@ -4,17 +4,16 @@ import { useRouter, useFocusEffect } from 'expo-router'
 import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { LinearGradient } from 'expo-linear-gradient'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-
+import { useTheme } from '../context/ThemeContext'
+import { useAlert } from '../context/AlertContext'
+import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
+import { useNavigateOnce } from '../hooks/useNavigateOnce'
+import { COURSES, DEFAULT_COURSE_ID, LAST_ACTIVE_STORAGE_KEY, RADICAL_CATEGORY_IDS, KANJI_TIER_IDS_BY_LEVEL } from '../constants/Courses'
 import ThemedView from './ThemedView'
 import ThemedText from './ThemedText'
 import AppSettings from './AppSettings'
 import SearchModal from './SearchModal'
 import InfoModal from './InfoModal'
-import { useTheme } from '../context/ThemeContext'
-import { useNavigateOnce } from '../hooks/useNavigateOnce'
-import { useAlert } from '../context/AlertContext'
-import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
-import { COURSES, DEFAULT_COURSE_ID, LAST_ACTIVE_STORAGE_KEY, RADICAL_CATEGORY_IDS, KANJI_TIER_IDS_BY_LEVEL } from '../constants/Courses'
 
 // Course card size; the horizontal rows snap by one card plus its gap.
 const CARD_WIDTH = 160
@@ -65,6 +64,7 @@ const HomePage = () => {
             'Your saved progress could not be read. To protect it, nothing you do now will be saved. Please close and restart the app.'
         )
     }, [progressLoadFailed, showAlert])
+
     const [settingsVisible, setSettingsVisible] = useState(false)
     const [searchVisible, setSearchVisible] = useState(false)
     const [infoVisible, setInfoVisible] = useState(false)
@@ -141,12 +141,11 @@ const HomePage = () => {
     // Renders one category's horizontal row of course cards, tinted with accentColor.
     const renderHorizontalSection = (title, subtitle, data, accentColor) => (
         <View style={styles.sectionContainer}>
-
             <View style={styles.sectionHeader}>
                 <View style={styles.titleWrapper}>
                     <View style={[styles.accentBar, { backgroundColor: accentColor }]} />
                     <View>
-                        <ThemedText style={styles.sectionTitle} title={true}>{title}</ThemedText>
+                        <ThemedText title style={styles.sectionTitle}>{title}</ThemedText>
                         <ThemedText style={styles.sectionSubtitle}>{subtitle}</ThemedText>
                     </View>
                 </View>
@@ -164,7 +163,7 @@ const HomePage = () => {
                         key={index}
                         style={[
                             styles.pathCard,
-                            { backgroundColor: theme.uiBackground, borderColor: theme.text }
+                            { backgroundColor: theme.uiBackground, borderColor: theme.text },
                         ]}
                         activeOpacity={0.8}
                         onPress={() => navigateOnce(() => router.push(item.route))}
@@ -177,7 +176,7 @@ const HomePage = () => {
                         </View>
 
                         <View>
-                            <ThemedText style={styles.cardTitle} title={true}>{item.title}</ThemedText>
+                            <ThemedText title style={styles.cardTitle}>{item.title}</ThemedText>
                             <ThemedText style={styles.cardSub}>{item.sub}</ThemedText>
                         </View>
 
@@ -202,8 +201,7 @@ const HomePage = () => {
     )
 
     return (
-        <ThemedView safe={true} style={styles.container}>
-
+        <ThemedView safe style={styles.container}>
             {/* Refresh on close: "Reset All Progress" lives in this sheet and fires no focus event. */}
             <AppSettings
                 isVisible={settingsVisible}
@@ -256,7 +254,7 @@ const HomePage = () => {
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{ paddingBottom: 50 }}
             >
-                {/* ACTIVE COURSE */}
+                {/* "Continue" card for the last opened course */}
                 <TouchableOpacity
                     activeOpacity={0.95}
                     style={styles.focusContainer}
@@ -291,13 +289,11 @@ const HomePage = () => {
                     </LinearGradient>
                 </TouchableOpacity>
 
-                {/*--- CATEGORIES WITH DISTINCT COLORS ---*/}
-                {renderHorizontalSection("Kana", "Native japanese writing system", kanaCourses, "#4facfe")}
-                {renderHorizontalSection("Kanji", "Characters originally from China", kanjiCourses, "#CE2D4F")}
-                {renderHorizontalSection("Radicals", "Building blocks or components of kanji characters", radicalCourses, "#00b09b")}
-
+                {/* One row of cards per category, each with its own accent color */}
+                {renderHorizontalSection('Kana', 'Native japanese writing system', kanaCourses, '#4facfe')}
+                {renderHorizontalSection('Kanji', 'Characters originally from China', kanjiCourses, '#CE2D4F')}
+                {renderHorizontalSection('Radicals', 'Building blocks or components of kanji characters', radicalCourses, '#00b09b')}
             </ScrollView>
-
         </ThemedView>
     )
 }
@@ -307,7 +303,7 @@ export default HomePage
 const styles = StyleSheet.create({
     container: { flex: 1 },
 
-    // --- TOP BAR ---
+    // --- Top bar ---
     topBar: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -320,7 +316,7 @@ const styles = StyleSheet.create({
     topBarSide: { flex: 1, flexDirection: 'row', alignItems: 'center' },
     topBarActions: { justifyContent: 'flex-end', gap: 16 },
 
-    // --- FOCUS ZONE ---
+    // --- "Continue" card ---
     focusContainer: {
         height: 460,
         marginHorizontal: 10,
@@ -368,18 +364,16 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         gap: 10,
         elevation: 2,
-        shadowColor: "#000",
+        shadowColor: '#000',
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.1,
         shadowRadius: 5,
     },
     playText: { fontWeight: 'bold', fontSize: 14, letterSpacing: 1 },
 
-    // --- SECTIONS ---
+    // --- Category sections ---
     sectionContainer: { marginBottom: 20 },
     sectionHeader: { paddingHorizontal: 10, marginBottom: 15 },
-
-    // New Styles for Header Distinction
     titleWrapper: { flexDirection: 'row', alignItems: 'center' },
     accentBar: {
         width: 5,
@@ -392,7 +386,7 @@ const styles = StyleSheet.create({
 
     horizontalScrollContent: { paddingLeft: 16, paddingRight: 20, alignItems: 'center' },
 
-    // Card Styles
+    // --- Course cards ---
     pathCard: {
         width: CARD_WIDTH,
         height: 180,

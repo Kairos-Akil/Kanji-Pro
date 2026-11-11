@@ -46,7 +46,7 @@ const KanjiPreview = ({ groupedData, focusChar }) => {
             <PreviewGrid groupedData={groupedData} idKey="character" focusChar={focusChar} renderTile={renderTile} />
 
             <KanjiModal
-                visible={modalVisible}
+                isVisible={modalVisible}
                 item={selectedItem}
                 onClose={() => setModalVisible(false)}
             />
@@ -77,6 +77,5 @@ const styles = StyleSheet.create({
     info: {
         fontSize: 10,
         marginTop: 4,
-        marginBottom: 0,
-    }
+    },
 })

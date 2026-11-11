@@ -15,14 +15,14 @@ export const AlertProvider = ({ children }) => {
 
     const handleButtonPress = (button) => {
         setAlertState(null)
-        if (button.onPress) button.onPress()
+        button.onPress?.()
     }
 
     return (
         <AlertContext.Provider value={showAlert}>
             {children}
             <AlertModal
-                visible={!!alertState}
+                isVisible={!!alertState}
                 title={alertState?.title}
                 message={alertState?.message}
                 buttons={alertState?.buttons ?? DEFAULT_BUTTONS}

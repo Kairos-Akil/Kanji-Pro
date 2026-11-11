@@ -32,7 +32,7 @@ const PreviewGrid = ({ groupedData, idKey, focusChar, renderTile }) => {
                 data={rows}
                 keyExtractor={row => row.key}
                 renderItem={({ item: row }) => (
-                    // Tiles use flex: 1, so a short last row stretches like FlatList's numColumns did.
+                    // Tiles use flex: 1, so the tiles of a short last row stretch to fill it.
                     <View style={styles.row}>
                         {row.items.map((item, i) => (
                             <Fragment key={i}>

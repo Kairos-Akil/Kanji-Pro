@@ -3,10 +3,10 @@ import { View, Text, TextInput, FlatList, TouchableOpacity, StyleSheet } from 'r
 import { useRouter } from 'expo-router'
 import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { useTheme } from '../context/ThemeContext'
+import { useNavigateOnce } from '../hooks/useNavigateOnce'
 import { answerDisplayText } from '../utils/answers'
 import { SEARCH_INDEX } from '../constants/Courses'
 import BottomSheet from './BottomSheet'
-import { useNavigateOnce } from '../hooks/useNavigateOnce'
 
 const MAX_RESULTS = 50
 

@@ -12,29 +12,26 @@ import {
 } from 'react-native-reanimated'
 import * as Haptics from 'expo-haptics'
 import { useAudioPlayer } from 'expo-audio'
+import { useProgress } from '../context/ProgressContext'
+import { useTheme } from '../context/ThemeContext'
+import { useAppSettings } from '../context/AppSettingsContext'
+import { answerDisplayText, typedAnswerMatches, answersMatch, hasModeData, shuffle, pickWrongOptions } from '../utils/answers'
+import { pickNextItem, INITIAL_PICKER_STATE } from '../utils/questionPicker'
 import {
     loadQuizSettings,
     DEFAULT_INPUT_MODE,
     DEFAULT_QUIZ_CONTENT,
     DEFAULT_LEARNING_MODE,
 } from '../components/QuizSettings'
-import { useProgress } from '../context/ProgressContext'
-import { useTheme } from '../context/ThemeContext'
-import { useAppSettings } from '../context/AppSettingsContext'
-import { answerDisplayText, typedAnswerMatches, answersMatch, hasModeData, shuffle, pickWrongOptions } from '../utils/answers'
-import { pickNextItem, INITIAL_PICKER_STATE } from '../utils/questionPicker'
 
 const correctSound = require('../assets/sounds/correct.wav')
 const incorrectSound = require('../assets/sounds/incorrect.wav')
-
-// Shared "positive" blue for the success glow and the teaching card's border.
-const TEACH_COLOR = '#00e1ffff'
 
 // Shared drill logic for every quiz (Kana, Kanji, Radicals): tracks per-item star progress,
 // generates multiple-choice questions, and drives the success/failure animation. idKey identifies
 // an item, answerKey is the tested field. questionModes (kanji) rotates the tested field per
 // question instead of always using answerKey.
-export const useQuizEngine = ({ Data, quizId, idKey, answerKey, questionModes = null }) => {
+export const useQuizEngine = ({ data, quizId, idKey, answerKey, questionModes = null }) => {
     const { theme } = useTheme()
     const { hapticsEnabled, soundEnabled } = useAppSettings()
     const {
@@ -46,8 +43,8 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, questionModes = 
 
     const progress = getProgressForQuiz(quizId)
 
-    // Keep the audio session active between clips — re-activation latency otherwise swallowed the
-    // buzzer right after a correct chime. See also 'mixWithOthers' in app/_layout.jsx.
+    // Keep the audio session active between clips: otherwise the delay of re-activating it
+    // swallows the buzzer right after a correct chime. See also 'mixWithOthers' in app/_layout.jsx.
     const correctPlayer = useAudioPlayer(correctSound, { keepAudioSessionActive: true })
     const incorrectPlayer = useAudioPlayer(incorrectSound, { keepAudioSessionActive: true })
 
@@ -75,8 +72,8 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, questionModes = 
     const [inputMode, setInputMode] = useState(DEFAULT_INPUT_MODE)
     const [quizContent, setQuizContent] = useState(DEFAULT_QUIZ_CONTENT)
     const [learningMode, setLearningMode] = useState(DEFAULT_LEARNING_MODE)
-    // Question 1 waits for the saved settings. Built with the defaults first, it was replaced by a
-    // different question a moment later, once the real settings arrived (a visible flash).
+    // Question 1 waits for the saved settings. Built with the defaults first, it would be replaced
+    // by a different question a moment later, once the real settings arrive (a visible flash).
     const [settingsLoaded, setSettingsLoaded] = useState(false)
 
     // Modes after the Quiz Content filter; falls back to all modes if the filter empties the list.
@@ -106,18 +103,19 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, questionModes = 
             { scale: scale.value },
             { translateX: shake.value },
         ],
+        // -1 = wrong (red), 0 = neutral, 1 = correct (blue)
         color: interpolateColor(
             color.value,
             [-1, 0, 1],
-            ['#ef4444', theme.title, TEACH_COLOR]
+            [theme.error, theme.title, theme.primary]
         ),
     }))
 
     // Teaching card rides the same `color` value, so on "Got it" it fills solid blue in sync —
     // matching how a correct choice button fills on the normal quiz.
     const teachCardStyle = useAnimatedStyle(() => ({
-        borderColor: interpolateColor(color.value, [0, 1], [theme.inactive, TEACH_COLOR]),
-        backgroundColor: interpolateColor(color.value, [0, 1], [theme.background, TEACH_COLOR]),
+        borderColor: interpolateColor(color.value, [0, 1], [theme.inactive, theme.primary]),
+        backgroundColor: interpolateColor(color.value, [0, 1], [theme.background, theme.primary]),
     }))
 
     // Load the quiz settings when the screen gains focus. In practice that's once per quiz: the
@@ -150,10 +148,10 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, questionModes = 
     const pickerStateRef = useRef(INITIAL_PICKER_STATE)
 
     const generateQuestion = () => {
-        if (Data.length === 0) return
+        if (data.length === 0) return
 
         const { item: nextItem, state } = pickNextItem({
-            data: Data,
+            data,
             idOf: item => item[idKey],
             getStars: item => progress[item[idKey]] ?? 0,
             learningMode,
@@ -166,13 +164,11 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, questionModes = 
         const itemModes = activeModes.filter(mode => hasModeData(nextItem, mode))
         const mode = itemModes[Math.floor(Math.random() * itemModes.length)] ?? allModes[0]
 
-        const wrongOptions = pickWrongOptions(Data, nextItem, mode)
-
-        const allOptions = shuffle([...wrongOptions, nextItem])
+        const wrongOptions = pickWrongOptions(data, nextItem, mode)
 
         setCurrentItem(nextItem)
         setCurrentMode(mode)
-        setOptions(allOptions)
+        setOptions(shuffle([...wrongOptions, nextItem]))
         setShowAnswer(false)
         answeredRef.current = false
         setSelectedChoice({})
@@ -238,9 +234,10 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, questionModes = 
     }
 
     const itemProgress = currentItem ? (progress[currentItem[idKey]] ?? 0) : 0
-    const learnedCount = getLearnedCount(quizId, Data.map(d => d[idKey]))
+    const learnedCount = getLearnedCount(quizId, data.map(d => d[idKey]))
 
-    // One entry per active mode the item has data for, so a kanji teaches meaning and readings up front.
+    // One entry per active mode the item has data for, so a kanji's card teaches meaning and
+    // readings together.
     const teachingAnswers = teaching && currentItem
         ? activeModes
             .filter(mode => hasModeData(currentItem, mode))
@@ -272,7 +269,7 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, questionModes = 
         learnedCount,
         lastAnswerCorrect,
         handleAnswerSubmit,
-        // Learning Mode: UI shows the answer(s) + a "Got it" button instead of the choice/keyboard input.
+        // Learning Mode: the UI shows the answer(s) and a "Got it" button instead of an input.
         teaching,
         teachingAnswers,
         handleLearningContinue,

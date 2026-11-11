@@ -20,19 +20,19 @@ const DETAIL_FIELDS = [
 // An empty array counts as "no value" too; plain `if (value)` treats [] as present.
 const hasValue = (value) => Array.isArray(value) ? value.length > 0 : value != null && value !== ''
 
-const KanjiModal = ({ visible, item, onClose }) => {
+const KanjiModal = ({ isVisible, item, onClose }) => {
     const { theme } = useTheme()
 
     if (!item) return null
 
     return (
         <Modal
-            visible={visible}
-            transparent={true}
+            visible={isVisible}
+            transparent
             animationType="fade"
             onRequestClose={onClose}
         >
-            <ThemedView style={styles.overlay} safe={true}>
+            <ThemedView style={styles.overlay} safe>
                 <View style={[styles.box, { backgroundColor: theme.tile }]}>
                     {/* Scrolls when a kanji's details don't fit (small phone, large font); Close
                         stays below it, always reachable. */}
@@ -78,6 +78,8 @@ const KanjiModal = ({ visible, item, onClose }) => {
         </Modal>
     )
 }
+
+export default KanjiModal
 
 const styles = StyleSheet.create({
     overlay: {
@@ -125,6 +127,3 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
 })
-
-export default KanjiModal
-

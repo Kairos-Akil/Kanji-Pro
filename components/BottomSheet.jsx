@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet, Modal, TouchableOpacity, Pressable } from 'react-native'
 import { useEffect, useState } from 'react'
+import { View, Text, StyleSheet, Modal, TouchableOpacity, Pressable } from 'react-native'
 import Animated, {
     useSharedValue,
     useAnimatedStyle,
@@ -58,18 +58,18 @@ const BottomSheet = ({ isVisible, onClose, title, heightPercent = '50%', childre
 
     return (
         <Modal
-            transparent={true}
+            transparent
             visible={rendered}
-            animationType="none" // We drive the slide/fade ourselves with Reanimated
+            animationType="none" // the slide and fade are driven by Reanimated above
             onRequestClose={onClose}
         >
             <View style={styles.overlayContainer}>
-                {/* Dark Backdrop (fades in/out) */}
+                {/* Dark backdrop (fades in/out); tapping it closes the sheet. */}
                 <Animated.View style={[styles.backdrop, backdropStyle]}>
                     <Pressable style={{ flex: 1 }} onPress={onClose} />
                 </Animated.View>
 
-                {/* Bottom Sheet (slides up from the bottom) */}
+                {/* The sheet itself (slides up from the bottom). */}
                 <Animated.View
                     onLayout={(e) => { sheetHeight.value = e.nativeEvent.layout.height }}
                     style={[styles.sheet, sheetStyle, { height: heightPercent, backgroundColor: theme.background, borderColor: theme.text }]}
@@ -102,11 +102,11 @@ export default BottomSheet
 const styles = StyleSheet.create({
     overlayContainer: {
         flex: 1,
-        justifyContent: 'flex-end', // This aligns the Sheet to the bottom
+        justifyContent: 'flex-end', // keeps the sheet at the bottom
     },
     backdrop: {
         ...StyleSheet.absoluteFill,
-        backgroundColor: 'rgba(0,0,0,0.5)', // Darken background
+        backgroundColor: 'rgba(0,0,0,0.5)',
     },
     sheet: {
         width: '100%',

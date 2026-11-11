@@ -3,17 +3,17 @@ import { View, Text, StyleSheet, ScrollView, Pressable, AccessibilityInfo } from
 import Animated from 'react-native-reanimated'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Star, ArrowRight } from 'lucide-react-native'
-
 import { useTheme } from '../context/ThemeContext'
+import { useQuizEngine } from '../hooks/useQuizEngine'
+import { answerDisplayText, answerAnnouncement } from '../utils/answers'
+import { MASTERY_STARS, bonusStars } from '../utils/mastery'
 import ThemedView from './ThemedView'
 import Spacer from './Spacer'
 import QuizInputChoices from './QuizInputChoices'
 import QuizInputKeyboard from './QuizInputKeyboard'
-import { useQuizEngine } from '../hooks/useQuizEngine'
-import { answerDisplayText, answerAnnouncement } from '../utils/answers'
-import { MASTERY_STARS, bonusStars } from '../utils/mastery'
 
-// Learning Mode card: reveals every quizzable answer, with a "Got it" button that grants the first star.
+// Learning Mode card: reveals every quizzable answer, with a "Got it" button that grants the
+// first star.
 const LearningCard = ({ answers, cardStyle, onContinue, theme }) => (
     <View style={styles.learnCard}>
         <Text style={[styles.learnHint, { color: theme.text }]}>
@@ -56,7 +56,7 @@ const LearningCard = ({ answers, cardStyle, onContinue, theme }) => (
 
 // Multiple-choice/keyboard drill quiz for Kana, Kanji, and Radicals. idKey/answerKey identify an
 // item and its answer field; questionModes (kanji) rotates the tested field. See useQuizEngine.
-const Quiz = ({ Data, quizId, idKey, answerKey, questionModes = null }) => {
+const Quiz = ({ data, quizId, idKey, answerKey, questionModes = null }) => {
     const { theme } = useTheme()
     const {
         currentItem,
@@ -75,7 +75,7 @@ const Quiz = ({ Data, quizId, idKey, answerKey, questionModes = null }) => {
         teachCardStyle,
         currentAnswerKey,
         questionLabel,
-    } = useQuizEngine({ Data, quizId, idKey, answerKey, questionModes })
+    } = useQuizEngine({ data, quizId, idKey, answerKey, questionModes })
 
     // Bottom inset only: the Quiz_Page header already covers the top, so `safe` would double it.
     const insets = useSafeAreaInsets()
@@ -96,7 +96,7 @@ const Quiz = ({ Data, quizId, idKey, answerKey, questionModes = null }) => {
     const bonus = bonusStars(itemProgress)
 
     return (
-        <ThemedView style={[styles.container, { backgroundColor: theme.background, paddingBottom: insets.bottom }]}>
+        <ThemedView style={[styles.container, { paddingBottom: insets.bottom }]}>
             {/* Stars + progress row; sits above the flex:1 body so it stays put while it scrolls. */}
             <View style={styles.header}>
                 {/* accessible: read as one element ("2 of 6 stars"), not as 6 unlabeled icons.
@@ -124,9 +124,9 @@ const Quiz = ({ Data, quizId, idKey, answerKey, questionModes = null }) => {
 
                 <Text
                     style={[styles.progress, { color: theme.text }]}
-                    accessibilityLabel={`${learnedCount} of ${Data.length} learned`}
+                    accessibilityLabel={`${learnedCount} of ${data.length} learned`}
                 >
-                    {learnedCount} / {Data.length}
+                    {learnedCount} / {data.length}
                 </Text>
             </View>
 
@@ -136,14 +136,15 @@ const Quiz = ({ Data, quizId, idKey, answerKey, questionModes = null }) => {
                 contentContainerStyle={styles.scrollContent}
                 showsVerticalScrollIndicator={false}
             >
-                {/* Question label (multi-mode only); hidden while teaching, the card shows every field. */}
+                {/* What's being asked (kanji only); hidden while teaching, where the card shows
+                    every field. */}
                 {questionLabel && !teaching && (
                     <Text style={[styles.questionLabel, { color: theme.text }]}>
                         {questionLabel}
                     </Text>
                 )}
 
-                {/* Label adds what's being asked ("Meaning of 日"); the label row above is hidden while teaching. */}
+                {/* For screen readers the label includes what's being asked ("Meaning of 日"). */}
                 <Animated.Text
                     style={[styles.char, animatedStyle]}
                     accessibilityLabel={questionLabel && !teaching

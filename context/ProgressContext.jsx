@@ -4,18 +4,21 @@ import { usePersistedState } from '../hooks/usePersistedState'
 import { getLocalDateString, recordDay, displayedStreak } from '../utils/streak'
 import { afterCorrect, afterWrong, isMastered } from '../utils/mastery'
 
+// Progress is offered through three contexts, so each screen re-renders only as often as it needs:
+// Live: the actions plus the current progress; changes on every answer (quiz screens).
 const ProgressContext = createContext(null)
-// Same API with a stable identity: consumers of this one (e.g. HomePage) read progress on demand.
+// Actions only, in an object that never changes: consumers (e.g. HomePage) never re-render because
+// of it and read progress on demand.
 const ProgressActionsContext = createContext(null)
-// Rarely-changing bits (streak count, load finished / load failed), so consumers re-render only
-// when these actually change. Once on the initial storage load, then at most once a day.
+// Rarely-changing bits (streak count, load finished / load failed): they change once on the
+// initial storage load, then at most once a day.
 const ProgressMetaContext = createContext({ streakCount: 0, progressLoaded: false, progressLoadFailed: false })
 
 const STORAGE_KEY = 'KANJI_PRO_PROGRESS_V1'
 const STREAK_STORAGE_KEY = 'KANJI_PRO_STREAK_V1'
 
 export const ProgressProvider = ({ children }) => {
-    // Shape: { [quizId]: { [itemId]: starCount } }, e.g. { hiraganaBasic: { 'あ': 3, 'い': 8 } }.
+    // Shape: { [quizId]: { [itemId]: starCount } }, e.g. { hiragana_basic: { 'あ': 3, 'い': 8 } }.
     // What the numbers mean (mastered at 6, "+N" above it) is defined in utils/mastery.js.
     const [progress, setProgress, progressLoaded, progressLoadFailed] = usePersistedState(STORAGE_KEY, {})
     const [streak, setStreak] = usePersistedState(STREAK_STORAGE_KEY, { count: 0, lastActiveDate: null })
@@ -25,7 +28,7 @@ export const ProgressProvider = ({ children }) => {
     const progressRef = useRef(progress)
     progressRef.current = progress
 
-    // Created once: the setState functions are stable and live values are read through the refs.
+    // Created once: the setState functions are stable and live progress is read through the ref.
     const actions = useMemo(() => {
         // Count today as practiced (see recordDay in utils/streak.js).
         const recordActivity = () => {
@@ -60,12 +63,13 @@ export const ProgressProvider = ({ children }) => {
             },
             resetProgress: () => setProgress({}),
         }
-        // setProgress/setStreak are stable useState setters; the refs cover the live values.
+        // setProgress/setStreak are stable useState setters; the ref covers the live progress.
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    // Re-render at midnight (app left open) and when the app comes back
-    // to the foreground. setDay with an unchanged day is a no-op, so this costs nothing otherwise.
+    // Re-render at midnight (app left open) and when the app comes back to the foreground, so a
+    // streak that broke overnight shows as 0. setDay with an unchanged day is a no-op, so this
+    // costs nothing otherwise.
     const [, setDay] = useState(getLocalDateString)
     useEffect(() => {
         let midnightTimer = null
@@ -128,6 +132,6 @@ export const useProgressActions = () => {
     return ctx
 }
 
-// Streak count + whether the persisted progress finished its initial load. Cheap to consume:
-// re-renders only when one of the two actually changes.
+// Streak count + whether the saved progress finished (or failed) its initial load. Cheap to
+// consume: re-renders only when one of these actually changes.
 export const useProgressMeta = () => useContext(ProgressMetaContext)

@@ -1,21 +1,23 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { View, Text, Pressable, StyleSheet } from 'react-native'
-import { ArrowRight, ArrowLeft } from 'lucide-react-native'
 import Animated, { FadeInDown } from 'react-native-reanimated'
 import * as Haptics from 'expo-haptics'
+import { ArrowRight, ArrowLeft } from 'lucide-react-native'
 import { useTheme } from '../context/ThemeContext'
 import { useAppSettings } from '../context/AppSettingsContext'
 
 const KEYS = [
     ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
     ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
-    ['z', 'x', 'c', 'v', 'b', 'n', 'm']
+    ['z', 'x', 'c', 'v', 'b', 'n', 'm'],
 ]
 
-// Press-and-hold backspace: after HOLD_DELAY, deletes auto-repeat every REPEAT_INTERVAL.
+// Press-and-hold backspace: after the hold delay, deleting repeats at the repeat interval.
 const BACKSPACE_HOLD_DELAY_MS = 350
 const BACKSPACE_REPEAT_INTERVAL_MS = 80
 
+// On-screen a-z keyboard for typed answers. After submitting (showAnswer) it shows "Correct!", or
+// the typed text struck through next to the right answer.
 const QuizInputKeyboard = ({ onSubmit, showAnswer, correctAnswerText, isCorrect }) => {
     const { theme } = useTheme()
     const { hapticsEnabled } = useAppSettings()
@@ -27,14 +29,12 @@ const QuizInputKeyboard = ({ onSubmit, showAnswer, correctAnswerText, isCorrect 
 
     // Light selection haptic on each keypress. Respects the Haptics toggle; no-op on web.
     const tick = useCallback(() => {
-        if (hapticsEnabled) Haptics.selectionAsync().catch(() => { })
+        if (hapticsEnabled) Haptics.selectionAsync().catch(() => {})
     }, [hapticsEnabled])
 
     // Reset input when the question changes (showAnswer true -> false).
     useEffect(() => {
-        if (!showAnswer) {
-            setInput('')
-        }
+        if (!showAnswer) setInput('')
     }, [showAnswer])
 
     const stopBackspaceHold = useCallback(() => {
@@ -79,17 +79,15 @@ const QuizInputKeyboard = ({ onSubmit, showAnswer, correctAnswerText, isCorrect 
 
     return (
         <View style={styles.container}>
-
-            {/* --- INPUT DISPLAY AREA --- */}
+            {/* --- Typed text + backspace --- */}
             <View style={styles.displayContainer}>
-                {/* Text Display */}
                 <View style={[styles.inputField, { borderColor: theme.text }]}>
                     <Text style={[styles.inputText, { color: theme.title }]}>
                         {input}
                     </Text>
                 </View>
 
-                {/* Backspace Button (Next to input) — hold to delete continuously */}
+                {/* Hold to keep deleting */}
                 <Pressable
                     style={({ pressed }) => [
                         styles.backspaceBtn,
@@ -105,14 +103,14 @@ const QuizInputKeyboard = ({ onSubmit, showAnswer, correctAnswerText, isCorrect 
                 </Pressable>
             </View>
 
-            {/* --- FEEDBACK (Only shows after submit) --- */}
+            {/* --- Feedback (only after submitting) --- */}
             {showAnswer && (
                 <Animated.View entering={FadeInDown.duration(200)} style={styles.feedbackContainer}>
                     {isCorrect ? (
                         <Text style={[styles.feedbackText, { color: theme.success }]}>Correct!</Text>
                     ) : (
-                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <Text style={[styles.feedbackText, { color: theme.error, textDecorationLine: 'line-through', marginRight: 10 }]}>
+                        <View style={styles.wrongRow}>
+                            <Text style={[styles.feedbackText, styles.wrongInput, { color: theme.error }]}>
                                 {input}
                             </Text>
                             <Text style={[styles.feedbackText, { color: theme.success }]}>
@@ -123,7 +121,7 @@ const QuizInputKeyboard = ({ onSubmit, showAnswer, correctAnswerText, isCorrect 
                 </Animated.View>
             )}
 
-            {/* --- KEYBOARD ROWS --- */}
+            {/* --- Keyboard rows --- */}
             <View style={styles.keyboardContainer}>
                 {KEYS.map((row, rowIndex) => (
                     <View key={rowIndex} style={styles.row}>
@@ -166,7 +164,7 @@ const QuizInputKeyboard = ({ onSubmit, showAnswer, correctAnswerText, isCorrect 
                 </View>
             </View>
 
-            {/* --- SUBMIT / NEXT BUTTON --- */}
+            {/* --- Submit button --- */}
             <Pressable
                 style={({ pressed }) => [
                     styles.submitBtn,
@@ -178,19 +176,19 @@ const QuizInputKeyboard = ({ onSubmit, showAnswer, correctAnswerText, isCorrect 
                 accessibilityRole="button"
             >
                 <ArrowRight size={32} color="#fff" />
-
             </Pressable>
-
         </View>
     )
 }
+
+export default QuizInputKeyboard
 
 const styles = StyleSheet.create({
     container: {
         width: '100%',
         alignItems: 'center',
     },
-    // Input Display Styles
+    // --- Typed text + backspace ---
     displayContainer: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -219,10 +217,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    // Feedback Styles
+    // --- Feedback ---
     feedbackContainer: {
         position: 'absolute',
-        top: -52, // Float above the keyboard area
+        top: -52, // floats above the typed text
         alignSelf: 'center',
         backgroundColor: 'rgba(0,0,0,0.8)',
         paddingHorizontal: 20,
@@ -234,7 +232,15 @@ const styles = StyleSheet.create({
         fontSize: 26,
         fontWeight: 'bold',
     },
-    // Keyboard Layout
+    wrongRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    wrongInput: {
+        textDecorationLine: 'line-through',
+        marginRight: 10,
+    },
+    // --- Keyboard ---
     keyboardContainer: {
         width: '100%',
     },
@@ -274,5 +280,3 @@ const styles = StyleSheet.create({
         marginTop: 8,
     },
 })
-
-export default QuizInputKeyboard

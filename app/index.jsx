@@ -1,10 +1,5 @@
 import HomePage from '../components/HomePage'
 
-
-const Index = () => {
-    return (
-        <HomePage />
-    )
-}
+const Index = () => <HomePage />
 
 export default Index

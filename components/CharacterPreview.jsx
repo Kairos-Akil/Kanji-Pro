@@ -21,7 +21,9 @@ const CharacterPreview = ({ groupedData, mainKey, subKey, subFontSize = 21, focu
                 accessibilityLabel={`${item[mainKey]}, ${answerDisplayText(item[subKey])}`}
             >
                 <Text style={[styles.main, { color: theme.title }]}>{item[mainKey]}</Text>
-                <Text style={[styles.sub, { color: theme.text, fontSize: subFontSize }]}>{answerDisplayText(item[subKey])}</Text>
+                <Text style={{ color: theme.text, fontSize: subFontSize }}>
+                    {answerDisplayText(item[subKey])}
+                </Text>
             </Tile>
         )
     }, [theme, mainKey, subKey, subFontSize])
@@ -43,5 +45,4 @@ const styles = StyleSheet.create({
     main: {
         fontSize: 29,
     },
-    sub: {},
 })

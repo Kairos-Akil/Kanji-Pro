@@ -5,7 +5,7 @@ import katakanaBasic from '../assets/data/KatakanaData/katakanaBasic.json'
 import katakanaVariants from '../assets/data/KatakanaData/katakanaVariants.json'
 import katakanaCombinations from '../assets/data/KatakanaData/katakanaCombinations.json'
 
-// kana string -> romaji, built from the same kana data files the app teaches from
+// kana string -> romaji, built from the same kana data files the app teaches from.
 const KANA_TO_ROMAJI = {}
 for (const { kana, romaji } of [
     ...hiraganaBasic, ...hiraganaVariants, ...hiraganaCombinations,

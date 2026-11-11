@@ -4,7 +4,7 @@ import ThemedView from './ThemedView'
 
 // Renders an alert as a real Modal instead of OS-level Alert.alert, which doesn't render on web.
 // Driven by the useAlert() hook in AlertContext.
-const AlertModal = ({ visible, title, message, buttons, onButtonPress }) => {
+const AlertModal = ({ isVisible, title, message, buttons, onButtonPress }) => {
     const { theme } = useTheme()
 
     // Android back button acts like Cancel (or a plain dismiss if there's no Cancel button), so it
@@ -14,8 +14,8 @@ const AlertModal = ({ visible, title, message, buttons, onButtonPress }) => {
     }
 
     return (
-        <Modal visible={visible} transparent={true} animationType="fade" onRequestClose={handleRequestClose}>
-            <ThemedView style={styles.overlay} safe={true}>
+        <Modal visible={isVisible} transparent animationType="fade" onRequestClose={handleRequestClose}>
+            <ThemedView style={styles.overlay} safe>
                 <View style={[styles.box, { backgroundColor: theme.tile }]}>
                     {title ? <Text style={[styles.title, { color: theme.title }]}>{title}</Text> : null}
                     {message ? <Text style={[styles.message, { color: theme.text }]}>{message}</Text> : null}

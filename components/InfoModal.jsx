@@ -1,7 +1,6 @@
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native'
 import { Heart, ExternalLink } from 'lucide-react-native'
 import { Ionicons } from '@react-native-vector-icons/ionicons'
-
 import { useTheme } from '../context/ThemeContext'
 import BottomSheet from './BottomSheet'
 import Spacer from './Spacer'
@@ -22,7 +21,6 @@ const InfoModal = ({ isVisible, onClose }) => {
     return (
         <BottomSheet isVisible={isVisible} onClose={onClose} title="About" heightPercent="60%">
             <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
-
                 <Text style={[styles.body, { color: theme.text }]}>
                     Thank you for using Kanji Pro! If you find any issues or bugs, please report them on my GitHub page.
                 </Text>
@@ -90,7 +88,6 @@ const InfoModal = ({ isVisible, onClose }) => {
                 </View>
 
                 <Spacer height={15} />
-
             </ScrollView>
         </BottomSheet>
     )

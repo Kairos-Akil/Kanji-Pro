@@ -12,7 +12,7 @@ const QuizScreen = () => {
     return (
         <Quiz
             key={course.id}
-            Data={course.data}
+            data={course.data}
             quizId={course.id}
             idKey={course.idKey}
             answerKey={course.answerKey}

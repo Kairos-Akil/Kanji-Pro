@@ -2,12 +2,14 @@ import { StyleSheet, ScrollView, View, TouchableOpacity } from 'react-native'
 import { useRouter } from 'expo-router'
 import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { LinearGradient } from 'expo-linear-gradient'
-
-import ThemedView from './ThemedView'
-import ThemedText from './ThemedText'
 import { useTheme } from '../context/ThemeContext'
 import { useNavigateOnce } from '../hooks/useNavigateOnce'
+import ThemedView from './ThemedView'
+import ThemedText from './ThemedText'
+import Spacer from './Spacer'
 
+// Shared page for the "What are Kana/Kanji/Radicals?" explanations (app/Explain_Page/). `data`
+// holds the texts; accentColor and icon (an Ionicons name) give each page its own look.
 const ExplanationLayout = ({ data, accentColor, icon }) => {
     const { theme } = useTheme()
     const router = useRouter()
@@ -16,8 +18,7 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
 
     return (
         <ThemedView style={styles.container}>
-
-            {/* --- HERO HEADER --- */}
+            {/* --- Hero header --- */}
             <View style={styles.headerContainer}>
                 <LinearGradient
                     colors={[accentColor, theme.background]}
@@ -25,7 +26,6 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
                     start={{ x: 0, y: 0 }}
                     end={{ x: 0, y: 1 }}
                 >
-                    {/* Back Button */}
                     <TouchableOpacity
                         onPress={() => navigateOnce(() => router.back())}
                         style={styles.backButton}
@@ -35,7 +35,6 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
                         <Ionicons name="arrow-back" size={28} color="#FFF" />
                     </TouchableOpacity>
 
-                    {/* Hero Content */}
                     <View style={styles.heroContent}>
                         <View style={styles.iconContainer}>
                             <Ionicons name={icon} size={40} color={accentColor} />
@@ -44,14 +43,12 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
                         <ThemedText style={styles.heroSubtitle}>{data.subtitle}</ThemedText>
                     </View>
 
-                    {/* Giant Background Watermark */}
-                    <ThemedText style={[styles.watermark, { color: '#FFFFFF20' }]}>
-                        {data.watermarkChar}
-                    </ThemedText>
+                    {/* Giant, faint background character */}
+                    <ThemedText style={styles.watermark}>{data.watermarkChar}</ThemedText>
                 </LinearGradient>
             </View>
 
-            {/* --- SCROLLABLE CONTENT --- */}
+            {/* --- Scrollable content --- */}
             <ScrollView
                 contentContainerStyle={styles.scrollContent}
                 showsVerticalScrollIndicator={false}
@@ -62,12 +59,12 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
                     <ThemedText style={styles.bodyText}>{data.intro}</ThemedText>
                 </View>
 
-                {/* Key Features / Points */}
+                {/* Key points */}
                 {data.sections.map((section, index) => (
                     <View key={index} style={styles.sectionContainer}>
                         <View style={[styles.accentBar, { backgroundColor: accentColor }]} />
                         <View style={{ flex: 1 }}>
-                            <ThemedText style={styles.subHeader} title={true}>
+                            <ThemedText title style={styles.subHeader}>
                                 {section.heading}
                             </ThemedText>
                             <ThemedText style={styles.bodyText}>
@@ -77,7 +74,7 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
                     </View>
                 ))}
 
-                {/* Visual Example Box */}
+                {/* Example box */}
                 <View style={[styles.exampleBox, { borderColor: accentColor }]}>
                     <ThemedText style={[styles.exampleTitle, { color: accentColor }]}>
                         EXAMPLE
@@ -91,7 +88,7 @@ const ExplanationLayout = ({ data, accentColor, icon }) => {
                     </View>
                 </View>
 
-                <View style={{ height: 50 }} />
+                <Spacer height={50} />
             </ScrollView>
         </ThemedView>
     )
@@ -107,19 +104,20 @@ const styles = StyleSheet.create({
         width: 40, height: 40, borderRadius: 20,
         backgroundColor: 'rgba(0,0,0,0.2)',
         alignItems: 'center', justifyContent: 'center',
-        marginBottom: 20
+        marginBottom: 20,
     },
     heroContent: { alignItems: 'center', zIndex: 10 },
     iconContainer: {
         width: 70, height: 70, borderRadius: 35,
         backgroundColor: 'white', alignItems: 'center', justifyContent: 'center',
-        marginBottom: 15, elevation: 5
+        marginBottom: 15, elevation: 5,
     },
     heroTitle: { fontSize: 32, fontWeight: '900', color: '#FFF', textShadowColor: 'rgba(0,0,0,0.3)', textShadowRadius: 10 },
     heroSubtitle: { fontSize: 16, fontWeight: '600', color: 'rgba(255,255,255,0.9)', marginTop: 5 },
     watermark: {
         position: 'absolute', right: -20, bottom: -30,
-        fontSize: 200, fontWeight: '900', zIndex: 0
+        fontSize: 200, fontWeight: '900', zIndex: 0,
+        color: '#FFFFFF20', // white at low opacity
     },
 
     scrollContent: { paddingTop: 40, paddingHorizontal: 20 },
@@ -136,11 +134,11 @@ const styles = StyleSheet.create({
 
     exampleBox: {
         borderWidth: 2, borderRadius: 20, borderStyle: 'dashed',
-        padding: 20, alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.02)'
+        padding: 20, alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.02)',
     },
     exampleTitle: { fontSize: 12, fontWeight: '900', letterSpacing: 2, marginBottom: 10 },
     exampleRow: { flexDirection: 'row', alignItems: 'center', gap: 20 },
     exampleChar: { fontSize: 48, fontWeight: 'bold' },
     exampleReading: { fontSize: 14, opacity: 0.6 },
-    exampleMeaning: { fontSize: 18, fontWeight: 'bold' }
+    exampleMeaning: { fontSize: 18, fontWeight: 'bold' },
 })

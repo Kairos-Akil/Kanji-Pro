@@ -7,7 +7,6 @@ import {
     Switch,
 } from 'react-native'
 import { Sun, Moon, Contrast, Vibrate, Volume2, Bell, Clock, Trash2 } from 'lucide-react-native'
-
 import { useTheme } from '../context/ThemeContext'
 import { useAppSettings } from '../context/AppSettingsContext'
 import { useProgressActions } from '../context/ProgressContext'
@@ -72,18 +71,17 @@ const AppSettings = ({ isVisible, onClose }) => {
     return (
         <BottomSheet isVisible={isVisible} onClose={onClose} title="Settings" heightPercent="75%">
             <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
-
                 {/* --- Appearance --- */}
-                <View style={styles.section}>
-                    <Text style={[styles.label, { color: theme.text, marginBottom: 10 }]}>Appearance</Text>
+                <View>
+                    <Text style={[styles.label, { color: theme.text }]}>Appearance</Text>
                     <SegmentedToggle options={THEME_OPTIONS} value={mode} onChange={setMode} />
                 </View>
 
                 <Spacer height={25} />
 
                 {/* --- Feedback --- */}
-                <View style={styles.section}>
-                    <Text style={[styles.label, { color: theme.text, marginBottom: 10 }]}>Feedback</Text>
+                <View>
+                    <Text style={[styles.label, { color: theme.text }]}>Feedback</Text>
 
                     <View style={styles.switchRow}>
                         <View style={styles.switchLabelRow}>
@@ -119,8 +117,8 @@ const AppSettings = ({ isVisible, onClose }) => {
                 <Spacer height={25} />
 
                 {/* --- Reminders --- */}
-                <View style={styles.section}>
-                    <Text style={[styles.label, { color: theme.text, marginBottom: 10 }]}>Reminders</Text>
+                <View>
+                    <Text style={[styles.label, { color: theme.text }]}>Reminders</Text>
 
                     <View style={styles.switchRow}>
                         <View style={styles.switchLabelRow}>
@@ -174,8 +172,8 @@ const AppSettings = ({ isVisible, onClose }) => {
                 <Spacer height={25} />
 
                 {/* --- Data --- */}
-                <View style={styles.section}>
-                    <Text style={[styles.label, { color: theme.text, marginBottom: 10 }]}>Data</Text>
+                <View>
+                    <Text style={[styles.label, { color: theme.text }]}>Data</Text>
 
                     <TouchableOpacity
                         style={[styles.resetBtn, { borderColor: theme.error }]}
@@ -189,7 +187,6 @@ const AppSettings = ({ isVisible, onClose }) => {
                 </View>
 
                 <Spacer height={15} />
-
             </ScrollView>
         </BottomSheet>
     )
@@ -198,7 +195,9 @@ const AppSettings = ({ isVisible, onClose }) => {
 export default AppSettings
 
 const styles = StyleSheet.create({
-    section: {},
+    label: {
+        marginBottom: 10,
+    },
     switchRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
