@@ -5,7 +5,7 @@
 set -euo pipefail
 
 # Files whose changes only reach the APK through a fresh prebuild.
-NATIVE_INPUTS=(app.json assets/MyAssets/blueLogo.png)
+NATIVE_INPUTS=(app.json assets/MyAssets/blueLogo.png plugins/withReleaseSigning.js)
 
 needs_prebuild=false
 if [ ! -f android/gradlew ]; then

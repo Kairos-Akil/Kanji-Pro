@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 # Fully prod build: release build type, packaged as an .aab (Android App Bundle) —
 # the format Google Play requires for store submission.
-# NOTE: this still uses the default debug keystore unless you configure a release
-# signing config in android/app/build.gradle — fine for local testing, but the Play
-# Store requires the same signing key on every future update, so set that up
-# (or use Play App Signing) before your first real store upload.
+# Signed with my release key (see plugins/withReleaseSigning.js). For Play, choose Play App
+# Signing with "use my own key", so the Play and GitHub versions share one key.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 

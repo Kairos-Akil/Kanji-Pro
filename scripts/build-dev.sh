@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Optimized dev build ("quasi prod"): release build type, JS minified and bundled in,
-# signed with the default debug keystore so it installs straight on any device without
-# extra setup. Good for real-device testing / sharing an installable APK with others.
+# Release APK (the one published on GitHub): release build type, JS minified and bundled in,
+# signed with my release key (see plugins/withReleaseSigning.js; the build stops if the key
+# isn't set up in ~/.gradle/gradle.properties).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
