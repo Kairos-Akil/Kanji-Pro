@@ -1,19 +1,31 @@
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native'
-import { Heart, ExternalLink } from 'lucide-react-native'
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native'
+import { ExternalLink } from 'lucide-react-native'
 import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { useTheme } from '../context/ThemeContext'
+import { GITHUB_URL, EDRDG_LICENCE_URL, FEEDBACK_URL, openLink } from '../utils/links'
 import BottomSheet from './BottomSheet'
 import Spacer from './Spacer'
 
-const GITHUB_URL = 'https://github.com/Kairos-Akil/Kanji-Pro'
-// const DONATE_URL = 'https://ko-fi.com' // set when donations go live
-const EDRDG_LICENCE_URL = 'https://www.edrdg.org/edrdg/licence.html'
-
-const openLink = (url) => {
-    Linking.openURL(url).catch(err => console.warn('Failed to open link:', err))
+// A full-width button that opens a web page.
+const LinkRow = ({ icon, label, url, accessibilityLabel }) => {
+    const { theme } = useTheme()
+    return (
+        <TouchableOpacity
+            style={[styles.linkRow, { borderColor: theme.inactive }]}
+            onPress={() => openLink(url)}
+            accessibilityLabel={accessibilityLabel}
+            accessibilityRole="link"
+        >
+            <View style={styles.linkLabelRow}>
+                <Ionicons name={icon} size={20} color={theme.text} />
+                <Text style={[styles.linkLabel, { color: theme.text }]}>{label}</Text>
+            </View>
+            <ExternalLink size={16} color={theme.text} />
+        </TouchableOpacity>
+    )
 }
 
-// "About this app" sheet: thank-you note, repo link, support link, and the EDRDG attribution
+// "About this app" sheet: thank-you note, feedback and repo links, and the EDRDG attribution
 // that the KANJIDIC2/KRADFILE (CC BY-SA) licence requires to be shown somewhere user-visible.
 const InfoModal = ({ isVisible, onClose }) => {
     const { theme } = useTheme()
@@ -22,49 +34,27 @@ const InfoModal = ({ isVisible, onClose }) => {
         <BottomSheet isVisible={isVisible} onClose={onClose} title="About" heightPercent="60%">
             <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
                 <Text style={[styles.body, { color: theme.text }]}>
-                    Thank you for using Kanji Pro! If you find any issues or bugs, please report them on my GitHub page.
+                    Thank you for using Kanji Pro! Found a bug or have an idea? Send me feedback, no
+                    account needed. You can also report issues on GitHub.
                 </Text>
 
                 <Spacer height={25} />
 
-                <TouchableOpacity
-                    style={[styles.linkRow, { borderColor: theme.inactive }]}
-                    onPress={() => openLink(GITHUB_URL)}
+                <LinkRow
+                    icon="chatbubble-ellipses-outline"
+                    label="Send feedback"
+                    url={FEEDBACK_URL}
+                    accessibilityLabel="Send feedback"
+                />
+
+                <Spacer height={12} />
+
+                <LinkRow
+                    icon="logo-github"
+                    label="View on GitHub"
+                    url={GITHUB_URL}
                     accessibilityLabel="View the project on GitHub"
-                    accessibilityRole="link"
-                >
-                    <View style={styles.linkLabelRow}>
-                        <Ionicons name="logo-github" size={20} color={theme.text} />
-                        <Text style={[styles.linkLabel, { color: theme.text }]}>View on GitHub</Text>
-                    </View>
-                    <ExternalLink size={16} color={theme.text} />
-                </TouchableOpacity>
-
-                <Spacer height={12} />
-
-                <TouchableOpacity
-                    style={[styles.linkRow, { borderColor: theme.inactive }]}
-                    // onPress={() => openLink(DONATE_URL)}
-                    accessibilityLabel="Support development"
-                    accessibilityRole="link"
-                    aria-disabled
-                >
-                    <View style={styles.linkLabelRow}>
-                        <Ionicons name="heart-outline" size={20} color={theme.text} />
-                        <Text style={[styles.linkLabel, { color: theme.text }]}>Support development</Text>
-                    </View>
-                    <ExternalLink size={16} color={theme.text} />
-                </TouchableOpacity>
-
-                <Spacer height={12} />
-
-                <View style={styles.donateRow}>
-                    <Heart size={13} color={theme.text} style={{ opacity: 0.55 }} />
-                    <Text style={[styles.donateText, { color: theme.text }]}>
-                        {/* Enjoying the app? You can support its development by buying me a coffee on Ko-fi. */}
-                        The donation button doesn&apos;t work yet. I might enable it in a future update.
-                    </Text>
-                </View>
+                />
 
                 <Spacer height={30} />
 
@@ -117,17 +107,6 @@ const styles = StyleSheet.create({
     linkLabel: {
         fontSize: 16,
         fontWeight: '500',
-    },
-    donateRow: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 6,
-        paddingVertical: 6,
-    },
-    donateText: {
-        fontSize: 13,
-        opacity: 0.55,
     },
     licenceBlock: {
         borderTopWidth: StyleSheet.hairlineWidth,

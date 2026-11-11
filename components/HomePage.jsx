@@ -5,6 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useAlert } from '../context/AlertContext'
 import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
 import { useNavigateOnce } from '../hooks/useNavigateOnce'
+import { useFeedbackPrompt } from '../hooks/useFeedbackPrompt'
 import { COURSES, DEFAULT_COURSE_ID, LAST_ACTIVE_STORAGE_KEY, RADICAL_CATEGORY_IDS, KANJI_TIER_IDS_BY_LEVEL } from '../constants/Courses'
 import { CATEGORIES } from '../constants/Categories'
 import ThemedView from './ThemedView'
@@ -60,6 +61,8 @@ const HomePage = () => {
             'Your saved progress could not be read. To protect it, nothing you do now will be saved. Please close and restart the app.'
         )
     }, [progressLoadFailed, showAlert])
+
+    useFeedbackPrompt()
 
     const [settingsVisible, setSettingsVisible] = useState(false)
     const [searchVisible, setSearchVisible] = useState(false)
