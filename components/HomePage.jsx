@@ -10,7 +10,6 @@ import ThemedText from './ThemedText'
 import AppSettings from './AppSettings'
 import SearchModal from './SearchModal'
 import InfoModal from './InfoModal'
-import { loadQuizSettings } from './QuizSettings'
 import { useTheme } from '../context/ThemeContext'
 import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
 import { COURSES, DEFAULT_COURSE_ID, LAST_ACTIVE_STORAGE_KEY, RADICAL_CATEGORY_IDS, KANJI_TIER_IDS_BY_LEVEL } from '../constants/Courses'
@@ -25,7 +24,7 @@ const CARD_COURSE_GROUPS = {
 
 // Percent learned per card key. Runs on focus (not per render): HomePage stays mounted under the
 // navigation stack, and counting every course live would re-run on each answered quiz question.
-const computeCardPercents = (getLearnedCount, maxStars) => {
+const computeCardPercents = (getLearnedCount) => {
     const percents = {}
     Object.entries(CARD_COURSE_GROUPS).forEach(([key, courseIds]) => {
         let learned = 0
@@ -34,7 +33,7 @@ const computeCardPercents = (getLearnedCount, maxStars) => {
             const course = COURSES[id]
             if (!course) return
             const itemIds = course.data.map(item => item[course.idKey])
-            learned += getLearnedCount(course.id, itemIds, maxStars)
+            learned += getLearnedCount(course.id, itemIds)
             total += course.data.length
         })
         percents[key] = total > 0 ? Math.round((learned / total) * 100) : 0
@@ -56,9 +55,7 @@ const HomePage = () => {
 
     // getLearnedCount comes from the stable actions context, so this callback never goes stale.
     const refreshPercents = useCallback(() => {
-        loadQuizSettings()
-            .then(saved => setCardPercents(computeCardPercents(getLearnedCount, saved.maxStars)))
-            .catch(err => console.warn('Error loading mastery level', err))
+        setCardPercents(computeCardPercents(getLearnedCount))
     }, [getLearnedCount])
 
     // Refresh on focus so the "Continue" card and percentages reflect changes made elsewhere.

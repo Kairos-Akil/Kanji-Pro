@@ -8,7 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useFocusEffect, usePathname } from 'expo-router'
 
 import BottomBar from './BottomBar'
-import QuizSettings, { loadQuizSettings } from './QuizSettings'
+import QuizSettings from './QuizSettings'
 import { useProgressActions, useProgressMeta } from '../context/ProgressContext'
 import { LAST_ACTIVE_STORAGE_KEY } from '../constants/Courses'
 
@@ -29,25 +29,19 @@ const TopSlider = ({ tabs = [] }) => {
     // The active tab is the last path segment, e.g. "hiraganaBasic".
     const activeTabName = pathname.split('/').pop()
 
-    const refreshCounts = async () => {
-        try {
-            const { maxStars } = await loadQuizSettings()
-            setLearnedByTab(Object.fromEntries(tabs.map(tab => [
-                tab.id,
-                getLearnedCount(tab.id, tab.data.map(item => item[tab.idKey]), maxStars),
-            ])))
-        } catch (e) {
-            console.warn('Error loading settings', e)
-        }
+    const refreshCounts = () => {
+        setLearnedByTab(Object.fromEntries(tabs.map(tab => [
+            tab.id,
+            getLearnedCount(tab.id, tab.data.map(item => item[tab.idKey])),
+        ])))
     }
 
-    // Recount when the page is shown again (e.g. back from a quiz) and when the settings sheet
-    // closes (the mastery level may have changed); settingsVisible is a dep only for the latter.
+    // Recount when the page is shown again, e.g. back from a quiz.
     useFocusEffect(
         useCallback(() => {
             refreshCounts()
             // eslint-disable-next-line react-hooks/exhaustive-deps
-        }, [settingsVisible])
+        }, [])
     )
 
     // Opened before the saved progress finished loading (e.g. straight from a link): count again
@@ -77,7 +71,6 @@ const TopSlider = ({ tabs = [] }) => {
 
             <QuizSettings
                 isVisible={settingsVisible}
-                // Closing flips settingsVisible, which re-runs the focus effect above (recount).
                 onClose={() => setSettingsVisible(false)}
                 // Quiz Content (meanings/readings) applies only to kanji quizzes.
                 showQuizContent={tabs.some(tab => tab.id?.startsWith('kanji_'))}

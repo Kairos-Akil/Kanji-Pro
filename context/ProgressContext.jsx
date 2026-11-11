@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useRef, useState } from 
 import { AppState } from 'react-native'
 import { usePersistedState } from '../hooks/usePersistedState'
 import { getLocalDateString, recordDay, displayedStreak } from '../utils/streak'
+import { afterCorrect, afterWrong, isMastered } from '../utils/mastery'
 
 const ProgressContext = createContext(null)
 // Same API with a stable identity: consumers of this one (e.g. HomePage) read progress on demand.
@@ -14,7 +15,8 @@ const STORAGE_KEY = 'KANJI_PRO_PROGRESS_V1'
 const STREAK_STORAGE_KEY = 'KANJI_PRO_STREAK_V1'
 
 export const ProgressProvider = ({ children }) => {
-    // Shape: { [quizId]: { [itemId]: starCount } }, e.g. { hiraganaBasic: { 'あ': 3, 'い': 1 } }.
+    // Shape: { [quizId]: { [itemId]: starCount } }, e.g. { hiraganaBasic: { 'あ': 3, 'い': 8 } }.
+    // What the numbers mean (mastered at 6, "+N" above it) is defined in utils/mastery.js.
     const [progress, setProgress, progressLoaded] = usePersistedState(STORAGE_KEY, {})
     const [streak, setStreak] = usePersistedState(STREAK_STORAGE_KEY, { count: 0, lastActiveDate: null })
 
@@ -31,12 +33,12 @@ export const ProgressProvider = ({ children }) => {
         }
 
         return {
-            incrementItem: (quizId, itemId, maxStars) => {
+            incrementItem: (quizId, itemId) => {
                 setProgress(prev => ({
                     ...prev,
                     [quizId]: {
                         ...prev[quizId],
-                        [itemId]: Math.min((prev[quizId]?.[itemId] ?? 0) + 1, maxStars),
+                        [itemId]: afterCorrect(prev[quizId]?.[itemId] ?? 0),
                     },
                 }))
                 recordActivity()
@@ -46,15 +48,15 @@ export const ProgressProvider = ({ children }) => {
                     ...prev,
                     [quizId]: {
                         ...prev[quizId],
-                        [itemId]: Math.max((prev[quizId]?.[itemId] ?? 0) - 1, 0),
+                        [itemId]: afterWrong(prev[quizId]?.[itemId] ?? 0),
                     },
                 }))
                 recordActivity()
             },
             getProgressForQuiz: (quizId) => progressRef.current[quizId] ?? {},
-            getLearnedCount: (quizId, itemIds, maxStars) => {
+            getLearnedCount: (quizId, itemIds) => {
                 const quizProgress = progressRef.current[quizId] ?? {}
-                return itemIds.filter(id => (quizProgress[id] ?? 0) >= maxStars).length
+                return itemIds.filter(id => isMastered(quizProgress[id] ?? 0)).length
             },
             resetProgress: () => setProgress({}),
         }

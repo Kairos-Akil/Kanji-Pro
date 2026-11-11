@@ -11,6 +11,7 @@ import QuizInputChoices from './QuizInputChoices'
 import QuizInputKeyboard from './QuizInputKeyboard'
 import { useQuizEngine } from '../hooks/useQuizEngine'
 import { answerDisplayText, answerAnnouncement } from '../utils/answers'
+import { MASTERY_STARS, bonusStars } from '../utils/mastery'
 
 // Learning Mode card: reveals every quizzable answer, with a "Got it" button that grants the first star.
 const LearningCard = ({ answers, cardStyle, onContinue, theme }) => (
@@ -62,7 +63,6 @@ const Quiz = ({ Data, quizId, idKey = 'kana', answerKey = 'romaji', allowKeyboar
         options,
         showAnswer,
         selectedChoice,
-        maxStars,
         inputMode,
         animatedStyle,
         itemProgress,
@@ -93,17 +93,22 @@ const Quiz = ({ Data, quizId, idKey = 'kana', answerKey = 'romaji', allowKeyboar
 
     if (!currentItem) return null
 
+    const bonus = bonusStars(itemProgress)
+
     return (
         <ThemedView style={[styles.container, { backgroundColor: theme.background, paddingBottom: insets.bottom }]}>
             {/* Stars + progress row; sits above the flex:1 body so it stays put while it scrolls. */}
             <View style={styles.header}>
-                {/* accessible: read as one element ("2 of 5 stars"), not as 5 unlabeled icons. */}
+                {/* accessible: read as one element ("2 of 6 stars"), not as 6 unlabeled icons.
+                    "+N": correct answers in a row since mastering (see utils/mastery.js). */}
                 <View
                     style={styles.starRow}
                     accessible
-                    accessibilityLabel={`${itemProgress} of ${maxStars} stars`}
+                    accessibilityLabel={bonus > 0
+                        ? `${MASTERY_STARS} of ${MASTERY_STARS} stars, plus ${bonus}`
+                        : `${itemProgress} of ${MASTERY_STARS} stars`}
                 >
-                    {[...Array(maxStars)].map((_, i) => (
+                    {[...Array(MASTERY_STARS)].map((_, i) => (
                         <Star
                             key={i}
                             size={20}
@@ -112,6 +117,9 @@ const Quiz = ({ Data, quizId, idKey = 'kana', answerKey = 'romaji', allowKeyboar
                             style={styles.star}
                         />
                     ))}
+                    {bonus > 0 && (
+                        <Text style={[styles.bonus, { color: theme.primary }]}>+{bonus}</Text>
+                    )}
                 </View>
 
                 <Text
@@ -194,12 +202,16 @@ const styles = StyleSheet.create({
     },
     starRow: {
         flexDirection: 'row',
-        flexWrap: 'wrap', // up to 15 stars wrap instead of pushing the progress numbers off-screen
-        justifyContent: 'flex-start',
+        alignItems: 'center',
         flexShrink: 1,
     },
     star: {
         marginHorizontal: 1,
+    },
+    bonus: {
+        marginLeft: 6,
+        fontSize: 15,
+        fontWeight: '700',
     },
     progress: {
         fontSize: 18,

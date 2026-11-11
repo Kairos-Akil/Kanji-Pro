@@ -14,7 +14,6 @@ import * as Haptics from 'expo-haptics'
 import { useAudioPlayer } from 'expo-audio'
 import {
     loadQuizSettings,
-    DEFAULT_MAX_STARS,
     DEFAULT_INPUT_MODE,
     DEFAULT_QUIZ_CONTENT,
     DEFAULT_LEARNING_MODE,
@@ -23,6 +22,7 @@ import { useProgress } from '../context/ProgressContext'
 import { useTheme } from '../context/ThemeContext'
 import { useAppSettings } from '../context/AppSettingsContext'
 import { answerDisplayText, typedAnswerMatches, answersMatch, hasModeData, shuffle, pickWrongOptions } from '../utils/answers'
+import { isMastered, reviewWeight, pickWeighted } from '../utils/mastery'
 
 const correctSound = require('../assets/sounds/correct.wav')
 const incorrectSound = require('../assets/sounds/incorrect.wav')
@@ -39,6 +39,7 @@ const WORKING_SET_MAX = 15
 const NEW_ITEM_CHANCE = 0.1
 
 // Chance of re-drilling a mastered item, so mastery can still be lost and the quiz never runs dry.
+// Which mastered item is weighted by its "+N" (see reviewWeight in utils/mastery.js).
 const REVIEW_CHANCE = 0.15
 
 // Shared drill logic for every quiz (Kana, Kanji, Radicals): tracks per-item star progress,
@@ -83,7 +84,6 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         }
     }
 
-    const [maxStars, setMaxStars] = useState(DEFAULT_MAX_STARS)
     const [inputMode, setInputMode] = useState(DEFAULT_INPUT_MODE)
     const [quizContent, setQuizContent] = useState(DEFAULT_QUIZ_CONTENT)
     const [learningMode, setLearningMode] = useState(DEFAULT_LEARNING_MODE)
@@ -138,7 +138,6 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         useCallback(() => {
             loadQuizSettings()
                 .then((saved) => {
-                    setMaxStars(saved.maxStars)
                     setInputMode(saved.inputMode)
                     setQuizContent(saved.quizContent)
                     setLearningMode(saved.learningMode)
@@ -157,7 +156,7 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         generateQuestion()
         // generateQuestion is recreated each render; excluding it keeps this an explicit whitelist.
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [current, maxStars, quizContent, learningMode, settingsLoaded])
+    }, [current, quizContent, learningMode, settingsLoaded])
 
     // Active learning pool: ids of the (at most WORKING_SET_MAX) unmastered items drilled right now.
     const workingSetRef = useRef(null)
@@ -205,11 +204,11 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
     }
 
     const generateQuestion = () => {
-        if (maxStars === 0 || Data.length === 0) return
+        if (Data.length === 0) return
 
         const getStars = (item) => progress[item[idKey]] ?? 0
-        const unmastered = Data.filter(item => getStars(item) < maxStars)
-        const mastered = Data.filter(item => getStars(item) >= maxStars)
+        const unmastered = Data.filter(item => !isMastered(getStars(item)))
+        const mastered = Data.filter(item => isMastered(getStars(item)))
 
         let nextItem = null
         let pool
@@ -247,7 +246,10 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
             const candidates = pool.length > 1 && currentItem
                 ? pool.filter(item => item[idKey] !== currentItem[idKey])
                 : pool
-            nextItem = candidates[Math.floor(Math.random() * candidates.length)]
+            // Reviews favor shaky items: a high "+N" (solidly known) makes an item come back rarely.
+            nextItem = pool === mastered
+                ? pickWeighted(candidates, item => reviewWeight(getStars(item)))
+                : candidates[Math.floor(Math.random() * candidates.length)]
         }
 
         // Only modes the item has data for; the fallback guards against pathological data.
@@ -311,7 +313,7 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
 
         if (isCorrect) {
             triggerSuccessAnimation()
-            incrementItem(quizId, currentItem[idKey], maxStars)
+            incrementItem(quizId, currentItem[idKey])
         } else {
             triggerFailureAnimation()
             decrementItem(quizId, currentItem[idKey])
@@ -326,7 +328,7 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
     }
 
     const itemProgress = currentItem ? (progress[currentItem[idKey]] ?? 0) : 0
-    const learnedCount = getLearnedCount(quizId, Data.map(d => d[idKey]), maxStars)
+    const learnedCount = getLearnedCount(quizId, Data.map(d => d[idKey]))
 
     // One entry per active mode the item has data for, so a kanji teaches meaning and readings up front.
     const teachingAnswers = teaching && currentItem
@@ -341,7 +343,7 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         answeredRef.current = true
         setShowAnswer(true)
         triggerSuccessAnimation({ instantColor: true })
-        incrementItem(quizId, currentItem[idKey], maxStars)
+        incrementItem(quizId, currentItem[idKey])
 
         advanceTimeoutRef.current = setTimeout(() => {
             color.value = 0 // instant reset so the next card doesn't fade from blue
@@ -354,7 +356,6 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         options,
         showAnswer,
         selectedChoice,
-        maxStars,
         // Callers can force choice-only for answer sets the keyboard can't represent.
         inputMode: allowKeyboard ? inputMode : 'choice',
         animatedStyle,
