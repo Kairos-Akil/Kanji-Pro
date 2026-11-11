@@ -21,6 +21,12 @@ export const afterWrong = (stars) => isMastered(stars) ? MASTERY_STARS - 1 : Mat
 // mastered (shaky) character returns far more often than a solid one.
 export const reviewWeight = (stars) => 0.5 ** bonusStars(stars)
 
+// The pool to draw the next learning question from. If its only character is the one just shown
+// (one left to learn), use the review pool instead, so it isn't asked twice in a row; it then comes
+// back every other question. Without reviews to fall back on, the same character is all there is.
+export const avoidRepeat = (pool, reviewPool, currentId, idOf) =>
+    pool.length === 1 && idOf(pool[0]) === currentId && reviewPool.length > 0 ? reviewPool : pool
+
 // Random pick where each item's chance is proportional to weightOf(item): weight 1 is twice as
 // likely as weight 0.5. `random` is injectable so tests can make it predictable.
 export const pickWeighted = (items, weightOf, random = Math.random) => {

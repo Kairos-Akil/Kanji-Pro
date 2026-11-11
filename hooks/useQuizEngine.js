@@ -22,7 +22,7 @@ import { useProgress } from '../context/ProgressContext'
 import { useTheme } from '../context/ThemeContext'
 import { useAppSettings } from '../context/AppSettingsContext'
 import { answerDisplayText, typedAnswerMatches, answersMatch, hasModeData, shuffle, pickWrongOptions } from '../utils/answers'
-import { isMastered, reviewWeight, pickWeighted } from '../utils/mastery'
+import { isMastered, reviewWeight, pickWeighted, avoidRepeat } from '../utils/mastery'
 
 const correctSound = require('../assets/sounds/correct.wav')
 const incorrectSound = require('../assets/sounds/incorrect.wav')
@@ -242,6 +242,11 @@ export const useQuizEngine = ({ Data, quizId, idKey, answerKey, allowKeyboard = 
         }
 
         if (!nextItem) {
+            // One character left to learn and it was just shown: take a review instead.
+            if (pool !== mastered) {
+                pool = avoidRepeat(pool, mastered, currentItem?.[idKey], item => item[idKey])
+            }
+
             // Don't re-ask the on-screen character (skipped only if it's the only candidate).
             const candidates = pool.length > 1 && currentItem
                 ? pool.filter(item => item[idKey] !== currentItem[idKey])

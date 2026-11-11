@@ -6,6 +6,7 @@ import {
     afterWrong,
     reviewWeight,
     pickWeighted,
+    avoidRepeat,
 } from '../utils/mastery'
 
 describe('stars and mastery', () => {
@@ -71,5 +72,29 @@ describe('reviews', () => {
         // Expected ratio 16:1, i.e. the solid item comes back about 6% of the time.
         expect(counts.solid / 10000).toBeGreaterThan(0.03)
         expect(counts.solid / 10000).toBeLessThan(0.09)
+    })
+})
+
+describe('avoidRepeat (one character left to learn)', () => {
+    const id = item => item.c
+    const learning = [{ c: '日' }]
+    const reviews = [{ c: '一' }, { c: '人' }]
+
+    test('switches to reviews when the only learning character was just shown', () => {
+        expect(avoidRepeat(learning, reviews, '日', id)).toBe(reviews)
+    })
+
+    test('keeps the learning pool when the last question was something else', () => {
+        expect(avoidRepeat(learning, reviews, '一', id)).toBe(learning)
+        expect(avoidRepeat(learning, reviews, undefined, id)).toBe(learning) // first question
+    })
+
+    test('keeps the learning pool when several characters are left', () => {
+        const several = [{ c: '日' }, { c: '月' }]
+        expect(avoidRepeat(several, reviews, '日', id)).toBe(several)
+    })
+
+    test('repeats only when there is nothing to review', () => {
+        expect(avoidRepeat(learning, [], '日', id)).toBe(learning)
     })
 })
