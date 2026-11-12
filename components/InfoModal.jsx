@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-nati
 import { ExternalLink } from 'lucide-react-native'
 import { Ionicons } from '@react-native-vector-icons/ionicons'
 import { useTheme } from '../context/ThemeContext'
-import { GITHUB_URL, EDRDG_LICENCE_URL, FEEDBACK_URL, openLink } from '../utils/links'
+import { APP_VERSION, GITHUB_URL, EDRDG_LICENCE_URL, FEEDBACK_URL, openLink } from '../utils/links'
 import BottomSheet from './BottomSheet'
 import Spacer from './Spacer'
 
@@ -77,6 +77,8 @@ const InfoModal = ({ isVisible, onClose }) => {
                     </TouchableOpacity>
                 </View>
 
+                <Text style={[styles.version, { color: theme.text }]}>Kanji Pro {APP_VERSION}</Text>
+
                 <Spacer height={15} />
             </ScrollView>
         </BottomSheet>
@@ -120,5 +122,11 @@ const styles = StyleSheet.create({
     licenceLink: {
         fontSize: 12,
         marginTop: 6,
+    },
+    version: {
+        fontSize: 12,
+        opacity: 0.55,
+        textAlign: 'center',
+        marginTop: 20,
     },
 })

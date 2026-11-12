@@ -31,12 +31,13 @@ radicals that make them up, with a spaced, star-based mastery system.
 - **Full kana coverage**: Hiragana and katakana, basic sets plus variants and combinations.
 - **Kanji N5 → N1**: 2,000+ kanji with meanings, on'yomi/kun'yomi readings, and the radicals each one is built from.
 - **Radicals**: learn the building blocks and see them annotated inside every kanji.
-- **Star-based mastery**: each character earns stars as you get it right; a configurable mastery level (1–15 stars) decides when it counts as "learned."
-- **Smart question pool**: unmastered items are prioritised, mastered ones return occasionally for review, and a wrong answer knocks a character back into rotation.
-- **Learning Mode**: brand-new characters (and any knocked back to zero stars) reveal their answer first, so you learn before you're tested. You can toggle it on/off in Quiz Settings.
+- **Star-based mastery**: each character earns stars as you get it right and counts as "learned" at 6 stars. Keep answering it correctly to collect bonus stars ("+N").
+- **Smart question pool**: unmastered items are prioritised, and mastered ones return for review now and then, the shaky ones (few bonus stars) more often than the solid ones. A wrong answer on a mastered character puts it back into rotation.
+- **Learning Mode**: teaches a few characters at a time and shows each new one with its answer first, so you learn before you're tested. You can toggle it on/off in Quiz Settings.
 - **Two input modes**: multiple-choice buttons or a built-in QWERTY keyboard that accepts romaji for kana readings.
 - **Multiple question types for kanji**: quiz on meanings, on/kun-readings, or a mix.
 - **Quality-of-life touches**: haptics, sound effects, light/dark/OLED themes, streak tracking, daily reminder, and search across the whole database.
+- **Feedback without an account**: send bugs and ideas straight from the app (About → Send feedback).
 
 ## Installation
 
@@ -46,22 +47,39 @@ radicals that make them up, with a spaced, star-based mastery system.
 
 Or download the APK from [Releases](https://github.com/Kairos-Akil/Kanji-Pro/releases).
 
+> **Updating from 1.2.1 or older?** Starting with 1.3.0, the app is signed with a new key, so
+> Android won't install it over an older version. Simply uninstall the old version before installing
+> the new one. Your progress from previous versions won't carry over.
+
+### Verifying the APK
+
+Every release is signed with my key. Its certificate fingerprint (SHA-256) is:
+
+```text
+79b3d40c854075bcaaee40c18793067a28229ce801a929f472bb43175d424e81
+```
+
+You can check a downloaded APK with `apksigner verify --print-certs app-release.apk`
+(from the Android SDK build tools). If the fingerprint differs, the APK isn't from me.
+
 ---
 
 ## Tech Stack
 
-- [Expo](https://expo.dev/) (~54) & [Expo Router](https://docs.expo.dev/router/introduction/) (file-based routing)
-- [React Native](https://reactnative.dev/) 0.81 · React 19 · New Architecture enabled
+- [Expo](https://expo.dev/) SDK 58 & [Expo Router](https://docs.expo.dev/router/introduction/) (file-based routing)
+- [React Native](https://reactnative.dev/) 0.88 · React 19 · New Architecture enabled
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) for animations
 - [AsyncStorage](https://react-native-async-storage.github.io/async-storage/) for offline progress persistence
-- [lucide-react-native](https://lucide.dev/) icons
+- [Ionicons](https://ionic.io/ionicons) and [lucide-react-native](https://lucide.dev/) icons
+- [Jest](https://jestjs.io/) tests for the quiz logic and progress saving
 - Dictionary data from **KANJIDIC2** and **KRADFILE-U**
 
 ---
 
 ## Getting Started
 
-**Prerequisites:** [Node.js](https://nodejs.org/) (LTS) and the Expo tooling.
+**Prerequisites:** [Node.js](https://nodejs.org/) 22 or newer. To build APKs you also need the
+Android SDK and a JDK 17.
 
 ```bash
 # Install dependencies
@@ -69,19 +87,29 @@ npm install
 
 # Start the dev server
 npm start
+
+# Run the tests and the linter
+npm test
+npx eslint .
 ```
 
-Then press `a` for Android, `i` for iOS, or `w` for the web build — or scan the QR code with the Expo Go app.
+Then press `a` for Android or `w` for the web build, or scan the QR code with the Expo Go app.
 
-### Building a release
+### Building an APK
 
-Build scripts live in `scripts/` and are wired into npm:
+Build scripts live in `scripts/` and are wired into npm. They regenerate the native `android/`
+project when needed.
 
 ```bash
-npm run build:debug   # debug APK
-npm run build:dev     # dev client
-npm run build:prod    # production APK
+npm run build:debug   # debug APK, works for anyone
+npm run build:dev     # release APK (what I publish), needs my signing key
+npm run build:prod    # release .aab bundle for the Play Store, needs my signing key
 ```
+
+Release builds are signed with my own key (see `plugins/withReleaseSigning.js`) and stop with an
+error if it isn't set up. To build the app yourself, use `npm run build:debug`.
+
+To prepare a new version, `npm run bump` raises the version number in every place it's stored.
 
 ---
 

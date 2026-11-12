@@ -41,3 +41,5 @@ yarn-error.*
 /android
 
 /.idea
+# private notes for Claude Code
+CLAUDE.local.md
